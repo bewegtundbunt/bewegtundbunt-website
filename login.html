@@ -3,610 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anmelden – bewegtundbunt</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>Anmelden – bewegt & bunt</title>
 
-  <!-- ✅ Supabase SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ── Tokens ───────────────────────────────────────────────── */
     :root {
-      --orange:  #F4720B;
-      --orange-d:#C85A00;
-      --green:   #2E7D4F;
-      --cream:   #FDF6EE;
-      --ink:     #1A1208;
-      --muted:   #7A6A58;
-      --border:  #E8DCCE;
-      --radius:  14px;
-      --shadow:  0 8px 40px rgba(26,18,8,.10);
+      --green: #2f6f5e;
+      --green-dark: #255a4c;
+      --cream: #f6f3ee;
+      --border: #e5e1da;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --radius: 10px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      min-height: 100vh;
+      font-family: "DM Sans", sans-serif;
+      background: linear-gradient(135deg, #f6f3ee, #efeae2);
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
     }
 
-    /* Decorative background blobs */
-    body::before, body::after {
-      content: '';
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    body::before {
-      width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(244,114,11,.12) 0%, transparent 70%);
-      top: -180px; right: -120px;
-    }
-    body::after {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(46,125,79,.10) 0%, transparent 70%);
-      bottom: -140px; left: -100px;
-    }
-
-    /* ── Card ─────────────────────────────────────────────────── */
     .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 52px 48px 44px;
+      background: white;
       width: 100%;
       max-width: 420px;
-      position: relative;
-      animation: rise .5s cubic-bezier(.16,1,.3,1) both;
-    }
-    @keyframes rise {
-      from { opacity:0; transform: translateY(28px); }
-      to   { opacity:1; transform: translateY(0);    }
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     }
 
-    /* ── Logo / Brand ─────────────────────────────────────────── */
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 36px;
-    }
-    .brand-dot {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: var(--orange);
-      flex-shrink: 0;
-      position: relative;
-    }
-    .brand-dot::after {
-      content: '';
-      position: absolute;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      background: var(--green);
-      bottom: -3px; right: -3px;
-    }
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: var(--ink);
-      letter-spacing: -.3px;
+      margin-bottom: 30px;
     }
 
-    /* ── Heading ──────────────────────────────────────────────── */
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: var(--ink);
-      line-height: 1.2;
-      margin-bottom: 6px;
+    .dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green);
     }
+
+    .brand-name {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
     .subtitle {
       font-size: 14px;
       color: var(--muted);
-      margin-bottom: 32px;
-      font-weight: 300;
+      margin-bottom: 30px;
     }
 
-    /* ── Form ─────────────────────────────────────────────────── */
-    .field { margin-bottom: 18px; }
     label {
       display: block;
       font-size: 12px;
       font-weight: 500;
       color: var(--muted);
-      letter-spacing: .6px;
+      margin-bottom: 6px;
       text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 13px 16px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: var(--ink);
-      background: var(--cream);
-      transition: border-color .2s, box-shadow .2s;
-      outline: none;
-    }
-    input:focus {
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(244,114,11,.12);
-      background: #fff;
+      letter-spacing: 0.6px;
     }
 
-    /* ── Button ───────────────────────────────────────────────── */
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(47,111,94,0.15);
+    }
+
     .btn {
       width: 100%;
       padding: 14px;
+      background: var(--green);
+      color: white;
       border: none;
       border-radius: var(--radius);
-      background: var(--orange);
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
       font-size: 15px;
       font-weight: 500;
       cursor: pointer;
-      transition: background .2s, transform .1s;
-      margin-top: 8px;
-      position: relative;
-      overflow: hidden;
+      transition: background 0.2s, transform 0.1s;
     }
-    .btn:hover  { background: var(--orange-d); }
-    .btn:active { transform: scale(.98); }
-    .btn:disabled { opacity: .6; cursor: not-allowed; }
 
-    .btn .spinner {
-      display: none;
-      width: 18px; height: 18px;
-      border: 2px solid rgba(255,255,255,.4);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      margin: 0 auto;
+    .btn:hover {
+      background: var(--green-dark);
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .btn.loading .btn-label { display: none; }
-    .btn.loading .spinner   { display: block; }
 
-    /* ── Messages ─────────────────────────────────────────────── */
-    .msg {
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 13.5px;
-      margin-top: 16px;
-      display: none;
+    .btn:active {
+      transform: scale(0.98);
     }
-    .msg.error   { background: #FEE8E2; color: #9B2C10; display: block; }
-    .msg.success { background: #E2F4EB; color: #1A5C35; display: block; }
 
-    /* ── Footer links ─────────────────────────────────────────── */
-    .footer-links {
-      margin-top: 28px;
+    .divider {
       text-align: center;
+      margin: 24px 0;
       font-size: 13px;
       color: var(--muted);
     }
-    .footer-links a {
-      color: var(--orange);
+
+    .footer-link {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer-link a {
+      color: var(--green);
       text-decoration: none;
       font-weight: 500;
     }
-    .footer-links a:hover { text-decoration: underline; }
 
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 24px 0;
-      color: var(--border);
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+    .footer-link a:hover {
+      text-decoration: underline;
     }
 
-    /* ── Back link ────────────────────────────────────────────── */
-    .back {
-      margin-top: 24px;
-      font-size: 13px;
-      color: var(--muted);
-      text-align: center;
-    }
-    .back a { color: var(--muted); text-decoration: underline; }
   </style>
 </head>
+
 <body>
 
-<div class="card">
+  <div class="card">
 
-  <div class="brand">
-    <div class="brand-dot"></div>
-    <span class="brand-name">bewegtundbunt</span>
+    <div class="brand">
+      <div class="dot"></div>
+      <div class="brand-name">bewegtundbunt</div>
+    </div>
+
+    <h1>Willkommen zurück</h1>
+    <div class="subtitle">
+      Melde dich an, um Sportstunden zu generieren.
+    </div>
+
+    <form>
+      <label>E-Mail</label>
+      <input type="email" placeholder="deine@email.de" required />
+
+      <label>Passwort</label>
+      <input type="password" placeholder="••••••••" required />
+
+      <button class="btn" type="submit">
+        Anmelden
+      </button>
+    </form>
+
+    <div class="divider">oder</div>
+
+    <div class="footer-link">
+      Noch kein Konto?
+      <a href="/">Pilot-Zugang anfragen</a>
+    </div>
+
   </div>
-
-  <h1>Willkommen zurück</h1>
-  <p class="subtitle">Melde dich an, um Sportstunden zu generieren.</p>
-
-  <div class="field">
-    <label for="email">E-Mail</label>
-    <input type="email" id="email" placeholder="deine@email.de" autocomplete="email" />
-  </div>
-
-  <div class="field">
-    <label for="password">Passwort</label>
-    <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
-  </div>
-
-  <button class="btn" id="loginBtn" onclick="handleLogin()">
-    <span class="btn-label">Anmelden</span>
-    <div class="spinner"></div>
-  </button>
-
-  <div id="msg" class="msg"></div>
-
-  <div class="divider">oder</div>
-
-  <div class="footer-links">
-    Noch kein Konto? <a href="mailto:hallo@bewegtundbunt.de">Pilot-Zugang anfragen</a>
-  </div>
-
-</div>
-
-<div class="back">
-  <a href="/">← Zurück zur Startseite</a>
-</div>
-
-<script>
-  // ╔══════════════════════════════════════════════════════════════╗
-  // ║  🔑 HIER DEINE SUPABASE-ZUGANGSDATEN EINTRAGEN             ║
-  // ║  Zu finden in: Supabase → Settings → API                   ║
-  // ╚══════════════════════════════════════════════════════════════╝
-  const SUPABASE_URL  = 'https://jhgoqrinhdtowuhzirnf.supabase.co';
-  const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoZ29xcmluaGR0b3d1aHppcm5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2MzIwODUsImV4cCI6MjA4NzIwODA4NX0.6b6mtRhJjoai5nogM8OWx4K5OkUDwxgMgyHuuQ2GtLI';
-
-  const { createClient } = supabase;
-  const sb = createClient(SUPABASE_URL, SUPABASE_ANON);
-
-  // Bereits eingeloggt? → direkt zum Dashboard
-  sb.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = '/dashboard.html';
-  });
-
-  const emailEl  = document.getElementById('email');
-  const passEl   = document.getElementById('password');
-  const btn      = document.getElementById('loginBtn');
-  const msgEl    = document.getElementById('msg');
-
-  // Enter-Taste
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Enter') handleLogin();
-  });
-
-  function showMsg(text, type) {
-    msgEl.textContent = text;
-    msgEl.className = `msg ${type}`;
-  }
-
-  async function handleLogin() {
-    const email    = emailEl.value.trim();
-    const password = passEl.value;
-
-    // Validierung
-    if (!email || !password) {
-      showMsg('Bitte E-Mail und Passwort eingeben.', 'error');
-      return;
-    }
-
-    // Lade-Zustand
-    btn.classList.add('loading');
-    btn.disabled = true;
-    msgEl.className = 'msg';
-
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-
-    btn.classList.remove('loading');
-    btn.disabled = false;
-
-    if (error) {
-      // Deutsche Fehlermeldungen
-      const map = {
-        'Invalid login credentials': 'E-Mail oder Passwort falsch.',
-        'Email not confirmed':        'Bitte bestätige zuerst deine E-Mail.',
-        'Too many requests':          'Zu viele Versuche – kurz warten.',
-      };
-      showMsg(map[error.message] || error.message, 'error');
-    } else {
-      showMsg('Erfolgreich angemeldet – weiterleiten…', 'success');
-      setTimeout(() => window.location.href = '/dashboard.html', 800);
-    }
-  }
-</script>
 
 </body>
-</html>      position: relative;
-      animation: rise .5s cubic-bezier(.16,1,.3,1) both;
-    }
-    @keyframes rise {
-      from { opacity:0; transform: translateY(28px); }
-      to   { opacity:1; transform: translateY(0);    }
-    }
-
-    /* ── Logo / Brand ─────────────────────────────────────────── */
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-    .brand-dot {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: var(--orange);
-      flex-shrink: 0;
-      position: relative;
-    }
-    .brand-dot::after {
-      content: '';
-      position: absolute;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      background: var(--green);
-      bottom: -3px; right: -3px;
-    }
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: var(--ink);
-      letter-spacing: -.3px;
-    }
-
-    /* ── Heading ──────────────────────────────────────────────── */
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: var(--ink);
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 32px;
-      font-weight: 300;
-    }
-
-    /* ── Form ─────────────────────────────────────────────────── */
-    .field { margin-bottom: 18px; }
-    label {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: .6px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 13px 16px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: var(--ink);
-      background: var(--cream);
-      transition: border-color .2s, box-shadow .2s;
-      outline: none;
-    }
-    input:focus {
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(244,114,11,.12);
-      background: #fff;
-    }
-
-    /* ── Button ───────────────────────────────────────────────── */
-    .btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: var(--radius);
-      background: var(--orange);
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
-      margin-top: 8px;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn:hover  { background: var(--orange-d); }
-    .btn:active { transform: scale(.98); }
-    .btn:disabled { opacity: .6; cursor: not-allowed; }
-
-    .btn .spinner {
-      display: none;
-      width: 18px; height: 18px;
-      border: 2px solid rgba(255,255,255,.4);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      margin: 0 auto;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .btn.loading .btn-label { display: none; }
-    .btn.loading .spinner   { display: block; }
-
-    /* ── Messages ─────────────────────────────────────────────── */
-    .msg {
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 13.5px;
-      margin-top: 16px;
-      display: none;
-    }
-    .msg.error   { background: #FEE8E2; color: #9B2C10; display: block; }
-    .msg.success { background: #E2F4EB; color: #1A5C35; display: block; }
-
-    /* ── Footer links ─────────────────────────────────────────── */
-    .footer-links {
-      margin-top: 28px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .footer-links a {
-      color: var(--orange);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .footer-links a:hover { text-decoration: underline; }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 24px 0;
-      color: var(--border);
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* ── Back link ────────────────────────────────────────────── */
-    .back {
-      margin-top: 24px;
-      font-size: 13px;
-      color: var(--muted);
-      text-align: center;
-    }
-    .back a { color: var(--muted); text-decoration: underline; }
-  </style>
-</head>
-<body>
-
-<div class="card">
-
-  <div class="brand">
-    <div class="brand-dot"></div>
-    <span class="brand-name">bewegtundbunt</span>
-  </div>
-
-  <h1>Willkommen zurück</h1>
-  <p class="subtitle">Melde dich an, um Sportstunden zu generieren.</p>
-
-  <div class="field">
-    <label for="email">E-Mail</label>
-    <input type="email" id="email" placeholder="deine@email.de" autocomplete="email" />
-  </div>
-
-  <div class="field">
-    <label for="password">Passwort</label>
-    <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
-  </div>
-
-  <button class="btn" id="loginBtn" onclick="handleLogin()">
-    <span class="btn-label">Anmelden</span>
-    <div class="spinner"></div>
-  </button>
-
-  <div id="msg" class="msg"></div>
-
-  <div class="divider">oder</div>
-
-  <div class="footer-links">
-    Noch kein Konto? <a href="/cdn-cgi/l/email-protection#5a323b3636351a383f2d3f3d2e2f343e382f342e743e3f">Pilot-Zugang anfragen</a>
-  </div>
-
-</div>
-
-<div class="back">
-  <a href="/">← Zurück zur Startseite</a>
-</div>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // ╔══════════════════════════════════════════════════════════════╗
-  // ║  🔑 HIER DEINE SUPABASE-ZUGANGSDATEN EINTRAGEN             ║
-  // ║  Zu finden in: Supabase → Settings → API                   ║
-  // ╚══════════════════════════════════════════════════════════════╝
-  const SUPABASE_URL  = 'https://jhgoqrinhdtowuhzirnf.supabase.co';
-  const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoZ29xcmluaGR0b3d1aHppcm5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2MzIwODUsImV4cCI6MjA4NzIwODA4NX0.6b6mtRhJjoai5nogM8OWx4K5OkUDwxgMgyHuuQ2GtLI';
-
-  const { createClient } = supabase;
-  const sb = createClient(SUPABASE_URL, SUPABASE_ANON);
-
-  // Bereits eingeloggt? → direkt zum Dashboard
-  sb.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = '/dashboard.html';
-  });
-
-  const emailEl  = document.getElementById('email');
-  const passEl   = document.getElementById('password');
-  const btn      = document.getElementById('loginBtn');
-  const msgEl    = document.getElementById('msg');
-
-  // Enter-Taste
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Enter') handleLogin();
-  });
-
-  function showMsg(text, type) {
-    msgEl.textContent = text;
-    msgEl.className = `msg ${type}`;
-  }
-
-  async function handleLogin() {
-    const email    = emailEl.value.trim();
-    const password = passEl.value;
-
-    // Validierung
-    if (!email || !password) {
-      showMsg('Bitte E-Mail und Passwort eingeben.', 'error');
-      return;
-    }
-
-    // Lade-Zustand
-    btn.classList.add('loading');
-    btn.disabled = true;
-    msgEl.className = 'msg';
-
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-
-    btn.classList.remove('loading');
-    btn.disabled = false;
-
-    if (error) {
-      // Deutsche Fehlermeldungen
-      const map = {
-        'Invalid login credentials': 'E-Mail oder Passwort falsch.',
-        'Email not confirmed':        'Bitte bestätige zuerst deine E-Mail.',
-        'Too many requests':          'Zu viele Versuche – kurz warten.',
-      };
-      showMsg(map[error.message] || error.message, 'error');
-    } else {
-      showMsg('Erfolgreich 
+</html>

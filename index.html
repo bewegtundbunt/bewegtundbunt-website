@@ -1,487 +1,350 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bewegt & bunt – Qualitätsstandard für Bewegungsbildung</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>bewegt & bunt – Bewegungsplanung für Kitas</title>
+  <meta name="description" content="Bewegungsstunden für Kitas in unter 1 Minute – fachlich fundiert, sofort einsetzbar. Spart Planungszeit im Dienst und erhöht die Qualität im Team." />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --white: #FAFAF8;
-      --ink: #18181A;
-      --ink-soft: #3D3D40;
-      --forest: #2D5A4E;
-      --forest-mid: #3D7A6A;
-      --forest-light: #EBF2EF;
-      --forest-pale: #F3F8F6;
-      --stone: #8C8C88;
-      --border: #E2E0DA;
-      --border-dark: #C8C5BC;
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --text:#111;
+      --muted:#5a6270;
+      --border:#111;
+      --soft:#e7e9ee;
+      --accent:#1a73e8;
+      --accent2:#0b57d0;
     }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Instrument Sans', sans-serif;
-      background: var(--white);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.35;
     }
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 56px; height: 68px;
-      background: rgba(250,250,248,0.95);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px 16px 60px;
     }
-    .nav-logo { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 400; color: var(--ink); text-decoration: none; }
-    .nav-logo strong { color: var(--forest); font-weight: 500; }
-    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 14px; color: var(--stone); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-right { display: flex; align-items: center; gap: 16px; }
-    .btn-outline { font-size: 13px; font-weight: 500; color: var(--ink); text-decoration: none; border: 1px solid var(--border-dark); padding: 9px 22px; border-radius: 3px; transition: all 0.2s; }
-    .btn-outline:hover { border-color: var(--ink); }
-    .btn-primary { font-size: 13px; font-weight: 500; background: var(--forest); color: white; text-decoration: none; padding: 9px 22px; border-radius: 3px; transition: background 0.2s; }
-    .btn-primary:hover { background: var(--forest-mid); }
 
-    /* HERO */
-    .hero { min-height: 100vh; padding-top: 68px; display: grid; grid-template-columns: 1fr 1fr; }
-    .hero-left { padding: 96px 64px 96px 56px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
-    .hero-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; }
-    .hero-kicker-line { width: 32px; height: 1px; background: var(--forest); }
-    .hero-kicker span { font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--forest); }
-    h1 { font-family: 'Fraunces', serif; font-size: clamp(38px, 3.8vw, 58px); font-weight: 400; line-height: 1.08; letter-spacing: -1.5px; color: var(--ink); margin-bottom: 28px; }
-    h1 em { font-style: italic; color: var(--forest); }
-    .hero-body { font-size: 17px; font-weight: 300; color: var(--ink-soft); line-height: 1.7; max-width: 460px; margin-bottom: 52px; }
-    .hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 56px; }
-    .btn-hero { background: var(--forest); color: white; padding: 15px 36px; border-radius: 3px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-    .btn-hero:hover { background: var(--forest-mid); }
-    .btn-text { font-size: 14px; color: var(--stone); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
-    .btn-text:hover { color: var(--ink); }
-    .hero-trust { display: flex; align-items: center; gap: 16px; padding-top: 32px; border-top: 1px solid var(--border); }
-    .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest); }
-    .trust-text { font-size: 13px; color: var(--stone); font-weight: 300; }
+    /* Topbar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px;
+      background:var(--card);
+      border:2px solid var(--border);
+      border-radius:16px;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .brand .name{
+      font-weight:900;
+      letter-spacing:.02em;
+      font-size:16px;
+      text-transform:uppercase;
+    }
+    .brand .tag{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:650;
+    }
 
-    /* Hero card */
-    .hero-right { background: var(--forest-pale); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 64px 48px; position: relative; overflow: hidden; }
-    .hero-right::before { content: ''; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(45,90,78,0.08) 0%, transparent 70%); }
-    .doc-card { background: white; border: 1px solid var(--border); border-radius: 8px; width: 100%; max-width: 380px; box-shadow: 0 4px 24px rgba(24,24,26,0.07), 0 1px 4px rgba(24,24,26,0.04); overflow: hidden; animation: floatCard 6s ease-in-out infinite; }
-    @keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    .doc-header { background: var(--forest); padding: 20px 24px; display: flex; align-items: center; gap: 12px; }
-    .doc-header-icon { font-size: 18px; }
-    .doc-header-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 400; color: white; }
-    .doc-header-sub { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; }
-    .doc-body { padding: 20px 24px; }
-    .doc-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
-    .doc-chip { font-size: 11px; font-weight: 500; background: var(--forest-light); color: var(--forest); padding: 4px 10px; border-radius: 2px; }
-    .doc-divider { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
-    .doc-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; font-size: 13px; }
-    .doc-label { color: var(--stone); }
-    .doc-val { color: var(--ink); font-weight: 500; text-align: right; max-width: 55%; }
-    .doc-phase-title { font-size: 11px; font-weight: 500; letter-spacing: 1.3px; text-transform: uppercase; color: var(--stone); margin-bottom: 10px; }
-    .doc-phase { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-    .phase-badge { font-size: 10px; font-weight: 500; background: var(--forest-light); color: var(--forest); padding: 2px 7px; border-radius: 2px; white-space: nowrap; margin-top: 1px; }
-    .phase-text { font-size: 13px; color: var(--ink-soft); line-height: 1.4; }
-    .doc-footer { background: var(--forest-pale); border-top: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; gap: 8px; }
-    .doc-footer-text { font-size: 12px; color: var(--forest); font-weight: 500; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:2px solid var(--border);
+      font-weight:900;
+      font-size:14px;
+      cursor:pointer;
+      transition:transform .05s ease, background .15s ease;
+      background:var(--card);
+    }
+    .btn:hover{ background:#f0f2f6; }
+    .btn:active{ transform:translateY(1px); }
+    .btn.primary{
+      background:linear-gradient(180deg,var(--accent),var(--accent2));
+      color:white;
+      border-color:transparent;
+    }
+    .btn.primary:hover{ filter:brightness(1.02); }
 
-    /* PROOF BAR */
-    .proof-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 56px; display: flex; align-items: center; gap: 48px; }
-    .proof-label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--stone); white-space: nowrap; }
-    .proof-vr { width: 1px; height: 28px; background: var(--border); }
-    .proof-items { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
-    .proof-item { font-size: 13px; color: var(--stone); font-weight: 300; display: flex; align-items: center; gap: 8px; }
-    .proof-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--forest-mid); flex-shrink: 0; }
+    /* Hero */
+    .hero{
+      margin-top:14px;
+      background:var(--card);
+      border:2px solid var(--border);
+      border-radius:18px;
+      padding:22px 18px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:16px;
+    }
+    @media (max-width:860px){
+      .hero{ grid-template-columns:1fr; }
+    }
 
-    /* SECTION SHARED */
-    .section-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--forest); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .section-eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--forest); }
-    h2 { font-family: 'Fraunces', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 400; letter-spacing: -1px; line-height: 1.12; color: var(--ink); }
+    h1{
+      margin:0 0 10px 0;
+      font-size:34px;
+      line-height:1.05;
+      letter-spacing:-0.02em;
+    }
+    .lead{
+      margin:0;
+      font-size:16px;
+      color:var(--muted);
+      font-weight:650;
+      max-width:54ch;
+    }
 
-    /* PROBLEM */
-    .problem { padding: 120px 56px; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; max-width: 1280px; margin: 0 auto; }
-    .problem-intro h2 { margin-bottom: 20px; }
-    .problem-intro p { font-size: 16px; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
-    .pain-list { display: flex; flex-direction: column; gap: 2px; }
-    .pain-item { padding: 28px 32px; background: var(--white); border: 1px solid var(--border); display: grid; grid-template-columns: 40px 1fr; gap: 20px; align-items: start; transition: border-color 0.2s; }
-    .pain-item:hover { border-color: var(--border-dark); }
-    .pain-num { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 300; color: var(--border-dark); line-height: 1; margin-top: 2px; }
-    .pain-content h3 { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
-    .pain-content p { font-size: 14px; font-weight: 300; color: var(--stone); line-height: 1.65; }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:14px;
+    }
+    .chip{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:2px solid var(--border);
+      font-size:13px;
+      font-weight:900;
+      background:#fff;
+      white-space:nowrap;
+    }
+    .chip small{
+      font-weight:800;
+      color:var(--muted);
+      font-size:12px;
+    }
 
-    /* SOLUTION */
-    .solution { background: var(--ink); padding: 120px 56px; }
-    .solution-inner { max-width: 1280px; margin: 0 auto; }
-    .solution .section-eyebrow { color: var(--forest-mid); }
-    .solution .section-eyebrow::before { background: var(--forest-mid); }
-    .solution h2 { color: white; margin-bottom: 72px; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.06); }
-    .step { background: var(--ink); padding: 48px 40px; }
-    .step-num { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 300; color: rgba(255,255,255,0.07); line-height: 1; margin-bottom: 32px; }
-    .step-icon { font-size: 24px; margin-bottom: 16px; }
-    .step h3 { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 400; color: white; margin-bottom: 12px; letter-spacing: -0.3px; }
-    .step p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .ctaBox{
+      border:2px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .ctaBox .headline{
+      font-weight:900;
+      font-size:15px;
+      margin:0;
+    }
+    .ctaBox .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14px;
+    }
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:6px;
+    }
 
-    /* OUTCOMES */
-    .outcomes { padding: 120px 56px; max-width: 1280px; margin: 0 auto; }
-    .outcomes-header { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 72px; align-items: end; }
-    .outcomes-header p { font-size: 16px; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
-    .outcomes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--border); }
-    .outcome { background: var(--white); padding: 48px 44px; position: relative; overflow: hidden; }
-    .outcome::after { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--forest); opacity: 0; transition: opacity 0.3s; }
-    .outcome:hover::after { opacity: 1; }
-    .outcome-for { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--forest); margin-bottom: 20px; }
-    .outcome h3 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; color: var(--ink); letter-spacing: -0.3px; margin-bottom: 12px; }
-    .outcome p { font-size: 14px; font-weight: 300; color: var(--stone); line-height: 1.7; }
+    /* Sections */
+    .grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width:980px){
+      .grid{ grid-template-columns:1fr; }
+    }
+    .card{
+      background:var(--card);
+      border:2px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+    }
+    .card h2{
+      margin:0 0 8px 0;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      font-weight:900;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14.5px;
+    }
+    .list{
+      margin:10px 0 0 0;
+      padding-left:18px;
+      color:var(--text);
+      font-weight:750;
+      font-size:14.5px;
+    }
+    .list li{ margin:6px 0; }
 
-    /* METRICS */
-    .metrics { background: var(--forest); padding: 80px 56px; }
-    .metrics-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.15); }
-    .metric { background: var(--forest); padding: 48px 40px; }
-    .metric-num { font-family: 'Fraunces', serif; font-size: 54px; font-weight: 400; color: white; line-height: 1; letter-spacing: -2px; margin-bottom: 8px; }
-    .metric-num sup { font-size: 28px; letter-spacing: 0; }
-    .metric-label { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.5; }
-
-    /* DELIVERABLES */
-    .deliverables { padding: 120px 56px; background: var(--forest-pale); }
-    .deliverables-inner { max-width: 1280px; margin: 0 auto; }
-    .deliverables h2 { margin-bottom: 56px; }
-    .deliverable-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(45,90,78,0.1); }
-    .deliverable { background: var(--forest-pale); padding: 40px 36px; }
-    .deliverable-check { width: 32px; height: 32px; border-radius: 50%; background: var(--forest-light); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--forest); margin-bottom: 20px; font-weight: 700; }
-    .deliverable h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-    .deliverable p { font-size: 13px; font-weight: 300; color: var(--stone); line-height: 1.65; }
-
-    /* PRICING */
-    .pricing { padding: 120px 56px; max-width: 1280px; margin: 0 auto; }
-    .pricing-header { margin-bottom: 64px; }
-    .pricing-header p { font-size: 17px; font-weight: 300; color: var(--ink-soft); margin-top: 16px; line-height: 1.7; }
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); }
-    .pricing-card { background: var(--white); padding: 52px 48px; }
-    .pricing-card.featured { background: var(--ink); }
-    .pricing-tier { font-size: 11px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--stone); margin-bottom: 8px; }
-    .pricing-card.featured .pricing-tier { color: rgba(255,255,255,0.35); }
-    .pricing-name { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 32px; letter-spacing: -0.5px; }
-    .pricing-card.featured .pricing-name { color: white; }
-    .pricing-amount { display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px; }
-    .pricing-price { font-family: 'Fraunces', serif; font-size: 52px; font-weight: 300; color: var(--ink); letter-spacing: -2px; }
-    .pricing-card.featured .pricing-price { color: white; }
-    .pricing-currency { font-size: 22px; color: var(--stone); }
-    .pricing-card.featured .pricing-currency { color: rgba(255,255,255,0.4); }
-    .pricing-period { font-size: 13px; font-weight: 300; color: var(--stone); margin-bottom: 36px; }
-    .pricing-card.featured .pricing-period { color: rgba(255,255,255,0.35); }
-    .pricing-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
-    .pricing-card.featured .pricing-divider { border-color: rgba(255,255,255,0.08); }
-    .pricing-feature { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; margin-bottom: 14px; color: var(--ink-soft); font-weight: 300; }
-    .pricing-card.featured .pricing-feature { color: rgba(255,255,255,0.6); }
-    .pricing-check { color: var(--forest); font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
-    .pricing-card.featured .pricing-check { color: rgba(255,255,255,0.5); }
-    .pricing-cta { display: block; text-align: center; margin-top: 40px; padding: 15px 28px; border-radius: 3px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
-    .pricing-card:not(.featured) .pricing-cta { border: 1px solid var(--border-dark); color: var(--ink); }
-    .pricing-card:not(.featured) .pricing-cta:hover { background: var(--ink); color: white; border-color: var(--ink); }
-    .pricing-card.featured .pricing-cta { background: white; color: var(--ink); }
-    .pricing-card.featured .pricing-cta:hover { background: var(--forest-light); }
-
-    /* CTA */
-    .cta-section { border-top: 1px solid var(--border); padding: 120px 56px; text-align: center; }
-    .cta-section h2 { margin-bottom: 20px; font-size: clamp(32px, 3.5vw, 52px); }
-    .cta-section p { font-size: 18px; font-weight: 300; color: var(--ink-soft); max-width: 520px; margin: 0 auto 48px; line-height: 1.7; }
-    .cta-actions { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    .btn-cta-primary { background: var(--forest); color: white; padding: 16px 40px; border-radius: 3px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-    .btn-cta-primary:hover { background: var(--forest-mid); }
-    .btn-cta-secondary { font-size: 14px; color: var(--stone); text-decoration: none; font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: all 0.2s; }
-    .btn-cta-secondary:hover { color: var(--ink); border-color: var(--ink); }
-    .cta-note { margin-top: 24px; font-size: 13px; color: var(--stone); font-weight: 300; }
-
-    /* FOOTER */
-    footer { background: var(--ink); padding: 48px 56px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-    .footer-logo { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 400; color: white; }
-    .footer-links { display: flex; gap: 32px; list-style: none; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; font-weight: 300; transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); font-weight: 300; }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-left > * { animation: fadeUp 0.7s ease both; }
-    .hero-kicker  { animation-delay: 0.05s; }
-    h1            { animation-delay: 0.15s; }
-    .hero-body    { animation-delay: 0.25s; }
-    .hero-actions { animation-delay: 0.35s; }
-    .hero-trust   { animation-delay: 0.45s; }
-    .hero-right   { animation: fadeUp 0.9s 0.3s ease both; }
-
-    /* RESPONSIVE */
-    @media (max-width: 960px) {
-      nav { padding: 0 24px; }
-      .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-left { padding: 60px 24px; border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-right { padding: 48px 24px; }
-      .proof-bar { padding: 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
-      .problem { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
-      .steps { grid-template-columns: 1fr; }
-      .outcomes-header { grid-template-columns: 1fr; gap: 24px; }
-      .outcomes-grid { grid-template-columns: 1fr; }
-      .metrics-inner { grid-template-columns: 1fr 1fr; }
-      .deliverable-list { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .solution, .outcomes, .deliverables, .pricing, .cta-section { padding: 80px 24px; }
-      .metrics { padding: 60px 24px; }
-      footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
+    /* Footer */
+    .footer{
+      margin-top:14px;
+      padding:16px;
+      border:2px solid var(--border);
+      border-radius:18px;
+      background:var(--card);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footMuted{
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
     }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<nav>
-  <a href="#" class="nav-logo">bewegt <strong>&</strong> bunt</a>
-  <ul class="nav-links">
-    <li><a href="#so-funktioniert-es">So funktioniert es</a></li>
-    <li><a href="#fuer-leitungen">Für Leitungen</a></li>
-    <li><a href="#preise">Preise</a></li>
-  </ul>
-  <div class="nav-right">
-    <a href="/login.html" class="btn-outline">Anmelden</a>
-    <a href="#pilot" class="btn-primary">Pilot anfragen</a>
-  </div>
-</nav>
+    <header class="topbar">
+      <div class="brand">
+        <div class="name">bewegt & bunt</div>
+        <div class="tag">Bewegungsplanung für Kitas – professionell & sofort einsetzbar</div>
+      </div>
 
-<section>
-  <div class="hero">
-    <div class="hero-left">
-      <div class="hero-kicker">
-        <div class="hero-kicker-line"></div>
-        <span>Für Kita-Leitungen</span>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="/login.html">Login</a>
+        <a class="btn primary" href="/login.html">Pilot starten</a>
       </div>
-      <h1>Bewegungsbildung.<br><em>Strukturiert.</em><br>Verlässlich. Messbar.</h1>
-      <p class="hero-body">bewegt & bunt ist die Planungssoftware, die Ihre Einrichtung mit fachlich fundierten, einheitlichen Bewegungsangeboten versorgt – ohne Mehraufwand für Ihr Team.</p>
-      <div class="hero-actions">
-        <a href="#pilot" class="btn-hero">Pilot-Zugang anfragen</a>
-        <a href="#so-funktioniert-es" class="btn-text">Wie es funktioniert →</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-dot"></div>
-        <span class="trust-text">3 Einheiten kostenlos testen · Kein Vertrag · Kein Risiko</span>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="doc-card">
-        <div class="doc-header">
-          <div class="doc-header-icon">📋</div>
-          <div>
-            <div class="doc-header-title">Gleichgewicht & Körpergefühl</div>
-            <div class="doc-header-sub">Generiert in 43 Sekunden</div>
-          </div>
-        </div>
-        <div class="doc-body">
-          <div class="doc-meta">
-            <span class="doc-chip">3–4 Jahre</span>
-            <span class="doc-chip">12 Kinder</span>
-            <span class="doc-chip">45 Min</span>
-          </div>
-          <hr class="doc-divider" />
-          <div class="doc-row"><span class="doc-label">Lernziel</span><span class="doc-val">Körperwahrnehmung & Gleichgewicht stärken</span></div>
-          <div class="doc-row"><span class="doc-label">Material</span><span class="doc-val">Weichbodenmatte, Reifen, Seile</span></div>
-          <div class="doc-row"><span class="doc-label">Raum</span><span class="doc-val">Turnhalle</span></div>
-          <hr class="doc-divider" />
-          <div class="doc-phase-title">Ablauf</div>
-          <div class="doc-phase"><span class="phase-badge">10 Min</span><span class="phase-text">Warm-Up: Barfüßige Erkundungsreise durch den Raum</span></div>
-          <div class="doc-phase"><span class="phase-badge">25 Min</span><span class="phase-text">Hauptteil: Gleichgewichtsparcours mit Stationen</span></div>
-          <div class="doc-phase"><span class="phase-badge">10 Min</span><span class="phase-text">Abschluss & Reflexion: Was haben wir gespürt?</span></div>
-        </div>
-        <div class="doc-footer">
-          <span class="doc-footer-text">✓ Pädagogisch geprüft · Sofort einsetzbar</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Bewegungsstunden in unter 1 Minute – direkt im Dienst planbar.</h1>
+        <p class="lead">
+          bewegt & bunt erstellt fachlich fundierte Bewegungsangebote für Kitas mit klarem Spannungsbogen,
+          Lernzielen und Materialliste – so, dass Teams <b>während der Arbeitszeit</b> schneller planen
+          und die Qualität im Alltag steigt.
+        </p>
+
+        <div class="chips">
+          <div class="chip">Sofort einsetzbar <small>ohne lange Vorbereitung</small></div>
+          <div class="chip">Materialliste <small>alles dabei</small></div>
+          <div class="chip">Minutenangaben <small>klarer Ablauf</small></div>
+          <div class="chip">Teamfähig <small>mehrere Geräte</small></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<div class="proof-bar">
-  <span class="proof-label">Ihr Qualitätsversprechen</span>
-  <div class="proof-vr"></div>
-  <div class="proof-items">
-    <span class="proof-item">Fachlich fundierte Lernziele</span>
-    <span class="proof-item">Einheitliche Standards im Team</span>
-    <span class="proof-item">Dokumentierbar & nachweisbar</span>
-    <span class="proof-item">Sofort einsetzbar</span>
-    <span class="proof-item">Keine Vorbereitung nötig</span>
-  </div>
-</div>
+      <aside class="ctaBox">
+        <div>
+          <p class="headline">Für Einrichtungsleitungen</p>
+          <p class="sub">
+            Spart Planungszeit <b>im Dienst</b>, erhöht fachliche Sicherheit im Team und macht Qualität skalierbar –
+            ohne zusätzliche Meetings oder Zettelwirtschaft.
+          </p>
+        </div>
 
-<section class="problem" id="fuer-leitungen">
-  <div class="problem-intro">
-    <div class="section-eyebrow">Die Herausforderung</div>
-    <h2>Was Leitungen täglich beschäftigt.</h2>
-    <p>Qualitätssicherung, Teamentlastung und pädagogischer Anspruch – alles gleichzeitig. Bewegungsbildung bleibt dabei oft dem Zufall überlassen.</p>
-  </div>
-  <div class="pain-list">
-    <div class="pain-item">
-      <div class="pain-num">01</div>
-      <div class="pain-content"><h3>Fehlende einheitliche Standards</h3><p>Jede Erzieherin plant anders. Qualität und Strukturtiefe variieren stark – ohne dass die Leitung es steuern kann.</p></div>
-    </div>
-    <div class="pain-item">
-      <div class="pain-num">02</div>
-      <div class="pain-content"><h3>Zeitdruck im Team</h3><p>Erzieherinnen bereiten Bewegungsangebote in der Freizeit vor. Wertvolle Zeit, die für die Kinder fehlt.</p></div>
-    </div>
-    <div class="pain-item">
-      <div class="pain-num">03</div>
-      <div class="pain-content"><h3>Pädagogische Qualität schwer nachweisbar</h3><p>Eltern, Träger und Behörden erwarten Belege. Ohne Dokumentation bleibt gute Arbeit unsichtbar.</p></div>
-    </div>
-    <div class="pain-item">
-      <div class="pain-num">04</div>
-      <div class="pain-content"><h3>Belastung der Fachkräfte</h3><p>Überlastetes Personal macht Fehler und verlässt Einrichtungen. Strukturhilfen sind kein Luxus, sondern Notwendigkeit.</p></div>
-    </div>
-  </div>
-</section>
+        <div class="ctaRow">
+          <a class="btn primary" href="/login.html">Jetzt testen</a>
+          <a class="btn" href="#so-funktionierts">So funktioniert’s</a>
+        </div>
+      </aside>
+    </section>
 
-<section class="solution" id="so-funktioniert-es">
-  <div class="solution-inner">
-    <div class="section-eyebrow">Die Lösung</div>
-    <h2>Drei Schritte.<br>Eine vollständige Stunde.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-icon">⌨️</div>
-        <h3>Angaben eingeben</h3>
-        <p>Alter, Gruppengröße, verfügbare Materialien. Mehr braucht Ihre Erzieherin nicht einzugeben – der Rest passiert automatisch.</p>
+    <section id="so-funktionierts" class="grid">
+      <div class="card">
+        <h2>1) Eingeben</h2>
+        <p>Materialien, Gruppengröße und Alter auswählen – passend zu euren Rahmenbedingungen.</p>
+        <ul class="list">
+          <li>Material: z.B. Tücher, Kegel</li>
+          <li>Gruppe & Alter</li>
+          <li>Raum / Schwerpunkt</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-icon">⚙️</div>
-        <h3>System generiert</h3>
-        <p>In unter einer Minute erstellt bewegt & bunt eine vollständige, pädagogisch durchdachte Bewegungseinheit mit klarem Spannungsbogen.</p>
+
+      <div class="card">
+        <h2>2) Erhalten</h2>
+        <p>Ein kompletter Ablauf mit Spannungsbogen, Minutenangaben, Materialliste und kurzen Anleitungen.</p>
+        <ul class="list">
+          <li>Einstieg → Warm-up → Hauptteil</li>
+          <li>Cooldown → Abschluss</li>
+          <li>Variationen & Vereinfachungen</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-icon">✓</div>
-        <h3>Sofort durchführen</h3>
-        <p>Mit Zeitplan, Materialliste, Durchführungsbeschreibung und Reflexion – fertig für den Einsatz. Keine Nachbereitung nötig.</p>
+
+      <div class="card">
+        <h2>3) Umsetzen</h2>
+        <p>Direkt mit in den Bewegungsraum nehmen, ohne Nacharbeit. Ideal für Vertretungen und Teamwechsel.</p>
+        <ul class="list">
+          <li>klare Regeln & Coaching-Sätze</li>
+          <li>schneller Aufbau</li>
+          <li>Reflexion in 2 Minuten</li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="outcomes">
-  <div class="outcomes-header">
-    <div>
-      <div class="section-eyebrow">Was Sie gewinnen</div>
-      <h2>Qualität, die Sie als Leitung verantworten können.</h2>
-    </div>
-    <p>bewegt & bunt stärkt Ihre Fachkräfte – und gibt Ihnen als Leitung die Sicherheit, dass Bewegungsbildung in Ihrer Einrichtung verlässlich und hochwertig stattfindet.</p>
-  </div>
-  <div class="outcomes-grid">
-    <div class="outcome">
-      <div class="outcome-for">Für die Leitung</div>
-      <h3>Einheitliche Qualität im gesamten Team</h3>
-      <p>Jede Erzieherin, jede Einheit – auf dem gleichen pädagogischen Niveau. Unabhängig von Erfahrung oder Tagesform.</p>
-    </div>
-    <div class="outcome">
-      <div class="outcome-for">Für die Leitung</div>
-      <h3>Nachweisbare pädagogische Arbeit</h3>
-      <p>Lernziele, Methoden, Reflexion – alles dokumentiert. Für Elterngespräche, Trägerberichte und Qualitätssicherung.</p>
-    </div>
-    <div class="outcome">
-      <div class="outcome-for">Für das Team</div>
-      <h3>Spürbare Entlastung im Alltag</h3>
-      <p>Erzieherinnen sparen bis zu 30 Minuten pro Einheit. Zeit, die direkt den Kindern zugute kommt.</p>
-    </div>
-    <div class="outcome">
-      <div class="outcome-for">Für das Team</div>
-      <h3>Professionelles Auftreten</h3>
-      <p>Statt improvisierter Bewegungsangebote: strukturierte, fundierte Einheiten, die die Fachkompetenz Ihrer Mitarbeitenden stärken.</p>
-    </div>
-  </div>
-</section>
+    <section class="grid">
+      <div class="card">
+        <h2>Nutzen</h2>
+        <p>Weniger Such- und Planungszeit im Alltag – dafür mehr Durchführung und mehr Qualität.</p>
+        <ul class="list">
+          <li>Planungszeit im Dienst reduzieren</li>
+          <li>fachliche Sicherheit im Team</li>
+          <li>gleichbleibende Qualität</li>
+        </ul>
+      </div>
 
-<div class="metrics">
-  <div class="metrics-inner">
-    <div class="metric"><div class="metric-num">&lt;1<sup>Min</sup></div><div class="metric-label">bis zur fertigen Bewegungseinheit</div></div>
-    <div class="metric"><div class="metric-num">100<sup>%</sup></div><div class="metric-label">pädagogisch fundiert & einsetzbar</div></div>
-    <div class="metric"><div class="metric-num">3</div><div class="metric-label">kostenlose Einheiten zum Testen</div></div>
-    <div class="metric"><div class="metric-num">0</div><div class="metric-label">Stunden Vorbereitungszeit nötig</div></div>
-  </div>
-</div>
+      <div class="card">
+        <h2>Für Teams</h2>
+        <p>Mehrere Personen können denselben Zugang nutzen (z.B. mehrere Tablets innerhalb einer Einrichtung).</p>
+        <ul class="list">
+          <li>gemeinsame Standards</li>
+          <li>einheitliche Vorlagen</li>
+          <li>schneller Einstieg für neue Kolleg:innen</li>
+        </ul>
+      </div>
 
-<section class="deliverables">
-  <div class="deliverables-inner">
-    <div class="section-eyebrow">Jede Einheit enthält</div>
-    <h2>Vollständig. Sofort nutzbar.</h2>
-    <div class="deliverable-list">
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Definiertes Lernziel</h3><p>Klar formuliert, pädagogisch begründet und dokumentierbar für Qualitätsberichte.</p></div>
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Strukturierter Zeitplan</h3><p>Warm-Up, Hauptteil und Abschluss mit exakten Minutenangaben – kein Improvisieren.</p></div>
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Vollständige Materialliste</h3><p>Alle benötigten Materialien auf einen Blick – vor der Stunde, nicht mittendrin.</p></div>
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Durchführungsbeschreibung</h3><p>Schritt-für-Schritt-Anleitung, die auch weniger erfahrene Fachkräfte sicher führt.</p></div>
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Reflexionsteil</h3><p>Für nachhaltige Lernprozesse bei Kindern und pädagogische Tiefe in der Einheit.</p></div>
-      <div class="deliverable"><div class="deliverable-check">✓</div><h3>Klarer Spannungsbogen</h3><p>Jede Einheit ist dramaturgisch aufgebaut – Kinder bleiben motiviert von Anfang bis Ende.</p></div>
-    </div>
-  </div>
-</section>
+      <div class="card">
+        <h2>Preisidee (Pilot)</h2>
+        <p>3 kostenlose Stunden – danach als Einrichtungslizenz planbar (Premium-Positionierung).</p>
+        <ul class="list">
+          <li>Start: Pilotphase</li>
+          <li>Ziel: Zahlungsbereitschaft</li>
+          <li>Skalierung: Standard in Kitas</li>
+        </ul>
+      </div>
+    </section>
 
-<section class="pricing" id="preise">
-  <div class="pricing-header">
-    <div class="section-eyebrow">Preise</div>
-    <h2>Transparent. Ohne Risiko.</h2>
-    <p>Starten Sie kostenlos – und entscheiden Sie erst dann, wenn Sie überzeugt sind.</p>
-  </div>
-  <div class="pricing-grid">
-    <div class="pricing-card">
-      <div class="pricing-tier">Einstieg</div>
-      <div class="pricing-name">Kostenlos testen</div>
-      <div class="pricing-amount"><span class="pricing-currency">€</span><span class="pricing-price">0</span></div>
-      <div class="pricing-period">für die ersten 3 Einheiten · keine Kreditkarte</div>
-      <hr class="pricing-divider" />
-      <div class="pricing-feature"><span class="pricing-check">✓</span> 3 vollständige Bewegungsstunden</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Alle Inhalte inklusive</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Sofort nutzbar</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Kein Vertrag, kein Risiko</div>
-      <a href="#" class="pricing-cta">Kostenlos starten</a>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-tier">Einrichtung · Pilot</div>
-      <div class="pricing-name">Für Ihr Team</div>
-      <div class="pricing-amount"><span class="pricing-currency" style="color:rgba(255,255,255,0.4)">ab €</span><span class="pricing-price">29</span></div>
-      <div class="pricing-period">pro Monat · im Pilotprogramm</div>
-      <hr class="pricing-divider" />
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Unbegrenzte Einheiten</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Für das gesamte Einrichtungsteam</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Einheitliche Qualitätsstandards</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Dokumentation & Export</div>
-      <div class="pricing-feature"><span class="pricing-check">✓</span> Direkter Support & Onboarding</div>
-      <a href="#pilot" class="pricing-cta">Pilot-Zugang anfragen</a>
-    </div>
-  </div>
-</section>
+    <footer class="footer">
+      <div class="footMuted">© bewegt & bunt • Professionelle Bewegungsplanung für Kitas</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="/login.html">Login</a>
+        <a class="btn" href="/print.html">Beispiel-Ausdruck</a>
+      </div>
+    </footer>
 
-<section class="cta-section" id="pilot">
-  <div class="section-eyebrow" style="justify-content:center">Jetzt starten</div>
-  <h2>Bewegungsbildung,<br>die <em style="font-family:'Fraunces',serif;font-style:italic;color:var(--forest)">verlässlich</em> gelingt.</h2>
-  <p>Erfahren Sie im Pilot, wie bewegt & bunt Ihr Team entlastet und Qualität in Ihrer Einrichtung sichtbar macht.</p>
-  <div class="cta-actions">
-    <a href="#" class="btn-cta-primary">Pilot-Zugang anfragen</a>
-    <a href="#" class="btn-cta-secondary">Zuerst kostenlos testen →</a>
   </div>
-  <p class="cta-note">Kein Vertrag · Persönliches Onboarding · Jederzeit kündbar</p>
-</section>
-
-<footer>
-  <div class="footer-logo">bewegt & bunt</div>
-  <ul class="footer-links">
-    <li><a href="#">Impressum</a></li>
-    <li><a href="#">Datenschutz</a></li>
-    <li><a href="#">Kontakt</a></li>
-  </ul>
-  <div class="footer-copy">© 2026 bewegt & bunt · Plattform für Kita-Fachkräfte</div>
-</footer>
-
 </body>
 </html>

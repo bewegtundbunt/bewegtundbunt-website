@@ -1,486 +1,130 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>bewegt & bunt – Bewegungsstunde (2 Seiten)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bewegt & bunt – Login</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <style>
-    /* =========================
-       PRINT SETUP (A4, 2 Seiten)
-       ========================= */
-    @page { size: A4; margin: 14mm; }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #111;
-      line-height: 1.25;
-      background: #fff;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    .page {
-      min-height: calc(297mm - 28mm);
+      background: #f4f4f4;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .page + .page { page-break-before: always; }
-
-    /* =========================
-       TYPO & LAYOUT
-       ========================= */
-    .header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px 12px;
-      border: 2.5px solid #111;
-      border-radius: 14px;
-    }
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .brand .kicker {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .brand .title {
-      font-size: 22px;
-      font-weight: 900;
-      margin: 0;
-    }
-    .meta {
-      text-align: right;
-      min-width: 220px;
-      display: grid;
-      gap: 4px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .meta span { font-weight: 600; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 10px;
-    }
-
-    .box {
-      border: 2.5px solid #111;
-      border-radius: 14px;
-      padding: 10px 12px;
-    }
-    .box h2 {
-      margin: 0 0 6px 0;
-      font-size: 14px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    .box p { margin: 0; font-size: 13.5px; }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .chip {
-      display: inline-flex;
       align-items: center;
-      gap: 6px;
-      border: 2px solid #111;
-      padding: 6px 8px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    .chip small {
-      font-size: 11.5px;
-      font-weight: 800;
-      opacity: 0.9;
-    }
-
-    .list {
-      margin: 6px 0 0 0;
-      padding-left: 16px;
-      font-size: 13.5px;
-      font-weight: 650;
-    }
-    .list li { margin: 4px 0; }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    /* =========================
-       ABLAUF (Seite 2)
-       ========================= */
-    .timeline {
-      border: 2.5px solid #111;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    .row {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 10px;
-      padding: 10px 12px;
-      border-top: 2px solid #111;
-    }
-    .row:first-child { border-top: 0; }
-    .time {
-      border: 2px solid #111;
-      border-radius: 12px;
-      padding: 8px 8px;
-      font-weight: 900;
-      text-align: center;
-      font-size: 13px;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
-      line-height: 1.05;
-    }
-    .time .min { font-size: 16px; }
-    .time .lbl { font-size: 11px; letter-spacing: 0.03em; text-transform: uppercase; }
-
-    .content h3 {
-      margin: 0 0 4px 0;
-      font-size: 15px;
-      font-weight: 900;
-    }
-    .content .sub {
-      margin: 0;
-      font-size: 13.5px;
-      font-weight: 650;
+      height: 100vh;
     }
 
-    .pillline {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .pill {
-      border: 2px solid #111;
-      border-radius: 999px;
-      padding: 5px 8px;
-      font-size: 12px;
-      font-weight: 850;
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 380px;
     }
 
-    .callouts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 22px;
     }
-    .callout {
-      border: 2.5px solid #111;
-      border-radius: 14px;
-      padding: 10px 12px;
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
     }
-    .callout h4 {
-      margin: 0 0 6px 0;
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background: black;
+      color: white;
+    }
+
+    .secondary {
+      background: #eee;
+      color: black;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: red;
       font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      margin-top: 10px;
     }
-    .callout ul {
-      margin: 0;
-      padding-left: 16px;
-      font-size: 13.5px;
-      font-weight: 650;
-    }
-    .callout li { margin: 4px 0; }
-
-    .footer {
-      margin-top: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-    }
-    .footer .box { padding: 9px 12px; }
-    .footer .box h2 { margin-bottom: 4px; }
-    .muted { opacity: 0.92; font-weight: 650; }
-
-    /* Keep layout stable in print */
-    .no-break { break-inside: avoid; page-break-inside: avoid; }
   </style>
 </head>
-
 <body>
 
-  <!-- =========================
-       SEITE 1 – ÜBERSICHT
-       ========================= -->
-  <section class="page">
+  <div class="card">
+    <h1>bewegt & bunt</h1>
 
-    <div class="header no-break">
-      <div class="brand">
-        <div class="kicker">bewegt & bunt</div>
-        <h1 class="title">Bewegungsstunde: „Bunte Kegel & flinke Tücher“</h1>
-        <div class="chips">
-          <div class="chip">Alter <small>3–6</small></div>
-          <div class="chip">Gruppe <small>10–18</small></div>
-          <div class="chip">Dauer <small>45 Min</small></div>
-          <div class="chip">Raum <small>Turnraum / Flur</small></div>
-        </div>
-      </div>
+    <input type="email" id="email" placeholder="E-Mail" />
+    <input type="password" id="password" placeholder="Passwort" />
 
-      <div class="meta">
-        <div>Datum: <span>__________</span></div>
-        <div>Kita/Gruppe: <span>__________</span></div>
-        <div>Fachkraft: <span>__________</span></div>
-        <div>Schwerpunkt: <span>Koordination + Team</span></div>
-      </div>
-    </div>
+    <button onclick="login()">Anmelden</button>
+    <button class="secondary" onclick="signup()">Registrieren</button>
 
-    <div class="grid">
-      <div class="box no-break">
-        <h2>Ziel der Stunde</h2>
-        <p>
-          Die Kinder bewegen sich vielseitig mit <b>Tüchern</b> und <b>Kegeln</b>.
-          Sie üben Reaktion, Orientierung im Raum und Zusammenarbeit – mit klaren, sofort umsetzbaren Aufgaben.
-        </p>
-        <ul class="list">
-          <li><b>Motorik:</b> Laufen, Stoppen, Drehen, Werfen/Fangen light</li>
-          <li><b>Sozial:</b> Absprechen, warten, helfen, fair bleiben</li>
-          <li><b>Selbstregulation:</b> „Stopp“-Signale, Tempo wechseln, ruhig werden</li>
-        </ul>
-      </div>
+    <div id="message" class="error"></div>
+  </div>
 
-      <div class="box no-break">
-        <h2>Material (mitnehmen)</h2>
-        <ul class="list">
-          <li>8–12 Kegel</li>
-          <li>10–18 Tücher (1 pro Kind)</li>
-          <li>Optional: Musik/Box, 2–4 Reifen, 6 Markierungsteller</li>
-        </ul>
-        <div class="chips">
-          <div class="chip">Aufbau <small>3–5 Min</small></div>
-          <div class="chip">Sicherheit <small>Kegel & Abstand</small></div>
-        </div>
-      </div>
-    </div>
+  <script>
+    const supabase = window.supabase.createClient(
+      "https://DEIN-PROJEKT.supabase.co",
+      "DEIN-ANON-KEY"
+    );
 
-    <div class="two-col">
-      <div class="box no-break">
-        <h2>Schnell-Setup (Aufbau)</h2>
-        <ul class="list">
-          <li>Kegel als „Inseln“ verteilen (Abstand: 1–2 große Schritte).</li>
-          <li>Freie Laufwege lassen (keine Stolper-Ecken).</li>
-          <li>Jedes Kind bekommt ein Tuch (oder aus einem Korb).</li>
-        </ul>
-      </div>
+    async function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
 
-      <div class="box no-break">
-        <h2>Regeln (kurz & klar)</h2>
-        <ul class="list">
-          <li>„<b>Stopp</b>“ = einfrieren wie eine Statue.</li>
-          <li>Tücher bleiben bei dir (nicht um Hals wickeln).</li>
-          <li>Kegel sind <b>Inseln</b>, nicht zum Werfen.</li>
-        </ul>
-      </div>
-    </div>
+      message.innerText = "";
 
-    <div class="box no-break">
-      <h2>Leitfragen für dich</h2>
-      <div class="callouts">
-        <div class="callout">
-          <h4>Beobachten</h4>
-          <ul>
-            <li>Wer findet schnell freie Wege?</li>
-            <li>Wer braucht klare Start/Stopps?</li>
-            <li>Wie klappt das Warten/Absprechen?</li>
-          </ul>
-        </div>
-        <div class="callout">
-          <h4>Coaching-Sätze</h4>
-          <ul>
-            <li>„Zeig mir: langsam – schnell – Stopp!“</li>
-            <li>„Such dir eine freie Insel.“</li>
-            <li>„Frag: Darf ich mit dir zusammen?“</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
 
-  </section>
+      if (error) {
+        message.innerText = error.message;
+      } else {
+        window.location.href = "/app.html";
+      }
+    }
 
-  <!-- =========================
-       SEITE 2 – DURCHFÜHRUNG (vollflächig)
-       ========================= -->
-  <section class="page">
+    async function signup() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
 
-    <div class="box no-break">
-      <h2>Durchführung (Ablauf)</h2>
-      <p class="muted">Tipp: Wenn es super läuft, verlängere einzelne Teile um 1–2 Minuten. Wenn es unruhig wird: vereinfachen + klare Stopps.</p>
-    </div>
+      message.innerText = "";
 
-    <div class="timeline no-break">
+      const { error } = await supabase.auth.signUp({
+        email,
+        password
+      });
 
-      <!-- Einstieg -->
-      <div class="row">
-        <div class="time">
-          <div class="min">5</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Einstieg: „Tuch-Weckruf“</h3>
-          <p class="sub">
-            Jedes Kind hält sein Tuch. Auf dein Zeichen: Tuch hoch – runter – links – rechts – über Kopf kreisen.
-            Dann „Stopp“ (Statue).
-          </p>
-          <div class="pillline">
-            <span class="pill">Signal: Stopp</span>
-            <span class="pill">Tempo: langsam/schnell</span>
-            <span class="pill">Raum: eigener Platz</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Warm-up -->
-      <div class="row">
-        <div class="time">
-          <div class="min">8</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Warm-up: „Inseln suchen“ (Kegel)</h3>
-          <p class="sub">
-            Kegel sind Inseln. Alle laufen frei. Bei „Insel!“ sucht jedes Kind eine freie Insel und stellt sich daneben.
-            Variation: „zu zweit“, „mit einem Fuß“, „leise wie Mäuse“.
-          </p>
-          <div class="pillline">
-            <span class="pill">Variation: allein/zu zweit</span>
-            <span class="pill">Challenge: 1 Fuß</span>
-            <span class="pill">Leise laufen</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hauptteil 1 -->
-      <div class="row">
-        <div class="time">
-          <div class="min">12</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Hauptteil 1: „Tuch-Paket“ (Team)</h3>
-          <p class="sub">
-            Je 2 Kinder halten ein Tuch an den Ecken. Aufgabe: gemeinsam zur nächsten Insel gehen, ohne dass das Tuch den Boden berührt.
-            Steigerung: Rückwärts / seitwärts / Slalom um Kegel.
-          </p>
-          <div class="pillline">
-            <span class="pill">Team: gemeinsam starten</span>
-            <span class="pill">Steigerung: Slalom</span>
-            <span class="pill">Sicherheit: Abstand</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hauptteil 2 -->
-      <div class="row">
-        <div class="time">
-          <div class="min">12</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Hauptteil 2: „Kegel-Bote“ (Koordination)</h3>
-          <p class="sub">
-            Du rufst eine Farbe/Nummer (oder zeigst einen Kegel). Die Kinder laufen hin, tippen den Kegel an und kommen zurück.
-            Variation: hüpfen / große Schritte / wie Roboter. Optional: Tuch als „Umhang“.
-          </p>
-          <div class="pillline">
-            <span class="pill">Variation: hüpfen</span>
-            <span class="pill">Orientierung: Farbe/Signal</span>
-            <span class="pill">Optional: Musik</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cooldown -->
-      <div class="row">
-        <div class="time">
-          <div class="min">5</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Cooldown: „Tuch-Wellen“</h3>
-          <p class="sub">
-            Alle setzen/knien im Kreis. Tuch liegt vor ihnen: kleine Wellen – große Wellen – ganz langsam.
-            Dann Tuch „atmet“: hoch beim Einatmen, runter beim Ausatmen.
-          </p>
-          <div class="pillline">
-            <span class="pill">Ruhig</span>
-            <span class="pill">Atmen</span>
-            <span class="pill">Kreis</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Abschluss -->
-      <div class="row">
-        <div class="time">
-          <div class="min">3</div>
-          <div class="lbl">Min</div>
-        </div>
-        <div class="content">
-          <h3>Abschluss: „Blitz-Reflexion“</h3>
-          <p class="sub">
-            Jedes Kind zeigt mit dem Tuch: <b>hoch</b> = „hat mir sehr gefallen“, <b>mittel</b> = „okay“, <b>unten</b> = „heute nicht meins“.
-            1–2 Kinder dürfen kurz sagen warum.
-          </p>
-          <div class="pillline">
-            <span class="pill">1 Satz reicht</span>
-            <span class="pill">Wertschätzend</span>
-            <span class="pill">Schnell</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="footer no-break">
-      <div class="box">
-        <h2>Optionen (wenn Zeit übrig)</h2>
-        <p class="muted">
-          „Tuch-Transport“: Ball/Schwamm auf dem Tuch zu zweit tragen.<br>
-          „Insel-Fang“: nur über Inseln darf „gerettet“ werden.
-        </p>
-      </div>
-
-      <div class="box">
-        <h2>Anpassung (wenn unruhig)</h2>
-        <p class="muted">
-          Weniger Kegel, größere Abstände, klare Stopps.<br>
-          Statt laufen: gehen. Statt Slalom: gerade Strecke.
-        </p>
-      </div>
-
-      <div class="box">
-        <h2>Notizen</h2>
-        <p class="muted">
-          Beobachtung: ___________________________<br>
-          Nächstes Mal: ___________________________
-        </p>
-      </div>
-    </div>
-
-  </section>
+      if (error) {
+        message.innerText = error.message;
+      } else {
+        message.style.color = "green";
+        message.innerText = "Registrierung erfolgreich. Bitte E-Mail bestätigen.";
+      }
+    }
+  </script>
 
 </body>
 </html>

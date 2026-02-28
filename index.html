@@ -3,760 +3,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bewegungszeit – Pilotprojekt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <title>bewegt & bunt – Generator</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <style>
-    :root {
-      --green: #2d6a4f;
-      --green-light: #52b788;
-      --green-pale: #d8f3dc;
-      --orange: #e07a2f;
-      --cream: #fdfaf5;
-      --dark: #1a2e23;
-      --grey: #6b7c72;
-      --radius: 16px;
+    :root{
+      --bg:#eef2f1;
+      --card:#ffffff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --border:#e5e7eb;
+      --forest:#2D4A3E;
+      --mint:#5AC08E;
+      --shadow: 0 14px 45px rgba(0,0,0,.08);
+      --radius: 18px;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Sora', sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      overflow-x: hidden;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: linear-gradient(180deg, #f3f6f5, var(--bg));
+      color:var(--ink);
+      padding:28px 16px 80px;
     }
+    /* Seite erst anzeigen wenn Auth gecheckt */
+    body.auth-loading { visibility: hidden; }
 
-    /* ── HERO ─────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      position: relative;
-      background: var(--dark);
-      overflow: hidden;
-      padding: 2rem;
+    .container{max-width: 980px; margin:0 auto}
+    h1{margin:0 0 8px 0; font-size:34px}
+    .sub{color:var(--muted); margin:0 0 18px 0}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 60% at 20% 40%, #2d6a4f55 0%, transparent 70%),
-        radial-gradient(ellipse 50% 70% at 80% 60%, #e07a2f22 0%, transparent 70%);
-    }
-
-    .hero-blob {
-      position: absolute;
-      width: 520px; height: 520px;
-      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
-      background: var(--green);
-      opacity: 0.12;
-      top: -100px; right: -120px;
-      animation: blobFloat 8s ease-in-out infinite;
-    }
-
-    @keyframes blobFloat {
-      0%, 100% { transform: translate(0,0) rotate(0deg); }
-      50% { transform: translate(-20px, 30px) rotate(8deg); }
-    }
-
-    .hero-content {
-      position: relative;
-      text-align: center;
-      max-width: 780px;
-    }
-
-    .pilot-badge {
-      display: inline-block;
-      background: var(--orange);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 2rem;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 7vw, 5rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-
-    .hero h1 span {
-      color: var(--green-light);
-    }
-
-    .hero p {
-      font-family: 'Lora', serif;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: #b0c8bc;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.7s 0.2s ease both;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-
-    .btn-primary {
-      background: var(--green-light);
-      color: var(--dark);
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.9rem 2.2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px #52b78840;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px #52b78860; }
-
-    .btn-ghost {
-      border: 2px solid #ffffff30;
-      color: #fff;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.9rem 2.2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--green-light); background: #ffffff10; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      color: #ffffff40;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .scroll-hint::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, #fff3, transparent);
-      animation: scrollLine 1.5s ease-in-out infinite;
-    }
-    @keyframes scrollLine {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; }
-    }
-
-    /* ── SECTION WRAPPER ──────────────────────────────── */
-    section { padding: 6rem 1.5rem; }
-    .container { max-width: 1060px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-    }
-
-    .section-intro {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      color: var(--grey);
-      line-height: 1.8;
-      max-width: 640px;
-    }
-
-    /* ── PROBLEM SECTION ──────────────────────────────── */
-    .problem {
-      background: #fff;
-    }
-
-    .problem-grid {
-      display: grid;
+    .form{
+      display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
+      gap:14px;
+      align-items:end;
     }
-
-    .problem-card {
-      background: var(--cream);
-      border-radius: var(--radius);
-      padding: 2rem;
-      border-left: 4px solid var(--orange);
+    @media (max-width: 760px){
+      .form{grid-template-columns:1fr}
     }
-
-    .problem-card h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
+    label{display:block; font-size:12px; letter-spacing:.02em; font-weight:800; margin:6px 0 6px}
+    input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      outline:none;
+      font-size:15px;
     }
+    input:focus{border-color: rgba(90,192,142,.85); box-shadow: 0 0 0 4px rgba(90,192,142,.18)}
+    .hint{font-size:12px; color:var(--muted); margin-top:4px}
 
-    .problem-card p {
-      font-size: 0.95rem;
-      color: var(--grey);
-      line-height: 1.7;
+    .btn{
+      grid-column: 1 / -1;
+      width:100%;
+      border:none;
+      padding:13px 14px;
+      border-radius:12px;
+      font-weight:900;
+      cursor:pointer;
+      background: var(--forest);
+      color:white;
+      font-size:16px;
     }
+    .btn:hover{filter:brightness(1.05)}
+    .btn:disabled{opacity:.6; cursor:not-allowed}
 
-    /* ── ÜBER MICH ────────────────────────────────────── */
-    .about {
-      background: var(--dark);
-      color: #fff;
+    .msg{
+      margin-top:14px;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#f8fafc;
+      font-size:14px;
+      display:none;
     }
+    .msg.ok{border-color:rgba(90,192,142,.55); background: rgba(90,192,142,.12); color:#064e3b}
+    .msg.err{border-color:rgba(224,122,95,.55); background: rgba(224,122,95,.10); color:#7c2d12}
 
-    .about-inner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 3.5rem;
-      align-items: start;
+    .section{margin-top:18px}
+    .box{
+      background:#fbfffe;
+      border:1px solid rgba(45,74,62,.18);
+      border-radius:16px;
+      padding:14px 14px;
+      margin-top:14px;
     }
-
-    .about-avatar {
-      width: 200px;
-      height: 200px;
-      border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
-      display: grid;
-      place-items: center;
-      font-size: 5rem;
-      flex-shrink: 0;
-      animation: blobFloat 7s ease-in-out infinite;
+    .box h3{margin:0 0 10px 0; font-size:15px; letter-spacing:.02em}
+    .grid4{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:10px;
     }
-
-    .about-text .section-title { color: #fff; }
-    .about-text .section-intro { color: #b0c8bc; }
-
-    .about-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 2.5rem;
-      flex-wrap: wrap;
+    @media (max-width: 860px){ .grid4{grid-template-columns: repeat(2, 1fr);} }
+    .mini{
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:14px;
+      padding:12px;
+      background:white;
     }
-
-    .stat {
-      display: flex;
-      flex-direction: column;
+    .mini .big{font-size:22px; font-weight:900; color: var(--forest)}
+    .mini .lab{font-size:12px; color:var(--muted)}
+    ul{margin:8px 0 0 18px}
+    .topbar{
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:14px;
+      gap:12px;
     }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--green-light);
-      line-height: 1;
+    .linkbtn{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+      cursor:pointer;
+      font-weight:800;
     }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: #b0c8bc;
-      margin-top: 0.3rem;
-      line-height: 1.4;
+    .linkbtn:hover{filter:brightness(0.98)}
+    .user-email{
+      font-size:13px;
+      color:var(--muted);
+      padding:8px 12px;
+      background:rgba(0,0,0,.04);
+      border-radius:10px;
     }
-
-    /* ── WAS IST INKLUSIVE ────────────────────────────── */
-    .pilot-includes {
-      background: var(--green-pale);
-    }
-
-    .includes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .include-card {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1.8rem;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .include-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #2d6a4f18; }
-
-    .include-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .include-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
-
-    .include-card p {
-      font-size: 0.9rem;
-      color: var(--grey);
-      line-height: 1.7;
-    }
-
-    /* ── PREISE ───────────────────────────────────────── */
-    .pricing {
-      background: #fff;
-    }
-
-    .pricing-note {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #fff8f2;
-      border: 1.5px solid var(--orange);
-      border-radius: 100px;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.85rem;
-      color: var(--orange);
-      font-weight: 600;
-      margin-bottom: 2.5rem;
-    }
-
-    .pricing-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .pricing-card {
-      border-radius: var(--radius);
-      padding: 2.2rem;
-      border: 2px solid #e8ede9;
-      position: relative;
-      transition: border-color 0.2s;
-    }
-    .pricing-card:hover { border-color: var(--green-light); }
-
-    .pricing-card.featured {
-      border-color: var(--green);
-      background: var(--dark);
-      color: #fff;
-    }
-
-    .pricing-card.featured .price-sub,
-    .pricing-card.featured .pricing-desc { color: #b0c8bc; }
-
-    .featured-tag {
-      position: absolute;
-      top: -13px; left: 50%;
-      transform: translateX(-50%);
-      background: var(--green-light);
-      color: var(--dark);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.3rem 1rem;
-      border-radius: 100px;
-    }
-
-    .plan-name {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 0.8rem;
-    }
-    .pricing-card.featured .plan-name { color: var(--green-light); }
-
-    .price-main {
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 0.2rem;
-    }
-
-    .price-sub {
-      font-size: 0.85rem;
-      color: var(--grey);
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-desc {
-      font-size: 0.9rem;
-      color: var(--grey);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      margin-bottom: 2rem;
-    }
-
-    .pricing-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.9rem;
-    }
-
-    .pricing-features li::before {
-      content: '✓';
-      color: var(--green-light);
-      font-weight: 700;
-      font-size: 0.85rem;
-      flex-shrink: 0;
-    }
-
-    .btn-plan {
-      display: block;
-      text-align: center;
-      padding: 0.85rem;
-      border-radius: 100px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      background: var(--green-light);
-      color: var(--dark);
-    }
-    .btn-plan:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #52b78840; }
-
-    .pricing-footnote {
-      text-align: center;
-      margin-top: 2.5rem;
-      font-family: 'Lora', serif;
-      font-style: italic;
-      color: var(--grey);
-      font-size: 0.9rem;
-    }
-
-    /* ── FEEDBACK / MITMACHEN ─────────────────────────── */
-    .cta-section {
-      background: var(--green);
-      color: #fff;
-      text-align: center;
-    }
-
-    .cta-section .section-title { color: #fff; }
-
-    .cta-section p {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      color: #c7e8d4;
-      line-height: 1.8;
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-    }
-
-    .cta-form {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .cta-form input {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.9rem 1.4rem;
-      border-radius: 100px;
-      border: none;
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-    }
-
-    .cta-form button {
-      background: var(--orange);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.9rem 2rem;
-      border-radius: 100px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .cta-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #e07a2f50; }
-
-    /* ── FOOTER ───────────────────────────────────────── */
-    footer {
-      background: var(--dark);
-      color: #b0c8bc;
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      font-size: 0.85rem;
-    }
-
-    footer a { color: var(--green-light); text-decoration: none; }
-
-    /* ── RESPONSIVE ───────────────────────────────────── */
-    @media (max-width: 700px) {
-      .problem-grid { grid-template-columns: 1fr; }
-      .about-inner { grid-template-columns: 1fr; }
-      .about-avatar { width: 130px; height: 130px; font-size: 3.5rem; margin: 0 auto; }
-      .about-stats { gap: 1.5rem; }
-    }
+    code.small{font-size:12px}
   </style>
 </head>
-<body>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-<section class="hero">
-  <div class="hero-blob"></div>
-  <div class="hero-content">
-    <div class="pilot-badge">🚀 Pilotprojekt · Begrenzte Plätze</div>
-    <h1>Bewegungsstunden, die <span>wirklich funktionieren</span></h1>
-    <p>
-      Eine App, die pädagogischen Fachkräften in Kitas klare Struktur und erprobte Qualität für jede Bewegungsstunde gibt –
-      entwickelt aus über 20 Jahren Praxiserfahrung.
-    </p>
-    <div class="hero-cta">
-      <a href="#mitmachen" class="btn-primary">Jetzt Pilotplatz sichern</a>
-      <a href="#ueber-mich" class="btn-ghost">Mehr erfahren</a>
-    </div>
-  </div>
-  <div class="scroll-hint">Scroll</div>
-</section>
-
-<!-- ═════════════════════ DAS PROBLEM ═════════════════════ -->
-<section class="problem">
+<body class="auth-loading">
   <div class="container">
-    <div class="section-label">Das Problem</div>
-    <h2 class="section-title">Warum Bewegungsstunden<br>oft scheitern</h2>
-    <p class="section-intro">
-      In vielen Kitas fehlt bei Bewegungsangeboten eine klare Methodik. Das Ergebnis: Chaos, Überforderung – und Kinder, die nicht wirklich profitieren.
-    </p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <h3>🌀 Fehlende Struktur</h3>
-        <p>Viele Bewegungsstunden laufen ohne klaren Aufbau – kein Warm-up, kein roter Faden, kein Abschluss. Die Kinder wissen nicht, was sie erwartet.</p>
+
+    <div class="topbar">
+      <div>
+        <h1>🏃‍♀️ Bewegungsstunde erstellen</h1>
+        <p class="sub">bewegt &amp; bunt – KI-gestützter Stundenplan-Generator</p>
       </div>
-      <div class="problem-card">
-        <h3>😰 Überforderung der Fachkräfte</h3>
-        <p>Erzieherinnen und Erzieher sind oft nicht dafür ausgebildet, motorische Förderangebote zu entwickeln und situativ anzupassen.</p>
-      </div>
-      <div class="problem-card">
-        <h3>📉 Geringe Qualität</h3>
-        <p>Ohne methodisches Wissen sinkt die pädagogische Qualität. Kinder mit Förderbedarf werden nicht ausreichend berücksichtigt.</p>
-      </div>
-      <div class="problem-card">
-        <h3>🔄 Kein Transfer</h3>
-        <p>Gute Ideen werden nicht systematisch festgehalten oder weitergegeben – jede Kraft erfindet das Rad neu.</p>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <span id="userEmail" class="user-email"></span>
+        <button id="logoutBtn" class="linkbtn">Abmelden</button>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ═════════════════════ ÜBER MICH ═════════════════════ -->
-<section class="about" id="ueber-mich">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-avatar">🧑‍⚕️</div>
-      <div class="about-text">
-        <div class="section-label">Wer steckt dahinter</div>
-        <h2 class="section-title">Erfahrung, die einen Unterschied macht</h2>
-        <p class="section-intro">
-          Als Ergotherapeut mit über 15 Jahren Berufserfahrung – darunter intensive Jahre in der Psychiatrie und Gerontopsychiatrie –
-          habe ich gelernt, wie strukturierte Gruppenangebote Menschen wirklich erreichen.
-          Seit fünf Jahren begleite ich als Individualbegleiter Kinder in verschiedenen Kitas.
-          Dabei musste ich immer wieder zuschauen, wie Bewegungsstunden scheiterten –
-          nicht aus Unwillen, sondern aus fehlendem Handwerkszeug.
-          <br><br>
-          Das möchte ich ändern. Diese App ist meine Antwort darauf.
-        </p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Jahre Erfahrung als<br>Ergotherapeut</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">5</span>
-            <span class="stat-label">Jahre Kita-Praxis als<br>Individualbegleiter</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">48</span>
-            <span class="stat-label">Jahre, voller<br>Praxiswissen</span>
-          </div>
+    <div class="card">
+      <div class="form">
+        <div>
+          <label for="templateKey">TEMPLATE-KEY</label>
+          <input id="templateKey" value="bewegung_basis" />
+          <div class="hint">Beispiel: <code class="small">bewegung_basis</code></div>
         </div>
+
+        <div>
+          <label for="minutes">ZIELDAUER (MINUTEN)</label>
+          <input id="minutes" type="number" min="10" max="120" value="30" />
+          <div class="hint">z.B. 30</div>
+        </div>
+
+        <button id="goBtn" class="btn">Stunde generieren</button>
+      </div>
+
+      <div id="msg" class="msg"></div>
+    </div>
+
+    <div id="result" class="section" style="display:none;">
+      <div class="box">
+        <h3>📋 ÜBERSICHT</h3>
+        <div class="grid4" id="overview"></div>
+      </div>
+
+      <div class="box">
+        <h3>🛠️ VORBEREITUNG</h3>
+        <ul id="prep"></ul>
+      </div>
+
+      <div class="box">
+        <h3>🎒 MATERIAL</h3>
+        <ul id="materials"></ul>
+      </div>
+
+      <div class="box">
+        <h3>⏱️ ABLAUF</h3>
+        <div id="flow"></div>
       </div>
     </div>
+
   </div>
-</section>
-
-<!-- ═════════════════════ WAS IST INKLUSIVE ═════════════════════ -->
-<section class="pilot-includes">
-  <div class="container">
-    <div class="section-label">Pilot-Zugang</div>
-    <h2 class="section-title">Was du als Pilot-Teilnehmer bekommst</h2>
-    <p class="section-intro">
-      Als Teil des Pilotprojekts testest du die App als Erste/r – und gestaltest aktiv mit, wie sie sich weiterentwickelt.
-    </p>
-    <div class="includes-grid">
-      <div class="include-card">
-        <div class="include-icon">🏗️</div>
-        <h3>Strukturierte Bewegungsstunden</h3>
-        <p>Vorgefertigte Stundenbausteine mit klarem Aufbau: Ankommen, Warm-up, Hauptteil, Abschluss – methodisch durchdacht.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">🧩</div>
-        <h3>Differenzierungsoptionen</h3>
-        <p>Jede Einheit lässt sich an Alter und Förderbedarfe anpassen – für inklusive Gruppen besonders wichtig.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">💬</div>
-        <h3>Direkter Draht zum Entwickler</h3>
-        <p>Dein Feedback fließt unmittelbar ein. Du sprichst direkt mit mir – kein Support-Ticket, keine Warteschleife.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">📋</div>
-        <h3>Dokumentationshilfe</h3>
-        <p>Die App hilft dir dabei, durchgeführte Einheiten festzuhalten – nachvollziehbar und teamfähig.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">🔄</div>
-        <h3>Regelmäßige Updates</h3>
-        <p>Die App wächst mit deinen Erfahrungen. Pilot-Teilnehmende erhalten alle Neuerungen zuerst.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">🎁</div>
-        <h3>Dauerhafter Vorzugspreis</h3>
-        <p>Wer jetzt mitmacht, sichert sich den Pilotpreis – für immer. Keine Preiserhöhung, keine Überraschungen.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════════════════ PREISE ═════════════════════ -->
-<section class="pricing" id="preise">
-  <div class="container">
-    <div class="section-label">Transparenz</div>
-    <h2 class="section-title">Pilotpreise</h2>
-    <div class="pricing-note">
-      ⏳ Nur während des Pilotprojekts – danach steigen die Preise
-    </div>
-    <p class="section-intro" style="margin-bottom: 0;">
-      Die Preise sind bewusst niedrig gehalten. Du unterstützt die Entwicklung und wir lernen gemeinsam.
-      Nach dem Pilot gelten höhere Standardpreise – dein Zugang bleibt zum Pilottarif.
-    </p>
-    <div class="pricing-cards">
-
-      <div class="pricing-card">
-        <div class="plan-name">Einzellizenz</div>
-        <div class="price-main">0 €</div>
-        <div class="price-sub">während des Pilotprojekts · kostenlos</div>
-        <p class="pricing-desc">Ideal zum Kennenlernen. Du testest die App vollumfänglich und gibst uns Feedback.</p>
-        <ul class="pricing-features">
-          <li>Vollständiger App-Zugang</li>
-          <li>Alle Stundenbausteine</li>
-          <li>Feedback-Kanal</li>
-          <li>Pilot-Community</li>
-        </ul>
-        <a href="#mitmachen" class="btn-plan">Jetzt bewerben</a>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="featured-tag">⭐ Empfohlen</div>
-        <div class="plan-name">Kita-Lizenz</div>
-        <div class="price-main">TBD</div>
-        <div class="price-sub">Preis folgt nach Pilotauswertung</div>
-        <p class="pricing-desc">Für ganze Teams: Alle Fachkräfte einer Einrichtung arbeiten gemeinsam mit der App.</p>
-        <ul class="pricing-features">
-          <li>Unbegrenzte Nutzer pro Kita</li>
-          <li>Team-Dokumentation</li>
-          <li>Onboarding-Gespräch inklusive</li>
-          <li>Priorisiertes Feedback</li>
-          <li>Dauerhafter Pilotpreis gesichert</li>
-        </ul>
-        <a href="#mitmachen" class="btn-plan">Interesse anmelden</a>
-      </div>
-
-    </div>
-    <p class="pricing-footnote">
-      Keine Kreditkarte nötig · Keine versteckten Kosten · Pilot endet mit einer gemeinsamen Auswertung
-    </p>
-  </div>
-</section>
-
-<!-- ═════════════════════ MITMACHEN ═════════════════════ -->
-<section class="cta-section" id="mitmachen">
-  <div class="container">
-    <div class="section-label" style="color:#c7e8d4">Jetzt dabei sein</div>
-    <h2 class="section-title">Pilotplatz sichern</h2>
-    <p>
-      Trag dich ein und ich melde mich persönlich bei dir.
-      Die Plätze im Pilotprojekt sind begrenzt – ich möchte jeden Teilnehmenden gut begleiten können.
-    </p>
-    <form class="cta-form" onsubmit="handleSubmit(event)">
-      <input type="email" placeholder="Deine E-Mail-Adresse" required />
-      <button type="submit">Anmelden →</button>
-    </form>
-    <p style="margin-top:1.5rem; font-size:0.8rem; color:#a0c8b0; font-family:'Lora',serif; font-style:italic;">
-      Kein Spam. Deine Daten bleiben bei mir. Versprochen.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<footer>
-  <p>© 2025 Bewegungszeit · Pilotprojekt · <a href="mailto:deine@email.de">Kontakt</a> · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
-  <p style="margin-top:0.5rem; font-size:0.75rem;">Entwickelt aus Leidenschaft für Kinder in Bewegung 🌿</p>
-</footer>
 
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = '✓ Du bist dabei!';
-    btn.style.background = '#2d6a4f';
-    btn.disabled = true;
-    e.target.querySelector('input').value = '';
-  }
+  const SUPABASE_URL = "https://jhgoqrinhdtowuhzirnf.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_uu0Xh8f_71Dk1qAQ_UirpQ_u-P4eSBG";
 
-  // Subtle scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(el => {
-      if (el.isIntersecting) {
-        el.target.style.opacity = '1';
-        el.target.style.transform = 'translateY(0)';
+  const { createClient } = supabase;
+  const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const msgBox = document.getElementById("msg");
+  const resWrap = document.getElementById("result");
+
+  // ─── Auth Guard ────────────────────────────────────────────────
+  // Seite ist unsichtbar bis Auth gecheckt (verhindert Flash of content)
+  (async () => {
+    const { data: { session } } = await sb.auth.getSession();
+
+    if (!session) {
+      // Kein Login → sofort weg
+      window.location.replace("login.html");
+      return;
+    }
+
+    // Eingeloggt → E-Mail anzeigen, Seite sichtbar machen
+    document.getElementById("userEmail").textContent = session.user.email;
+    document.body.classList.remove("auth-loading");
+
+    // Session-Änderungen überwachen (z.B. Logout in anderem Tab)
+    sb.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT' || !session) {
+        window.location.replace("login.html");
       }
     });
-  }, { threshold: 0.1 });
+  })();
 
-  document.querySelectorAll('.include-card, .problem-card, .pricing-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
+  // ─── Helpers ───────────────────────────────────────────────────
+  function showMsg(text, type){
+    msgBox.textContent = text;
+    msgBox.className = "msg " + (type || "");
+    msgBox.style.display = "block";
+  }
+
+  function clearMsg(){
+    msgBox.style.display = "none";
+    msgBox.textContent = "";
+  }
+
+  function li(text){
+    const el = document.createElement("li");
+    el.textContent = text;
+    return el;
+  }
+
+  function renderResult(payload){
+    const data = payload?.data ?? payload ?? {};
+
+    // Felder laut generate_session_print_v2 Struktur
+    const age      = data?.meta?.age_group ?? "–";
+    const duration = data?.meta?.total_duration_min ?? "–";
+    const room     = data?.meta?.space ?? "–";
+    const intensity = data?.meta?.avg_intensity_level
+      ? Number(data.meta.avg_intensity_level).toFixed(1)
+      : "–";
+
+    const overview = document.getElementById("overview");
+    overview.innerHTML = "";
+
+    const cards = [
+      { big: age, lab: "Altersgruppe" },
+      { big: duration + " min", lab: "Gesamtdauer" },
+      { big: room, lab: "Raum" },
+      { big: intensity, lab: "Ø Intensität" },
+    ];
+
+    cards.forEach(c => {
+      const div = document.createElement("div");
+      div.className = "mini";
+      div.innerHTML = `<div class="big">${c.big}</div><div class="lab">${c.lab}</div>`;
+      overview.appendChild(div);
+    });
+
+    // Vorbereitung (setup_steps)
+    const prep = document.getElementById("prep");
+    prep.innerHTML = "";
+    (data?.setup_steps ?? []).forEach(x => prep.appendChild(li(x)));
+
+    // Material
+    const mats = document.getElementById("materials");
+    mats.innerHTML = "";
+    (data?.materials ?? []).forEach(x => mats.appendChild(li(
+      typeof x === "string" ? x : JSON.stringify(x)
+    )));
+
+    // Ablauf (timeline)
+    const flow = document.getElementById("flow");
+    flow.innerHTML = "";
+
+    (data?.timeline ?? []).forEach(s => {
+      const wrap = document.createElement("div");
+      wrap.className = "mini";
+      wrap.style.marginBottom = "10px";
+
+      const title = s.title ?? s.slot_type ?? "Sequenz";
+      const timeStr = s.t_start_min !== undefined
+        ? `${s.t_start_min}–${s.t_end_min} min`
+        : (s.duration_min ? s.duration_min + " min" : "");
+      const desc = s.content ?? "";
+
+      wrap.innerHTML = `
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;">
+          <div style="font-weight:900">${title}</div>
+          <div style="color:var(--muted);font-weight:800">${timeStr}</div>
+        </div>
+        <div style="margin-top:6px;color:#334155;line-height:1.45">${desc}</div>
+      `;
+      flow.appendChild(wrap);
+    });
+
+    resWrap.style.display = "block";
+  }
+
+  // ─── Generator ─────────────────────────────────────────────────
+  document.getElementById("goBtn").addEventListener("click", async () => {
+    clearMsg();
+
+    // Nochmal Session prüfen bevor API-Call
+    const { data: { session } } = await sb.auth.getSession();
+    if (!session) {
+      window.location.replace("login.html");
+      return;
+    }
+
+    const template_key = document.getElementById("templateKey").value.trim();
+    const target_minutes = Number(document.getElementById("minutes").value || 30);
+
+    if (!template_key) {
+      showMsg("Bitte einen TEMPLATE-KEY eingeben.", "err");
+      return;
+    }
+
+    document.getElementById("goBtn").disabled = true;
+    showMsg("Generiere Stunde…", "");
+
+    try {
+      const { data, error } = await sb.rpc("generate_session_print_v2", {
+        p_template_key: template_key,
+        p_target_minutes: target_minutes
+      });
+
+      if (error) {
+        showMsg("Fehler: " + error.message, "err");
+        return;
+      }
+
+      // ── Nutzung loggen ────────────────────────────────────────
+      await sb.from("usage_log").insert({
+        user_id: session.user.id,
+        user_email: session.user.email,
+        template_key,
+        target_minutes
+      });
+
+      showMsg("✅ Stunde erfolgreich generiert!", "ok");
+      renderResult(data);
+
+    } catch(e) {
+      showMsg("Unerwarteter Fehler: " + (e?.message || e), "err");
+    } finally {
+      document.getElementById("goBtn").disabled = false;
+    }
+  });
+
+  // ─── Logout ────────────────────────────────────────────────────
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await sb.auth.signOut();
+    window.location.replace("login.html");
   });
 </script>
+
 </body>
 </html>

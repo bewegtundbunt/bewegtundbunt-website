@@ -13,22 +13,14 @@
     background: #f0f4f3;
     min-height: 100vh;
   }
-  h1 {
-    margin-bottom: 8px;
-    color: #1a1a1a;
-    font-size: 24px;
-  }
-  .subtitle {
-    color: #666;
-    margin-bottom: 30px;
-    font-size: 14px;
-  }
+  h1 { margin-bottom: 8px; color: #1a1a1a; font-size: 24px; }
+  .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
   .card {
     background: white;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    max-width: 650px;
+    max-width: 700px;
   }
   label {
     display: block;
@@ -38,6 +30,13 @@
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.4px;
+  }
+  .hint {
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 2px;
   }
   input, select {
     width: 100%;
@@ -68,30 +67,20 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    transition: background 0.2s, opacity 0.2s;
+    transition: background 0.2s;
   }
-  button:hover:not(:disabled) {
-    background: #165a4c;
-  }
-  button:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
+  button:hover:not(:disabled) { background: #165a4c; }
+  button:disabled { opacity: 0.7; cursor: not-allowed; }
   .spinner {
-    width: 16px;
-    height: 16px;
+    width: 16px; height: 16px;
     border: 2px solid rgba(255,255,255,0.4);
     border-top-color: white;
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
     display: none;
   }
-  button.loading .spinner {
-    display: block;
-  }
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+  button.loading .spinner { display: block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
   #status {
     margin-top: 20px;
     padding: 12px 16px;
@@ -111,27 +100,69 @@
     border: 1px solid #86efac;
     color: #166534;
   }
-  #result {
-    margin-top: 24px;
-    display: none;
-  }
-  #result h2 {
-    font-size: 16px;
-    color: #1f6f5f;
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0eeeb;
-  }
-  #result-content {
-    white-space: pre-wrap;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #333;
+  #result { margin-top: 28px; display: none; }
+  .result-section {
+    margin-bottom: 20px;
     background: #f8fffe;
-    padding: 16px;
-    border-radius: 10px;
     border: 1px solid #d0ebe6;
+    border-radius: 12px;
+    padding: 16px 20px;
   }
+  .result-section h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1f6f5f;
+    margin: 0 0 10px 0;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .meta-item {
+    background: white;
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e0eeeb;
+  }
+  .meta-item .val { font-size: 18px; font-weight: 700; color: #1f6f5f; }
+  .meta-item .key { font-size: 11px; color: #888; margin-top: 2px; }
+  .timeline-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8f4f1;
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .t-time { font-size: 12px; color: #888; min-width: 75px; padding-top: 2px; }
+  .t-body { flex: 1; }
+  .t-title { font-weight: 600; font-size: 14px; color: #1a1a1a; }
+  .t-type {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    background: #e0eeeb;
+    color: #1f6f5f;
+    margin-top: 3px;
+  }
+  .t-content { font-size: 13px; color: #555; margin-top: 4px; line-height: 1.5; }
+  .intensity { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .intensity-bar { display: flex; gap: 3px; }
+  .intensity-dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd; }
+  .intensity-dot.on { background: #1f6f5f; }
+  .list-items { list-style: none; padding: 0; margin: 0; }
+  .list-items li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eef7f5;
+    display: flex;
+    gap: 8px;
+  }
+  .list-items li:last-child { border-bottom: none; }
+  .list-items li::before { content: "→"; color: #1f6f5f; flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -140,21 +171,14 @@
 <p class="subtitle">bewegt & bunt – KI-gestützter Stundenplan-Generator</p>
 
 <div class="card">
-  <label>Altersgruppe</label>
-  <select id="age">
-    <option>3–4 Jahre</option>
-    <option selected>4–5 Jahre</option>
-    <option>5–6 Jahre</option>
-  </select>
+  <label>
+    Template-Key
+    <span class="hint">Schlüssel der Vorlage – schau in deiner Supabase-Tabelle nach</span>
+  </label>
+  <input type="text" id="templateKey" value="bewegung_basis" placeholder="z.B. bewegung_basis">
 
-  <label>Gruppengröße</label>
-  <input type="number" id="groupSize" value="12" min="1" max="40">
-
-  <label>Dauer (Minuten)</label>
-  <input type="number" id="duration" value="30" min="10" max="120">
-
-  <label>Material (kommagetrennt)</label>
-  <input type="text" id="material" value="Bälle, Matten" placeholder="z.B. Bälle, Matten, Reifen">
+  <label>Zieldauer (Minuten)</label>
+  <input type="number" id="targetMinutes" value="30" min="10" max="120">
 
   <button id="generateBtn" onclick="generate()">
     <div class="spinner"></div>
@@ -162,16 +186,12 @@
   </button>
 
   <div id="status"></div>
-
-  <div id="result">
-    <h2>Deine Bewegungsstunde</h2>
-    <div id="result-content"></div>
-  </div>
+  <div id="result"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-  const SUPABASE_URL     = "https://jhgoqrinhdtowuhzirnf.supabase.co";
+  const SUPABASE_URL      = "https://jhgoqrinhdtowuhzirnf.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_uu0Xh8f_71Dk1qAQ_UirpQ_u-P4eSBG";
 
   let supabaseClient;
@@ -196,9 +216,73 @@
     txt.textContent = loading ? "Generiere..." : "Stunde generieren";
   }
 
+  function dot(on) {
+    return `<div class="intensity-dot ${on ? 'on' : ''}"></div>`;
+  }
+
+  function renderResult(data) {
+    const el = document.getElementById("result");
+    const meta = data.meta || {};
+
+    const metaHtml = `
+      <div class="result-section">
+        <h3>📋 Übersicht</h3>
+        <div class="meta-grid">
+          <div class="meta-item"><div class="val">${meta.age_group || '–'}</div><div class="key">Altersgruppe</div></div>
+          <div class="meta-item"><div class="val">${meta.total_duration_min || '–'} min</div><div class="key">Gesamtdauer</div></div>
+          <div class="meta-item"><div class="val">${meta.space || '–'}</div><div class="key">Raum</div></div>
+          <div class="meta-item"><div class="val">${meta.avg_intensity_level ? Number(meta.avg_intensity_level).toFixed(1) : '–'}</div><div class="key">Ø Intensität</div></div>
+        </div>
+      </div>`;
+
+    const setup = data.setup_steps || [];
+    const setupHtml = setup.length ? `
+      <div class="result-section">
+        <h3>🔧 Vorbereitung</h3>
+        <ul class="list-items">${setup.map(s => `<li>${s}</li>`).join('')}</ul>
+      </div>` : '';
+
+    const mats = data.materials || [];
+    const matHtml = mats.length ? `
+      <div class="result-section">
+        <h3>🎒 Material</h3>
+        <ul class="list-items">${mats.map(m => `<li>${m}</li>`).join('')}</ul>
+      </div>` : '';
+
+    const slots = data.timeline || [];
+    const timelineHtml = slots.length ? `
+      <div class="result-section">
+        <h3>⏱ Ablauf</h3>
+        ${slots.map(slot => {
+          const intensity = slot.intensity_level || 0;
+          const dots = [1,2,3,4,5].map(i => dot(i <= intensity)).join('');
+          return `
+            <div class="timeline-item">
+              <div class="t-time">${slot.t_start_min}'–${slot.t_end_min}'<br><small>${slot.duration_min} min</small></div>
+              <div class="t-body">
+                <div class="t-title">${slot.title || ''}</div>
+                <span class="t-type">${slot.slot_type || ''}</span>
+                ${intensity ? `<div class="intensity"><span style="font-size:11px;color:#888">Intensität</span><div class="intensity-bar">${dots}</div></div>` : ''}
+                ${slot.content ? `<div class="t-content">${slot.content}</div>` : ''}
+              </div>
+            </div>`;
+        }).join('')}
+      </div>` : '';
+
+    const tips = data.tips || [];
+    const tipsHtml = tips.length ? `
+      <div class="result-section">
+        <h3>💡 Tipps</h3>
+        <ul class="list-items">${tips.map(t => `<li>${t}</li>`).join('')}</ul>
+      </div>` : '';
+
+    el.innerHTML = metaHtml + setupHtml + matHtml + timelineHtml + tipsHtml;
+    el.style.display = "block";
+  }
+
   async function generate() {
     if (!supabaseClient) {
-      showStatus("❌ Supabase konnte nicht geladen werden. Bitte Seite neu laden.", "error");
+      showStatus("❌ Supabase konnte nicht geladen werden.", "error");
       return;
     }
 
@@ -206,23 +290,19 @@
     document.getElementById("status").textContent = "";
     document.getElementById("result").style.display = "none";
 
-    const age       = document.getElementById("age").value;
-    const groupSize = parseInt(document.getElementById("groupSize").value);
-    const duration  = parseInt(document.getElementById("duration").value);
-    const material  = document.getElementById("material").value;
+    const templateKey   = document.getElementById("templateKey").value.trim();
+    const targetMinutes = parseInt(document.getElementById("targetMinutes").value);
 
-    if (!groupSize || groupSize < 1) { showStatus("⚠️ Bitte eine gültige Gruppengröße eingeben.", "error"); return; }
-    if (!duration  || duration  < 5) { showStatus("⚠️ Bitte eine gültige Dauer eingeben.", "error"); return; }
+    if (!templateKey) { showStatus("⚠️ Bitte einen Template-Key eingeben.", "error"); return; }
+    if (!targetMinutes || targetMinutes < 5) { showStatus("⚠️ Bitte eine gültige Dauer eingeben.", "error"); return; }
 
     setLoading(true);
-    console.log("🚀 RPC wird aufgerufen...", { age, groupSize, duration, material });
+    console.log("🚀 RPC generate_session_print_v2:", { templateKey, targetMinutes });
 
     try {
       const { data, error } = await supabaseClient.rpc("generate_session_print_v2", {
-        p_age:        age,
-        p_group_size: groupSize,
-        p_duration:   duration,
-        p_material:   material
+        p_template_key:   templateKey,
+        p_target_minutes: targetMinutes
       });
 
       if (error) {
@@ -232,9 +312,7 @@
       }
 
       console.log("✅ Ergebnis:", data);
-      const content = typeof data === "string" ? data : JSON.stringify(data, null, 2);
-      document.getElementById("result-content").textContent = content;
-      document.getElementById("result").style.display = "block";
+      renderResult(data);
       showStatus("✅ Stunde erfolgreich generiert!", "success");
 
     } catch (err) {

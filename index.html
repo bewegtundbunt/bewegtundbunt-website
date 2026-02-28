@@ -9,554 +9,415 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --schwarz: #0d0d0d;
-    --weiss: #fafaf8;
     --gruen: #1a5c4e;
-    --gruen-dunkel: #123d34;
+    --gruen-hell: #2a7a67;
+    --gruen-blass: #e8f2ef;
+    --gruen-mittel: #d0e8e2;
     --gold: #c9a84c;
-    --gold-hell: #f0e4c0;
+    --gold-hell: #f5edd8;
+    --text: #1a1a1a;
     --grau: #6b6b6b;
-    --grau-hell: #f0eeea;
+    --grau-hell: #f4f2ee;
     --linie: rgba(0,0,0,0.08);
+    --weiss: #fafaf8;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Outfit', sans-serif;
     background: var(--weiss);
-    color: var(--schwarz);
+    color: var(--text);
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 22px 56px;
-    background: rgba(250,250,248,0.94);
+    padding: 20px 56px;
+    background: rgba(250,250,248,0.95);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--linie);
   }
   .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 600;
-    color: var(--gruen); letter-spacing: 0.2px;
+    font-size: 20px; font-weight: 600; color: var(--gruen);
   }
   .logo em { font-style: italic; color: var(--gold); }
   .nav-right { display: flex; align-items: center; gap: 32px; }
   .nav-link {
-    font-size: 13px; font-weight: 400; color: var(--grau);
-    text-decoration: none; letter-spacing: 0.3px;
-    transition: color 0.2s;
+    font-size: 13px; color: var(--grau);
+    text-decoration: none; transition: color 0.2s;
   }
-  .nav-link:hover { color: var(--schwarz); }
+  .nav-link:hover { color: var(--text); }
   .nav-btn {
-    background: var(--schwarz); color: var(--weiss);
+    background: var(--gruen); color: white;
     text-decoration: none; padding: 10px 24px;
-    border-radius: 4px; font-size: 13px; font-weight: 500;
-    letter-spacing: 0.3px; transition: background 0.2s;
+    border-radius: 6px; font-size: 13px; font-weight: 500;
+    transition: background 0.2s;
   }
-  .nav-btn:hover { background: var(--gruen); }
+  .nav-btn:hover { background: var(--gruen-hell); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 0 56px;
-    padding-top: 80px;
-    gap: 80px;
+    align-items: center; gap: 80px;
+    padding: 140px 56px 100px;
     max-width: 1300px; margin: 0 auto;
   }
-  .hero-left { padding: 40px 0; }
 
   .tag {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; align-items: center; gap: 10px;
     font-size: 11px; font-weight: 500; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 32px;
-  }
-  .tag-line { width: 28px; height: 1px; background: var(--gold); }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 5vw, 72px);
-    font-weight: 600; line-height: 1.08;
-    letter-spacing: -1.5px;
-    color: var(--schwarz);
+    text-transform: uppercase; color: var(--gruen);
     margin-bottom: 28px;
   }
-  .hero h1 em {
-    font-style: italic; color: var(--gruen);
+  .tag-line { width: 24px; height: 1px; background: var(--gold); }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 5vw, 68px);
+    font-weight: 600; line-height: 1.1;
+    letter-spacing: -1.5px; margin-bottom: 24px;
   }
+  h1 em { font-style: italic; color: var(--gruen); }
 
   .hero-desc {
-    font-size: 17px; font-weight: 300;
-    color: var(--grau); line-height: 1.75;
-    max-width: 440px; margin-bottom: 48px;
+    font-size: 17px; font-weight: 300; color: var(--grau);
+    line-height: 1.75; max-width: 440px; margin-bottom: 44px;
   }
 
-  .hero-cta {
-    display: flex; flex-direction: column; gap: 14px;
-  }
+  .cta-wrap { display: flex; flex-direction: column; gap: 12px; }
   .cta-main {
     display: inline-flex; align-items: center; gap: 10px;
-    background: var(--gruen); color: var(--weiss);
-    text-decoration: none; padding: 17px 32px;
-    border-radius: 4px; font-size: 15px; font-weight: 500;
-    transition: all 0.25s; width: fit-content;
+    background: var(--gruen); color: white;
+    text-decoration: none; padding: 16px 32px;
+    border-radius: 6px; font-size: 15px; font-weight: 500;
+    width: fit-content; transition: all 0.2s;
   }
   .cta-main:hover {
-    background: var(--gruen-dunkel);
+    background: var(--gruen-hell);
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(26,92,78,0.25);
+    box-shadow: 0 10px 28px rgba(26,92,78,0.2);
   }
-  .cta-main .arrow { transition: transform 0.2s; }
-  .cta-main:hover .arrow { transform: translateX(4px); }
+  .cta-note { font-size: 12px; color: var(--grau); }
+  .cta-note strong { color: var(--text); font-weight: 500; }
 
-  .cta-note {
-    font-size: 12px; color: var(--grau);
-    letter-spacing: 0.2px;
-  }
-  .cta-note strong { color: var(--schwarz); font-weight: 500; }
-
-  /* Hero rechts – Produkt-Preview */
-  .hero-right { position: relative; }
-
+  /* Preview Card */
   .preview-card {
-    background: var(--weiss);
+    background: white;
+    border-radius: 16px;
     border: 1px solid var(--linie);
-    border-radius: 12px;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.10);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.07);
     overflow: hidden;
+    position: relative;
   }
   .preview-header {
     background: var(--gruen);
     padding: 20px 24px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .preview-header-left h3 {
+  .preview-header h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; font-weight: 600;
-    color: var(--weiss); margin-bottom: 2px;
-  }
-  .preview-header-left p {
-    font-size: 12px; color: rgba(255,255,255,0.6);
-  }
-  .preview-badge {
-    background: var(--gold);
-    color: var(--schwarz);
-    font-size: 11px; font-weight: 600;
-    padding: 5px 12px; border-radius: 20px;
-    letter-spacing: 0.5px;
-  }
-
-  .preview-body { padding: 24px; }
-
-  .preview-meta {
-    display: flex; gap: 16px; margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  .meta-chip {
-    font-size: 11px; font-weight: 500;
-    color: var(--gruen); background: #e8f2ef;
-    padding: 4px 10px; border-radius: 20px;
-  }
-
-  .preview-timeline { display: flex; flex-direction: column; }
-
-  .tl-row {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 0;
-    position: relative;
-  }
-
-  .tl-time {
-    font-size: 11px; color: var(--grau);
-    padding: 14px 0 14px 0;
-    border-right: 1px solid var(--linie);
-    text-align: right; padding-right: 14px;
-    line-height: 1.3;
-  }
-
-  .tl-content {
-    padding: 12px 0 12px 16px;
-    border-bottom: 1px solid var(--linie);
-  }
-  .tl-row:last-child .tl-content { border-bottom: none; }
-
-  .tl-phase {
-    font-size: 10px; font-weight: 500;
-    letter-spacing: 1.2px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 2px;
-  }
-  .tl-title {
-    font-size: 14px; font-weight: 500; color: var(--schwarz);
+    font-size: 17px; font-weight: 600; color: white;
     margin-bottom: 2px;
   }
+  .preview-header p { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .preview-badge {
+    background: var(--gold); color: white;
+    font-size: 11px; font-weight: 600;
+    padding: 5px 12px; border-radius: 20px;
+  }
+  .preview-body { padding: 20px 24px; }
+  .preview-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .chip {
+    font-size: 11px; font-weight: 500; color: var(--gruen);
+    background: var(--gruen-blass); padding: 4px 10px; border-radius: 20px;
+  }
+  .tl-row {
+    display: grid; grid-template-columns: 48px 1fr;
+    border-top: 1px solid var(--linie);
+  }
+  .tl-time {
+    font-size: 11px; color: var(--grau);
+    padding: 12px 12px 12px 0;
+    border-right: 1px solid var(--linie);
+    text-align: right; line-height: 1.4;
+  }
+  .tl-body { padding: 12px 0 12px 14px; }
+  .tl-phase {
+    font-size: 10px; font-weight: 500; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 2px;
+  }
+  .tl-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
   .tl-desc { font-size: 12px; color: var(--grau); line-height: 1.4; }
-
   .preview-footer {
-    padding: 16px 24px;
-    background: var(--grau-hell);
-    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    background: var(--gruen-blass);
+    display: flex; justify-content: space-between; align-items: center;
   }
   .preview-footer span { font-size: 12px; color: var(--grau); }
-  .preview-footer strong { font-size: 12px; color: var(--gruen); font-weight: 600; }
+  .preview-footer strong { font-size: 12px; color: var(--gruen); }
 
-  /* Floating stat */
-  .stat-float {
-    position: absolute;
-    bottom: -20px; left: -28px;
-    background: var(--schwarz);
-    color: var(--weiss);
-    padding: 16px 20px;
-    border-radius: 10px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
-  }
-  .stat-float .num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px; font-weight: 600;
-    line-height: 1; color: var(--gold);
-  }
-  .stat-float .label {
-    font-size: 11px; color: rgba(255,255,255,0.5);
-    margin-top: 4px; letter-spacing: 0.3px;
-  }
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--linie); max-width: 1200px; margin: 0 auto; }
 
-  /* ── TRENNLINIE ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--linie);
-    max-width: 1200px; margin: 0 auto;
-  }
-
-  /* ── PROBLEM ── */
-  .problem-section {
+  /* PROBLEM */
+  .problem {
     padding: 120px 56px;
     max-width: 1300px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 100px; align-items: center;
   }
-
-  .problem-left h2 {
+  .problem h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 3.5vw, 52px);
+    font-size: clamp(32px, 3.5vw, 48px);
     font-weight: 600; line-height: 1.15;
     letter-spacing: -1px; margin-bottom: 20px;
   }
-  .problem-left p {
+  .problem-desc {
     font-size: 16px; color: var(--grau);
     font-weight: 300; line-height: 1.75;
   }
 
-  .problem-right { display: flex; flex-direction: column; gap: 0; }
-
+  .prob-list { display: flex; flex-direction: column; }
   .prob-item {
-    display: flex; gap: 20px;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--linie);
-    align-items: flex-start;
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 24px 0; border-bottom: 1px solid var(--linie);
   }
-  .prob-item:first-child { padding-top: 0; }
   .prob-item:last-child { border-bottom: none; padding-bottom: 0; }
-
   .prob-nr {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 36px; font-weight: 400;
-    color: var(--gold-hell); line-height: 1;
-    min-width: 40px;
+    font-size: 40px; font-weight: 400;
+    color: var(--gruen-mittel); line-height: 1; min-width: 44px;
   }
-  .prob-text h3 {
-    font-size: 15px; font-weight: 600;
-    margin-bottom: 6px; color: var(--schwarz);
-  }
-  .prob-text p {
-    font-size: 14px; color: var(--grau);
-    line-height: 1.65;
-  }
+  .prob-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 5px; }
+  .prob-item p { font-size: 14px; color: var(--grau); line-height: 1.65; }
 
-  /* ── LÖSUNG ── */
-  .loesung-section {
-    background: var(--schwarz);
-    padding: 120px 56px;
-  }
-  .loesung-inner {
-    max-width: 1300px; margin: 0 auto;
-  }
-  .loesung-top {
-    display: flex; justify-content: space-between;
-    align-items: flex-end; margin-bottom: 72px;
-    gap: 40px;
-  }
-  .loesung-top h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 3.5vw, 52px);
-    font-weight: 600; line-height: 1.15;
-    letter-spacing: -1px; color: var(--weiss);
-    max-width: 500px;
-  }
-  .loesung-top p {
-    font-size: 15px; color: rgba(255,255,255,0.45);
-    max-width: 340px; line-height: 1.7;
-    font-weight: 300; text-align: right;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .feat {
-    padding: 36px 32px;
-    background: var(--schwarz);
-    transition: background 0.2s;
-  }
-  .feat:hover { background: #161616; }
-
-  .feat-icon {
-    font-size: 24px; margin-bottom: 20px;
-    display: block;
-  }
-  .feat h3 {
-    font-size: 16px; font-weight: 600;
-    color: var(--weiss); margin-bottom: 10px;
-  }
-  .feat p {
-    font-size: 13px; color: rgba(255,255,255,0.45);
-    line-height: 1.7; font-weight: 300;
-  }
-
-  /* ── PREIS ── */
-  .preis-section {
-    padding: 120px 56px;
-    max-width: 1300px; margin: 0 auto;
-  }
-
-  .preis-header { text-align: center; margin-bottom: 72px; }
-  .preis-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 3.5vw, 52px);
-    font-weight: 600; line-height: 1.15;
-    letter-spacing: -1px; margin-bottom: 16px;
-  }
-  .preis-header p {
-    font-size: 16px; color: var(--grau);
-    font-weight: 300; max-width: 480px;
-    margin: 0 auto; line-height: 1.7;
-  }
-
-  .preis-karte-wrap {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 24px; max-width: 900px; margin: 0 auto;
-  }
-
-  .preis-karte {
-    border-radius: 8px; overflow: hidden;
-    border: 1px solid var(--linie);
-  }
-  .preis-karte.haupt {
-    border-color: var(--gruen);
-    box-shadow: 0 20px 60px rgba(26,92,78,0.12);
-  }
-
-  .pk-top {
-    padding: 36px 36px 28px;
-    border-bottom: 1px solid var(--linie);
-  }
-  .preis-karte.haupt .pk-top {
-    background: var(--gruen); border-bottom: none;
-    color: var(--weiss);
-  }
-
-  .pk-label {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--grau); margin-bottom: 20px;
-  }
-  .preis-karte.haupt .pk-label { color: rgba(255,255,255,0.6); }
-
-  .pk-preis {
-    display: flex; align-items: baseline; gap: 4px;
-    margin-bottom: 8px;
-  }
-  .pk-preis .zahl {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 56px; font-weight: 600; line-height: 1;
-  }
-  .pk-preis .waehrung { font-size: 24px; font-weight: 300; color: var(--grau); }
-  .preis-karte.haupt .pk-preis .waehrung { color: rgba(255,255,255,0.6); }
-  .pk-preis .periode { font-size: 14px; color: var(--grau); }
-  .preis-karte.haupt .pk-preis .periode { color: rgba(255,255,255,0.6); }
-
-  .pk-desc { font-size: 13px; color: var(--grau); }
-  .preis-karte.haupt .pk-desc { color: rgba(255,255,255,0.65); }
-
-  .pk-body { padding: 28px 36px 36px; }
-  .pk-liste { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-bottom: 32px; }
-  .pk-liste li {
-    display: flex; gap: 12px;
-    font-size: 14px; color: var(--schwarz);
-    align-items: flex-start; line-height: 1.5;
-  }
-  .pk-liste li .check { color: var(--gruen); font-weight: 600; flex-shrink: 0; }
-
-  .pk-btn {
-    display: block; text-align: center;
-    text-decoration: none;
-    padding: 14px 24px; border-radius: 4px;
-    font-size: 14px; font-weight: 500;
-    transition: all 0.2s;
-  }
-  .pk-btn.haupt-btn {
-    background: var(--schwarz); color: var(--weiss);
-  }
-  .pk-btn.haupt-btn:hover { background: var(--gruen-dunkel); }
-  .pk-btn.neben-btn {
-    background: transparent; color: var(--schwarz);
-    border: 1px solid var(--linie);
-  }
-  .pk-btn.neben-btn:hover { border-color: var(--schwarz); }
-
-  .preis-hinweis {
-    text-align: center; margin-top: 32px;
-    font-size: 13px; color: var(--grau);
-  }
-
-  /* ── EINFÜHRUNG ── */
-  .einfuehrung {
+  /* LÖSUNG */
+  .loesung {
     background: var(--grau-hell);
     padding: 120px 56px;
   }
-  .einfuehrung-inner {
-    max-width: 1300px; margin: 0 auto;
-  }
-  .einfuehrung-inner h2 {
+  .loesung-inner { max-width: 1300px; margin: 0 auto; }
+  .loesung-head { margin-bottom: 64px; }
+  .loesung-head h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3vw, 44px);
-    font-weight: 600; line-height: 1.2;
-    letter-spacing: -0.8px; margin-bottom: 60px;
-    max-width: 500px;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 600; line-height: 1.15;
+    letter-spacing: -1px; margin-bottom: 14px;
+  }
+  .loesung-head p {
+    font-size: 16px; color: var(--grau);
+    font-weight: 300; max-width: 500px; line-height: 1.7;
   }
 
+  .feat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .feat {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 28px;
+    border: 1px solid var(--linie);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .feat:hover {
+    box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .feat-icon {
+    width: 44px; height: 44px;
+    background: var(--gruen-blass);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 18px;
+  }
+  .feat h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+  .feat p { font-size: 13px; color: var(--grau); line-height: 1.65; }
+
+  /* PREIS */
+  .preis { padding: 120px 56px; max-width: 1300px; margin: 0 auto; }
+  .preis-head { text-align: center; margin-bottom: 64px; }
+  .preis-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 600; letter-spacing: -1px; margin-bottom: 14px;
+  }
+  .preis-head p {
+    font-size: 16px; color: var(--grau);
+    font-weight: 300; max-width: 440px;
+    margin: 0 auto; line-height: 1.7;
+  }
+
+  .preis-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px; max-width: 860px; margin: 0 auto;
+  }
+  .pk {
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--linie);
+    background: white;
+  }
+  .pk.haupt {
+    border-color: var(--gruen);
+    box-shadow: 0 16px 48px rgba(26,92,78,0.1);
+  }
+  .pk-top {
+    padding: 32px;
+    border-bottom: 1px solid var(--linie);
+    background: var(--grau-hell);
+  }
+  .pk.haupt .pk-top {
+    background: var(--gruen);
+    border-bottom: none;
+  }
+  .pk-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--grau); margin-bottom: 18px;
+  }
+  .pk.haupt .pk-label { color: rgba(255,255,255,0.6); }
+  .pk-preis {
+    display: flex; align-items: baseline; gap: 3px; margin-bottom: 6px;
+  }
+  .pk-preis .zahl {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px; font-weight: 600; line-height: 1;
+    color: var(--text);
+  }
+  .pk.haupt .pk-preis .zahl { color: white; }
+  .pk-preis .eur { font-size: 22px; color: var(--grau); font-weight: 300; }
+  .pk.haupt .pk-preis .eur { color: rgba(255,255,255,0.5); }
+  .pk-preis .per { font-size: 13px; color: var(--grau); }
+  .pk.haupt .pk-preis .per { color: rgba(255,255,255,0.5); }
+  .pk-sub { font-size: 13px; color: var(--grau); }
+  .pk.haupt .pk-sub { color: rgba(255,255,255,0.6); }
+
+  .pk-body { padding: 28px 32px 32px; }
+  .pk-liste { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .pk-liste li { display: flex; gap: 10px; font-size: 14px; line-height: 1.5; }
+  .pk-liste li .ck { color: var(--gruen); font-weight: 600; flex-shrink: 0; }
+
+  .pk-btn {
+    display: block; text-align: center;
+    text-decoration: none; padding: 13px 20px;
+    border-radius: 6px; font-size: 14px; font-weight: 500;
+    transition: all 0.2s;
+  }
+  .pk-btn.gruen { background: var(--gruen); color: white; }
+  .pk-btn.gruen:hover { background: var(--gruen-hell); }
+  .pk-btn.outline { border: 1.5px solid var(--linie); color: var(--text); }
+  .pk-btn.outline:hover { border-color: var(--gruen); color: var(--gruen); }
+
+  .preis-note {
+    text-align: center; margin-top: 28px;
+    font-size: 13px; color: var(--grau);
+  }
+  .preis-note a { color: var(--gruen); text-decoration: none; font-weight: 500; }
+
+  /* EINFÜHRUNG */
+  .einfuehrung {
+    background: var(--gruen-blass);
+    padding: 120px 56px;
+  }
+  .einfuehrung-inner { max-width: 1300px; margin: 0 auto; }
+  .einfuehrung-inner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 600; letter-spacing: -0.8px;
+    margin-bottom: 56px; max-width: 480px;
+  }
   .schritte {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 48px;
   }
-
-  .schritt { position: relative; }
   .schritt-nr {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 64px; font-weight: 600;
-    color: var(--linie); line-height: 1;
-    margin-bottom: 16px;
+    font-size: 56px; font-weight: 400;
+    color: var(--gruen-mittel); line-height: 1; margin-bottom: 16px;
   }
-  .schritt h3 {
-    font-size: 17px; font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .schritt p {
-    font-size: 14px; color: var(--grau);
-    line-height: 1.7; font-weight: 300;
-  }
+  .schritt h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+  .schritt p { font-size: 14px; color: var(--grau); line-height: 1.7; font-weight: 300; }
 
-  /* ── VISION ── */
+  /* VISION */
   .vision {
-    padding: 160px 56px;
-    text-align: center;
     background: var(--gruen);
+    padding: 140px 56px;
+    text-align: center;
   }
-  .vision-inner { max-width: 800px; margin: 0 auto; }
-
+  .vision-inner { max-width: 760px; margin: 0 auto; }
   .vision-tag {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 32px;
-    display: block;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 28px;
   }
-
   .vision h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 4vw, 60px);
-    font-weight: 600; line-height: 1.12;
-    letter-spacing: -1.5px; color: var(--weiss);
-    margin-bottom: 28px;
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 600; line-height: 1.15;
+    letter-spacing: -1.5px; color: white;
+    margin-bottom: 24px;
   }
-  .vision h2 em {
-    font-style: italic; color: var(--gold);
-  }
-
+  .vision h2 em { font-style: italic; color: var(--gold); }
   .vision p {
-    font-size: 17px; color: rgba(255,255,255,0.55);
-    font-weight: 300; line-height: 1.75;
-    margin-bottom: 52px;
+    font-size: 17px; color: rgba(255,255,255,0.6);
+    font-weight: 300; line-height: 1.75; margin-bottom: 48px;
   }
-
   .vision-btn {
     display: inline-flex; align-items: center; gap: 10px;
-    background: var(--weiss); color: var(--gruen);
-    text-decoration: none; padding: 18px 40px;
-    border-radius: 4px; font-size: 15px; font-weight: 600;
-    transition: all 0.25s;
+    background: white; color: var(--gruen);
+    text-decoration: none; padding: 17px 36px;
+    border-radius: 6px; font-size: 15px; font-weight: 600;
+    transition: all 0.2s;
   }
   .vision-btn:hover {
-    background: var(--gold);
-    color: var(--schwarz);
+    background: var(--gold-hell);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.15);
   }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
-    background: var(--schwarz);
-    padding: 40px 56px;
+    background: var(--grau-hell);
+    padding: 32px 56px;
     display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--linie);
   }
   .footer-logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 17px; font-weight: 600;
-    color: rgba(255,255,255,0.4);
+    font-size: 17px; font-weight: 600; color: var(--grau);
   }
-  .footer-logo em { font-style: italic; color: var(--gold); opacity: 0.6; }
-  .footer-links { display: flex; gap: 28px; }
+  .footer-logo em { font-style: italic; color: var(--gold); }
+  .footer-links { display: flex; gap: 24px; }
   .footer-links a {
-    font-size: 12px; color: rgba(255,255,255,0.3);
+    font-size: 12px; color: var(--grau);
     text-decoration: none; transition: color 0.2s;
   }
-  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-links a:hover { color: var(--text); }
 
-  /* ── ANIMATIONEN ── */
-  .fade-in {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .fade-in.show { opacity: 1; transform: translateY(0); }
+  /* FADE IN */
+  .fi { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+  .fi.show { opacity: 1; transform: translateY(0); }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 1000px) {
-    nav { padding: 18px 24px; }
-    .nav-right .nav-link { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 48px; }
-    .hero-right .stat-float { display: none; }
-    .problem-section { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
-    .loesung-section { padding: 80px 24px; }
-    .loesung-top { flex-direction: column; align-items: flex-start; }
-    .loesung-top p { text-align: left; }
-    .features-grid { grid-template-columns: 1fr; }
-    .preis-section { padding: 80px 24px; }
-    .preis-karte-wrap { grid-template-columns: 1fr; max-width: 480px; }
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    nav { padding: 16px 24px; }
+    .nav-link { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 110px 24px 60px; gap: 48px; }
+    .problem { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
+    .loesung { padding: 80px 24px; }
+    .feat-grid { grid-template-columns: 1fr; }
+    .preis { padding: 80px 24px; }
+    .preis-grid { grid-template-columns: 1fr; max-width: 440px; }
     .einfuehrung { padding: 80px 24px; }
     .schritte { grid-template-columns: 1fr; gap: 32px; }
     .vision { padding: 100px 24px; }
-    footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
+    footer { padding: 24px; flex-direction: column; gap: 14px; text-align: center; }
   }
 </style>
 </head>
@@ -574,118 +435,107 @@
 </nav>
 
 <!-- HERO -->
-<div style="max-width:1300px;margin:0 auto;padding:0 56px;">
-<div class="hero" style="max-width:none;padding:140px 0 100px;">
-  <div class="hero-left">
+<div style="background:var(--weiss)">
+<div class="hero">
+  <div>
     <div class="tag"><span class="tag-line"></span>Für Kita-Einrichtungsleitungen</div>
-    <h1>Der Standard für<br><em>professionelle</em><br>Bewegungsplanung.</h1>
+    <h1>Der Standard für <em>professionelle</em> Bewegungsplanung.</h1>
     <p class="hero-desc">Fachlich fundierte Bewegungsstunden – vollständig strukturiert, mit Materialliste und Zeitplan – generiert in unter 60 Sekunden.</p>
-    <div class="hero-cta">
-      <a href="https://app.bewegtundbunt.de/dashboard.html" class="cta-main">
-        14 Tage kostenlos testen <span class="arrow">→</span>
-      </a>
-      <p class="cta-note"><strong>Kein Kreditkarte.</strong> Kein Risiko. Für Ihr gesamtes Team.</p>
+    <div class="cta-wrap">
+      <a href="https://app.bewegtundbunt.de/dashboard.html" class="cta-main">14 Tage kostenlos testen →</a>
+      <p class="cta-note"><strong>Keine Kreditkarte.</strong> Kein Risiko. Für Ihr gesamtes Team.</p>
     </div>
   </div>
 
-  <div class="hero-right">
-    <div class="preview-card">
-      <div class="preview-header">
-        <div class="preview-header-left">
-          <h3>Bewegungseinheit · Turnhalle</h3>
-          <p>4–5 Jahre · Gruppe mit 12 Kindern</p>
-        </div>
-        <div class="preview-badge">42 Sek.</div>
+  <div class="preview-card">
+    <div class="preview-header">
+      <div>
+        <h3>Bewegungseinheit · Turnhalle</h3>
+        <p>4–5 Jahre · 12 Kinder</p>
       </div>
-      <div class="preview-body">
-        <div class="preview-meta">
-          <span class="meta-chip">30 Minuten</span>
-          <span class="meta-chip">Ø Intensität 1.8</span>
-          <span class="meta-chip">Bälle · Tücher · Hütchen</span>
-        </div>
-        <div class="preview-timeline">
-          <div class="tl-row">
-            <div class="tl-time">0'<br>5'</div>
-            <div class="tl-content">
-              <div class="tl-phase">Einstieg</div>
-              <div class="tl-title">Tuch-Impuls im Kreis</div>
-              <div class="tl-desc">Freies Erkunden – Was kann dein Tuch alles sein?</div>
-            </div>
-          </div>
-          <div class="tl-row">
-            <div class="tl-time">5'<br>20'</div>
-            <div class="tl-content">
-              <div class="tl-phase">Hauptteil</div>
-              <div class="tl-title">Ball-Stationen – Rollen, Werfen, Parcours</div>
-              <div class="tl-desc">3 Stationen im Wechsel, klare Signale</div>
-            </div>
-          </div>
-          <div class="tl-row">
-            <div class="tl-time">20'<br>28'</div>
-            <div class="tl-content">
-              <div class="tl-phase">Hauptteil</div>
-              <div class="tl-title">Teamwurf mit Tuch</div>
-              <div class="tl-desc">Kooperation im Zweierteam – Ball tragen & fangen</div>
-            </div>
-          </div>
-          <div class="tl-row">
-            <div class="tl-time">28'<br>30'</div>
-            <div class="tl-content">
-              <div class="tl-phase">Abschluss</div>
-              <div class="tl-title">Reflexionskreis</div>
-              <div class="tl-desc">Gemeinsam einsammeln, kurzes Feedback</div>
-            </div>
-          </div>
+      <div class="preview-badge">42 Sek.</div>
+    </div>
+    <div class="preview-body">
+      <div class="preview-chips">
+        <span class="chip">30 Minuten</span>
+        <span class="chip">Bälle · Tücher · Hütchen</span>
+        <span class="chip">Ø Intensität 1.8</span>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">0'<br>5'</div>
+        <div class="tl-body">
+          <div class="tl-phase">Einstieg</div>
+          <div class="tl-title">Tuch-Impuls im Kreis</div>
+          <div class="tl-desc">Freies Erkunden – Was kann dein Tuch sein?</div>
         </div>
       </div>
-      <div class="preview-footer">
-        <span>🖨 Sofort druckbar</span>
-        <strong>✓ Lernziele dokumentiert</strong>
+      <div class="tl-row">
+        <div class="tl-time">5'<br>20'</div>
+        <div class="tl-body">
+          <div class="tl-phase">Hauptteil</div>
+          <div class="tl-title">Ball-Stationen – Rollen & Werfen</div>
+          <div class="tl-desc">3 Stationen im Wechsel mit Signal</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">20'<br>28'</div>
+        <div class="tl-body">
+          <div class="tl-phase">Hauptteil</div>
+          <div class="tl-title">Teamwurf mit Tuch</div>
+          <div class="tl-desc">Kooperation im Zweierteam</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">28'<br>30'</div>
+        <div class="tl-body">
+          <div class="tl-phase">Abschluss</div>
+          <div class="tl-title">Reflexionskreis</div>
+          <div class="tl-desc">Gemeinsam einsammeln & Feedback</div>
+        </div>
       </div>
     </div>
-
-    <div class="stat-float">
-      <div class="num">49 €</div>
-      <div class="label">pro Einrichtung / Monat</div>
+    <div class="preview-footer">
+      <span>🖨 Sofort druckbar</span>
+      <strong>✓ Lernziele dokumentiert</strong>
     </div>
   </div>
 </div>
 </div>
 
-<hr class="divider">
+<hr>
 
 <!-- PROBLEM -->
-<div class="problem-section fade-in">
-  <div class="problem-left">
+<div class="problem fi">
+  <div>
     <div class="tag"><span class="tag-line"></span>Die Herausforderung</div>
     <h2>Was heute täglich Planungszeit kostet.</h2>
-    <p>Bewegungsförderung ist gesetzlich verankert – aber die Vorbereitung liegt bei jeder Fachkraft individuell. Das kostet Zeit, erzeugt Unsicherheit und führt zu uneinheitlicher Qualität.</p>
+    <p class="problem-desc">Bewegungsförderung ist unverzichtbar – aber die Vorbereitung liegt bei jeder Fachkraft individuell. Das kostet Zeit, erzeugt Unsicherheit und führt zu uneinheitlicher Qualität.</p>
   </div>
-  <div class="problem-right">
+  <div class="prob-list">
     <div class="prob-item">
       <div class="prob-nr">01</div>
-      <div class="prob-text">
+      <div>
         <h3>Zeitintensive Vorbereitung</h3>
         <p>Stunden für Recherche, Anpassung und Strukturierung – pro Fachkraft, pro Woche, jedes Mal neu.</p>
       </div>
     </div>
     <div class="prob-item">
       <div class="prob-nr">02</div>
-      <div class="prob-text">
+      <div>
         <h3>Schwankende Angebotsqualität</h3>
         <p>Erfahrung und Motivation der einzelnen Fachkraft bestimmen die Qualität. Das ist keine tragfähige Grundlage.</p>
       </div>
     </div>
     <div class="prob-item">
       <div class="prob-nr">03</div>
-      <div class="prob-text">
+      <div>
         <h3>Fehlende Fachstruktur</h3>
         <p>Professioneller Aufbau – Einstieg, Warm-up, Hauptteil, Cooldown, Reflexion – fehlt in der Praxis häufig.</p>
       </div>
     </div>
     <div class="prob-item">
       <div class="prob-nr">04</div>
-      <div class="prob-text">
+      <div>
         <h3>Kein Qualitätsstandard im Team</h3>
         <p>Ohne System gibt es keine Vergleichbarkeit und keine nachhaltige Qualitätssicherung über Gruppen hinweg.</p>
       </div>
@@ -693,43 +543,44 @@
   </div>
 </div>
 
-<hr class="divider">
+<hr>
 
 <!-- LÖSUNG -->
-<section class="loesung-section" id="loesung">
+<section class="loesung" id="loesung">
   <div class="loesung-inner">
-    <div class="loesung-top fade-in">
+    <div class="loesung-head fi">
+      <div class="tag"><span class="tag-line"></span>Die Lösung</div>
       <h2>Was bewegt & bunt für Ihr Team leistet.</h2>
-      <p>Kein Pinterest. Kein Improvisation. Fachlich durchdachte Bewegungsstunden – auf Knopfdruck, für jede Gruppe.</p>
+      <p>Kein Pinterest. Keine Improvisation. Fachlich durchdachte Bewegungsstunden – auf Knopfdruck, für jede Gruppe.</p>
     </div>
-    <div class="features-grid fade-in">
+    <div class="feat-grid fi">
       <div class="feat">
-        <span class="feat-icon">🎯</span>
+        <div class="feat-icon">🎯</div>
         <h3>Durchdachte Dramaturgie</h3>
         <p>Jede generierte Stunde folgt dem professionellen Aufbau: Einstieg → Warm-up → Hauptteil → Cooldown → Reflexion.</p>
       </div>
       <div class="feat">
-        <span class="feat-icon">📋</span>
+        <div class="feat-icon">📋</div>
         <h3>Dokumentierte Lernziele</h3>
         <p>Definierte pädagogische Ziele für jedes Angebot – direkt verwendbar für Dokumentation und Elterngespräche.</p>
       </div>
       <div class="feat">
-        <span class="feat-icon">🎒</span>
+        <div class="feat-icon">🎒</div>
         <h3>Materialliste inklusive</h3>
         <p>Alles was gebraucht wird, steht dabei. Kein Suchen, kein Vergessen – sofort einsatzbereit.</p>
       </div>
       <div class="feat">
-        <span class="feat-icon">⏱</span>
+        <div class="feat-icon">⏱</div>
         <h3>Minutengenaue Zeitstruktur</h3>
         <p>Klarer Ablaufplan für jeden Abschnitt. Fachkräfte wissen jederzeit, wo sie im Programm stehen.</p>
       </div>
       <div class="feat">
-        <span class="feat-icon">📱</span>
+        <div class="feat-icon">📱</div>
         <h3>iPad & Tablet optimiert</h3>
         <p>Direkt auf dem iPad nutzbar oder ausdrucken – ohne Formatierungsaufwand, fertig für die Praxis.</p>
       </div>
       <div class="feat">
-        <span class="feat-icon">⚡</span>
+        <div class="feat-icon">⚡</div>
         <h3>Unter 60 Sekunden</h3>
         <p>Altersgruppe und Dauer eingeben – fertig. Was früher Stunden dauerte, geht jetzt in unter einer Minute.</p>
       </div>
@@ -738,82 +589,80 @@
 </section>
 
 <!-- PREIS -->
-<section class="preis-section" id="preis">
-  <div class="preis-header fade-in">
+<section class="preis" id="preis">
+  <div class="preis-head fi">
     <div class="tag" style="justify-content:center"><span class="tag-line"></span>Preismodell</div>
     <h2>Einfach. Transparent. Für Einrichtungen.</h2>
-    <p>Eine Lizenz für die gesamte Einrichtung. Alle Tablets, alle Fachkräfte, alle Gruppen.</p>
+    <p>Eine Lizenz für die gesamte Einrichtung – alle Tablets, alle Fachkräfte, alle Gruppen.</p>
   </div>
-  <div class="preis-karte-wrap fade-in">
-
-    <div class="preis-karte">
+  <div class="preis-grid fi">
+    <div class="pk">
       <div class="pk-top">
-        <div class="pk-label">Einstieg</div>
+        <div class="pk-label">Kostenlos testen</div>
         <div class="pk-preis">
-          <span class="waehrung">€</span>
+          <span class="eur">€</span>
           <span class="zahl">0</span>
-          <span class="periode">/ 14 Tage</span>
+          <span class="per">/ 14 Tage</span>
         </div>
-        <div class="pk-desc">Kostenlos testen – ohne Kreditkarte</div>
+        <div class="pk-sub">Ohne Kreditkarte – sofort starten</div>
       </div>
       <div class="pk-body">
         <ul class="pk-liste">
-          <li><span class="check">✓</span> Unbegrenzte Nutzung für 14 Tage</li>
-          <li><span class="check">✓</span> Alle Funktionen inklusive</li>
-          <li><span class="check">✓</span> Kein Risiko, keine Bindung</li>
-          <li><span class="check">✓</span> Direkt nach Registrierung nutzbar</li>
+          <li><span class="ck">✓</span> Voller Funktionsumfang</li>
+          <li><span class="ck">✓</span> Unbegrenzte Nutzung für 14 Tage</li>
+          <li><span class="ck">✓</span> Kein Risiko, keine Bindung</li>
+          <li><span class="ck">✓</span> Direkt nach Start nutzbar</li>
         </ul>
-        <a href="https://app.bewegtundbunt.de/dashboard.html" class="pk-btn neben-btn">Kostenlos starten →</a>
+        <a href="https://app.bewegtundbunt.de/dashboard.html" class="pk-btn outline">Kostenlos starten →</a>
       </div>
     </div>
 
-    <div class="preis-karte haupt">
+    <div class="pk haupt">
       <div class="pk-top">
         <div class="pk-label">Einrichtungslizenz</div>
         <div class="pk-preis">
-          <span class="waehrung" style="color:rgba(255,255,255,0.5)">€</span>
-          <span class="zahl" style="color:var(--weiss)">49</span>
-          <span class="periode" style="color:rgba(255,255,255,0.5)">/ Monat</span>
+          <span class="eur">€</span>
+          <span class="zahl" style="color:white">49</span>
+          <span class="per">/ Monat</span>
         </div>
-        <div class="pk-desc">Für das gesamte Team – monatlich kündbar</div>
+        <div class="pk-sub">Für das gesamte Team – monatlich kündbar</div>
       </div>
       <div class="pk-body">
         <ul class="pk-liste">
-          <li><span class="check">✓</span> Alle Tablets der Einrichtung</li>
-          <li><span class="check">✓</span> Unbegrenzt Stunden generieren</li>
-          <li><span class="check">✓</span> Alle Altersgruppen & Dauern</li>
-          <li><span class="check">✓</span> Materiallisten & Zeitstruktur</li>
-          <li><span class="check">✓</span> Sofort druckbar & iPad-optimiert</li>
-          <li><span class="check">✓</span> Monatlich kündbar – keine Bindung</li>
+          <li><span class="ck">✓</span> Alle Tablets der Einrichtung</li>
+          <li><span class="ck">✓</span> Unbegrenzt Stunden generieren</li>
+          <li><span class="ck">✓</span> Alle Altersgruppen & Dauern</li>
+          <li><span class="ck">✓</span> Materiallisten & Zeitstruktur</li>
+          <li><span class="ck">✓</span> iPad-optimiert & druckbar</li>
+          <li><span class="ck">✓</span> Monatlich kündbar</li>
         </ul>
-        <a href="https://app.bewegtundbunt.de/dashboard.html" class="pk-btn haupt-btn">Jetzt 14 Tage testen →</a>
+        <a href="https://app.bewegtundbunt.de/dashboard.html" class="pk-btn gruen">Jetzt 14 Tage testen →</a>
       </div>
     </div>
-
   </div>
-  <p class="preis-hinweis">Mehrere Einrichtungen? <a href="mailto:hallo@bewegtundbunt.de" style="color:var(--gruen);text-decoration:none;font-weight:500">Trägerkonditionen anfragen →</a></p>
+  <p class="preis-note">Mehrere Einrichtungen oder Träger? <a href="mailto:hallo@bewegtundbunt.de">Sonderkonditionen anfragen →</a></p>
 </section>
 
 <!-- EINFÜHRUNG -->
 <section class="einfuehrung" id="einfuehrung">
-  <div class="einfuehrung-inner fade-in">
+  <div class="einfuehrung-inner fi">
     <div class="tag"><span class="tag-line"></span>So führen Sie es ein</div>
     <h2>In drei Schritten im Team etabliert.</h2>
     <div class="schritte">
       <div class="schritt">
         <div class="schritt-nr">01</div>
-        <h3>Testen Sie selbst</h3>
-        <p>Starten Sie den Generator mit Ihrer eigenen Altersgruppe und Dauer. Sehen Sie in unter 60 Sekunden, was Ihr Team täglich nutzen wird.</p>
+        <h3>Selbst ausprobieren</h3>
+        <p>Starten Sie den Generator mit Ihrer Altersgruppe und Dauer. Sehen Sie in unter 60 Sekunden, was Ihr Team täglich nutzen wird.</p>
       </div>
       <div class="schritt">
         <div class="schritt-nr">02</div>
         <h3>Team-Zugang einrichten</h3>
-        <p>Teilen Sie den Zugangslink mit Ihrem Team. Keine Installation, keine Schulung – direkt auf jedem iPad nutzbar.</p>
+        <p>Teilen Sie den Link mit Ihrem Team. Keine Installation, keine Schulung – direkt auf jedem iPad nutzbar.</p>
       </div>
       <div class="schritt">
         <div class="schritt-nr">03</div>
         <h3>Qualitätsstandard setzen</h3>
-        <p>Definieren Sie bewegt & bunt als Standard für Ihre Einrichtung. Einheitliche Qualität in allen Gruppen – vom ersten Tag an.</p>
+        <p>Definieren Sie bewegt & bunt als Standard Ihrer Einrichtung. Einheitliche Qualität in allen Gruppen – vom ersten Tag an.</p>
       </div>
     </div>
   </div>
@@ -821,7 +670,7 @@
 
 <!-- VISION -->
 <section class="vision">
-  <div class="vision-inner fade-in">
+  <div class="vision-inner fi">
     <span class="vision-tag">Vision</span>
     <h2>„Wenn in einer Kita Bewegung geplant wird, läuft das über <em>bewegt & bunt</em>."</h2>
     <p>Der Standard für professionelle Bewegungsplanung in deutschen Kitas. Nicht Pinterest. Nicht Improvisation. Fachliche Qualität – systematisch und skalierbar.</p>
@@ -843,7 +692,7 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+  document.querySelectorAll('.fi').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

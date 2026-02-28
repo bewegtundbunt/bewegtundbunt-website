@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>bewegt & bunt – Generator</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f6f4ef;
+  margin: 0;
+  padding: 40px;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2d4a3e;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input, select {
+  padding: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.result {
+  margin-top: 20px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Dashboard funktioniert ✅</h1>
+
+<div class="container">
+<h1>Bewegungsstunde erstellen</h1>
+
+<div class="card">
+
+<label>Alter</label>
+<select id="age">
+<option value="2-3">2–3 Jahre</option>
+<option value="3-4">3–4 Jahre</option>
+<option value="4-5" selected>4–5 Jahre</option>
+<option value="5-6">5–6 Jahre</option>
+<option value="gemischt">Gemischt</option>
+</select>
+
+<label>Gruppengröße</label>
+<input type="number" id="group" value="12" min="3" max="30">
+
+<label>Dauer (Minuten)</label>
+<select id="duration">
+<option value="20">20</option>
+<option value="30" selected>30</option>
+<option value="45">45</option>
+<option value="60">60</option>
+</select>
+
+<label>Material (Kommagetrennt)</label>
+<input type="text" id="materials" value="Bälle, Matten">
+
+<br><br>
+
+<button onclick="generate()">✨ Stunde generieren</button>
+
+<div class="result" id="result"></div>
+
+</div>
+</div>
+
+<script>
+const SUPABASE_URL = 'DEINE_SUPABASE_URL';
+const SUPABASE_KEY = 'DEIN_SUPABASE_ANON_KEY';
+
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function generate() {
+
+  const age = document.getElementById('age').value;
+  const group = parseInt(document.getElementById('group').value);
+  const duration = parseInt(document.getElementById('duration').value);
+  const materials = document.getElementById('materials').value.split(',');
+
+  document.getElementById('result').innerHTML = "Generiere Stunde...";
+
+  try {
+    const { data, error } = await supabase.rpc('generate_session_print_v2', {
+      p_age_group: age,
+      p_group_size: group,
+      p_duration_minutes: duration,
+      p_materials: materials
+    });
+
+    if (error) throw error;
+
+    if (!data || data.length === 0) {
+      document.getElementById('result').innerHTML = "Keine Daten erhalten.";
+      return;
+    }
+
+    let html = "<h2>Deine Stunde</h2>";
+
+    data.forEach(block => {
+      html += `
+        <div style="margin-bottom:15px;">
+          <strong>${block.slot_type}</strong><br>
+          ${block.block_title}<br>
+          <small>${block.content}</small>
+        </div>
+      `;
+    });
+
+    document.getElementById('result').innerHTML = html;
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById('result').innerHTML =
+      "Fehler: " + err.message;
+  }
+}
+</script>
+
 </body>
 </html>

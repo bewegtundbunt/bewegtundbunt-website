@@ -411,11 +411,11 @@
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
-  <p>© 2026 bewegt & bunt · <a href="mailto:rene@bewegtundbunt.de">Kontakt</a> · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+  <p>© 2026 bewegt & bunt · <a href="mailto:rene@bewegtundbunt.de">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
   <p style="margin-top:0.5rem; font-size:0.75rem;">Entwickelt aus Leidenschaft für Kinder in Bewegung 🌿</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(el => {
       if (el.isIntersecting) {
@@ -427,10 +427,4 @@
 
   document.querySelectorAll('.include-card, .problem-card').forEach(card => {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-  });
-</script>
-</body>
-</html>
+    card.style.transform

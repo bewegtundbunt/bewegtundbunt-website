@@ -1,933 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pilotprojekt Bewegungsförderung – René Kraków</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink:     #0f1f17;
-      --forest:  #1b4332;
-      --sage:    #40916c;
-      --mint:    #74c69d;
-      --sand:    #f8f4ee;
-      --warm:    #ede8df;
-      --accent:  #c8773a;
-      --radius:  14px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--sand);
-      color: var(--ink);
-      overflow-x: hidden;
-    }
-
-    /* ─── NAV ─────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 3rem;
-      background: #0f1f17ee;
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: #fff;
-      letter-spacing: 0.02em;
-    }
-
-    .nav-logo span { color: var(--mint); }
-
-    .nav-cta {
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 0.6rem 1.4rem;
-      border-radius: 100px;
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: opacity 0.2s;
-    }
-    .nav-cta:hover { opacity: 0.85; }
-
-    /* ─── HERO ────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 8rem 3rem 6rem;
-      background: var(--forest);
-    }
-
-    /* Grain texture overlay */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      background-size: 200px;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    /* Geometric accent */
-    .hero-geo {
-      position: absolute;
-      right: -80px; top: 50%;
-      transform: translateY(-50%);
-      width: 560px; height: 560px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 40% 40%, #40916c30, transparent 65%),
-                  radial-gradient(circle at 70% 70%, #c8773a18, transparent 55%);
-      border: 1px solid #ffffff0a;
-    }
-
-    .hero-geo-inner {
-      position: absolute;
-      right: 60px; top: 50%;
-      transform: translateY(-50%);
-      width: 380px; height: 380px;
-      border-radius: 50%;
-      border: 1px solid #74c69d18;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-    }
-
-    .confidential-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      border: 1px solid #74c69d50;
-      color: var(--mint);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.45rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 2.2rem;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    .confidential-tag::before {
-      content: '●';
-      color: var(--accent);
-      font-size: 0.5rem;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.12;
-      margin-bottom: 1.8rem;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--mint);
-    }
-
-    .hero-intro {
-      font-size: 1.05rem;
-      color: #a8c5b5;
-      line-height: 1.8;
-      margin-bottom: 3rem;
-      font-weight: 300;
-      animation: fadeUp 0.7s 0.2s ease both;
-      max-width: 560px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-
-    .btn-main {
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 1rem 2.4rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 24px #c8773a40;
-    }
-    .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 32px #c8773a55; }
-
-    .btn-outline {
-      border: 1.5px solid #ffffff25;
-      color: #fff;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 1rem 2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--mint); background: #ffffff08; }
-
-    .hero-meta {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 4rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.4s ease both;
-      padding-top: 2.5rem;
-      border-top: 1px solid #ffffff10;
-    }
-
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .meta-val {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .meta-label {
-      font-size: 0.78rem;
-      color: #7aa890;
-      letter-spacing: 0.05em;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── SECTIONS ────────────────────────────────────── */
-    section { padding: 6rem 3rem; }
-    .container { max-width: 1020px; margin: 0 auto; }
-
-    .label {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.7rem;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-    }
-
-    .intro-text {
-      font-size: 1.05rem;
-      color: #4a6355;
-      line-height: 1.85;
-      max-width: 620px;
-      font-weight: 300;
-    }
-
-    /* ─── ABLAUF TIMELINE ─────────────────────────────── */
-    .ablauf { background: #fff; }
-
-    .timeline {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 28px;
-      top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--sage), var(--mint), transparent);
-    }
-
-    .tl-item {
-      display: grid;
-      grid-template-columns: 60px 1fr;
-      gap: 1.5rem;
-      padding-bottom: 2.8rem;
-      position: relative;
-    }
-
-    .tl-item:last-child { padding-bottom: 0; }
-
-    .tl-dot {
-      width: 58px; height: 58px;
-      border-radius: 50%;
-      background: var(--sand);
-      border: 2px solid var(--sage);
-      display: grid;
-      place-items: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    .tl-body h3 {
-      font-weight: 600;
-      font-size: 1.05rem;
-      margin-bottom: 0.35rem;
-      padding-top: 0.9rem;
-    }
-
-    .tl-body p {
-      font-size: 0.92rem;
-      color: #5a7265;
-      line-height: 1.75;
-    }
-
-    .tl-week {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.2rem;
-    }
-
-    /* ─── ÜBER RENÉ ───────────────────────────────────── */
-    .about { background: var(--forest); color: #fff; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
-      align-items: center;
-      margin-top: 3rem;
-    }
-
-    .about-portrait {
-      aspect-ratio: 3/4;
-      border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
-      background: linear-gradient(160deg, var(--sage) 0%, #1b4332 100%);
-      display: grid;
-      place-items: center;
-      font-size: 6rem;
-      border: 1px solid #74c69d20;
-      animation: blobMorph 9s ease-in-out infinite;
-    }
-
-    @keyframes blobMorph {
-      0%, 100% { border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; }
-      33%       { border-radius: 55% 45% 40% 60% / 45% 55% 50% 50%; }
-      66%       { border-radius: 45% 55% 60% 40% / 55% 45% 45% 55%; }
-    }
-
-    .about h2 { color: #fff; }
-    .about .intro-text { color: #a8c5b5; max-width: 100%; }
-
-    .credentials {
-      margin-top: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .cred-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.2rem 1.4rem;
-      background: #ffffff08;
-      border-radius: var(--radius);
-      border: 1px solid #74c69d15;
-      transition: background 0.2s;
-    }
-    .cred-item:hover { background: #ffffff12; }
-
-    .cred-icon { font-size: 1.4rem; flex-shrink: 0; }
-
-    .cred-body h4 {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #e0f0e8;
-      margin-bottom: 0.2rem;
-    }
-
-    .cred-body p {
-      font-size: 0.82rem;
-      color: #7aa890;
-      line-height: 1.6;
-    }
-
-    /* ─── KONDITIONEN ─────────────────────────────────── */
-    .konditionen { background: var(--warm); }
-
-    .kond-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .kond-card {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 2rem;
-      border: 1.5px solid #e2ddd6;
-      transition: border-color 0.2s, transform 0.25s;
-    }
-    .kond-card:hover { border-color: var(--sage); transform: translateY(-3px); }
-
-    .kond-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-
-    .kond-card h3 {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .kond-card p {
-      font-size: 0.88rem;
-      color: #5a7265;
-      line-height: 1.75;
-    }
-
-    .highlight-box {
-      background: var(--forest);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 2rem 2.4rem;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .highlight-box .icon { font-size: 2.2rem; flex-shrink: 0; }
-
-    .highlight-box p {
-      font-size: 0.95rem;
-      color: #a8c5b5;
-      line-height: 1.75;
-    }
-
-    .highlight-box strong { color: #fff; }
-
-    /* ─── VERTRAG / CTA ───────────────────────────────── */
-    .vertrag-section {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .vertrag-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .vertrag-section h2 { color: #fff; }
-    .vertrag-section .intro-text { color: #8aaa98; }
-
-    .vertrag-list {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .vertrag-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.92rem;
-      color: #a8c5b5;
-      line-height: 1.7;
-    }
-
-    .vertrag-list li::before {
-      content: '→';
-      color: var(--mint);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 0.05rem;
-    }
-
-    /* Contract form */
-    .contract-form {
-      background: #1b3828;
-      border-radius: 20px;
-      padding: 2.5rem;
-      border: 1px solid #74c69d18;
-    }
-
-    .contract-form h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .contract-form .sub {
-      font-size: 0.85rem;
-      color: #7aa890;
-      margin-bottom: 2rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #7aa890;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      background: #0f1f17;
-      border: 1.5px solid #2d5a40;
-      border-radius: 10px;
-      padding: 0.85rem 1.1rem;
-      color: #e0f0e8;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      outline: none;
-      transition: border-color 0.2s;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--mint); }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #4a7060; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .submit-btn {
-      width: 100%;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 1rem;
-      border-radius: 100px;
-      margin-top: 0.5rem;
-      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
-      letter-spacing: 0.03em;
-    }
-    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px #c8773a45; }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #4a7060;
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-
-    .success-msg {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .success-msg .check { font-size: 3rem; margin-bottom: 1rem; }
-
-    .success-msg h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--mint);
-      margin-bottom: 0.5rem;
-    }
-
-    .success-msg p { font-size: 0.9rem; color: #7aa890; }
-
-    /* ─── FOOTER ──────────────────────────────────────── */
-    footer {
-      background: #080f0b;
-      padding: 2.5rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      color: #4a7060;
-      font-size: 0.8rem;
-    }
-
-    footer a { color: #7aa890; text-decoration: none; }
-    footer a:hover { color: var(--mint); }
-
-    /* ─── REVEAL ANIMATION ────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── RESPONSIVE ──────────────────────────────────── */
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      section { padding: 5rem 1.5rem; }
-      .hero { padding: 7rem 1.5rem 4rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-portrait { max-width: 200px; margin: 0 auto; }
-      .vertrag-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .hero-meta { gap: 1.5rem; }
-      footer { flex-direction: column; text-align: center; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bewegt & bunt – Der Standard für Bewegungsplanung in Kitas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gruen:#1a5c4e;
+  --gruen-hell:#2a7a67;
+  --gruen-blass:#e8f2ef;
+  --gruen-mittel:#d0e8e2;
+  --gold:#c9a84c;
+  --text:#1a1a1a;
+  --grau:#6b6b6b;
+  --grau-hell:#f4f2ee;
+  --linie:rgba(0,0,0,0.08);
+  --weiss:#fafaf8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--weiss);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 56px;
+  background:rgba(250,250,248,0.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--linie);
+}
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:600;color:var(--gruen);
+}
+.logo em{color:var(--gold);font-style:italic}
+.nav-btn{
+  background:var(--gruen);color:white;
+  text-decoration:none;padding:10px 24px;
+  border-radius:6px;font-size:13px;font-weight:500;
+}
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  padding:140px 56px 100px;
+  max-width:1300px;margin:0 auto;
+  align-items:center;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:60px;line-height:1.1;margin-bottom:24px;
+}
+.hero-desc{
+  font-size:17px;color:var(--grau);line-height:1.7;margin-bottom:40px;
+}
+.cta-main{
+  background:var(--gruen);color:white;
+  padding:16px 32px;border-radius:6px;
+  text-decoration:none;font-weight:500;
+}
+.problem{
+  padding:120px 56px;
+  max-width:1300px;margin:0 auto;
+}
+.problem h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;margin-bottom:20px;
+}
+.problem p{
+  font-size:16px;color:var(--grau);line-height:1.7;
+}
+.ueber{
+  background:var(--weiss);
+  padding:120px 56px;
+}
+.ueber-inner{
+  max-width:1000px;margin:0 auto;
+}
+.ueber h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:40px;margin-bottom:24px;
+}
+.ueber p{
+  font-size:16px;
+  color:var(--grau);
+  line-height:1.8;
+  margin-bottom:28px;
+}
+.chips{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.chip{
+  background:var(--gruen-blass);
+  color:var(--gruen);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+}
+.loesung{
+  background:var(--grau-hell);
+  padding:120px 56px;
+}
+footer{
+  background:var(--grau-hell);
+  padding:32px 56px;
+  text-align:center;
+  font-size:13px;
+  color:var(--grau);
+}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding:110px 24px 60px}
+  .problem,.ueber,.loesung{padding:80px 24px}
+}
+</style>
 </head>
+
 <body>
 
-<!-- ═══════════════════════ NAV ═══════════════════════ -->
 <nav>
-  <div class="nav-logo">René Kraków · <span>Pilotprojekt</span></div>
-  <a href="#vertrag" class="nav-cta">Vertrag anfordern →</a>
+  <div class="logo">bewegt <em>&</em> bunt</div>
+  <a href="#" class="nav-btn">14 Tage testen →</a>
 </nav>
 
-<!-- ═══════════════════════ HERO ═══════════════════════ -->
 <section class="hero">
-  <div class="hero-geo"></div>
-  <div class="hero-geo-inner"></div>
-  <div class="hero-content">
-    <div class="confidential-tag">Nur für Leitungsebene · Vertraulich</div>
-    <h1>Strukturierte Bewegungsförderung –<br><em>vier Wochen, eine Kita,</em><br>messbare Qualität.</h1>
-    <p class="hero-intro">
-      Ein stiller Praxistest: Erzieherinnen und Erzieher arbeiten mit einer strukturierten Methodik –
-      ohne zu wissen, dass sie Teil eines Pilotprojekts sind.
-      Sie als Leitung behalten den vollen Überblick.
+  <div>
+    <h1>Der Standard für professionelle Bewegungsplanung.</h1>
+    <p class="hero-desc">
+      Fachlich fundierte Bewegungsstunden – vollständig strukturiert,
+      mit Materialliste und Zeitplan – generiert in unter 60 Sekunden.
     </p>
-    <div class="hero-actions">
-      <a href="#vertrag" class="btn-main">Jetzt Vertrag anfordern</a>
-      <a href="#ablauf" class="btn-outline">Wie läuft es ab?</a>
-    </div>
-    <div class="hero-meta">
-      <div class="meta-item">
-        <span class="meta-val">4</span>
-        <span class="meta-label">Wochen Laufzeit</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-val">1</span>
-        <span class="meta-label">Kita, exklusiv</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-val">0 €</span>
-        <span class="meta-label">Kosten im Pilot</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-val">100%</span>
-        <span class="meta-label">Ohne Eingriff</span>
-      </div>
-      </div>
+    <a href="#" class="cta-main">14 Tage kostenlos testen →</a>
+  </div>
+  <div>
+    <!-- Vorschau-Platzhalter -->
   </div>
 </section>
 
-<!-- ═══════════════════════ ABLAUF ═══════════════════════ -->
-<section class="ablauf" id="ablauf">
-  <div class="container">
-    <div class="label">Der Prozess</div>
-    <h2 class="reveal">Ablauf des Pilotprojekts</h2>
-    <p class="intro-text reveal">
-      Der Pilot läuft vollständig im Hintergrund. Ich greife nicht in den Alltag ein.
-      Sie als Leitung sind meine einzige Ansprechpartnerin – von der ersten Absprache bis zur Auswertung.
+<section class="problem">
+  <h2>Was heute täglich Planungszeit kostet.</h2>
+  <p>
+    Bewegungsförderung ist unverzichtbar – aber die Vorbereitung liegt bei jeder Fachkraft individuell.
+    Das kostet Zeit, erzeugt Unsicherheit und führt zu uneinheitlicher Qualität.
+  </p>
+</section>
+
+<!-- NEUE ÜBER-MICH SEKTION -->
+<section class="ueber" id="ueber-mich">
+  <div class="ueber-inner">
+    <h2>Aus der Praxis – für die Praxis.</h2>
+
+    <p>
+      Ich bin seit 15 Jahren Physiotherapeut und begleite seit fünf Jahren integrative Arbeit in Kitas.
+      In dieser Zeit habe ich Bewegungsangebote in neun bis zehn verschiedenen Einrichtungen beobachtet,
+      analysiert und begleitet.
     </p>
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-dot">🤝</div>
-        <div class="tl-body">
-          <div class="tl-week">Vor Start</div>
-          <h3>Vereinbarung auf Leitungsebene</h3>
-          <p>Wir klären alles schriftlich per Pilotvertrag: Ziele, Datenschutz, Vertraulichkeit und den genauen Ablauf. Ihr Team weiß nichts von meiner Rolle im Hintergrund.</p>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot">📲</div>
-        <div class="tl-body">
-          <div class="tl-week">Woche 1</div>
-          <h3>Stille Einführung der Methodik</h3>
-          <p>Die strukturierten Bewegungsbausteine werden – über Sie oder einen vereinbarten Weg – in den Alltag eingebracht. Ich selbst bleibe vollständig im Hintergrund.</p>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot">🔍</div>
-        <div class="tl-body">
-          <div class="tl-week">Woche 2 & 3</div>
-          <h3>Beobachtung & stille Begleitung</h3>
-          <p>Ich beobachte im Rahmen meiner regulären Tätigkeit, wie die Methodik wirkt – ohne aktiv einzugreifen. Ihre Leitung erhält auf Wunsch Zwischenberichte.</p>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot">📊</div>
-        <div class="tl-body">
-          <div class="tl-week">Woche 4</div>
-          <h3>Auswertung & gemeinsames Gespräch</h3>
-          <p>Am Ende des Pilots sprechen wir gemeinsam aus, was funktioniert hat, was nicht – und ob und wie es weitergeht. Kein Druck, keine Verpflichtung.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════════════════ ÜBER RENÉ ═══════════════════════ -->
-<section class="about" id="ueber">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-portrait">🧑‍⚕️</div>
-      <div>
-        <div class="label" style="color: var(--mint);">Wer ich bin</div>
-        <h2 class="reveal">René Kraków</h2>
-        <p class="intro-text reveal">
-          Ich bin Ergotherapeut, pädagogischer Individualbegleiter – und ich kenne Ihre Kita bereits von innen.
-          Als Individualbegleiter bin ich täglich vor Ort. Ich sehe, wie Bewegungsstunden ablaufen.
-          Und ich weiß: es geht besser. Mit klarer Struktur, erprobter Methodik und dem richtigen Werkzeug.
-        </p>
-        <div class="credentials">
-          <div class="cred-item reveal">
-            <div class="cred-icon">🩺</div>
-            <div class="cred-body">
-              <h4>15+ Jahre als Ergotherapeut</h4>
-              <p>Davon intensive Jahre in Psychiatrie und Gerontopsychiatrie – mit Fokus auf strukturierte Gruppenangebote.</p>
-            </div>
-          </div>
-          <div class="cred-item reveal">
-            <div class="cred-icon">🧒</div>
-            <div class="cred-body">
-              <h4>5 Jahre Kita-Praxis als Individualbegleiter</h4>
-              <p>Täglich in verschiedenen Kitas, mit verschiedenen Kindern – inklusive Kinder mit besonderem Förderbedarf.</p>
-            </div>
-          </div>
-          <div class="cred-item reveal">
-            <div class="cred-icon">🏃</div>
-            <div class="cred-body">
-              <h4>Beobachter aus erster Reihe</h4>
-              <p>Ich habe unzählige Bewegungsstunden erlebt, die scheiterten – nicht aus Unwillen, sondern aus fehlendem Handwerkszeug. Das möchte ich ändern.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ KONDITIONEN ═══════════════════════ -->
-<section class="konditionen">
-  <div class="container">
-    <div class="label">Was Sie wissen müssen</div>
-    <h2 class="reveal">Konditionen & Rahmenbedingungen</h2>
-    <p class="intro-text reveal">
-      Volle Transparenz auf Leitungsebene, volle Vertraulichkeit gegenüber dem Team.
-      Das ist die Grundlage dieses Pilots.
+    <p>
+      Dabei ist mir immer wieder aufgefallen: Die Qualität von Bewegungsstunden hängt stark von der einzelnen
+      Fachkraft ab. Struktur, Zielklarheit und fachlicher Aufbau fehlen häufig – nicht aus Mangel an Engagement,
+      sondern aus Zeitmangel und fehlendem System.
     </p>
-    <div class="kond-grid">
-      <div class="kond-card reveal">
-        <div class="kond-icon">📄</div>
-        <h3>Schriftlicher Pilotvertrag</h3>
-        <p>Alles wird verbindlich schriftlich festgehalten: Ziele, Datenschutz, Vertraulichkeit, Haftung und die genauen Bedingungen des Endes.</p>
-      </div>
-      <div class="kond-card reveal">
-        <div class="kond-icon">🔒</div>
-        <h3>Vertraulichkeit gegenüber dem Team</h3>
-        <p>Erzieherinnen und Erzieher erfahren nichts von meiner Rolle im Hintergrund. Die Methodik wird neutral eingeführt – ohne meinen Namen.</p>
-      </div>
-      <div class="kond-card reveal">
-        <div class="kond-icon">🚫</div>
-        <h3>Kein Eingriff, keine Sonderrolle</h3>
-        <p>Ich verhalte mich während des gesamten Pilots wie gewohnt. Es gibt keine zusätzlichen Maßnahmen, die auffallen könnten.</p>
-      </div>
-      <div class="kond-card reveal">
-        <div class="kond-icon">💶</div>
-        <h3>Kostenlos für Ihre Kita</h3>
-        <p>Der Pilot ist für Sie vollständig kostenfrei. Ich lerne, Sie gewinnen – im besten Fall eine nachhaltig bessere Qualität in der Bewegungsförderung.</p>
-      </div>
-      <div class="kond-card reveal">
-        <div class="kond-icon">🗓️</div>
-        <h3>Genau vier Wochen – nicht mehr</h3>
-        <p>Der Pilot hat ein klares Ende. Danach entscheiden wir gemeinsam, was als nächstes kommt. Sie gehen keine langfristige Verpflichtung ein.</p>
-      </div>
-      <div class="kond-card reveal">
-        <div class="kond-icon">🤝</div>
-        <h3>Ausstieg jederzeit möglich</h3>
-        <p>Wenn Sie das Projekt während der vier Wochen beenden möchten, können Sie das jederzeit tun – ohne Begründung, ohne Konsequenzen.</p>
-      </div>
-    </div>
-    <div class="highlight-box reveal">
-      <div class="icon">💡</div>
-      <p>
-        <strong>Wichtig für Sie als Leitung:</strong> Ihre Einrichtung bleibt anonym. Im Rahmen der Pilotauswertung werden keine Rückschlüsse auf Ihre Kita oder Ihr Team gezogen. Alle Daten werden ausschließlich aggregiert und anonymisiert verwendet.
-      </p>
+
+    <p>
+      Aktuell arbeite ich im Krippenbereich und werde im Sommer in den Kindergarten wechseln.
+      So erlebe ich beide Altersstufen unmittelbar in der Praxis – und sehe täglich,
+      wo Planung vereinfacht und professionalisiert werden kann.
+    </p>
+
+    <div class="chips">
+      <div class="chip">15 Jahre Physiotherapie</div>
+      <div class="chip">5 Jahre integrative Kita-Arbeit</div>
+      <div class="chip">Erfahrung aus 9–10 Einrichtungen</div>
+      <div class="chip">Krippe & Kindergarten</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════ VERTRAG ═══════════════════════ -->
-<section class="vertrag-section" id="vertrag">
-  <div class="container">
-    <div class="vertrag-inner">
-      <div>
-        <div class="label" style="color: var(--mint);">Nächster Schritt</div>
-        <h2 class="reveal">Vertrag anfordern</h2>
-        <p class="intro-text reveal">
-          Füllen Sie das Formular aus – ich melde mich persönlich bei Ihnen.
-          Gemeinsam klären wir alle Details und Sie erhalten den Pilotvertrag zur Prüfung.
-          Kein Druck. Kein Verkaufsgespräch.
-        </p>
-        <ul class="vertrag-list reveal">
-          <li>Ich sende Ihnen den Pilotvertrag zur Ansicht</li>
-          <li>Wir klären offene Fragen in einem kurzen Gespräch</li>
-          <li>Sie entscheiden, ob und wann der Pilot startet</li>
-          <li>Alles bleibt vertraulich – auch dieser Erstkontakt</li>
-          <li>Keine automatischen Newsletter oder Folgemails</li>
-        </ul>
-      </div>
-
-      <!-- FORM -->
-      <div class="contract-form reveal">
-        <div id="form-content">
-          <h3>Pilotvertrag anfordern</h3>
-          <p class="sub">Nur für Kita-Leitungen · Vertraulich</p>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label>Vorname</label>
-              <input type="text" placeholder="Ihr Vorname" id="f-vorname" />
-            </div>
-            <div class="form-group">
-              <label>Nachname</label>
-              <input type="text" placeholder="Ihr Nachname" id="f-nachname" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Name der Kita / Einrichtung</label>
-            <input type="text" placeholder="z. B. Kita Regenbogen" id="f-kita" />
-          </div>
-
-          <div class="form-group">
-            <label>Ihre E-Mail-Adresse</label>
-            <input type="email" placeholder="leitung@kita-name.de" id="f-email" />
-          </div>
-
-          <div class="form-group">
-            <label>Telefon (optional)</label>
-            <input type="tel" placeholder="+49 123 456789" id="f-tel" />
-          </div>
-
-          <div class="form-group">
-            <label>Fragen oder Anmerkungen (optional)</label>
-            <textarea rows="3" placeholder="Was beschäftigt Sie? Was möchten Sie vorab wissen?" id="f-msg"></textarea>
-          </div>
-
-          <button class="submit-btn" onclick="handleSubmit()">
-            Vertrag anfordern →
-          </button>
-
-          <p class="form-note">
-            Ihre Daten werden ausschließlich für diesen Erstkontakt verwendet.<br>
-            Keine Weitergabe. Keine Werbung. Kein Spam.
-          </p>
-        </div>
-
-        <div class="success-msg" id="form-success">
-          <div class="check">✅</div>
-          <h4>Anfrage eingegangen.</h4>
-          <p>Ich melde mich persönlich bei Ihnen –<br>in der Regel innerhalb von 24 Stunden.<br><br>
-          <span style="color:#4a7060">René Kraków</span></p>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="loesung">
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;margin-bottom:20px;">
+    Die Lösung: bewegt & bunt
+  </h2>
+  <p style="font-size:16px;color:var(--grau);line-height:1.7;">
+    Ein professioneller Standard für Bewegungsplanung –
+    systematisch, strukturiert und sofort einsetzbar.
+  </p>
 </section>
 
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
-  <span>© 2025 René Kraków · Pilotprojekt Bewegungsförderung</span>
-  <span>
-    <a href="mailto:kontakt@rene-krakow.de">kontakt@rene-krakow.de</a>
-    &nbsp;·&nbsp;
-    <a href="#">Impressum</a>
-    &nbsp;·&nbsp;
-    <a href="#">Datenschutz</a>
-  </span>
+  bewegt & bunt · Professionelle Bewegungsplanung für Kitas
 </footer>
 
-<script>
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(el => {
-      if (el.isIntersecting) {
-        el.target.classList.add('visible');
-        observer.unobserve(el.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Form submit
-  function handleSubmit() {
-    const vorname = document.getElementById('f-vorname').value.trim();
-    const email   = document.getElementById('f-email').value.trim();
-    const kita    = document.getElementById('f-kita').value.trim();
-
-    if (!vorname || !email || !kita) {
-      alert('Bitte füllen Sie mindestens Vorname, Kita-Name und E-Mail aus.');
-      return;
-    }
-
-    document.getElementById('form-content').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
-</script>
 </body>
 </html>

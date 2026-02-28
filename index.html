@@ -1,350 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>bewegt & bunt – Bewegungsplanung für Kitas</title>
-  <meta name="description" content="Bewegungsstunden für Kitas in unter 1 Minute – fachlich fundiert, sofort einsetzbar. Spart Planungszeit im Dienst und erhöht die Qualität im Team." />
-
+  <meta charset="UTF-8">
+  <title>bewegt & bunt – App</title>
   <style>
-    :root{
-      --bg:#f6f7f9;
-      --card:#ffffff;
-      --text:#111;
-      --muted:#5a6270;
-      --border:#111;
-      --soft:#e7e9ee;
-      --accent:#1a73e8;
-      --accent2:#0b57d0;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.35;
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-
-    a{ color:inherit; text-decoration:none; }
-
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px 16px 60px;
+    h1 {
+      margin-bottom: 20px;
     }
-
-    /* Topbar */
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 16px;
-      background:var(--card);
-      border:2px solid var(--border);
-      border-radius:16px;
-    }
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-    }
-    .brand .name{
-      font-weight:900;
-      letter-spacing:.02em;
-      font-size:16px;
-      text-transform:uppercase;
-    }
-    .brand .tag{
-      font-size:13px;
-      color:var(--muted);
-      font-weight:650;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 14px;
-      border-radius:12px;
-      border:2px solid var(--border);
-      font-weight:900;
-      font-size:14px;
-      cursor:pointer;
-      transition:transform .05s ease, background .15s ease;
-      background:var(--card);
-    }
-    .btn:hover{ background:#f0f2f6; }
-    .btn:active{ transform:translateY(1px); }
-    .btn.primary{
-      background:linear-gradient(180deg,var(--accent),var(--accent2));
-      color:white;
-      border-color:transparent;
-    }
-    .btn.primary:hover{ filter:brightness(1.02); }
-
-    /* Hero */
-    .hero{
-      margin-top:14px;
-      background:var(--card);
-      border:2px solid var(--border);
-      border-radius:18px;
-      padding:22px 18px;
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:16px;
-    }
-    @media (max-width:860px){
-      .hero{ grid-template-columns:1fr; }
-    }
-
-    h1{
-      margin:0 0 10px 0;
-      font-size:34px;
-      line-height:1.05;
-      letter-spacing:-0.02em;
-    }
-    .lead{
-      margin:0;
-      font-size:16px;
-      color:var(--muted);
-      font-weight:650;
-      max-width:54ch;
-    }
-
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:14px;
-    }
-    .chip{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      border:2px solid var(--border);
-      font-size:13px;
-      font-weight:900;
-      background:#fff;
-      white-space:nowrap;
-    }
-    .chip small{
-      font-weight:800;
-      color:var(--muted);
-      font-size:12px;
-    }
-
-    .ctaBox{
-      border:2px solid var(--border);
-      border-radius:16px;
-      padding:14px;
-      background:#fff;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      justify-content:space-between;
-    }
-    .ctaBox .headline{
-      font-weight:900;
-      font-size:15px;
-      margin:0;
-    }
-    .ctaBox .sub{
-      margin:0;
-      color:var(--muted);
-      font-weight:650;
-      font-size:14px;
-    }
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:6px;
-    }
-
-    /* Sections */
-    .grid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:12px;
-    }
-    @media (max-width:980px){
-      .grid{ grid-template-columns:1fr; }
-    }
-    .card{
-      background:var(--card);
-      border:2px solid var(--border);
-      border-radius:18px;
-      padding:16px;
-    }
-    .card h2{
-      margin:0 0 8px 0;
-      font-size:14px;
-      text-transform:uppercase;
-      letter-spacing:.04em;
-      font-weight:900;
-    }
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-weight:650;
-      font-size:14.5px;
-    }
-    .list{
-      margin:10px 0 0 0;
-      padding-left:18px;
-      color:var(--text);
-      font-weight:750;
-      font-size:14.5px;
-    }
-    .list li{ margin:6px 0; }
-
-    /* Footer */
-    .footer{
-      margin-top:14px;
-      padding:16px;
-      border:2px solid var(--border);
-      border-radius:18px;
-      background:var(--card);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .footMuted{
-      color:var(--muted);
-      font-weight:650;
-      font-size:13px;
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-
-    <header class="topbar">
-      <div class="brand">
-        <div class="name">bewegt & bunt</div>
-        <div class="tag">Bewegungsplanung für Kitas – professionell & sofort einsetzbar</div>
-      </div>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn" href="/login.html">Login</a>
-        <a class="btn primary" href="/login.html">Pilot starten</a>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div>
-        <h1>Bewegungsstunden in unter 1 Minute – direkt im Dienst planbar.</h1>
-        <p class="lead">
-          bewegt & bunt erstellt fachlich fundierte Bewegungsangebote für Kitas mit klarem Spannungsbogen,
-          Lernzielen und Materialliste – so, dass Teams <b>während der Arbeitszeit</b> schneller planen
-          und die Qualität im Alltag steigt.
-        </p>
-
-        <div class="chips">
-          <div class="chip">Sofort einsetzbar <small>ohne lange Vorbereitung</small></div>
-          <div class="chip">Materialliste <small>alles dabei</small></div>
-          <div class="chip">Minutenangaben <small>klarer Ablauf</small></div>
-          <div class="chip">Teamfähig <small>mehrere Geräte</small></div>
-        </div>
-      </div>
-
-      <aside class="ctaBox">
-        <div>
-          <p class="headline">Für Einrichtungsleitungen</p>
-          <p class="sub">
-            Spart Planungszeit <b>im Dienst</b>, erhöht fachliche Sicherheit im Team und macht Qualität skalierbar –
-            ohne zusätzliche Meetings oder Zettelwirtschaft.
-          </p>
-        </div>
-
-        <div class="ctaRow">
-          <a class="btn primary" href="/login.html">Jetzt testen</a>
-          <a class="btn" href="#so-funktionierts">So funktioniert’s</a>
-        </div>
-      </aside>
-    </section>
-
-    <section id="so-funktionierts" class="grid">
-      <div class="card">
-        <h2>1) Eingeben</h2>
-        <p>Materialien, Gruppengröße und Alter auswählen – passend zu euren Rahmenbedingungen.</p>
-        <ul class="list">
-          <li>Material: z.B. Tücher, Kegel</li>
-          <li>Gruppe & Alter</li>
-          <li>Raum / Schwerpunkt</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>2) Erhalten</h2>
-        <p>Ein kompletter Ablauf mit Spannungsbogen, Minutenangaben, Materialliste und kurzen Anleitungen.</p>
-        <ul class="list">
-          <li>Einstieg → Warm-up → Hauptteil</li>
-          <li>Cooldown → Abschluss</li>
-          <li>Variationen & Vereinfachungen</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>3) Umsetzen</h2>
-        <p>Direkt mit in den Bewegungsraum nehmen, ohne Nacharbeit. Ideal für Vertretungen und Teamwechsel.</p>
-        <ul class="list">
-          <li>klare Regeln & Coaching-Sätze</li>
-          <li>schneller Aufbau</li>
-          <li>Reflexion in 2 Minuten</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <h2>Nutzen</h2>
-        <p>Weniger Such- und Planungszeit im Alltag – dafür mehr Durchführung und mehr Qualität.</p>
-        <ul class="list">
-          <li>Planungszeit im Dienst reduzieren</li>
-          <li>fachliche Sicherheit im Team</li>
-          <li>gleichbleibende Qualität</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Für Teams</h2>
-        <p>Mehrere Personen können denselben Zugang nutzen (z.B. mehrere Tablets innerhalb einer Einrichtung).</p>
-        <ul class="list">
-          <li>gemeinsame Standards</li>
-          <li>einheitliche Vorlagen</li>
-          <li>schneller Einstieg für neue Kolleg:innen</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Preisidee (Pilot)</h2>
-        <p>3 kostenlose Stunden – danach als Einrichtungslizenz planbar (Premium-Positionierung).</p>
-        <ul class="list">
-          <li>Start: Pilotphase</li>
-          <li>Ziel: Zahlungsbereitschaft</li>
-          <li>Skalierung: Standard in Kitas</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footMuted">© bewegt & bunt • Professionelle Bewegungsplanung für Kitas</div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn" href="/login.html">Login</a>
-        <a class="btn" href="/print.html">Beispiel-Ausdruck</a>
-      </div>
-    </footer>
-
+  <div class="box">
+    <h1>bewegt & bunt – App</h1>
+    <p>Willkommen im internen Bereich.</p>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Generator starten</a>
   </div>
 </body>
 </html>

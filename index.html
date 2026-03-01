@@ -2,435 +2,132 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>bewegt & bunt – Der Standard für Bewegungsplanung in Kitas</title>
-  <meta name="description" content="Professionelle Bewegungsplanung für Kitas – klar strukturiert, sofort umsetzbar, entwickelt für Leitung und Träger." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bewegt & bunt</title>
 
   <style>
     :root{
-      /* Hintergrund: weiß mit pastelligem Grün */
-      --bg: #eef7f0;
-      --surface: rgba(255,255,255,.86);
-      --surface-strong: #ffffff;
+      /* Pastelliges Grün (Hintergrund) */
+      --mint-50: #EAF6F0;
+      --mint-100:#DDF1E7;
 
-      /* Logo-Farben (harmonisch angenähert) */
-      --brand-dark: #1a5c4e;
-      --brand: #2a7a67;
-      --brand-light: #7bbf4b;     /* frisches Grün aus Logo-Anmutung */
-      --brand-soft: #dff0e4;      /* sehr sanftes Grün */
+      /* Deine Grüntöne (Text/Elemente) */
+      --forest: #1A5C4E;
+      --forest-700:#13473C;
 
-      /* Text */
-      --ink: #0f172a;
-      --muted: #475569;
-      --line: rgba(15,23,42,.10);
-
-      /* Layout */
-      --shadow: 0 18px 45px rgba(2,6,23,.10);
-      --shadow-soft: 0 12px 30px rgba(2,6,23,.08);
-      --radius: 22px;
-      --radius-lg: 28px;
+      --white: #ffffff;
     }
 
-    *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color: var(--ink);
-      background:
-        radial-gradient(900px 420px at 15% 0%, rgba(123,191,75,.18), transparent 60%),
-        radial-gradient(800px 380px at 85% 10%, rgba(26,92,78,.14), transparent 55%),
-        linear-gradient(180deg, var(--bg) 0%, #f7fbf8 60%, #ffffff 100%);
-      line-height: 1.5;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, var(--mint-50) 0%, var(--white) 70%);
+      color: var(--forest);
     }
 
-    a{ color:inherit; }
-    .wrap{ max-width: 1120px; margin: 0 auto; padding: 24px; }
+    /* Layout-Container */
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-    /* Header */
+    /* Header mit Logo */
     header{
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(238,247,240,.55);
-      backdrop-filter: blur(10px) saturate(150%);
-      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+      background: rgba(234, 246, 240, 0.75);
+      border-bottom: 1px solid rgba(26, 92, 78, 0.10);
+      z-index: 10;
     }
+
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
       padding: 14px 0;
-    }
-    .brandline{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight: 800;
-      letter-spacing: .2px;
-    }
-    .mini-mark{
-      width: 38px; height: 38px;
-      border-radius: 14px;
-      display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(26,92,78,.18), rgba(123,191,75,.18));
-      border: 1px solid rgba(26,92,78,.18);
-      box-shadow: 0 10px 22px rgba(26,92,78,.10);
-    }
-    .mini-mark span{
-      font-weight:900;
-      color: var(--brand-dark);
-    }
-    .navlinks{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .navlinks a{
-      text-decoration:none;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 12px;
-    }
-    .navlinks a:hover{
-      background: rgba(255,255,255,.75);
-      color: var(--ink);
-      border: 1px solid rgba(15,23,42,.06);
-      padding: 7px 9px;
+      gap: 16px;
     }
 
-    /* Single App Button */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+      color: inherit;
+    }
+
+    .brand img{
+      height: 48px;
+      width: auto;
+      display:block;
+    }
+
+    .brand .name{
+      font-weight: 650;
+      letter-spacing: 0.2px;
+      line-height: 1.1;
+    }
+
+    .brand .sub{
+      font-size: 12px;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
-      padding: 12px 18px;
-      border-radius: 14px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--forest);
+      color: var(--white);
       text-decoration:none;
-      font-weight: 800;
-      letter-spacing: .2px;
-      border: 1px solid rgba(255,255,255,.18);
-      color: #fff;
-      background: linear-gradient(135deg, var(--brand-dark), var(--brand));
-      box-shadow: 0 14px 28px rgba(26,92,78,.22);
-      transition: transform .08s ease, filter .2s ease, box-shadow .2s ease;
-      white-space: nowrap;
+      font-weight: 650;
+      box-shadow: 0 10px 22px rgba(26, 92, 78, 0.18);
+      transition: transform .08s ease, background .15s ease;
     }
-    .btn:hover{ transform: translateY(-1px); filter: brightness(1.02); box-shadow: 0 18px 36px rgba(26,92,78,.24); }
+    .btn:hover{ background: var(--forest-700); }
+    .btn:active{ transform: translateY(1px); }
 
-    /* Hero */
-    main{ padding: 26px 0 10px; }
-    .hero{
-      border-radius: var(--radius-lg);
-      background: linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.78) 100%);
-      border: 1px solid rgba(15,23,42,.08);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      position: relative;
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:-80px -120px auto auto;
-      width: 420px; height: 420px;
-      border-radius: 999px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(123,191,75,.25), transparent 55%),
-        radial-gradient(circle at 70% 60%, rgba(26,92,78,.18), transparent 60%);
-      filter: blur(0px);
-      transform: rotate(12deg);
-      pointer-events:none;
-    }
-    .hero-inner{
-      padding: 42px 28px 34px;
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 22px;
-      align-items: start;
-      position: relative;
-    }
-    @media (max-width: 920px){
-      .hero-inner{ grid-template-columns: 1fr; padding: 34px 18px 26px; }
-      .navlinks{ display:none; } /* sauber & klar für mobile */
-    }
-
-    /* Logo-Kreis mittig über Headline */
-    .logo-stack{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      gap: 14px;
-      padding-top: 6px;
-    }
-    .logo-circle{
-      width: 132px; height: 132px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,.92) 100%);
-      border: 1px solid rgba(26,92,78,.18);
-      box-shadow: 0 22px 55px rgba(26,92,78,.12);
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-    }
-    .logo-circle img{
-      width: 78%;
-      height: auto;
-      display:block;
-    }
-
-    h1{
-      margin: 0;
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height: 1.08;
-      letter-spacing: -0.6px;
-      font-weight: 850;
-      color: #0b1220;
-    }
-    .lead{
-      margin: 8px 0 0;
-      font-size: clamp(16px, 1.5vw, 18px);
-      color: var(--muted);
-      max-width: 70ch;
-    }
-
-    /* Quote */
-    .quote{
-      margin-top: 16px;
-      width: min(760px, 100%);
-      border-radius: 20px;
-      padding: 18px 18px;
-      background: linear-gradient(135deg, rgba(26,92,78,.10), rgba(123,191,75,.12));
-      border: 1px solid rgba(26,92,78,.12);
-    }
-    .quote p{
-      margin:0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: clamp(16px, 1.7vw, 20px);
-      color: rgba(15,23,42,.86);
-    }
-    .quote .author{
-      margin-top: 8px;
-      font-weight: 800;
-      color: var(--brand-dark);
-      font-size: 14px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-
-    /* Right side cards */
-    .panel{
-      display:grid;
-      gap: 12px;
-      padding-top: 10px;
-    }
-    .card{
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(15,23,42,.08);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: 0 10px 22px rgba(2,6,23,.06);
-    }
-    .card h3{
-      margin: 0 0 6px;
-      font-size: 15px;
-      letter-spacing: -.2px;
-    }
-    .card p{
-      margin: 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(123,191,75,.14);
-      border: 1px solid rgba(123,191,75,.22);
-      color: var(--brand-dark);
-      font-weight: 900;
-      font-size: 13px;
-      width: fit-content;
-    }
-    .dot{
-      width: 10px; height: 10px; border-radius: 999px;
-      background: var(--brand-light);
-      box-shadow: 0 0 0 4px rgba(123,191,75,.14);
-    }
-
-    /* Sections below */
-    .section{
-      margin-top: 18px;
-      padding: 18px 0 10px;
-    }
-    .section h2{
-      margin: 0 0 10px;
-      font-size: 22px;
-      letter-spacing: -0.3px;
-    }
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    @media (max-width: 920px){
-      .grid3{ grid-template-columns: 1fr; }
-    }
-    .kpi{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(15,23,42,.08);
-      padding: 16px;
-      box-shadow: 0 10px 22px rgba(2,6,23,.06);
-    }
-    .kpi strong{
-      display:block;
-      font-size: 15px;
-      margin-bottom: 6px;
-      color: #0b1220;
-      letter-spacing: -.2px;
-    }
-    .kpi span{
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    footer{
-      margin-top: 30px;
-      padding: 22px 0 40px;
-      border-top: 1px solid rgba(15,23,42,.08);
-      color: var(--muted);
-      font-size: 14px;
-    }
+    /* Demo-Content */
+    main{ padding: 54px 0 90px; }
+    h1{ font-size: clamp(28px, 3.5vw, 44px); margin: 0 0 12px; }
+    p{ max-width: 62ch; font-size: 18px; line-height: 1.55; margin: 0; opacity: 0.95; }
   </style>
 </head>
 
 <body>
+
   <header>
     <div class="wrap">
       <div class="nav">
-        <div class="brandline">
-          <div class="mini-mark" aria-hidden="true"><span>BB</span></div>
+        <a class="brand" href="/">
+          <!-- WICHTIG: Pfad ggf. anpassen -->
+          <img src="assets/logo-bb.png" alt="bewegt & bunt Logo" />
           <div>
-            bewegt <span style="color:var(--brand-dark)">&</span> bunt<br />
-            <span style="font-weight:700;color:var(--muted);font-size:12px;">Bewegungsplanung für Kitas</span>
+            <div class="name">bewegt & bunt</div>
+            <div class="sub">Der Standard für Bewegungsplanung</div>
           </div>
-        </div>
-
-        <nav class="navlinks" aria-label="Navigation">
-          <a href="#vorteile">Vorteile</a>
-          <a href="#fuerleitung">Für Leitung & Träger</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-
-        <!-- EINZIGER Button oben rechts -->
-        <a class="btn" href="https://app.bewegtundbunt.de/" target="_blank" rel="noopener">
-          Jetzt zur App →
         </a>
+
+        <!-- Beispiel-CTA zur App -->
+        <a class="btn" href="/app">Zur App</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-inner">
-        <!-- LINKS: Logo mittig über Headline -->
-        <div class="logo-stack">
-          <div class="logo-circle">
-            <!-- Logo-Datei: /assets/logo.png -->
-            <img src="assets/logo.png" alt="bewegt & bunt Logo" />
-          </div>
-
-          <h1>Der Standard für Bewegungsplanung in Kitas</h1>
-          <p class="lead">
-            Weniger Organisationsaufwand, mehr Qualität im Alltag:
-            strukturiert geplante Bewegungseinheiten, die Teams direkt umsetzen können.
-          </p>
-
-          <div class="quote" aria-label="Zitat">
-            <p>„Bewegung ist die Sprache, die alle Kinder sprechen – lange bevor sie Worte kennen.“</p>
-            <div class="author">— Friedrich Fröbel</div>
-          </div>
-        </div>
-
-        <!-- RECHTS: seriöse Nutzenboxen -->
-        <div class="panel">
-          <div class="badge"><span class="dot"></span> Für Einrichtungsleitungen & Träger</div>
-
-          <div class="card">
-            <h3>Standardisierte Qualität</h3>
-            <p>Einheitliche Struktur und klare Abläufe sorgen für verlässliche Durchführung im gesamten Team.</p>
-          </div>
-
-          <div class="card">
-            <h3>Planung in Minuten</h3>
-            <p>Keine Zettelwirtschaft: Inhalte sind übersichtlich vorbereitet – direkt nutzbar im Gruppenalltag.</p>
-          </div>
-
-          <div class="card">
-            <h3>Professionell & alltagstauglich</h3>
-            <p>Material, Aufbau, Durchführung und Varianten – sauber gegliedert und sofort einsatzbereit.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="vorteile">
-      <h2>Warum bewegt & bunt?</h2>
-      <div class="grid3">
-        <div class="kpi">
-          <strong>Mehr Zeit im Dienst</strong>
-          <span>Weniger Vorbereitung, mehr Durchführung – ohne Zusatzaufwand nach Feierabend.</span>
-        </div>
-        <div class="kpi">
-          <strong>Klarer Ablauf</strong>
-          <span>Jede Einheit ist so strukturiert, dass sie auch Vertretungen sicher umsetzen können.</span>
-        </div>
-        <div class="kpi">
-          <strong>Träger-tauglich</strong>
-          <span>Ein professioneller Standard, der Qualität sichtbar macht und Prozesse vereinheitlicht.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="fuerleitung">
-      <h2>Für Leitung & Träger gedacht</h2>
-      <div class="grid3">
-        <div class="kpi">
-          <strong>Entlastung im Alltag</strong>
-          <span>Planung wird einfacher – Teams finden schneller passende Einheiten und setzen sie sicher um.</span>
-        </div>
-        <div class="kpi">
-          <strong>Einheitliche Umsetzung</strong>
-          <span>Standardisierte Vorlagen fördern Verlässlichkeit und Qualität über Gruppen hinweg.</span>
-        </div>
-        <div class="kpi">
-          <strong>Professionelles Auftreten</strong>
-          <span>Strukturierte Angebote stärken die pädagogische Qualität und die Außenwirkung der Einrichtung.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="kontakt">
-      <h2>Kontakt</h2>
-      <div class="kpi" style="background:rgba(255,255,255,.92);">
-        <strong>Fragen oder Anpassungswünsche?</strong>
-        <span>Schreib uns: <a href="mailto:info@bewegtundbunt.de" style="color:var(--brand-dark);font-weight:900;text-decoration:none;">info@bewegtundbunt.de</a></span>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> bewegt & bunt ·
-      <span style="color:var(--brand-dark);font-weight:800;">Professionelle Bewegungsplanung</span>
-    </footer>
+  <main>
+    <div class="wrap">
+      <h1>Bewegungsplanung, die Leitung überzeugt.</h1>
+      <p>
+        Strukturierte, sofort einsetzbare Bewegungsstunden – für weniger Orga-Aufwand
+        und mehr Qualität im Kita-Alltag.
+      </p>
+    </div>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

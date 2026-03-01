@@ -1,44 +1,52 @@
-Sehr gerne! Ich habe die Website nun massiv aufgewertet, um sie für **Kita-Leitungen und Träger** hochprofessionell zu gestalten, ohne dabei den Markenkern „bewegt & bunt“ zu verlieren.
+### ✅ Alle umgesetzten Anforderungen im Überblick
+| Anforderung | Umsetzung |
+|---|---|
+| ❌ Keine Pilot-Anfragen für Dritte | Alle Anfragebuttons und Texte für externe Einrichtungen/Träger wurden entfernt. Der Pilot wird explizit als **exklusiv für die Kita Fröbisch** beschrieben. |
+| 🎯 Zielgruppe nur Kita / Integrationstagesstätte Fröbisch | Persönliche Begrüßung für das Team der Einrichtung, alle Inhalte und Vorteile sind auf euren Arbeitsalltag zugeschnitten. |
+| 🎨 Harmonischere Farben | Harte Kontraste entfernt, wärmere weiche Grüntöne, sehr weicher Hintergrundverlauf, abgeschwächte Schatten und Rahmen. |
+| 🐛 Fehler aus Screenshot behoben | Kein überflüssiger Text im Code mehr, Hintergrund ist sauber, es erscheint kein durchscheinender Chat-Text mehr. |
+| ✍️ Schreibschrift Akzente | Ich habe die gut lesbare Handschrift-Schriftart `Caveat` integriert, die für Begrüßungen und Akzente verwendet wird. Fließtext bleibt zur besseren Lesbarkeit bei der professionellen Schrift Sora. |
+| ❌ Logo im Header entfernt | Statt dem Bildlogo wird nur der Markenname im Header angezeigt. |
+| ✅ Header Button | Der Button `Zur App öffnen` oben rechts ist erhalten wie gewünscht. |
+| ℹ️ Branding | „bewegt & bunt“ wird durchgehend konsequent in Anführungszeichen geschrieben.
 
-### Was ich optimiert habe:
-1.  **Zielgruppen-Fokus:** Die Texte wurden so angepasst, dass sie die Schmerzpunkte von Leitungen (Qualitätssicherung, Team-Entlastung) und Trägern (Standards, Attraktivität als Arbeitgeber) direkt ansprechen.
-2.  **Branding:** Das Markenzeichen „bewegt & bunt“ wird konsequent in Anführungszeichen gesetzt.
-3.  **Header-CTA:** Der Button oben rechts führt nun direkt zur App (Link-Platzhalter im Code).
-4.  **Design-System:**
-    *   **Professionelle Grundtöne:** Ich habe ein tiefes Waldgrün für Vertrauen und ein sanftes Pastell für Modernität gewählt.
-    *   **Struktur:** Großzügiges White-Space Management (Abstände), damit die Seite ruhig und kompetent wirkt.
-    *   **Cards:** Ein dezenter Glassmorphismus-Effekt für die Karten.
 
-Hier ist der fertige, überarbeitete HTML-Code:
+---
 
+# 📄 Fertiger HTML Code
 ```html
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>„bewegt & bunt“ – Professionalität für Kita-Leitungen & Träger</title>
+  <title>„bewegt & bunt“ – Pilotprojekt Kita Fröbisch</title>
 
-  <!-- Google Fonts -->
+  <!-- Schriftarten: Professionell Sora + Schreibschrift Caveat für Akzente -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Professionelle Grundtöne */
-      --forest: #13473C;      /* Vertrauen & Beständigkeit */
-      --forest-light: #1A5C4F;
-      --mint: #E6F4EC;        /* Frische & Struktur */
-      --bg-gradient: linear-gradient(135deg, #f8fbf9 0%, #eef6f1 100%);
-      --accent-soft: #D9EBE0;
+      /* Harmonisch abgestimmte, warme Grundtöne */
+      --forest: #23574b;
+      --forest-light: #2f7061;
+      --mint: #EDF6F0;
+      --bg-gradient: linear-gradient(180deg, #F7FBF8 0%, #ffffff 100%);
+      --accent-soft: #E6F4EC;
       --white: #ffffff;
-      --text: #0E352D;
-      --border: rgba(19, 71, 60, 0.12);
-      --shadow: 0 20px 40px rgba(14, 53, 45, 0.08);
-      --radius-lg: 24px;
-      --radius-sm: 12px;
+      --text: #1F463C;
+      --border: rgba(35, 87, 75, 0.10);
+      --shadow: 0 18px 45px rgba(35, 87, 75, 0.06);
+      --radius-lg: 28px;
       --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    /* Klasse für Schreibschrift Akzente */
+    .handwritten {
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
     }
 
     *{ box-sizing: border-box; -webkit-font-smoothing: antialiased; }
@@ -78,14 +86,8 @@ Hier ist der fertige, überarbeitete HTML-Code:
     .brand{
       display: flex;
       align-items: center;
-      gap: 14px;
       text-decoration: none;
       color: inherit;
-    }
-
-    .brand img{
-      height: 48px;
-      width: auto;
     }
 
     .brand-text .title{
@@ -130,14 +132,31 @@ Hier ist der fertige, überarbeitete HTML-Code:
       border-radius: 999px;
       font-weight: 700;
       font-size: 14px;
-      box-shadow: 0 10px 20px rgba(19, 71, 60, 0.2);
+      box-shadow: 0 10px 20px rgba(19, 71, 60, 0.15);
       transition: var(--transition);
       white-space: nowrap;
     }
     .btn-app:hover{
       transform: translateY(-2px);
       background: var(--forest-light);
-      box-shadow: 0 15px 30px rgba(19, 71, 60, 0.3);
+      box-shadow: 0 15px 30px rgba(19, 71, 60, 0.25);
+    }
+
+    .btn-outline {
+      text-decoration: none;
+      border: 1.5px solid var(--forest);
+      color: var(--forest);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      background: transparent;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-outline:hover {
+      background: var(--mint);
+      transform: translateY(-2px);
     }
 
     /* HERO SECTION */
@@ -148,11 +167,12 @@ Hier ist der fertige, überarbeitete HTML-Code:
     }
 
     .hero-card{
-      background: rgba(255, 255, 255, 0.6);
-      border: 1px solid var(--white);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255,255,255, 0.8);
       border-radius: var(--radius-lg);
       padding: 50px;
       box-shadow: var(--shadow);
+      backdrop-filter: blur(4px);
     }
 
     .hero h1{
@@ -207,11 +227,9 @@ Hier ist der fertige, überarbeitete HTML-Code:
       border-radius: var(--radius-lg);
       padding: 32px;
       transition: var(--transition);
-      position: relative;
-      overflow: hidden;
     }
     .card:hover{
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       box-shadow: var(--shadow);
       border-color: var(--forest);
     }
@@ -241,31 +259,22 @@ Hier ist der fertige, überarbeitete HTML-Code:
       color: var(--forest);
     }
 
-    /* PILOT CTA */
-    .pilot-cta{
-      background: var(--forest);
-      color: var(--white);
+    /* Infobox Pilotprojekt */
+    .pilot-info{
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .pilot-cta h3{ color: var(--white); font-size: 28px; margin: 0 0 10px 0; }
-    .pilot-cta p{ opacity: 0.9; margin: 0; }
-
-    .btn-white{
-      background: var(--white);
-      color: var(--forest);
-      padding: 16px 32px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: var(--transition);
-    }
-    .btn-white:hover{ transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .pilot-info h3{ color: var(--forest); font-size: 28px; margin: 0 0 10px 0; }
+    .pilot-info p{ opacity: 0.9; margin: 0; }
 
     footer{
       background: var(--accent-soft);
@@ -278,8 +287,9 @@ Hier ist der fertige, überarbeitete HTML-Code:
     @media (max-width: 850px){
       .nav{ flex-direction: column; gap: 20px; text-align: center; }
       .hero-card{ padding: 30px; }
-      .pilot-cta{ flex-direction: column; text-align: center; }
+      .pilot-info{ flex-direction: column; text-align: center; }
       .nav-links{ flex-wrap: wrap; justify-content: center; }
+      .hero-actions { justify-content: center; }
     }
   </style>
 </head>
@@ -290,20 +300,19 @@ Hier ist der fertige, überarbeitete HTML-Code:
   <div class="wrap">
     <div class="nav">
       <a class="brand" href="#top">
-        <img src="assets/logo-bb.png" alt="„bewegt & bunt“ Logo">
+        <!-- LOGO WURDE GEWÜNSCHTERMAẞEN ENTFERNT -->
         <div class="brand-text">
           <div class="title">„bewegt & bunt“</div>
-          <div class="sub">Strategisches Qualitätsmanagement</div>
+          <div class="sub">Pilotprojekt Kita Fröbisch</div>
         </div>
       </a>
 
       <nav class="nav-links">
         <a class="chip" href="#konzept">Konzept</a>
-        <a class="chip" href="#vorteile">Trägervorteile</a>
-        <a class="chip" href="#pilot">Pilotprojekt</a>
+        <a class="chip" href="#vorteile">Vorteile für euer Team</a>
+        <a class="chip" href="#projekt">Projektablauf</a>
       </nav>
 
-      <!-- Ersetzt durch "Zur App" Button -->
       <a class="btn-app" href="https://deine-app-url.de">
         Zur App öffnen
       </a>
@@ -317,85 +326,86 @@ Hier ist der fertige, überarbeitete HTML-Code:
   <section class="hero">
     <div class="wrap">
       <div class="hero-card">
-        <h1>Qualitätssicherung in der Kita-Bewegung.</h1>
+        <!-- Schreibschrift Akzent wie gewünscht -->
+        <p class="handwritten" style="font-size: 24px; color: var(--forest-light); margin:0 0 12px 0;">Willkommen, Team der Kita Fröbisch 👋</p>
+
+        <h1>Mehr Zeit für die Kinder, weniger Zeit für Planung.</h1>
         <div class="hero-points">
-          <div class="point"><div class="point-dot"></div><span>Entlastung für Teams durch „bewegt & bunt“ Einheiten.</span></div>
-          <div class="point"><div class="point-dot"></div><span>Sicherheit für Leitungen durch standardisierte Planung.</span></div>
-          <div class="point"><div class="point-dot"></div><span>Pilotprojekt: 4 Wochen praxisnahe Evaluation.</span></div>
+          <div class="point"><div class="point-dot"></div><span>Entlastung für euer Team durch fertige „bewegt & bunt“ Einheiten.</span></div>
+          <div class="point"><div class="point-dot"></div><span>Sicherheit für die Leitung durch standardisierte, geprüfte Abläufe.</span></div>
+          <div class="point"><div class="point-dot"></div><span>✅ Exklusives 4-wöchiges Pilotprojekt für eure Einrichtung.</span></div>
         </div>
-        <div style="display:flex; gap:16px; flex-wrap:wrap;">
-          <a class="btn-app" href="#pilot">Am Pilotprojekt teilnehmen</a>
-          <a class="btn-app" style="background:transparent; border:1.5px solid var(--forest); color:var(--forest); box-shadow:none;" href="mailto:kontakt@bewegtundbunt.de">Fachberatung anfragen</a>
+        <div class="hero-actions" style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a class="btn-app" href="#projekt">Zum Projektablauf</a>
+          <a class="btn-outline" href="mailto:kontakt@bewegtundbunt.de">Fragen an den Ansprechpartner</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ANGEBOT / KONZEPT -->
+  <!-- KONZEPT -->
   <section id="konzept">
     <div class="wrap">
-      <h2>Das „bewegt & bunt“ Versprechen</h2>
+      <h2>Das „bewegt & bunt“ Versprechen für euch</h2>
       <div class="grid">
         <div class="card">
-          <h3>Methodische Exzellenz</h3>
-          <p>Fertig konzipierte Einheiten, die methodisch-didaktisch auf dem neuesten Stand der Frühpädagogik basieren.</p>
+          <h3>Methodisch sicher</h3>
+          <p>Alle Bewegungsstunden basieren auf dem neuesten Stand der Frühpädagogik und sind auf die Altersgruppen eurer Einrichtung abgestimmt.</p>
         </div>
         <div class="card">
-          <h3>Echte Zeitersparnis</h3>
-          <p>Die Vorbereitungszeit im Team sinkt signifikant, während die Qualität der Angebote messbar steigt.</p>
+          <h3>Keine lange Vorbereitung</h3>
+          <p>Materialangaben, Zeitplan und Hinweise für Erzieher*innen sind bereits fertig hinterlegt.</p>
         </div>
         <div class="card">
-          <h3>Träger-Standards</h3>
-          <p>Schaffen Sie einheitliche Standards über alle Einrichtungen hinweg – verlässlich und steuerbar.</p>
+          <h3>Einheitliche Qualität</h3>
+          <p>Alle Mitarbeiter*innen nutzen den gleichen Standard – auch bei Personalwechsel oder Vertretung.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRÄGER-VORTEILE -->
+  <!-- VORTEILE TEAM / LEITUNG -->
   <section id="vorteile" style="background: rgba(255,255,255,0.4); padding: 80px 0;">
     <div class="wrap">
-      <h2>Warum Träger & Leitungen auf uns setzen</h2>
+      <h2>Was sich für euch ändert</h2>
       <div class="grid">
         <div class="card">
-          <h3>Fachkräftemangel begegnen</h3>
-          <p>„bewegt & bunt“ ermöglicht es auch weniger erfahrenen Kräften, Bewegungsstunden auf Top-Niveau durchzuführen.</p>
+          <h3>Für das pädagogische Team</h3>
+          <p>Ihr spart bis zu 2 Stunden Vorbereitungszeit pro Woche und habt mehr Zeit für die Interaktion mit den Kindern.</p>
           <ul class="mini-list">
-            <li>Sicherheit in der Umsetzung</li>
-            <li>Reduzierter Stressfaktor</li>
+            <li>Sichere Schritt für Schritt Anleitung</li>
+            <li>Hinweise zu Gefahren und Überforderung</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Transparenz & Planung</h3>
-          <p>Leitungen erhalten ein klares Dashboard über die durchgeführten Einheiten und pädagogischen Ziele.</p>
+          <h3>Für die Einrichtungsleitung</h3>
+          <p>Ihr erhaltet Transparenz über durchgeführte Angebote und habt nachweisbare Qualitätsstandards.</p>
           <ul class="mini-list">
-            <li>Digitale Übersicht</li>
-            <li>Dokumentationshilfe</li>
+            <li>Einfache Dokumentation</li>
+            <li>Planungssicherheit auch bei Urlaub / Krankheit</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Attraktiver Arbeitgeber</h3>
-          <p>Bieten Sie Ihrem Team moderne, digitale Tools statt veralteter Ordnerstrukturen.</p>
+          <h3>Für die Kinder</h3>
+          <p>Regelmäßige, abwechslungsreiche Bewegungsangebote, die Spaß machen und die Entwicklung fördern.</p>
           <ul class="mini-list">
-            <li>Innovative Arbeitsumgebung</li>
-            <li>Modernes Image</li>
+            <li>Abgestimmt auf alle Altersgruppen</li>
+            <li>Inklusive Konzepte für alle Kinder</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILOTPROJEKT -->
-  <section id="pilot">
+  <!-- PROJEKTABLAUF PILOT -->
+  <section id="projekt">
     <div class="wrap">
-      <div class="pilot-cta">
+      <div class="pilot-info">
         <div>
-          <h3>Der „bewegt & bunt“ Pilot</h3>
-          <p>Starten Sie mit einer Kita über 4 Wochen. Evaluieren Sie den Impact auf Team und Qualität.</p>
+          <h3>Ablauf des 4-wöchigen Pilotprojekts</h3>
+          <p>Gemeinsam evaluieren wir nach Abschluss, welche Anpassungen wir für den dauerhaften Einsatz in eurer Einrichtung vornehmen.</p>
         </div>
-        <a class="btn-white" href="mailto:kontakt@bewegtundbunt.de?subject=Pilotprojekt%20Anfrage&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20das%20Pilotprojekt%20von%20%E2%80%9Ebewegt%20%26%20bunt%E2%80%9C.%0A%0AEinrichtung%3A%0ATr%C3%A4ger%3A">
-          Pilot anfragen
-        </a>
+        <a class="btn-app" href="https://deine-app-url.de">Projektdokumentation öffnen</a>
       </div>
     </div>
   </section>
@@ -406,12 +416,12 @@ Hier ist der fertige, überarbeitete HTML-Code:
   <div class="wrap">
     <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px;">
       <div>
-        <div style="font-weight:700; color:var(--forest); font-size:18px; margin-bottom:10px;">„bewegt & bunt“</div>
-        <p style="max-width:300px; opacity:0.7;">Ihr Partner für moderne Bewegungsplanung und Qualitätssicherung in Kindertagesstätten.</p>
+        <div class="handwritten" style="font-size: 26px; color: var(--forest); margin-bottom:10px;">„bewegt & bunt“</div>
+        <p style="max-width:300px; opacity:0.7;">Exklusives Pilotprojekt in Zusammenarbeit mit der Kindertagesstätte Fröbisch.</p>
       </div>
       <div style="display:flex; gap:40px;">
         <div>
-          <div style="font-weight:600; margin-bottom:10px;">Navigation</div>
+          <div style="font-weight:600; margin-bottom:10px;">Schnellzugriff</div>
           <a href="#top" style="display:block; color:inherit; text-decoration:none; margin-bottom:5px;">Nach oben</a>
           <a href="mailto:kontakt@bewegtundbunt.de" style="display:block; color:inherit; text-decoration:none;">Kontakt</a>
         </div>
@@ -422,8 +432,8 @@ Hier ist der fertige, überarbeitete HTML-Code:
         </div>
       </div>
     </div>
-    <div style="margin-top:40px; border-top:1px solid rgba(0,0,0,0.1); padding-top:20px; text-align:center; opacity:0.6;">
-      © <span id="y"></span> „bewegt & bunt“ · Alle Rechte vorbehalten.
+    <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:20px; text-align:center; opacity:0.6;">
+      © <span id="y"></span> „bewegt & bunt“
     </div>
   </div>
 </footer>
@@ -435,3 +445,8 @@ Hier ist der fertige, überarbeitete HTML-Code:
 </body>
 </html>
 ```
+
+
+---
+### 💡 Hinweis zum Link der App:
+Ersetze den Platzhalter `https://deine-app-url.de` an beiden Stellen im Code durch die tatsächliche Adresse eurer internen App / Dokumentation.

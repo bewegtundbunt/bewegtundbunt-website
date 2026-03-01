@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bewegt & bunt</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --green: #2d6a4f;
       --green-light: #52b788;
       --green-pale: #d8f3dc;
-      --orange: #e07a2f;
       --cream: #fdfaf5;
       --dark: #1a2e23;
       --grey: #6b7c72;
       --radius: 16px;
+      --shadow: 0 18px 50px rgba(0,0,0,.25);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,7 +28,72 @@
       overflow-x: hidden;
     }
 
-    /* ── HERO ─────────────────────────────────────────── */
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(26,46,35,.55);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .logo {
+      width: 36px; height: 36px;
+      border-radius: 999px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--green);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(255,255,255,.92);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease, opacity .12s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: .95; }
+
+    .btn.primary {
+      background: linear-gradient(180deg, var(--green-light), var(--green));
+      color: #fff;
+      border: none;
+      box-shadow: 0 10px 24px rgba(82,183,136,.25);
+    }
+
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -34,397 +101,181 @@
       position: relative;
       background: var(--dark);
       overflow: hidden;
-      padding: 2rem;
+      padding: 120px 18px 70px;
     }
-    .hero::before {
-      content: '';
+
+    .glow {
       position: absolute;
-      inset: 0;
+      inset: -30%;
       background:
-        radial-gradient(ellipse 60% 60% at 20% 40%, #2d6a4f55 0%, transparent 70%),
-        radial-gradient(ellipse 50% 70% at 80% 60%, #e07a2f22 0%, transparent 70%);
+        radial-gradient(circle at 30% 30%, rgba(82,183,136,.28), transparent 55%),
+        radial-gradient(circle at 80% 35%, rgba(45,106,79,.35), transparent 58%),
+        radial-gradient(circle at 70% 80%, rgba(216,243,220,.12), transparent 55%);
+      filter: blur(2px);
+      pointer-events: none;
     }
-    .hero-blob {
-      position: absolute;
-      width: 520px; height: 520px;
-      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
-      background: var(--green);
-      opacity: 0.12;
-      top: -100px; right: -120px;
-      animation: blobFloat 8s ease-in-out infinite;
-    }
-    @keyframes blobFloat {
-      0%, 100% { transform: translate(0,0) rotate(0deg); }
-      50% { transform: translate(-20px, 30px) rotate(8deg); }
-    }
-    .hero-content {
+
+    .hero-card {
       position: relative;
+      width: min(980px, 100%);
       text-align: center;
-      max-width: 780px;
-    }
-    .hero h1 {
-      font-size: clamp(2.6rem, 7vw, 5rem);
-      font-weight: 800;
       color: #fff;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.7s 0.1s ease both;
+      padding: 34px 18px;
     }
-    .hero h1 span { color: var(--green-light); }
-    .hero p {
-      font-family: 'Lora', serif;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: #b0c8bc;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.7s 0.2s ease both;
-    }
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-    .btn-primary {
-      background: var(--green-light);
-      color: var(--dark);
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.9rem 2.2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px #52b78840;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px #52b78860; }
-    .btn-ghost {
-      border: 2px solid #ffffff30;
-      color: #fff;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.9rem 2.2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--green-light); background: #ffffff10; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .scroll-hint {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
+
+    .hero-badge {
+      display: inline-flex;
+      gap: 10px;
       align-items: center;
-      gap: 0.4rem;
-      color: #ffffff40;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .scroll-hint::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, #fff3, transparent);
-      animation: scrollLine 1.5s ease-in-out infinite;
-    }
-    @keyframes scrollLine {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; }
-    }
-
-    /* ── SECTION WRAPPER ──────────────────────────────── */
-    section { padding: 6rem 1.5rem; }
-    .container { max-width: 1060px; margin: 0 auto; }
-    .section-label {
-      font-size: 0.7rem;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.12);
       font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 0.75rem;
+      margin-bottom: 18px;
     }
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
     }
-    .section-intro {
+    h1 span { color: var(--green-light); }
+
+    .sub {
       font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      color: var(--grey);
-      line-height: 1.8;
-      max-width: 640px;
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.55;
+      color: rgba(255,255,255,.8);
+      max-width: 780px;
+      margin: 0 auto 22px;
     }
 
-    /* ── PROBLEM SECTION ──────────────────────────────── */
-    .problem { background: #fff; }
-    .problem-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .problem-card {
-      background: var(--cream);
-      border-radius: var(--radius);
-      padding: 2rem;
-      border-left: 4px solid var(--orange);
-    }
-    .problem-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; }
-    .problem-card p { font-size: 0.95rem; color: var(--grey); line-height: 1.7; }
-
-    /* ── ÜBER MICH ────────────────────────────────────── */
-    .about { background: var(--dark); color: #fff; }
-    .about-inner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-    .about-avatar {
-      width: 200px; height: 200px;
-      border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
-      display: grid;
-      place-items: center;
-      font-size: 5rem;
-      flex-shrink: 0;
-      animation: blobFloat 7s ease-in-out infinite;
-    }
-    .about-text .section-title { color: #fff; }
-    .about-text .section-intro { color: #b0c8bc; }
-    .about-stats {
+    .cta {
       display: flex;
-      gap: 2.5rem;
-      margin-top: 2.5rem;
+      justify-content: center;
+      gap: 12px;
       flex-wrap: wrap;
+      margin-top: 12px;
     }
-    .stat { display: flex; flex-direction: column; }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--green-light);
-      line-height: 1;
-    }
-    .stat-label { font-size: 0.8rem; color: #b0c8bc; margin-top: 0.3rem; line-height: 1.4; }
 
-    /* ── WAS IST INKLUSIVE ────────────────────────────── */
-    .pilot-includes { background: var(--green-pale); }
-    .includes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
+    .btn.secondary {
+      background: transparent;
+      color: rgba(255,255,255,.92);
     }
-    .include-card {
+
+    /* Sections */
+    section {
+      padding: 72px 18px;
+    }
+
+    .wrap {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
       background: #fff;
       border-radius: var(--radius);
-      padding: 1.8rem;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .include-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #2d6a4f18; }
-    .include-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .include-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark); }
-    .include-card p { font-size: 0.9rem; color: var(--grey); line-height: 1.7; }
-
-    /* ── APP CTA ──────────────────────────────────────── */
-    .app-cta {
-      background: var(--green);
-      color: #fff;
-      text-align: center;
-    }
-    .app-cta .section-title { color: #fff; }
-    .app-cta p {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      color: #c7e8d4;
-      line-height: 1.8;
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
+      padding: 18px;
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
     }
 
-    /* ── FOOTER ───────────────────────────────────────── */
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--grey); line-height: 1.55; font-size: 14.5px; }
+
     footer {
+      padding: 30px 18px;
+      color: rgba(255,255,255,.8);
       background: var(--dark);
-      color: #b0c8bc;
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,.1);
     }
-    footer a { color: var(--green-light); text-decoration: none; }
+    footer a { text-decoration: underline; text-underline-offset: 3px; }
 
-    /* ── RESPONSIVE ───────────────────────────────────── */
-    @media (max-width: 700px) {
-      .problem-grid { grid-template-columns: 1fr; }
-      .about-inner { grid-template-columns: 1fr; }
-      .about-avatar { width: 130px; height: 130px; font-size: 3.5rem; margin: 0 auto; }
-      .about-stats { gap: 1.5rem; }
+    @media (max-width: 920px) {
+      .grid { grid-template-columns: 1fr; }
+      nav a:not(.btn) { display: none; }
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <a class="brand" href="#top" aria-label="Zur Startseite">
+      <div class="logo">BB</div>
+      bewegt & bunt
+    </a>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-<section class="hero">
-  <div class="hero-blob"></div>
-  <div class="hero-content">
-    <h1>Bewegungsstunden, die <span>wirklich funktionieren</span></h1>
-    <p>
-      Eine App, die pädagogischen Fachkräften in Kitas klare Struktur und erprobte Qualität für jede Bewegungsstunde gibt –
-      entwickelt aus über 15 Jahren Praxiserfahrung als Ergotherapeut.
-    </p>
-    <div class="hero-cta">
-      <a href="https://app.bewegtundbunt.de" class="btn-primary">Zur App →</a>
-      <a href="#ueber-mich" class="btn-ghost">Mehr erfahren</a>
-    </div>
-  </div>
-  <div class="scroll-hint">Scroll</div>
-</section>
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#angebot">Angebot</a>
 
-<!-- ═════════════════════ DAS PROBLEM ═════════════════════ -->
-<section class="problem">
-  <div class="container">
-    <div class="section-label">Das Problem</div>
-    <h2 class="section-title">Warum Bewegungsstunden<br>oft scheitern</h2>
-    <p class="section-intro">
-      In vielen Kitas fehlt bei Bewegungsangeboten eine klare Methodik. Das Ergebnis: Chaos, Überforderung – und Kinder, die nicht wirklich profitieren.
-    </p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <h3>🌀 Fehlende Struktur</h3>
-        <p>Viele Bewegungsstunden laufen ohne klaren Aufbau – kein Warm-up, kein roter Faden, kein Abschluss. Die Kinder wissen nicht, was sie erwartet.</p>
-      </div>
-      <div class="problem-card">
-        <h3>😰 Überforderung der Fachkräfte</h3>
-        <p>Erzieherinnen und Erzieher sind oft nicht dafür ausgebildet, motorische Förderangebote zu entwickeln und situativ anzupassen.</p>
-      </div>
-      <div class="problem-card">
-        <h3>📉 Geringe Qualität</h3>
-        <p>Ohne methodisches Wissen sinkt die pädagogische Qualität. Kinder mit Förderbedarf werden nicht ausreichend berücksichtigt.</p>
-      </div>
-      <div class="problem-card">
-        <h3>🔄 Kein Transfer</h3>
-        <p>Gute Ideen werden nicht systematisch festgehalten oder weitergegeben – jede Kraft erfindet das Rad neu.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <!-- WICHTIG: Dieser Link muss zur App zeigen -->
+      <a class="btn primary" href="https://app.bewegtundbunt.de/login.html">Zur App →</a>
+    </nav>
+  </header>
 
-<!-- ═════════════════════ ÜBER MICH ═════════════════════ -->
-<section class="about" id="ueber-mich">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-avatar">🧑‍⚕️</div>
-      <div class="about-text">
-        <div class="section-label">Wer steckt dahinter</div>
-        <h2 class="section-title">Erfahrung, die einen Unterschied macht</h2>
-        <p class="section-intro">
-          Als Ergotherapeut mit über 15 Jahren Berufserfahrung – darunter intensive Jahre in der Psychiatrie und Gerontopsychiatrie –
-          habe ich gelernt, wie strukturierte Gruppenangebote Menschen wirklich erreichen.
-          Seit fünf Jahren begleite ich als Individualbegleiter Kinder in verschiedenen Kitas.
-          Dabei musste ich immer wieder zuschauen, wie Bewegungsstunden scheiterten –
-          nicht aus Unwillen, sondern aus fehlendem Handwerkszeug.
-          <br><br>
-          Das möchte ich ändern. Diese App ist meine Antwort darauf.
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <div class="glow"></div>
+      <div class="hero-card">
+        <div class="hero-badge">Struktur. Qualität. Sofort umsetzbar.</div>
+        <h1>Bewegungsstunden, die <span>wirklich funktionieren</span></h1>
+        <p class="sub">
+          Eine App, die pädagogischen Fachkräften in Kitas klare Struktur und erprobte Qualität
+          für jede Bewegungsstunde gibt – entwickelt aus über 20 Jahren Praxiserfahrung.
         </p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Jahre Erfahrung als<br>Ergotherapeut</span>
+
+        <div class="cta">
+          <a class="btn primary" href="https://app.bewegtundbunt.de/login.html">Zur App →</a>
+          <a class="btn secondary" href="#angebot">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber">
+      <div class="wrap">
+        <h2>Über mich</h2>
+        <p style="margin-top:10px;color:var(--grey);line-height:1.6;max-width:820px;">
+          Kurztext: Wer du bist, warum bewegt & bunt entstanden ist und was pädagogische Teams dadurch gewinnen.
+        </p>
+      </div>
+    </section>
+
+    <section id="angebot">
+      <div class="wrap">
+        <h2>Angebot</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Fertige Bewegungsstunden</h3>
+            <p>Erprobte Einheiten mit klarer Struktur – sofort durchführbar.</p>
           </div>
-          <div class="stat">
-            <span class="stat-number">5</span>
-            <span class="stat-label">Jahre Kita-Praxis als<br>Individualbegleiter</span>
+          <div class="card">
+            <h3>Planung in Minuten</h3>
+            <p>Weniger Vorbereitung, mehr Zeit mit den Kindern – während der Arbeitszeit.</p>
+          </div>
+          <div class="card">
+            <h3>Qualität & Standard</h3>
+            <p>Gleichbleibende Qualität und einfache Umsetzung für ganze Teams.</p>
           </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 bewegt & bunt · <a href="mailto:rene@bewegtundbunt.de">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
     </div>
-  </div>
-</section>
-
-<!-- ═════════════════════ WAS IST INKLUSIVE ═════════════════════ -->
-<section class="pilot-includes">
-  <div class="container">
-    <div class="section-label">Was die App bietet</div>
-    <h2 class="section-title">Alles, was Fachkräfte brauchen</h2>
-    <p class="section-intro">
-      bewegt & bunt gibt pädagogischen Fachkräften das Handwerkszeug für qualitativ hochwertige Bewegungsstunden – direkt einsetzbar, ohne Vorkenntnisse.
-    </p>
-    <div class="includes-grid">
-      <div class="include-card">
-        <div class="include-icon">🏗️</div>
-        <h3>Strukturierte Bewegungsstunden</h3>
-        <p>Vorgefertigte Stundenbausteine mit klarem Aufbau: Ankommen, Warm-up, Hauptteil, Abschluss – methodisch durchdacht.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">🧩</div>
-        <h3>Differenzierungsoptionen</h3>
-        <p>Jede Einheit lässt sich an Alter und Förderbedarfe anpassen – für inklusive Gruppen besonders wichtig.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">⚡</div>
-        <h3>In Sekunden fertig</h3>
-        <p>Kein langes Planen – die App generiert in Sekunden eine vollständige, druckfertige Bewegungsstunde.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">📋</div>
-        <h3>Dokumentationshilfe</h3>
-        <p>Die App hilft dabei, durchgeführte Einheiten festzuhalten – nachvollziehbar und teamfähig.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">🔄</div>
-        <h3>Regelmäßige Updates</h3>
-        <p>Neue Bewegungseinheiten kommen laufend dazu – die App wächst mit den Bedürfnissen der Praxis.</p>
-      </div>
-      <div class="include-card">
-        <div class="include-icon">💬</div>
-        <h3>Direkter Kontakt</h3>
-        <p>Du erreichst den Entwickler direkt – kein Support-Ticket, keine Warteschleife.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════════════════ APP CTA ═════════════════════ -->
-<section class="app-cta" id="app">
-  <div class="container">
-    <div class="section-label" style="color:#c7e8d4">Jetzt starten</div>
-    <h2 class="section-title">Bereit für bessere Bewegungsstunden?</h2>
-    <p>
-      Der Zugang ist aktuell für eine Kita ausgelegt. Melde dich an und erstelle deine erste Bewegungsstunde in unter einer Minute.
-    </p>
-    <a href="https://app.bewegtundbunt.de" class="btn-primary" style="display:inline-block;">Zur App →</a>
-    <p style="margin-top:1.5rem; font-size:0.8rem; color:#a0c8b0; font-family:'Lora',serif; font-style:italic;">
-      Zugang nur nach Freischaltung · Für pädagogische Fachkräfte in Kitas
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<footer>
-  <p>© 2026 bewegt & bunt · <a href="mailto:rene@bewegtundbunt.de">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
-  <p style="margin-top:0.5rem; font-size:0.75rem;">Entwickelt aus Leidenschaft für Kinder in Bewegung 🌿</p>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(el => {
-      if (el.isIntersecting) {
-        el.target.style.opacity = '1';
-        el.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.include-card, .problem-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform
+  </footer>
+</body>
+</html>

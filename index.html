@@ -26,7 +26,7 @@
       --shadow: 0 14px 40px rgba(15,26,23,0.08);
       --shadow2: 0 10px 28px rgba(15,26,23,0.06);
       --r: 22px;
-      --max: 1040px;
+      --max: 1080px;
     }
 
     *{ box-sizing:border-box; }
@@ -45,7 +45,7 @@
     /* Header */
     header{
       position:sticky; top:0; z-index:10;
-      background: rgba(246,251,248,0.78);
+      background: rgba(246,251,248,0.82);
       backdrop-filter: blur(10px);
       border-bottom:1px solid rgba(220,231,227,0.75);
     }
@@ -58,7 +58,7 @@
       font-weight:700; letter-spacing:0.2px;
     }
     .mark{
-      width:34px; height:34px; border-radius:12px;
+      width:36px; height:36px; border-radius:13px;
       background: linear-gradient(135deg, var(--green), var(--green2));
       color:#fff; display:grid; place-items:center;
       font-weight:800;
@@ -89,10 +89,17 @@
       box-shadow: 0 16px 34px rgba(26,92,78,0.22);
     }
     .btn-primary:hover{ filter: brightness(1.02); }
+    .btn-ghost{
+      background: rgba(26,92,78,0.06);
+      border-color: rgba(26,92,78,0.16);
+      box-shadow: none;
+      color: var(--green);
+    }
+    .btn-ghost:hover{ background: rgba(26,92,78,0.10); }
 
     /* Sections */
-    section{ padding: 56px 0; }
-    .hero{ padding: 44px 0 30px; }
+    section{ padding: 66px 0; }
+    .hero{ padding: 50px 0 34px; }
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
       padding:8px 12px; border-radius:999px;
@@ -103,28 +110,35 @@
     }
     h1{
       margin: 14px 0 10px;
-      font-size: clamp(34px, 3.6vw, 52px);
-      line-height: 1.05;
-      letter-spacing: -0.6px;
-      max-width: 18ch;
+      font-size: clamp(34px, 3.6vw, 54px);
+      line-height: 1.03;
+      letter-spacing: -0.8px;
+      max-width: 19ch;
     }
     .lead{
       margin:0;
       color:var(--muted);
       font-size:18px;
-      line-height:1.6;
-      max-width: 60ch;
+      line-height:1.65;
+      max-width: 68ch;
     }
     .hero-row{
       display:flex; align-items:center; gap:12px; flex-wrap:wrap;
       margin-top: 18px;
     }
+    .tiny{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .tiny em{ color: var(--green); font-style: normal; font-weight: 600; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin-top: 18px;
+      margin-top: 22px;
     }
     .card{
       background: var(--card);
@@ -140,13 +154,38 @@
       display:flex; align-items:center; gap:10px;
     }
     .chip{
-      width:34px; height:34px; border-radius:14px;
+      width:36px; height:36px; border-radius:14px;
       background: rgba(26,92,78,0.10);
       display:grid; place-items:center;
       font-size:16px;
     }
     .card p{
-      margin:0; color:var(--muted); line-height:1.6; font-size:14px;
+      margin:0; color:var(--muted); line-height:1.65; font-size:14px;
+    }
+    .card small{
+      display:block;
+      margin-top:10px;
+      color: rgba(84,99,94,0.9);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px; flex-wrap:wrap;
+      margin-bottom: 18px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: 26px;
+      letter-spacing: -0.4px;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 70ch;
+      font-size: 14px;
     }
 
     .split{
@@ -178,22 +217,90 @@
     .mini{
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .mini strong{ color: var(--ink); }
 
+    /* Fun section */
+    .bubble{
+      background: linear-gradient(180deg, rgba(26,92,78,0.08), rgba(26,92,78,0.03));
+      border: 1px solid rgba(26,92,78,0.14);
+      border-radius: var(--r);
+      padding: 18px;
+    }
+    .bubble h3{ margin:0 0 10px; font-size:18px; letter-spacing:-0.2px; }
+    .bubble p{ margin:0; color: var(--muted); line-height:1.7; font-size:14px; }
+
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .tagrow{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 12px;
+    }
+    .tag{
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(220,231,227,0.9);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .tag strong{ color: var(--green); }
+
+    /* FAQ */
+    details{
+      background: #fff;
+      border: 1px solid rgba(220,231,227,0.95);
+      border-radius: 18px;
+      padding: 14px 14px;
+      box-shadow: 0 8px 22px rgba(15,26,23,0.05);
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      font-weight: 650;
+      color: var(--ink);
+      list-style: none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .chev{
+      width:28px; height:28px; border-radius:12px;
+      display:grid; place-items:center;
+      background: rgba(26,92,78,0.08);
+      border: 1px solid rgba(26,92,78,0.14);
+      color: var(--green);
+      flex: 0 0 auto;
+    }
+    details[open] .chev{ transform: rotate(180deg); transition: 140ms ease; }
+    details p{
+      margin:10px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* CTA */
     .cta{
       background: linear-gradient(135deg, var(--green), var(--green2));
       color:#fff;
-      border-radius: 26px;
-      padding: 22px;
+      border-radius: 28px;
+      padding: 24px;
       box-shadow: var(--shadow);
       border: 1px solid rgba(255,255,255,0.16);
       display:flex; align-items:center; justify-content:space-between;
       gap: 12px; flex-wrap:wrap;
     }
-    .cta h2{ margin:0; font-size: 20px; letter-spacing:-0.3px; }
-    .cta p{ margin:6px 0 0; opacity:0.92; line-height:1.6; max-width: 70ch; }
+    .cta h2{ margin:0; font-size: 22px; letter-spacing:-0.3px; }
+    .cta p{ margin:6px 0 0; opacity:0.92; line-height:1.6; max-width: 75ch; }
     .cta .btn{
       border:1px solid rgba(255,255,255,0.26);
       background: rgba(255,255,255,0.12);
@@ -219,8 +326,9 @@
     @media (max-width: 980px){
       .grid{ grid-template-columns: 1fr; }
       .split{ grid-template-columns: 1fr; }
+      .two{ grid-template-columns: 1fr; }
       h1{ max-width: unset; }
-      section{ padding: 48px 0; }
+      section{ padding: 54px 0; }
     }
   </style>
 </head>
@@ -238,7 +346,8 @@
       <nav class="menu" aria-label="Navigation">
         <a href="#pilot">Pilot</a>
         <a href="#nutzen">Nutzen</a>
-        <a href="#rene">René</a>
+        <a href="#alltag">Alltag</a>
+        <a href="#faq">FAQ</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
 
@@ -261,23 +370,30 @@
 
       <div class="hero-row">
         <a class="btn btn-primary" href="#kontakt">Pilot anfragen</a>
-        <!-- Optional: Link zur App, wenn du möchtest -->
-        <!-- <a class="btn" href="https://app.bewegtundbunt.de" target="_blank" rel="noopener">Zur App</a> -->
+        <a class="btn btn-ghost" href="#pilot">So läuft’s ab</a>
       </div>
+
+      <p class="tiny">
+        Kleiner Hinweis: Wir mögen Struktur. Aber wir mögen auch Lachen.
+        <em>Beides passt erstaunlich gut zusammen.</em>
+      </p>
 
       <!-- 3 kurze Nutzenkarten -->
       <div class="grid" id="nutzen">
         <div class="card">
           <h3><span class="chip">⏱️</span> Weniger Aufwand</h3>
           <p>Vorbereitung wird einfacher – das Team kann schneller starten.</p>
+          <small>„Wo ist die Materialliste?“ – wird seltener gefragt. Versprochen. 😉</small>
         </div>
         <div class="card">
           <h3><span class="chip">✅</span> Verlässliche Umsetzung</h3>
           <p>Klare Struktur sorgt für Routine und sichere Durchführung.</p>
+          <small>Mehr „Wir machen das jetzt.“ – weniger „Wir müssten mal…“</small>
         </div>
         <div class="card">
           <h3><span class="chip">📌</span> Qualität sichern</h3>
           <p>Standards helfen bei Übergaben und Team-Abstimmung.</p>
+          <small>Auch wenn die Woche wieder… sagen wir: „kreativ“ wird.</small>
         </div>
       </div>
     </div>
@@ -286,28 +402,123 @@
   <!-- PILOT -->
   <section id="pilot">
     <div class="wrap">
+      <div class="section-title">
+        <h2>So läuft der Pilot</h2>
+        <p>Klarer Ablauf, wenig Aufwand – und am Ende wissen wir, ob es im Alltag trägt.</p>
+      </div>
+
       <div class="split">
         <div class="card">
-          <h3 style="margin:0 0 10px; font-size:18px; letter-spacing:-0.2px;">So läuft der Pilot</h3>
           <div class="steps">
             <div class="step"><span class="dot"></span><div><strong>Zugang für das Team</strong><span>z. B. Nutzung auf iPads</span></div></div>
             <div class="step"><span class="dot"></span><div><strong>Sofort einsetzbare Einheiten</strong><span>klar strukturiert &amp; praxistauglich</span></div></div>
             <div class="step"><span class="dot"></span><div><strong>4 Wochen Laufzeit</strong><span>ohne laufendes Eingreifen</span></div></div>
             <div class="step"><span class="dot"></span><div><strong>Kurzes Abschluss-Feedback</strong><span>Leitung &amp; Team – was war hilfreich?</span></div></div>
           </div>
+
+          <div class="tagrow" aria-label="Pilot-Notizen">
+            <div class="tag"><strong>1</strong> Einrichtung</div>
+            <div class="tag"><strong>4</strong> Wochen</div>
+            <div class="tag"><strong>0</strong> Dauer-Meetings</div>
+            <div class="tag"><strong>+ </strong>Entlastung</div>
+          </div>
         </div>
 
-        <div class="card" id="rene">
+        <div class="card">
           <h3 style="margin:0 0 10px; font-size:18px; letter-spacing:-0.2px;">René Krakow</h3>
           <p class="mini">
             Ergotherapeut aus Leipzig. Erfahrung aus Psychiatrie, Demenzstation/Geriatrie,
             klinischen Stationen und als Individualbegleiter in Kitas.
             <br><br>
             <strong>Beobachtung:</strong> Angebote scheitern oft nicht an Motivation, sondern an Planung.
-            bewegt &amp; bunt setzt genau dort an.
+            bewegt &amp; bunt setzt genau dort an – mit Struktur, die niemanden erschlägt.
+          </p>
+
+          <div class="tagrow">
+            <div class="tag">praxisnah</div>
+            <div class="tag">klar</div>
+            <div class="tag">umsetzbar</div>
+            <div class="tag">teamfreundlich</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLTAG / FUN -->
+  <section id="alltag">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>So sieht’s im Alltag aus</h2>
+        <p>Ein kleines Augenzwinkern – und ein ernster Kern: Wenn Planung leichter wird, passiert mehr.</p>
+      </div>
+
+      <div class="two">
+        <div class="bubble">
+          <h3>Vorher</h3>
+          <p>
+            „Wir sollten heute was machen…“<br>
+            „Welche Materialien brauchen wir?“<br>
+            „Haben wir überhaupt Zeit?“<br><br>
+            Ergebnis: Gute Idee, nächstes Mal. (Oder übernächstes.)
+          </p>
+        </div>
+
+        <div class="bubble">
+          <h3>Mit Struktur</h3>
+          <p>
+            „Wir nehmen Einheit X.“<br>
+            „Material steht hier.“<br>
+            „Dauer passt.“<br><br>
+            Ergebnis: Angebot findet statt. Team atmet aus. Kinder sind in Bewegung.
           </p>
         </div>
       </div>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="card">
+          <h3><span class="chip">🧩</span> Teamfähig</h3>
+          <p>Einheitliche Struktur: leichter übergeben, leichter vertreten, leichter umsetzen.</p>
+        </div>
+        <div class="card">
+          <h3><span class="chip">🧭</span> Klar geführt</h3>
+          <p>Weniger „Was machen wir?“ – mehr „Wir starten jetzt.“</p>
+        </div>
+        <div class="card">
+          <h3><span class="chip">🎈</span> Leichter Ton</h3>
+          <p>Professionell – aber ohne das Gefühl, ein Handbuch studieren zu müssen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>FAQ</h2>
+        <p>Die typischen Fragen – kurz beantwortet.</p>
+      </div>
+
+      <details>
+        <summary>Ist der Pilot wirklich ohne laufendes Eingreifen?<span class="chev">⌄</span></summary>
+        <p>Ja. Die Einrichtung testet 4 Wochen eigenständig. Am Ende sammeln wir Feedback – das war’s.</p>
+      </details>
+
+      <details>
+        <summary>Was braucht die Einrichtung technisch?<span class="chev">⌄</span></summary>
+        <p>Ein Browser reicht. Wenn iPads vorhanden sind: super. Wenn nicht: geht auch am Laptop/PC.</p>
+      </details>
+
+      <details>
+        <summary>Wie viel Zeit kostet das Team im Alltag?<span class="chev">⌄</span></summary>
+        <p>Die Idee ist: weniger Zeit für Planung, mehr Zeit für Durchführung. Deshalb ist alles bewusst schlank aufbereitet.</p>
+      </details>
+
+      <details>
+        <summary>Was ist das Ziel des Piloten?<span class="chev">⌄</span></summary>
+        <p>Zu prüfen, ob strukturierte Einheiten die Umsetzung spürbar erleichtern – aus Sicht der Leitung und des Teams.</p>
+      </details>
     </div>
   </section>
 
@@ -319,6 +530,7 @@
           <h2>Pilot anfragen</h2>
           <p>
             Kurze Mail genügt: Einrichtung, Ansprechpartner:in, Teamgröße, iPads ja/nein.
+            Wenn Sie mögen, nennen Sie auch: „Was nervt aktuell am meisten?“ – wir lieben klare Probleme.
           </p>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -335,7 +547,6 @@
     <div class="foot">
       <div>© <span id="y"></span> bewegt &amp; bunt</div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <!-- Sobald du echte Seiten hast, hier verlinken -->
         <a href="#" onclick="alert('Impressum folgt – hier später verlinken.'); return false;">Impressum</a>
         <a href="#" onclick="alert('Datenschutz folgt – hier später verlinken.'); return false;">Datenschutz</a>
       </div>

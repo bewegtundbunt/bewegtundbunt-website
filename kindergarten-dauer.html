@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bewegt & bunt – Kindergarten – Dauer wählen</title>
+  <meta name="description" content="Kindergarten – Dauer wählen" />
+
+  <style>
+    :root{
+      --bg: #F4FAF7;
+      --card: #FFFFFF;
+      --ink: #0F1A17;
+      --muted: #4B5B56;
+      --line: #DCE7E3;
+
+      --green: #1A5C4E;
+      --green2:#2A7A67;
+
+      --shadow: 0 10px 28px rgba(15, 26, 23, 0.08);
+      --r: 18px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(var(--bg), #fff);
+    }
+    a{ color: inherit; text-decoration:none; }
+
+    /* Topbar */
+    .topbar{
+      background: linear-gradient(0deg, rgba(0,0,0,0.08), rgba(0,0,0,0.08)), var(--green);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .leaf{
+      width: 22px; height: 22px;
+      display:inline-grid; place-items:center;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.14);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-weight: 600;
+      cursor:pointer;
+      white-space: nowrap;
+    }
+    .btn:hover{ background: rgba(255,255,255,0.18); }
+
+    /* Content */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 26px 18px 60px;
+    }
+
+    .crumbs{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 6px 0 18px;
+    }
+
+    .panel{
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(220,231,227,0.9);
+      border-radius: 22px;
+      padding: 34px 18px 40px;
+      box-shadow: 0 16px 40px rgba(15,26,23,0.06);
+    }
+
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 2.6vw, 34px);
+      letter-spacing: -0.3px;
+      text-align: center;
+    }
+    .sub{
+      margin: 0 0 22px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .duration-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(230px, 280px));
+      gap: 22px;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .duration-card{
+      border: 2px solid rgba(26,92,78,0.18);
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px 18px;
+      box-shadow: 0 10px 28px rgba(15,26,23,0.08);
+      cursor:pointer;
+      text-align:center;
+      transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+    }
+    .duration-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(15,26,23,0.12);
+      border-color: rgba(26,92,78,0.28);
+    }
+
+    .icon{
+      font-size: 22px;
+      margin-bottom: 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(26,92,78,0.10);
+    }
+    .minutes{
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+    }
+    .label{
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .pill{
+      display:inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(26,92,78,0.10);
+      border: 1px solid rgba(26,92,78,0.16);
+      color: var(--green);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    @media (max-width: 720px){
+      .duration-grid{
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .panel{ padding: 26px 14px 34px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="leaf">🌿</span>
+        <span>bewegt &amp; bunt</span>
+      </div>
+      <button class="btn" type="button" id="backBtn">← Zurück</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="crumbs">Start &nbsp;›&nbsp; Kindergarten</div>
+
+    <div class="panel">
+      <h1>🧸 Kindergarten – Dauer wählen</h1>
+      <p class="sub">Wie lang soll die Bewegungseinheit dauern?</p>
+
+      <!-- NUR 45 & 60 MIN -->
+      <div class="duration-grid">
+        <button class="duration-card" type="button" data-duration="45">
+          <div class="icon">🏃</div>
+          <div class="minutes">45 min</div>
+          <div class="label">Erweiterte Einheit</div>
+          <div class="pill">5 Vorlagen</div>
+        </button>
+
+        <button class="duration-card" type="button" data-duration="60">
+          <div class="icon">🎯</div>
+          <div class="minutes">60 min</div>
+          <div class="label">Volle Bewegungsstunde</div>
+          <div class="pill">5 Vorlagen</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ✅ HIER anpassen, wohin nach der Auswahl weitergeleitet werden soll:
+    // Beispiele:
+    // const NEXT_URL = "kindergarten-vorlagen.html";
+    // const NEXT_URL = "/kindergarten/vorlagen.html";
+    const NEXT_URL = "kindergarten-vorlagen.html";
+
+    // Back-Button: geht eine Seite zurück (oder auf Start, wenn kein Verlauf)
+    document.getElementById("backBtn").addEventListener("click", () => {
+      if (history.length > 1) history.back();
+      else window.location.href = "index.html";
+    });
+
+    // Dauer-Auswahl
+    document.querySelectorAll(".duration-card").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const duration = btn.getAttribute("data-duration");
+
+        // Speichere Auswahl für nächste Seite (falls du es brauchst)
+        localStorage.setItem("bb_bereich", "kindergarten");
+        localStorage.setItem("bb_dauer", duration);
+
+        // Weiterleitung
+        window.location.href = NEXT_URL;
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,61 +1,50 @@
+
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>bewegt & bunt – Pilotprojekt für Bewegungsplanung in Kitas</title>
+  <title>bewegt & bunt – Pilotprojekt</title>
 
-  <!-- Optional: Google Fonts (du kannst das rausnehmen, wenn du es simpler willst) -->
+  <!-- Neue Schriftart -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --mint-50:  #EAF6F0;
-      --mint-100: #DDF1E7;
-      --mint-200: #C7E8DA;
-
-      --forest:   #1A5C4E;
-      --forest-700:#13473C;
-      --forest-900:#0D2F28;
-
-      --sun:      #E8C547;   /* kleiner Akzent für Highlights */
-      --ink:      #0F172A;
-      --white:    #ffffff;
-
-      --card: rgba(255,255,255,0.78);
-      --border: rgba(26, 92, 78, 0.12);
-      --shadow: 0 18px 45px rgba(13, 47, 40, 0.10);
-
+      --bg: #E6F4EC;         /* angenehmes Pastellgrün */
+      --bg2:#F6FBF8;
+      --forest:#13473C;
+      --forest2:#0E352D;
+      --white:#fff;
+      --border: rgba(19,71,60,.14);
+      --shadow: 0 18px 45px rgba(14,53,45,.10);
       --radius: 22px;
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--forest-900);
-      background: radial-gradient(1200px 600px at 20% 0%, var(--mint-100) 0%, rgba(234,246,240,0.35) 55%, rgba(255,255,255,0.85) 100%),
-                  linear-gradient(180deg, var(--mint-50) 0%, var(--white) 60%);
-      overflow-x: hidden;
+      font-family: "Sora", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--forest2);
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 45%, #ffffff 100%);
     }
 
-    a { color: inherit; }
     .wrap{
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 22px;
     }
 
-    /* Sticky Nav */
+    /* NAV */
     header{
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(12px);
-      background: rgba(234, 246, 240, 0.72);
+      backdrop-filter: blur(10px);
+      background: rgba(230, 244, 236, 0.78);
       border-bottom: 1px solid var(--border);
     }
 
@@ -63,266 +52,206 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 18px;
-      padding: 14px 0;
+      gap: 16px;
+      padding: 16px 0;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap: 12px;
+      gap: 16px;
       text-decoration:none;
-      min-width: 220px;
+      color: inherit;
+      padding-left: 10px; /* Logo weiter weg vom Rand */
     }
 
     .brand img{
-      height: 44px;
+      height: 40px;
       width:auto;
       display:block;
     }
 
-    .brand strong{
+    .brand .title{
       font-weight: 700;
-      letter-spacing: 0.2px;
-      color: var(--forest-900);
-      display:block;
-      line-height:1.1;
+      letter-spacing: -0.2px;
+      line-height: 1.1;
     }
-    .brand span{
-      display:block;
-      font-size: 12.5px;
-      opacity: 0.85;
-      margin-top: 2px;
+    .brand .sub{
+      font-size: 12px;
+      opacity: .78;
+      margin-top: 4px;
     }
 
     .navlinks{
       display:flex;
       align-items:center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content:center;
     }
 
     .chip{
       text-decoration:none;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       padding: 10px 12px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.6);
-      transition: transform .08s ease, background .15s ease;
+      background: rgba(255,255,255,.55);
     }
-    .chip:hover{
-      background: rgba(255,255,255,0.9);
-    }
-    .chip:active{ transform: translateY(1px); }
 
     .btn{
       text-decoration:none;
       font-weight: 700;
-      font-size: 14.5px;
+      font-size: 13.5px;
       padding: 12px 16px;
       border-radius: 999px;
       background: var(--forest);
       color: var(--white);
-      box-shadow: 0 18px 35px rgba(26,92,78,0.18);
-      transition: transform .08s ease, background .15s ease;
+      box-shadow: 0 18px 35px rgba(19,71,60,0.18);
       white-space: nowrap;
     }
-    .btn:hover{ background: var(--forest-700); }
-    .btn:active{ transform: translateY(1px); }
+    .btn:hover{ background: #0F3B32; }
 
-    /* Sections */
-    section{
-      padding: 78px 0;
-    }
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 18px;
-      margin-bottom: 26px;
-    }
-    h1{
-      font-size: clamp(34px, 4.3vw, 56px);
-      line-height: 1.02;
-      margin: 0;
-      color: var(--forest-900);
-      letter-spacing: -0.8px;
-    }
-    h2{
-      font-size: clamp(26px, 3vw, 38px);
-      line-height: 1.12;
-      margin: 0;
-      color: var(--forest-900);
-      letter-spacing: -0.4px;
-    }
-    .lead{
-      font-size: 18.5px;
-      line-height: 1.55;
-      max-width: 70ch;
-      margin: 14px 0 0 0;
-      opacity: 0.92;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(232, 197, 71, 0.18);
-      border: 1px solid rgba(232, 197, 71, 0.35);
-      font-weight: 700;
-      color: #5B4510;
-      white-space: nowrap;
-    }
-
-    /* Hero layout */
+    /* HERO (nur Headline + 4 Zeilen + Button) */
     .hero{
-      padding: 92px 0 66px;
+      min-height: calc(100vh - 78px);
+      display:flex;
+      align-items:center;
+      padding: 64px 0 40px;
     }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 22px;
-      align-items: start;
-    }
+
     .hero-card{
-      background: var(--card);
+      width: 100%;
+      max-width: 920px;
+      background: rgba(255,255,255,.55);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 22px;
+      padding: 34px;
     }
+
+    h1{
+      margin: 0;
+      font-size: clamp(34px, 4.6vw, 60px);
+      line-height: 1.03;
+      letter-spacing: -1px;
+      color: var(--forest2);
+    }
+
+    .lines{
+      margin-top: 18px;
+      display:grid;
+      gap: 10px;
+      font-size: 16px;
+      line-height: 1.45;
+      opacity: .92;
+      max-width: 70ch;
+    }
+
+    .lines div{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+    }
+    .dot{
+      width:10px; height:10px;
+      border-radius:999px;
+      background: var(--forest);
+      margin-top: 6px;
+      flex: 0 0 auto;
+    }
+
     .hero-actions{
       display:flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 18px;
+      margin-top: 20px;
     }
+
     .btn-ghost{
       text-decoration:none;
-      font-weight: 800;
-      font-size: 14.5px;
+      font-weight: 700;
+      font-size: 13.5px;
       padding: 12px 16px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,.7);
+      color: var(--forest2);
     }
 
-    .kpis{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-    .kpi{
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.65);
-      padding: 14px;
-    }
-    .kpi strong{
-      display:block;
-      font-size: 18px;
-      color: var(--forest-900);
-    }
-    .kpi span{
-      display:block;
-      margin-top: 6px;
-      font-size: 13.5px;
-      opacity: 0.85;
-      line-height: 1.35;
+    /* SECTIONS (sehr kurz gehalten) */
+    section{
+      padding: 72px 0;
     }
 
-    /* Cards / grids */
-    .grid3{
+    h2{
+      margin: 0 0 14px 0;
+      font-size: clamp(22px, 2.8vw, 34px);
+      letter-spacing: -0.5px;
+      color: var(--forest2);
+    }
+
+    .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
+
     .card{
-      background: var(--card);
+      background: rgba(255,255,255,.72);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 20px;
+      padding: 18px;
     }
+
     .card h3{
       margin: 0 0 8px 0;
-      font-size: 18px;
-      color: var(--forest-900);
-      letter-spacing: -0.2px;
+      font-size: 16px;
+      color: var(--forest2);
     }
+
     .card p{
       margin: 0;
-      line-height: 1.55;
-      opacity: 0.92;
-      font-size: 15.8px;
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: .9;
     }
-    .list{
-      margin: 12px 0 0 0;
-      padding: 0 0 0 18px;
-      line-height: 1.6;
-      font-size: 15.6px;
-    }
-    .list li{ margin: 6px 0; }
 
-    /* Pilot banner */
-    .pilot{
-      background: linear-gradient(135deg, rgba(26,92,78,0.10) 0%, rgba(199,232,218,0.55) 100%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
+    .mini-list{
+      margin: 10px 0 0 0;
+      padding: 0 0 0 18px;
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: .92;
+    }
+    .mini-list li{ margin: 6px 0; }
+
+    .cta{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 16px;
+      gap: 14px;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.62);
+      box-shadow: var(--shadow);
       margin-top: 16px;
     }
-    .pilot strong{
-      display:block;
-      font-size: 16px;
-      color: var(--forest-900);
-    }
-    .pilot span{
-      display:block;
-      margin-top: 4px;
-      opacity: 0.88;
-      line-height: 1.4;
-      font-size: 14.5px;
-    }
 
-    /* Footer */
     footer{
       padding: 34px 0 48px;
       border-top: 1px solid var(--border);
-      background: rgba(234,246,240,0.35);
-    }
-    .foot{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      opacity: 0.9;
-      font-size: 14px;
+      background: rgba(230,244,236,0.45);
     }
 
-    /* Responsive */
     @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .grid3{ grid-template-columns: 1fr; }
-      .grid2{ grid-template-columns: 1fr; }
-      .nav{ align-items: flex-start; }
-      .navlinks{ justify-content: flex-start; }
+      .grid{ grid-template-columns: 1fr; }
+      .nav{ align-items:flex-start; }
+      .navlinks{ justify-content:flex-start; }
+      .hero-card{ padding: 24px; }
     }
   </style>
 </head>
@@ -332,299 +261,157 @@
 <header>
   <div class="wrap">
     <div class="nav">
+
       <a class="brand" href="#top">
-        <!-- LOGO: Pfad anpassen (Website-Projekt!) -->
+        <!-- LOGO-PFAD anpassen:
+             Website (klassisch): assets/logo-bb.png
+             Vercel/Next public/:  /logo-bb.png
+        -->
         <img src="assets/logo-bb.png" alt="bewegt & bunt Logo">
         <div>
-          <strong>bewegt & bunt</strong>
-          <span>Pilotprojekt – Bewegungsplanung in Kitas</span>
+          <div class="title">bewegt & bunt</div>
+          <div class="sub">Pilotprojekt – Bewegungsplanung in Kitas</div>
         </div>
       </a>
 
       <nav class="navlinks" aria-label="Navigation">
         <a class="chip" href="#angebot">Angebot</a>
-        <a class="chip" href="#probleme">Probleme & Lösungen</a>
+        <a class="chip" href="#probleme">Probleme</a>
         <a class="chip" href="#pilot">Pilot</a>
-        <a class="chip" href="#ueber-mich">Über mich</a>
+        <a class="chip" href="#ueber">Über mich</a>
       </nav>
 
-      <a class="btn" href="#pilot">Pilot anfragen</a>
+      <!-- Statt "Pilot anfragen": E-Mail senden -->
+      <a class="btn" href="mailto:kontakt@bewegtundbunt.de?subject=Pilot%20anfragen&body=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Pilotprojekt%20mit%20einer%20Kita.%20Bitte%20melden%20Sie%20sich%20bei%20mir.">
+        E-Mail senden
+      </a>
+
     </div>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- 1) STARTSEITE -->
+  <!-- HERO: nur Schrift + 4 Zeilen + Button -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero-grid">
+      <div class="hero-card">
+        <h1>Bewegungsstunden, die sofort laufen.</h1>
 
-        <div>
-          <div class="pill">Start mit 1 Kita · 4 Wochen Pilot · ohne Zusatzaufwand</div>
-          <h1 style="margin-top:14px;">Bewegungsstunden, die sofort laufen – ohne stundenlange Vorbereitung.</h1>
-          <p class="lead">
-            bewegt & bunt ist eine Software-Lösung für Kitas: Sie nimmt die Planung & Strukturierung von Bewegungs-
-            (und perspektivisch auch Kreativ-)angeboten ab – damit Teams im Alltag Zeit sparen und trotzdem
-            qualitativ hochwertig durchführen können.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="#pilot">Pilotprojekt starten</a>
-            <a class="btn-ghost" href="#angebot">Was ist enthalten?</a>
-          </div>
-
-          <div class="pilot" style="margin-top:18px;">
-            <div>
-              <strong>Pilot-Hinweis</strong>
-              <span>
-                Der Pilot startet <b>mit einer Kita</b> (iPads/Tablet-Nutzung möglich) und läuft
-                <b>4 Wochen</b> – in dieser Zeit soll das System ohne dein Eingreifen funktionieren.
-              </span>
-            </div>
-            <a class="btn" href="#pilot">Details</a>
-          </div>
+        <div class="lines">
+          <div><span class="dot"></span><span>Fertige Einheiten für Krippe & Kindergarten.</span></div>
+          <div><span class="dot"></span><span>Weniger Vorbereitung – mehr Zeit im Dienst.</span></div>
+          <div><span class="dot"></span><span>Pilot: 4 Wochen, Start mit einer Kita.</span></div>
+          <div><span class="dot"></span><span>Klarer Ablauf, sichere Durchführung, ein Standard.</span></div>
         </div>
 
-        <aside class="hero-card">
-          <h2 style="font-size:22px;">Was du sofort bekommst</h2>
-          <p style="margin:10px 0 0 0; opacity:.92; line-height:1.55;">
-            Für den Pilot setzen wir auf <b>fertige, praxiserprobte Einheiten</b> (z. B. Krippe & Kindergarten),
-            die Schritt für Schritt durch die Durchführung führen.
-          </p>
-
-          <div class="kpis">
-            <div class="kpi">
-              <strong>Krippe</strong>
-              <span>kurze Einheiten, ca. bis 15 Minuten · ideal für kleine Gruppen</span>
-            </div>
-            <div class="kpi">
-              <strong>Kindergarten</strong>
-              <span>voll strukturierte Stunden · klarer Ablauf · sichere Umsetzung</span>
-            </div>
-            <div class="kpi">
-              <strong>Planungszeit</strong>
-              <span>weniger Orga-Aufwand im Team · mehr Zeit in der Dienstzeit</span>
-            </div>
-            <div class="kpi">
-              <strong>Qualität</strong>
-              <span>einheitliche Standards · klar verständliche Anleitung</span>
-            </div>
-          </div>
-
-          <p style="margin:14px 0 0 0; font-size:14.5px; opacity:.88;">
-            *Später ausbaufähig: „Sandkasten-/Generator“-Modus, bei dem Alter, Gruppengröße, Ort & Material
-            ausgewählt werden und die Stunde automatisch entsteht.
-          </p>
-        </aside>
-
+        <div class="hero-actions">
+          <!-- Button "Verlinkung zu Web" – wenn diese Seite deine "Web" ist, ändere den Link z.B. zur App -->
+          <a class="btn" href="https://bewegtundbunt.de">Zur Website</a>
+          <a class="btn-ghost" href="#pilot">Pilot-Infos</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 2) ANGEBOT -->
+  <!-- ANGEBOT (kurz) -->
   <section id="angebot">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <h2>Das biete ich an</h2>
-          <p class="lead">
-            Ein klarer Standard für Bewegungsplanung: verständlich, strukturiert, sofort einsetzbar –
-            so, dass Pädagog*innen nur noch durchführen müssen.
-          </p>
-        </div>
-        <div class="pill">Fokus: Pilot & Alltagstauglichkeit</div>
-      </div>
+      <h2>Was du bekommst</h2>
 
-      <div class="grid3">
+      <div class="grid">
         <div class="card">
-          <h3>Fertige Bewegungseinheiten</h3>
-          <p>Schritt-für-Schritt-Anleitung inklusive Einstieg, Hauptteil, Abschluss – in einer Logik, die jedes Team versteht.</p>
-          <ul class="list">
-            <li>Krippe & Kindergarten getrennt</li>
-            <li>Materialliste & Aufbau kompakt</li>
-            <li>Durchführung ohne „Raten“</li>
-          </ul>
+          <h3>Fertige Stunden</h3>
+          <p>Direkt einsetzbar – mit klarer Schrittfolge.</p>
         </div>
-
         <div class="card">
-          <h3>Sofortige Planung & Struktur</h3>
-          <p>Du wählst den Rahmen – die Stunde ist fertig vorbereitet: Ablauf, Hinweise, Varianten und klare Sprache.</p>
-          <ul class="list">
-            <li>weniger Organisationsaufwand</li>
-            <li>einheitliche Qualität im Team</li>
-            <li>entlastet Leitung & Fachkräfte</li>
-          </ul>
+          <h3>Einheitliche Qualität</h3>
+          <p>Standardisierte Abläufe, die jedes Team versteht.</p>
         </div>
-
         <div class="card">
-          <h3>Pilot-Setup (1 Kita)</h3>
-          <p>Wir starten mit einer Einrichtung, testen 4 Wochen im echten Alltag und sammeln Feedback für die Skalierung.</p>
-          <ul class="list">
-            <li>iPad/Tablet-Nutzung möglich</li>
-            <li>4 Wochen Laufzeit ohne Eingriff</li>
-            <li>klarer Ablauf & Auswertung</li>
-          </ul>
+          <h3>Entlastung im Alltag</h3>
+          <p>Weniger Orga – mehr Umsetzung.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3) PROBLEME & LÖSUNGEN -->
+  <!-- PROBLEME (kurz) -->
   <section id="probleme">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <h2>Welche Probleme lösen wir?</h2>
-          <p class="lead">
-            Im Kita-Alltag scheitert gute Bewegung oft nicht am Willen – sondern an Zeit, Struktur und Materialien.
-            bewegt & bunt setzt genau dort an.
-          </p>
-        </div>
-      </div>
+      <h2>Welche Probleme lösen wir?</h2>
 
-      <div class="grid2">
+      <div class="grid">
         <div class="card">
-          <h3>Problem: Zu wenig Zeit im Alltag</h3>
-          <p>Vorbereitung frisst Ressourcen – dadurch wird Bewegung verschoben oder „irgendwie“ gemacht.</p>
-          <ul class="list">
-            <li><b>Lösung:</b> Einheiten sind sofort einsatzbereit</li>
-            <li><b>Lösung:</b> klare Material- & Ablaufstruktur</li>
-            <li><b>Lösung:</b> Planung wird standardisiert</li>
+          <h3>Zu wenig Zeit</h3>
+          <p>Bewegung scheitert oft an Vorbereitung.</p>
+          <ul class="mini-list">
+            <li>Stunden sind fertig</li>
+            <li>Material & Aufbau klar</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Problem: Uneinheitliche Qualität im Team</h3>
-          <p>Wenn jede*r anders plant, entstehen unterschiedliche Standards – das macht Leitung schwer steuerbar.</p>
-          <ul class="list">
-            <li><b>Lösung:</b> einheitliche Vorlage & Sprache</li>
-            <li><b>Lösung:</b> klare Schrittfolge für Durchführung</li>
-            <li><b>Lösung:</b> Varianten für unterschiedliche Gruppen</li>
+          <h3>Uneinheitliche Umsetzung</h3>
+          <p>Jede*r macht’s anders – Leitung hat wenig Steuerung.</p>
+          <ul class="mini-list">
+            <li>Ein Standard fürs Team</li>
+            <li>Klare Sprache & Struktur</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Problem: Material/Setting passt nicht</h3>
-          <p>Zu wenig/zu viel Material, falsches Alter, unklarer Raum – das macht Angebote unnötig kompliziert.</p>
-          <ul class="list">
-            <li><b>Lösung:</b> Materialliste + Alternativen</li>
-            <li><b>Lösung:</b> Anpassung an Ort & Gruppengröße</li>
-            <li><b>Lösung:</b> klare Setup-Anleitung</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Problem: Leitung braucht Sicherheit</h3>
-          <p>Leitung will: verlässliche Umsetzung, weniger Chaos, gute Qualität – ohne Zusatzstress.</p>
-          <ul class="list">
-            <li><b>Lösung:</b> Pilot mit messbarer Alltagstauglichkeit</li>
-            <li><b>Lösung:</b> Standards statt Einzelwissen</li>
-            <li><b>Lösung:</b> skalierbares Modell (SaaS)</li>
+          <h3>Unsicherheit bei der Durchführung</h3>
+          <p>Wenn Ablauf fehlt, wird’s im Alltag schwierig.</p>
+          <ul class="mini-list">
+            <li>Schritt-für-Schritt</li>
+            <li>Varianten für Gruppen</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4) PILOT -->
+  <!-- PILOT (kurz + CTA E-Mail senden) -->
   <section id="pilot">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <h2>Das Pilotprojekt</h2>
-          <p class="lead">
-            Ziel: In 4 Wochen zeigen, dass bewegt & bunt im Alltag funktioniert – ohne Nachsteuern,
-            ohne Extraaufwand und mit echter Entlastung für Teams und Leitung.
-          </p>
-        </div>
-        <div class="pill">Pilot startet mit 1 Kita</div>
-      </div>
+      <h2>Pilotprojekt</h2>
 
-      <div class="grid3">
-        <div class="card">
-          <h3>1 · Start mit einer Einrichtung</h3>
-          <p>Eine Kita bekommt Zugriff, das Team nutzt das System im Alltag (auch auf iPads/Tablets).</p>
-          <ul class="list">
-            <li>klarer Zugang für das Team</li>
-            <li>einfaches Handling</li>
-            <li>Praxis statt Theorie</li>
-          </ul>
-        </div>
+      <div class="card">
+        <h3>Start mit 1 Kita · 4 Wochen</h3>
+        <p>
+          Wir testen im echten Alltag: verständlich, umsetzbar, entlastend – ohne Nachsteuern.
+        </p>
 
-        <div class="card">
-          <h3>2 · 4 Wochen ohne Eingriff</h3>
-          <p>Inhalt ist so aufgebaut, dass er ohne Rückfragen durchgeführt werden kann.</p>
-          <ul class="list">
-            <li>strukturierter Ablauf</li>
-            <li>Varianten & Hinweise</li>
-            <li>verlässlicher Standard</li>
-          </ul>
+        <div class="cta">
+          <div style="font-size:14px; opacity:.9;">
+            Interesse am Pilot? Schreib kurz – wir starten bewusst klein.
+          </div>
+          <a class="btn" href="mailto:kontakt@bewegtundbunt.de?subject=Pilot%20anfragen&body=Hallo%2C%20ich%20m%C3%B6chte%20das%20Pilotprojekt%20starten.%20Kita%3A%20%5BName%5D%20%2F%20Ort%3A%20%5BOrt%5D%20%2F%20Kontakt%3A%20%5BTelefon%5D">
+            E-Mail senden
+          </a>
         </div>
-
-        <div class="card">
-          <h3>3 · Feedback & Auswertung</h3>
-          <p>Am Ende prüfen wir: Zeitersparnis, Verständlichkeit, Umsetzbarkeit – und definieren die nächsten Schritte.</p>
-          <ul class="list">
-            <li>Was hat entlastet?</li>
-            <li>Wo braucht es Feinschliff?</li>
-            <li>Plan für Skalierung</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pilot" style="margin-top:18px;">
-        <div>
-          <strong>Pilot anfragen</strong>
-          <span>
-            Wenn du eine Kita-Leitung bist (oder eine kennst), die 4 Wochen testen möchte:
-            Wir starten bewusst klein – <b>mit einer Kita</b>.
-          </span>
-        </div>
-        <!-- Optional: später ersetzen durch echtes Kontaktformular -->
-        <a class="btn" href="mailto:kontakt@bewegtundbunt.de?subject=Pilot%20anfragen&body=Hallo%2C%20ich%20m%C3%B6chte%20das%20Pilotprojekt%20mit%20einer%20Kita%20starten.%20Bitte%20meldet%20euch%20bei%20mir.">E-Mail senden</a>
       </div>
     </div>
   </section>
 
-  <!-- 5) ÜBER MICH -->
-  <section id="ueber-mich">
+  <!-- ÜBER MICH (kurz) -->
+  <section id="ueber">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <h2>Über mich</h2>
-          <p class="lead">
-            Ich komme aus der Praxis und entwickle bewegt & bunt so, dass es im echten Kita-Alltag funktioniert:
-            klar, verständlich, umsetzbar – und leitungsfreundlich.
+      <h2>Über mich</h2>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3>Praxisfokus</h3>
+          <p>
+            bewegt & bunt ist so gebaut, dass es im Kita-Alltag wirklich funktioniert: klar, schnell, umsetzbar.
           </p>
         </div>
-      </div>
-
-      <div class="grid2">
         <div class="card">
-          <h3>Praxisnaher Hintergrund</h3>
+          <h3>Warum das wichtig ist</h3>
           <p>
-            bewegt & bunt ist aus langjähriger Erfahrung entstanden – mit dem Ziel, Pädagog*innen
-            die Vorbereitung abzunehmen und Bewegung qualitativ sicher im Alltag zu verankern.
+            Leitung bekommt Sicherheit: weniger Aufwand im Team, verlässliche Qualität, klare Standards.
           </p>
-          <ul class="list">
-            <li>Fokus: Entlastung im Team</li>
-            <li>Fokus: klare Standards</li>
-            <li>Fokus: sofortige Umsetzung</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Warum ein Pilot?</h3>
-          <p>
-            Weil gute Lösungen im Alltag bestehen müssen. Im Pilot zeigen wir in einer Kita,
-            dass Inhalte, Struktur und Bedienung wirklich funktionieren – ohne Extraaufwand.
-          </p>
-          <ul class="list">
-            <li>Start mit 1 Kita</li>
-            <li>4 Wochen Laufzeit</li>
-            <li>Feedback → Skalierung</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -633,20 +420,18 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>© <span id="year"></span> bewegt & bunt</div>
-      <div>
-        <a href="#top" style="text-decoration:none; font-weight:700;">Nach oben</a>
-        <span style="opacity:.55;"> · </span>
-        <a href="mailto:kontakt@bewegtundbunt.de" style="text-decoration:none; font-weight:700;">Kontakt</a>
-      </div>
+  <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:13px; opacity:.9;">
+    <div>© <span id="y"></span> bewegt & bunt</div>
+    <div>
+      <a href="#top" style="text-decoration:none; font-weight:700;">Nach oben</a>
+      <span style="opacity:.5;"> · </span>
+      <a href="mailto:kontakt@bewegtundbunt.de" style="text-decoration:none; font-weight:700;">Kontakt</a>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
 </body>

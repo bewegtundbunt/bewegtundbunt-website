@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>bewegt & bunt – Strukturierte Bewegungsplanung für Kitas</title>
-  <meta name="description" content="bewegt & bunt unterstützt Kitas mit strukturierter Bewegungsplanung: sofort einsetzbar, praxiserprobt und zeitsparend – für Leitung und Teams." />
+  <title>bewegt & bunt – 4-Wochen Pilot für Kitas</title>
+  <meta name="description" content="bewegt & bunt: 4-Wochen Pilot für eine Kita. Strukturierte Bewegungsangebote, sofort einsetzbar – ohne zusätzlichen Aufwand und ohne laufendes Eingreifen." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,12 @@
       --line: #DCE7E3;
 
       --green: #1A5C4E;
-      --green-2:#2A7A67;
-      --green-3:#E7F2EE;
+      --green2:#2A7A67;
+      --greenSoft:#E7F2EE;
 
-      --shadow: 0 10px 30px rgba(15, 26, 23, 0.08);
-      --radius: 18px;
-      --radius-sm: 12px;
-
-      --max: 1100px;
+      --shadow: 0 10px 28px rgba(15, 26, 23, 0.08);
+      --r: 18px;
+      --max: 980px;
     }
 
     *{ box-sizing:border-box; }
@@ -34,27 +32,27 @@
       margin:0;
       font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
-      background: radial-gradient(1200px 600px at 50% -50%, rgba(26,92,78,0.18), transparent 60%),
+      background: radial-gradient(1100px 520px at 50% -40%, rgba(26,92,78,0.18), transparent 60%),
                   linear-gradient(var(--bg), #fff);
     }
     a{ color: inherit; text-decoration:none; }
-    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 20px; }
 
-    /* Header */
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
     header{
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(247,251,249,0.75);
+      background: rgba(247,251,249,0.78);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(220,231,227,0.7);
+      border-bottom: 1px solid rgba(220,231,227,0.75);
     }
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
+      gap: 14px;
       padding: 14px 0;
-      gap: 16px;
     }
     .brand{
       display:flex;
@@ -66,7 +64,362 @@
     .mark{
       width: 34px; height: 34px;
       border-radius: 10px;
-      background: linear-gradient(135deg, var(--green), var(--green-2));
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      display:grid; place-items:center;
+      color:#fff;
+      font-weight:800;
+      box-shadow: 0 10px 20px rgba(26,92,78,0.25);
+    }
+    .navlinks{
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .navlinks a{
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    .navlinks a:hover{ background: rgba(26,92,78,0.08); color: var(--ink); }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 8px 18px rgba(15,26,23,0.06);
+      cursor:pointer;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); transition: 160ms ease; }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      border-color: transparent;
+      color:#fff;
+      box-shadow: 0 14px 28px rgba(26,92,78,0.22);
+    }
+    .btn-primary:hover{ filter: brightness(1.02); }
+
+    main{ padding: 38px 0 64px; }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(26,92,78,0.10);
+      border: 1px solid rgba(26,92,78,0.18);
+      color: var(--green);
+      font-weight: 600;
+      font-size: 13px;
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(32px, 3.6vw, 48px);
+      line-height: 1.06;
+      letter-spacing: -0.6px;
+    }
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items:start;
+      margin-top: 18px;
+    }
+
+    .panel{
+      background: var(--card);
+      border: 1px solid rgba(220,231,227,0.95);
+      border-radius: var(--r);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .bullets{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display:grid;
+      gap: 10px;
+    }
+    .bullets li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: var(--greenSoft);
+      border: 1px solid rgba(26,92,78,0.12);
+    }
+    .dot{
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      background: var(--green);
+      margin-top: 5px;
+      flex: 0 0 auto;
+    }
+    .bullets strong{ display:block; margin-bottom: 2px; }
+
+    .actions{
+      margin-top: 14px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .section{
+      margin-top: 18px;
+      display:grid;
+      gap: 14px;
+    }
+    .section h2{
+      margin:0 0 6px;
+      font-size: 20px;
+      letter-spacing: -0.3px;
+    }
+    .section p{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .card{
+      background: #fff;
+      border: 1px solid rgba(220,231,227,0.95);
+      border-radius: var(--r);
+      padding: 16px;
+      box-shadow: 0 8px 22px rgba(15,26,23,0.06);
+    }
+    .card h3{ margin:0 0 6px; font-size: 15px; }
+    .card p{ margin:0; color: var(--muted); line-height: 1.65; font-size: 14px; }
+
+    .cta{
+      margin-top: 20px;
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      border-radius: 22px;
+      padding: 22px;
+      color:#fff;
+      box-shadow: 0 18px 40px rgba(26,92,78,0.25);
+      border: 1px solid rgba(255,255,255,0.16);
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .cta h2{ margin:0; font-size: 20px; letter-spacing: -0.3px; }
+    .cta p{ margin:6px 0 0; opacity: 0.92; line-height: 1.6; max-width: 70ch; }
+    .cta .btn{
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      box-shadow: none;
+    }
+    .cta .btn:hover{ background: rgba(255,255,255,0.16); }
+
+    footer{
+      margin-top: 28px;
+      padding: 24px 0 44px;
+      border-top: 1px solid rgba(220,231,227,0.8);
+      background: rgba(247,251,249,0.6);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .foot{
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    @media (max-width: 940px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      main{ padding-top: 28px; }
+      .nav{ flex-wrap: wrap; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="bewegt & bunt">
+        <div class="mark">BB</div>
+        <div>bewegt &amp; bunt</div>
+      </a>
+
+      <nav class="navlinks" aria-label="Navigation">
+        <a href="#pilot">Pilot</a>
+        <a href="#nutzen">Nutzen</a>
+        <a href="#uebermich">René</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <!-- HIER optional deine App-URL einsetzen, wenn du sie als "Einblick" zeigen willst -->
+      <a class="btn btn-primary" href="#kontakt">Pilot anfragen</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="kicker">Ein Pilot. Eine Einrichtung. Vier Wochen. Ohne laufendes Eingreifen.</div>
+    <h1>bewegt &amp; bunt – strukturierte Bewegungsangebote, die im Alltag wirklich stattfinden.</h1>
+    <p class="lead">
+      Für Einrichtungsleitungen, die Qualität sichern und ihr Team entlasten wollen:
+      Der 4-Wochen-Pilot zeigt, ob strukturierte Planung die Umsetzung von Bewegungsangeboten messbar erleichtert –
+      ohne Zusatzaufwand und ohne ständige Rückfragen.
+    </p>
+
+    <div class="hero">
+      <section class="panel" id="pilot" aria-label="Pilot">
+        <h2>So läuft der 4-Wochen-Pilot</h2>
+        <p>Ein klarer Ablauf, damit Ihre Einrichtung ohne ständiges Nachsteuern testen kann.</p>
+
+        <div style="height:10px"></div>
+        <ul class="bullets">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Einrichtung erhält Zugang</strong>
+              <span style="color:var(--muted)">Ein gemeinsamer Zugang für das Team (z. B. auf iPads).</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Sofort einsetzbare Einheiten</strong>
+              <span style="color:var(--muted)">Vorgefertigte Bewegungsstunden – klar strukturiert, praxistauglich.</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Vier Wochen Laufzeit</strong>
+              <span style="color:var(--muted)">Durchführung im Alltag – ohne mein laufendes Eingreifen.</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Auswertung am Ende</strong>
+              <span style="color:var(--muted)">Kurzes Feedback (Leitung & Team) – was hat sich verbessert, was fehlt?</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#kontakt">Pilot anfragen</a>
+          <!-- Optional: falls du einen App-Einblick willst -->
+          <!-- <a class="btn" href="https://app.bewegtundbunt.de" target="_blank" rel="noopener">Zur App</a> -->
+        </div>
+      </section>
+
+      <aside class="panel" id="nutzen" aria-label="Nutzen für Leitung">
+        <h2>Nutzen für die Leitungsebene</h2>
+        <p>
+          bewegt &amp; bunt ist so gedacht, dass Angebote nicht an Planung scheitern.
+          Ziel ist eine spürbare Entlastung bei gleichzeitiger Qualitätssteigerung.
+        </p>
+
+        <div style="height:10px"></div>
+        <div class="grid3">
+          <div class="card">
+            <h3>Weniger Organisationsaufwand</h3>
+            <p>Klare Struktur statt Einzelabsprachen und Zettelwirtschaft.</p>
+          </div>
+          <div class="card">
+            <h3>Verlässliche Umsetzung</h3>
+            <p>Einheiten sind so aufbereitet, dass Teams schneller starten können.</p>
+          </div>
+          <div class="card">
+            <h3>Qualität sichern</h3>
+            <p>Standardisierte Abläufe erleichtern Übergaben und Teamarbeit.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section panel" id="uebermich" aria-label="Über René">
+      <h2>Über René Krakow</h2>
+      <p>
+        Ich bin René Krakow (48), Ergotherapeut aus Leipzig. In meiner Arbeit habe ich in der Psychiatrie,
+        auf einer Demenzstation / Geriatrie sowie in verschiedenen klinischen Stationen und zuletzt als
+        Individualbegleiter in Kitas gearbeitet.
+        <br><br>
+        Meine Beobachtung aus der Praxis: In Kitas scheitern viele gute Gruppenangebote nicht an Motivation,
+        sondern an Vorbereitung, Planung und Organisation. bewegt &amp; bunt ist daraus entstanden – als
+        strukturierte Lösung, die im Alltag funktioniert.
+      </p>
+    </section>
+
+    <section class="cta" id="kontakt" aria-label="Kontakt">
+      <div>
+        <h2>Pilotplatz vergeben</h2>
+        <p>
+          Wenn Sie als Einrichtung am 4-Wochen-Pilot teilnehmen möchten, schreiben Sie mir kurz:
+          Einrichtung, Ansprechpartner:in, Teamgröße und ob iPads genutzt werden.
+        </p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="mailto:kontakt@bewegtundbunt.de">Pilot per E-Mail anfragen</a>
+        <!-- Optional: zweiter Kontaktweg -->
+        <!-- <a class="btn" href="tel:+49XXXXXXXXXX">Anrufen</a> -->
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© <span id="y"></span> bewegt &amp; bunt</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="#" onclick="alert('Impressum folgt – hier später verlinken.'); return false;">Impressum</a>
+        <a href="#" onclick="alert('Datenschutz folgt – hier später verlinken.'); return false;">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>      background: linear-gradient(135deg, var(--green), var(--green-2));
       display:grid; place-items:center;
       color:#fff;
       font-weight:800;

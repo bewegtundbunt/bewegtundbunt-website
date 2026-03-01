@@ -52,6 +52,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: 0.2s ease;
+      display: inline-block;
     }
 
     .btn:hover {
@@ -59,34 +60,35 @@
     }
 
     .hero {
-      padding: 80px 8%;
+      padding: 100px 8%;
       text-align: center;
       background: var(--green-light);
     }
 
     .hero h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 20px;
       color: var(--green-dark);
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 40px;
       color: var(--text-light);
     }
 
     .section {
-      padding: 80px 8%;
+      padding: 90px 8%;
       max-width: 1100px;
       margin: auto;
     }
 
     .section h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
+      font-size: 30px;
+      margin-bottom: 40px;
       color: var(--green-dark);
+      text-align: center;
     }
 
     .features {
@@ -97,14 +99,16 @@
 
     .card {
       background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      text-align: left;
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: var(--green);
+      font-size: 20px;
     }
 
     .card p {
@@ -114,28 +118,29 @@
 
     .cta {
       text-align: center;
-      padding: 80px 8%;
+      padding: 100px 8%;
       background: var(--green-light);
     }
 
     .cta h2 {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-size: 28px;
       color: var(--green-dark);
     }
 
     footer {
-      padding: 40px 8%;
+      padding: 50px 8%;
       text-align: center;
       font-size: 14px;
       color: var(--text-light);
+      border-top: 1px solid #eee;
     }
 
     @media(max-width:768px){
       .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
-
   </style>
 </head>
 
@@ -143,41 +148,45 @@
 
 <header>
   <div class="logo">bewegt & bunt</div>
-  <a href="login.html" class="btn">Zur App</a>
+  <a href="https://bewegtundbunt-app.vercel.app/login.html" class="btn">Zur App</a>
 </header>
 
 <section class="hero">
   <h1>Bewegungsplanung neu gedacht.</h1>
   <p>
     bewegt & bunt ist die professionelle Planungssoftware für Kitas.
-    Sie erstellt in unter einer Minute fachlich fundierte, sofort einsetzbare Bewegungsstunden –
+    In unter einer Minute entstehen fachlich fundierte, sofort einsetzbare Bewegungsstunden –
     mit klarem Aufbau, Lernzielen und Materialliste.
   </p>
-  <a href="login.html" class="btn">Jetzt einloggen</a>
+  <a href="https://bewegtundbunt-app.vercel.app/login.html" class="btn">Jetzt einloggen</a>
 </section>
 
 <section class="section">
   <h2>Warum bewegt & bunt?</h2>
+
   <div class="features">
 
     <div class="card">
       <h3>Zeitersparnis im Arbeitsalltag</h3>
       <p>
-        Keine stundenlange Vorbereitung mehr. Planung erfolgt strukturiert und sofort umsetzbar – direkt im Teamalltag.
+        Keine zeitintensive Vorbereitung mehr. Bewegungsstunden werden strukturiert geplant
+        und sind sofort im Kita-Alltag einsetzbar.
       </p>
     </div>
 
     <div class="card">
       <h3>Fachlich fundierte Inhalte</h3>
       <p>
-        Jede Einheit enthält klare Ziele, methodischen Aufbau und passende Materialliste.
+        Jede Einheit enthält klare Lernziele, methodischen Aufbau,
+        Differenzierungsmöglichkeiten und Materialübersicht.
       </p>
     </div>
 
     <div class="card">
       <h3>Qualität & Sicherheit</h3>
       <p>
-        Einheitliche Standards steigern nachhaltig die Qualität der Bewegungsförderung in Ihrer Einrichtung.
+        Einheitliche Standards stärken die pädagogische Qualität
+        und geben Teams Sicherheit in der Umsetzung.
       </p>
     </div>
 
@@ -186,7 +195,7 @@
 
 <section class="cta">
   <h2>Bereit für professionelle Bewegungsplanung?</h2>
-  <a href="login.html" class="btn">Zur Plattform</a>
+  <a href="https://bewegtundbunt-app.vercel.app/login.html" class="btn">Zur Plattform</a>
 </section>
 
 <footer>

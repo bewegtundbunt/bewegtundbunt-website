@@ -1,327 +1,962 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>bewegt & bunt – Generator</title>
 <style>
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    margin: 0;
-    padding: 40px 20px;
-    background: #f0f4f3;
-    min-height: 100vh;
-  }
-  h1 { margin-bottom: 8px; color: #1a1a1a; font-size: 24px; }
-  .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
-  .card {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    max-width: 700px;
-  }
-  label {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 13px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-  }
-  .hint {
-    font-size: 12px;
-    color: #999;
-    font-weight: 400;
-    text-transform: none;
-    margin-top: 2px;
-  }
-  input, select {
-    width: 100%;
-    padding: 10px 12px;
-    margin-top: 6px;
-    border-radius: 8px;
-    border: 1.5px solid #ddd;
-    font-size: 15px;
-    transition: border-color 0.2s;
-    color: #1a1a1a;
-  }
-  input:focus, select:focus {
-    outline: none;
-    border-color: #1f6f5f;
-  }
-  button {
-    margin-top: 28px;
-    padding: 13px 20px;
-    background: #1f6f5f;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background 0.2s;
-  }
-  button:hover:not(:disabled) { background: #165a4c; }
-  button:disabled { opacity: 0.7; cursor: not-allowed; }
-  .spinner {
-    width: 16px; height: 16px;
-    border: 2px solid rgba(255,255,255,0.4);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-    display: none;
-  }
-  button.loading .spinner { display: block; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  #status {
-    margin-top: 20px;
-    padding: 12px 16px;
-    border-radius: 10px;
-    font-size: 14px;
-    display: none;
-  }
-  #status.error {
-    display: block;
-    background: #fef2f2;
-    border: 1px solid #fca5a5;
-    color: #b91c1c;
-  }
-  #status.success {
-    display: block;
-    background: #f0fdf4;
-    border: 1px solid #86efac;
-    color: #166534;
-  }
-  #result { margin-top: 28px; display: none; }
-  .result-section {
-    margin-bottom: 20px;
-    background: #f8fffe;
-    border: 1px solid #d0ebe6;
-    border-radius: 12px;
-    padding: 16px 20px;
-  }
-  .result-section h3 {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #1f6f5f;
-    margin: 0 0 10px 0;
-  }
-  .meta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 10px;
-  }
-  .meta-item {
-    background: white;
-    border-radius: 8px;
-    padding: 10px 12px;
-    border: 1px solid #e0eeeb;
-  }
-  .meta-item .val { font-size: 18px; font-weight: 700; color: #1f6f5f; }
-  .meta-item .key { font-size: 11px; color: #888; margin-top: 2px; }
-  .timeline-item {
-    display: flex;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #e8f4f1;
-  }
-  .timeline-item:last-child { border-bottom: none; }
-  .t-time { font-size: 12px; color: #888; min-width: 75px; padding-top: 2px; }
-  .t-body { flex: 1; }
-  .t-title { font-weight: 600; font-size: 14px; color: #1a1a1a; }
-  .t-type {
-    display: inline-block;
-    font-size: 11px;
-    padding: 2px 7px;
-    border-radius: 20px;
-    background: #e0eeeb;
-    color: #1f6f5f;
-    margin-top: 3px;
-  }
-  .t-content { font-size: 13px; color: #555; margin-top: 4px; line-height: 1.5; }
-  .intensity { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
-  .intensity-bar { display: flex; gap: 3px; }
-  .intensity-dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd; }
-  .intensity-dot.on { background: #1f6f5f; }
-  .list-items { list-style: none; padding: 0; margin: 0; }
-  .list-items li {
-    padding: 5px 0;
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid #eef7f5;
-    display: flex;
-    gap: 8px;
-  }
-  .list-items li:last-child { border-bottom: none; }
-  .list-items li::before { content: "→"; color: #1f6f5f; flex-shrink: 0; }
+:root {
+  --green-darkest: #287736;
+  --green-dark:    #2CB52C;
+  --green-light:   #92FEBB;
+  --green-pale:    #B0E04B;
+  --green-bg:      #e8f5e2;
+  --cream:         #f5fbf2;
+  --dark:          #1a2e1e;
+  --grey:          #5a6e5d;
+  --border:        #d4e8d4;
+  --card-bg:       #ffffff;
+  --radius:        16px;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  min-height: 100vh;
+  color: var(--dark);
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  background: var(--dark);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbar-logo { font-size: 1.1rem; font-weight: 800; color: var(--green-light); }
+.topbar-right { display: flex; gap: 1rem; align-items: center; }
+.topbar a {
+  color: #9ec49e;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.topbar a:hover { color: var(--green-light); }
+.btn-back {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff !important;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.82rem !important;
+}
+.btn-back:hover { background: rgba(255,255,255,0.2) !important; }
+
+/* ── MAIN LAYOUT ── */
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; color: var(--dark); }
+.subtitle { color: var(--grey); margin-bottom: 2rem; font-size: 0.95rem; }
+
+/* ── FORM CARD ── */
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  margin-bottom: 2rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.form-group { display: flex; flex-direction: column; }
+label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+input, select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  color: var(--dark);
+  background: #fff;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--green-darkest);
+}
+.btn-generate {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(135deg, var(--green-darkest), #2CB52C);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px #28773640;
+}
+.btn-generate:hover:not(:disabled) { opacity: 0.92; transform: translateY(-2px); }
+.btn-generate:disabled { opacity: 0.6; cursor: not-allowed; }
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+.btn-generate.loading .spinner { display: block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── STATUS ── */
+#status {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: none;
+}
+#status.error { display: block; background: #fef2f2; border: 1px solid #fca5a5; color: #b91c1c; }
+#status.success { display: block; background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
+
+/* ── RESULT ── */
+#result { display: none; }
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.result-header h2 { font-size: 1.3rem; font-weight: 800; }
+.btn-print {
+  background: var(--green-darkest);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-print:hover { opacity: 0.85; }
+
+.result-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.result-section h3 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green-darkest);
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+/* meta grid */
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+.meta-item {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+}
+.meta-item .val { font-size: 1.3rem; font-weight: 800; color: var(--green-darkest); }
+.meta-item .key { font-size: 0.72rem; color: var(--grey); margin-top: 0.2rem; }
+
+/* timeline */
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eef6ee;
+}
+.timeline-item:last-child { border-bottom: none; }
+.t-time {
+  font-size: 0.78rem;
+  color: var(--grey);
+  min-width: 90px;
+  padding-top: 2px;
+  line-height: 1.4;
+}
+.t-body { flex: 1; }
+.t-title { font-weight: 700; font-size: 0.95rem; }
+.t-type {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--green-bg);
+  color: var(--green-darkest);
+  margin-top: 3px;
+  font-weight: 600;
+}
+.t-content { font-size: 0.85rem; color: #555; margin-top: 0.4rem; line-height: 1.6; }
+.t-material {
+  font-size: 0.78rem;
+  color: var(--green-darkest);
+  margin-top: 0.35rem;
+  background: var(--green-bg);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  display: inline-block;
+}
+
+/* materials */
+.mat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem;
+}
+.mat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--cream);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.mat-item::before { content: "📦"; font-size: 0.9rem; }
+.mat-qty { font-weight: 700; color: var(--green-darkest); margin-left: auto; font-size: 0.8rem; }
+
+/* tips */
+.tip-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eef6ee;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.tip-item:last-child { border-bottom: none; }
+.tip-item::before { content: "💡"; flex-shrink: 0; }
+
+/* closing quote */
+.closing-quote {
+  background: linear-gradient(135deg, var(--green-darkest), #1a5c20);
+  color: #fff;
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.closing-quote blockquote {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #c8f0c8;
+}
+.closing-quote .quote-author {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: #92FEBB;
+  font-weight: 600;
+}
+
+/* counter badge */
+.counter-badge {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .topbar { padding: 0.8rem 1rem; }
+}
+
+/* Print */
+@media print {
+  .topbar, .card, .btn-print, #status { display: none !important; }
+  body { background: #fff; }
+  .result-section { box-shadow: none; border: 1px solid #ccc; }
+}
 </style>
 </head>
 <body>
 
-<h1>🏃 Bewegungsstunde erstellen</h1>
-<p class="subtitle">bewegt & bunt – KI-gestützter Stundenplan-Generator</p>
-
-<div class="card">
-  <label>
-    Template-Key
-    <span class="hint">Schlüssel der Vorlage – schau in deiner Supabase-Tabelle nach</span>
-  </label>
-  <input type="text" id="templateKey" value="bewegung_basis" placeholder="z.B. bewegung_basis">
-
-  <label>Zieldauer (Minuten)</label>
-  <input type="number" id="targetMinutes" value="30" min="10" max="120">
-
-  <button id="generateBtn" onclick="generate()">
-    <div class="spinner"></div>
-    <span id="btnText">Stunde generieren</span>
-  </button>
-
-  <div id="status"></div>
-  <div id="result"></div>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-logo">bewegt &amp; bunt</div>
+  <div class="topbar-right">
+    <a href="/" class="btn-back">← Zur Website</a>
+    <a href="#" onclick="logout()">Abmelden</a>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<div class="main">
+  <h1>🏃 Bewegungsstunde erstellen</h1>
+  <p class="subtitle">bewegt &amp; bunt – Strukturierter Stundenplan-Generator</p>
+  <div id="seasonBadge" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1.5px solid var(--border);border-radius:100px;padding:0.4rem 1rem;font-size:0.82rem;font-weight:600;color:var(--green-darkest);margin-bottom:1.5rem;"></div>
+
+  <div class="card">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Bereich</label>
+        <select id="bereich">
+          <option value="krippe">Krippe (0–3 Jahre)</option>
+          <option value="kindergarten" selected>Kindergarten (3–6 Jahre)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Zieldauer</label>
+        <select id="targetMinutes">
+          <option value="15">15 Minuten</option>
+          <option value="30" selected>30 Minuten</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Anzahl Kinder</label>
+        <select id="kinderAnzahl">
+          <option value="5">5 Kinder</option>
+          <option value="8">8 Kinder</option>
+          <option value="10">10 Kinder</option>
+          <option value="12" selected>12 Kinder</option>
+          <option value="15">15 Kinder</option>
+          <option value="20">20 Kinder</option>
+          <option value="25">25 Kinder</option>
+        </select>
+      </div>
+
+    </div>
+
+    <button class="btn-generate" id="generateBtn" onclick="generate()">
+      <div class="spinner"></div>
+      <span id="btnText">Stunde generieren</span>
+    </button>
+    <div id="status"></div>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result">
+    <div class="result-header">
+      <h2>Deine Bewegungsstunde</h2>
+      <button class="btn-print" onclick="window.print()">🖨️ Drucken</button>
+    </div>
+    <div id="result-content"></div>
+  </div>
+</div>
+
+  <!-- VERLAUF -->
+  <div id="historySection" style="margin-top:2rem;display:none;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+      <h2 style="font-size:1.2rem;font-weight:800;">🕐 Zuletzt generiert</h2>
+      <button onclick="loadHistory()" style="background:transparent;border:1.5px solid var(--border);color:var(--green-darkest);padding:0.4rem 1rem;border-radius:100px;font-size:0.82rem;font-weight:600;cursor:pointer;">Aktualisieren</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
-  const SUPABASE_URL      = "https://jhgoqrinhdtowuhzirnf.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_uu0Xh8f_71Dk1qAQ_UirpQ_u-P4eSBG";
+const SUPABASE_URL      = "https://jhgoqrinhdtowuhzirnf.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_uu0Xh8f_71Dk1qAQ_UirpQ_u-P4eSBG";
+let supabaseClient;
+try {
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+} catch(e) { console.error("Supabase init error:", e); }
 
-  let supabaseClient;
-  try {
-    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    console.log("✅ Supabase initialisiert");
-  } catch (e) {
-    console.error("❌ Supabase Init-Fehler:", e);
-  }
+// ── AUTH CHECK ──
+async function checkAuth() {
+  if (!supabaseClient) return;
+  const { data } = await supabaseClient.auth.getSession();
+  if (!data.session) window.location.href = "login.html";
+}
+checkAuth();
 
-  function showStatus(msg, type) {
-    const el = document.getElementById("status");
-    el.textContent = msg;
-    el.className = type;
-  }
+async function logout() {
+  if (supabaseClient) await supabaseClient.auth.signOut();
+  window.location.href = "login.html";
+}
 
-  function setLoading(loading) {
-    const btn = document.getElementById("generateBtn");
-    const txt = document.getElementById("btnText");
-    btn.disabled = loading;
-    btn.classList.toggle("loading", loading);
-    txt.textContent = loading ? "Generiere..." : "Stunde generieren";
-  }
+// ── ABSCHLUSSSPRÜCHE (rotierend, nie "bewegt und bunt") ──
+const CLOSING_QUOTES = [
+  { text: "Bewegung ist die Sprache, die alle Kinder sprechen – lange bevor sie Worte kennen.", author: "Friedrich Fröbel" },
+  { text: "Kinder brauchen keine perfekte Stunde – sie brauchen jemanden, der mit ihnen in Bewegung bleibt.", author: "Unbekannt" },
+  { text: "Der Körper ist das erste Zuhause, das ein Kind kennt. Lass es darin wohnen.", author: "Pädagogische Weisheit" },
+  { text: "Durch Spielen lernt das Kind, dass es die Welt gestalten kann.", author: "Maria Montessori" },
+  { text: "Kinder lernen am besten, wenn sie sich bewegen – denn Bewegung ist Denken in Aktion.", author: "Carla Hannaford" },
+  { text: "Jede Bewegungsstunde ist eine Einladung: Trau dich, sei dabei, wachse.", author: "Pädagogische Weisheit" },
+  { text: "Was im Körper beginnt, findet seinen Weg in den Geist.", author: "Unbekannt" },
+  { text: "Kinder, die sich bewegen dürfen, denken klarer – und lächeln häufiger.", author: "Sportpädagogik" },
+  { text: "Eine gute Bewegungsstunde endet nicht wenn die Zeit um ist, sondern wenn die Energie noch nachhallt.", author: "Unbekannt" },
+  { text: "Spielen ist die ernsteste Beschäftigung der Kindheit.", author: "Charles Baudelaire" },
+  { text: "Gesundheit ist nicht alles, aber ohne Gesundheit ist alles nichts.", author: "Arthur Schopenhauer" },
+  { text: "Das Geheimnis guter Pädagogik liegt darin, die Begeisterung zu schützen.", author: "Unbekannt" }
+];
 
-  function dot(on) {
-    return `<div class="intensity-dot ${on ? 'on' : ''}"></div>`;
-  }
-
-  function renderResult(data) {
-    const el = document.getElementById("result");
-    const meta = data.meta || {};
-
-    const metaHtml = `
-      <div class="result-section">
-        <h3>📋 Übersicht</h3>
-        <div class="meta-grid">
-          <div class="meta-item"><div class="val">${meta.age_group || '–'}</div><div class="key">Altersgruppe</div></div>
-          <div class="meta-item"><div class="val">${meta.total_duration_min || '–'} min</div><div class="key">Gesamtdauer</div></div>
-          <div class="meta-item"><div class="val">${meta.space || '–'}</div><div class="key">Raum</div></div>
-          <div class="meta-item"><div class="val">${meta.avg_intensity_level ? Number(meta.avg_intensity_level).toFixed(1) : '–'}</div><div class="key">Ø Intensität</div></div>
-        </div>
-      </div>`;
-
-    const setup = data.setup_steps || [];
-    const setupHtml = setup.length ? `
-      <div class="result-section">
-        <h3>🔧 Vorbereitung</h3>
-        <ul class="list-items">${setup.map(s => `<li>${s}</li>`).join('')}</ul>
-      </div>` : '';
-
-    const mats = data.materials || [];
-    const matHtml = mats.length ? `
-      <div class="result-section">
-        <h3>🎒 Material</h3>
-        <ul class="list-items">${mats.map(m => `<li>${m}</li>`).join('')}</ul>
-      </div>` : '';
-
-    const slots = data.timeline || [];
-    const timelineHtml = slots.length ? `
-      <div class="result-section">
-        <h3>⏱ Ablauf</h3>
-        ${slots.map(slot => {
-          const intensity = slot.intensity_level || 0;
-          const dots = [1,2,3,4,5].map(i => dot(i <= intensity)).join('');
-          return `
-            <div class="timeline-item">
-              <div class="t-time">${slot.t_start_min}'–${slot.t_end_min}'<br><small>${slot.duration_min} min</small></div>
-              <div class="t-body">
-                <div class="t-title">${slot.title || ''}</div>
-                <span class="t-type">${slot.slot_type || ''}</span>
-                ${intensity ? `<div class="intensity"><span style="font-size:11px;color:#888">Intensität</span><div class="intensity-bar">${dots}</div></div>` : ''}
-                ${slot.content ? `<div class="t-content">${slot.content}</div>` : ''}
-              </div>
-            </div>`;
-        }).join('')}
-      </div>` : '';
-
-    const tips = data.tips || [];
-    const tipsHtml = tips.length ? `
-      <div class="result-section">
-        <h3>💡 Tipps</h3>
-        <ul class="list-items">${tips.map(t => `<li>${t}</li>`).join('')}</ul>
-      </div>` : '';
-
-    el.innerHTML = metaHtml + setupHtml + matHtml + timelineHtml + tipsHtml;
-    el.style.display = "block";
-  }
-
-  async function generate() {
-    if (!supabaseClient) {
-      showStatus("❌ Supabase konnte nicht geladen werden.", "error");
-      return;
-    }
-
-    document.getElementById("status").className = "";
-    document.getElementById("status").textContent = "";
-    document.getElementById("result").style.display = "none";
-
-    const templateKey   = document.getElementById("templateKey").value.trim();
-    const targetMinutes = parseInt(document.getElementById("targetMinutes").value);
-
-    if (!templateKey) { showStatus("⚠️ Bitte einen Template-Key eingeben.", "error"); return; }
-    if (!targetMinutes || targetMinutes < 5) { showStatus("⚠️ Bitte eine gültige Dauer eingeben.", "error"); return; }
-
-    setLoading(true);
-    console.log("🚀 RPC generate_session_print_v2:", { templateKey, targetMinutes });
-
-    try {
-      const { data, error } = await supabaseClient.rpc("generate_session_print_v2", {
-        p_template_key:   templateKey,
-        p_target_minutes: targetMinutes
-      });
-
-      if (error) {
-        console.error("❌ RPC Fehler:", error);
-        showStatus("❌ Fehler: " + error.message, "error");
-        return;
+// ── VORLAGEN – strikte Reihenfolge, KEIN Zufall ──
+const TEMPLATES = {
+  krippe: {
+    15: [
+      {
+        title: "Hampelmänner & Begrüßungsrunde",
+        thema: "Körperwahrnehmung",
+        timeline: [
+          { title: "Ankommen & Begrüßung", type: "Einführung", dauer: 3, content: "Kinder setzen sich im Kreis. Jedes Kind wird mit Namen begrüßt. Gemeinsames Einatmen und Strecken.", material: "Sitzkissen" },
+          { title: "Warm-up: Hampelmänner", type: "Warm-up", dauer: 4, content: "Alle machen gemeinsam Hampelmänner im Stehen. Langsam beginnen, Tempo steigern.", material: "Keine" },
+          { title: "Hauptteil: Körperteile zeigen", type: "Hauptteil", dauer: 5, content: "Lehrperson nennt Körperteil – Kinder tippen darauf. Steigern: zwei Körperteile gleichzeitig.", material: "Keine" },
+          { title: "Abschluss & Entspannung", type: "Abschluss", dauer: 3, content: "Kinder legen sich auf den Boden. Ruhige Musik. Arme und Beine strecken und wieder einziehen.", material: "Matten, Musik-Player" }
+        ],
+        materials: ["Sitzkissen", "Matten", "Musik-Player"],
+        tips: ["Langsames Tempo für Krippe beibehalten", "Wiederholungen helfen beim Lernen", "Lob für jeden Versuch"]
+      },
+      {
+        title: "Rollkugeln & Tuchspiel",
+        thema: "Gleichgewicht & Tastsinn",
+        timeline: [
+          { title: "Ankommen & Einführung", type: "Einführung", dauer: 2, content: "Kinder sitzen im Kreis. Kurze Vorstellung des Spiels mit Tüchern.", material: "Bunte Tücher" },
+          { title: "Warm-up: Tuch schwingen", type: "Warm-up", dauer: 3, content: "Jedes Kind bekommt ein Tuch. Gemeinsam schwingen, werfen, fangen.", material: "Bunte Tücher (1 pro Kind)" },
+          { title: "Hauptteil: Kugeln rollen", type: "Hauptteil", dauer: 7, content: "Weiche Bälle werden hin und hergerollt. Erst auf dem Boden, dann über kleine Rampen aus Matten.", material: "Weiche Bälle, Matten" },
+          { title: "Abschluss: Tuch-Entspannung", type: "Abschluss", dauer: 3, content: "Tuch sanft über den Körper des Kindes legen (mit Erlaubnis). Ruhige Atmung.", material: "Bunte Tücher, Matten" }
+        ],
+        materials: ["Bunte Tücher (1 pro Kind)", "Weiche Bälle (5–8)", "Matten (4–6)"],
+        tips: ["Auf Überreizung achten", "Tuchkontakt nur wenn Kind einwilligt", "Langsame ruhige Sprache"]
+      },
+      {
+        title: "Spaziergang durch den Wald",
+        thema: "Fantasie & Grobmotorik",
+        timeline: [
+          { title: "Ankommen & Geschichte", type: "Einführung", dauer: 3, content: "Kurze Geschichte vorlesen: Wir gehen heute in den Wald! Was sehen wir?", material: "Bilderbuch (optional)" },
+          { title: "Warm-up: Tiere imitieren", type: "Warm-up", dauer: 3, content: "Bär brummt und stampft, Vogel flattert, Hase hüpft – alle machen mit.", material: "Keine" },
+          { title: "Hauptteil: Waldparcours", type: "Hauptteil", dauer: 6, content: "Über Steine balancieren (Kissen), unter Ästen ducken (Stab auf Stühlen), durch Pfützen hüpfen (Kreise).", material: "Kissen, Stäbe, Stühle, Kreide/Klebeband" },
+          { title: "Abschluss: Am Lagerfeuer", type: "Abschluss", dauer: 3, content: "Alle sitzen im Kreis um ein imaginäres Feuer. Hände wärmen, ruhig atmen.", material: "Keine" }
+        ],
+        materials: ["Kissen (6–8)", "Stäbe (2)", "Stühle (2)", "Klebeband oder Kreide"],
+        tips: ["Geschichte motiviert Krippe-Kinder sehr", "Parcours altersgerecht niedrig halten", "Sicherheit beim Balancieren beachten"]
+      },
+      {
+        title: "Bubble & Ballonspiel",
+        thema: "Auge-Hand-Koordination",
+        timeline: [
+          { title: "Ankommen & Zauberwelt", type: "Einführung", dauer: 2, content: "Seifenblasen im Raum pusten – Kinder beobachten und wundern sich.", material: "Seifenblasen" },
+          { title: "Warm-up: Blasen fangen", type: "Warm-up", dauer: 4, content: "Kinder laufen den Seifenblasen nach und versuchen sie zu fangen.", material: "Seifenblasen" },
+          { title: "Hauptteil: Luftballon oben halten", type: "Hauptteil", dauer: 6, content: "Luftballon darf nicht den Boden berühren – erst allein, dann zu zweit.", material: "Luftballons (2 pro Paar)" },
+          { title: "Abschluss: Ballon im Kreis", type: "Abschluss", dauer: 3, content: "Alle sitzen im Kreis, Ballon wird sanft weitergegeben. Ruhige Bewegungen.", material: "Luftballons" }
+        ],
+        materials: ["Seifenblasen (2 Flaschen)", "Luftballons (aufgeblasen, 6–8)"],
+        tips: ["Auf Latexallergie achten!", "Ballons nicht zu stark aufpusten", "Langsame Variante für ruhigere Kinder"]
+      },
+      {
+        title: "Spiegel & Schatten",
+        thema: "Imitation & Körperbewusstsein",
+        timeline: [
+          { title: "Ankommen & Spiegelspiel", type: "Einführung", dauer: 3, content: "Lehrperson macht Bewegungen vor – Kinder imitieren wie ein Spiegel.", material: "Keine" },
+          { title: "Warm-up: Großer & kleiner Körper", type: "Warm-up", dauer: 3, content: "Abwechselnd ganz groß machen (strecken) und ganz klein (zusammenkauern).", material: "Keine" },
+          { title: "Hauptteil: Partnerspiegel", type: "Hauptteil", dauer: 6, content: "Kinder in Paaren: einer macht, der andere spiegelt. Dann tauschen.", material: "Keine" },
+          { title: "Abschluss: Schattenruhe", type: "Abschluss", dauer: 3, content: "Kinder legen sich auf den Boden. Kurze Entspannung mit ruhiger Musik.", material: "Musik-Player, Matten" }
+        ],
+        materials: ["Matten (1 pro Kind)", "Musik-Player"],
+        tips: ["Paare gut zusammenstellen", "Tempo langsam beginnen", "Lob für Kreativität"]
+      },
+      {
+        title: "Fühlpfad & Barfußlaufen",
+        thema: "Sensorische Integration",
+        timeline: [
+          { title: "Ankommen & Vorbereitung", type: "Einführung", dauer: 2, content: "Schuhe und Socken ausziehen. Kurz erklären: Heute erkunden unsere Füße die Welt!", material: "Keine" },
+          { title: "Warm-up: Zehen wippen", type: "Warm-up", dauer: 3, content: "Auf Zehenspitzen stehen, Fersen heben und senken. Im Stehen wippen.", material: "Keine" },
+          { title: "Hauptteil: Fühlpfad", type: "Hauptteil", dauer: 7, content: "Verschiedene Unterlagen auslegen: Matte, Sand in Wanne, Kieselsteine (weich), Tuch. Kinder gehen langsam durch.", material: "Matte, Sandwanne, Kieselstein-Matte, Tücher" },
+          { title: "Abschluss: Fußmassage", type: "Abschluss", dauer: 3, content: "Kinder massieren sich gegenseitig (oder selbst) die Füße mit einem Igelball.", material: "Igelbälle (1 pro Kind)" }
+        ],
+        materials: ["Sandwanne", "Kieselstein-Matte", "Weiche Tücher", "Igelbälle (1 pro Kind)"],
+        tips: ["Sauberkeit sicherstellen", "Kinder die nicht wollen, können zuschauen", "Sehr beruhigende Wirkung"]
       }
-
-      console.log("✅ Ergebnis:", data);
-      renderResult(data);
-      showStatus("✅ Stunde erfolgreich generiert!", "success");
-
-    } catch (err) {
-      console.error("❌ Fehler:", err);
-      showStatus("❌ Unerwarteter Fehler: " + err.message, "error");
-    } finally {
-      setLoading(false);
-    }
+    ],
+    30: [
+      {
+        title: "Großer Bewegungsparcours",
+        thema: "Grobmotorik & Koordination",
+        timeline: [
+          { title: "Ankommen & Begrüßungsritual", type: "Einführung", dauer: 5, content: "Kreis bilden. Jedes Kind wird mit Händeschütteln und Namen begrüßt. Kurze Atemübung: tief einatmen, laut ausatmen.", material: "Sitzkissen" },
+          { title: "Warm-up: Tierwanderung", type: "Warm-up", dauer: 7, content: "Kinder bewegen sich als verschiedene Tiere durch den Raum: Elefant (schwer), Maus (leise), Vogel (Arme ausbreiten). Wechsel auf Zuruf.", material: "Keine" },
+          { title: "Hauptteil: Parcours", type: "Hauptteil", dauer: 13, content: "Station 1: Kriechtunnel (2 min). Station 2: Balancierbalken (3 min). Station 3: Sprungpunkte (3 min). Station 4: Rollmatte (3 min). Kinder rotieren nach Signal.", material: "Kriechtunnel, Balancierbalken, Klebeband-Markierungen, Rollmatte" },
+          { title: "Abschluss: Entspannungskreis", type: "Abschluss", dauer: 5, content: "Alle legen sich auf Matten im Kreis (Köpfe zur Mitte). Ruhige Musik. Kurze Geschichte über einen Sonnentag vorlesen.", material: "Matten, Musik-Player" }
+        ],
+        materials: ["Sitzkissen", "Kriechtunnel", "Balancierbalken", "Klebeband", "Rollmatte", "Matten", "Musik-Player"],
+        tips: ["Stationen vorher aufbauen", "Klare Signale für Wechsel", "Krippe braucht viel Einzelaufmerksamkeit"]
+      },
+      {
+        title: "Tanz & Rhythmus für die Krippe",
+        thema: "Rhythmusgefühl & Soziales",
+        timeline: [
+          { title: "Ankommen & Trommeln", type: "Einführung", dauer: 4, content: "Kinder sitzen im Kreis. Jedes Kind bekommt eine kleine Trommel oder tippt auf Knie. Gemeinsam klopfen.", material: "Kleine Trommeln oder Rasseln" },
+          { title: "Warm-up: Klatschspiel", type: "Warm-up", dauer: 5, content: "Einfache Klatschmuster: 1x, 2x, 3x. Dann mit Stampfen kombinieren.", material: "Keine" },
+          { title: "Hauptteil: Tanz mit Tüchern", type: "Hauptteil", dauer: 14, content: "Jedes Kind bekommt ein Tuch. Verschiedene Musikstücke: langsam schwingen, schnell wedeln, auf Boden legen und aufheben. 3 Lieder à ca. 4 Minuten.", material: "Bunte Tücher (1 pro Kind), Musik-Player" },
+          { title: "Abschluss: Leises Summen", type: "Abschluss", dauer: 7, content: "Alle sitzen, Tücher über die Knie. Leises Summstück. Kinder summen mit. Langsam ausklingen.", material: "Tücher, Musik-Player" }
+        ],
+        materials: ["Kleine Trommeln oder Rasseln", "Bunte Tücher (1 pro Kind)", "Musik-Player"],
+        tips: ["Ruhige Musikauswahl für Krippe", "Wechsel von laut/leise bewusst einbauen", "Tücher beruhigen"]
+      },
+      {
+        title: "Wasser & Sinne",
+        thema: "Sensorische Erfahrung",
+        timeline: [
+          { title: "Ankommen & Neugier wecken", type: "Einführung", dauer: 4, content: "Schüsseln mit Wasser stehen im Raum. Kinder erkunden mit Fingern vorsichtig. Erzählen: Was fühlt ihr?", material: "Schüsseln mit Wasser, Handtücher" },
+          { title: "Warm-up: Regen imitieren", type: "Warm-up", dauer: 5, content: "Finger-Regen: alle tippen schnell auf Oberschenkel. Dann langsamer Regen (einzelne Tropfen).", material: "Keine" },
+          { title: "Hauptteil: Bewegungs-Wasserspiele", type: "Hauptteil", dauer: 15, content: "Station 1: Schwämme ausdrücken (6 min). Station 2: Wasser in Becher füllen ohne Hände (Löffel) (5 min). Station 3: nasse Füße trockentupfen (4 min).", material: "Schwämme, Schüsseln, Becher, Löffel, Handtücher" },
+          { title: "Abschluss: Trocken & ruhig", type: "Abschluss", dauer: 6, content: "Hände trocknen. Im Kreis sitzen. Kurze Nachbesprechung: Was hat sich am besten angefühlt?", material: "Handtücher" }
+        ],
+        materials: ["Schüsseln mit Wasser (4)", "Schwämme (8)", "Becher", "Löffel", "Handtücher"],
+        tips: ["Kleidungsschutz vorbereiten", "Wassertemperatur prüfen", "Aufsicht erhöhen bei Wasser"]
+      },
+      {
+        title: "Bausteine & Körper",
+        thema: "Raumwahrnehmung & Kreativität",
+        timeline: [
+          { title: "Ankommen & Vorzeigen", type: "Einführung", dauer: 4, content: "Große Weichschaum-Bausteine im Raum. Lehrperson baut einen Turm – Kinder schauen zu und wollen mitmachen.", material: "Weichschaum-Bausteine" },
+          { title: "Warm-up: Baumeister-Yoga", type: "Warm-up", dauer: 6, content: "Einfache Yoga-Posen: Baum (ein Bein heben), Brücke (auf Boden), Mauer (gerade stehen, Arme seitlich).", material: "Matten" },
+          { title: "Hauptteil: Freies Bauen & Klettern", type: "Hauptteil", dauer: 14, content: "Kinder bauen frei mit Bausteinen. Lehrperson baut sichere Hindernisse zum Drübersteigen, Draufsetzen, Drunterkrabbeln.", material: "Weichschaum-Bausteine (10+), Matten" },
+          { title: "Abschluss: Bausteine aufräumen als Spiel", type: "Abschluss", dauer: 6, content: "Wer kann mit einem Baustein auf dem Kopf balancieren? Bausteine werden so zum Regal gebracht.", material: "Weichschaum-Bausteine" }
+        ],
+        materials: ["Weichschaum-Bausteine (10–15)", "Matten (4–6)"],
+        tips: ["Bausteine sind ideal für Krippe", "Freies Spiel ist pädagogisch wertvoll", "Aufräumen als Übung integrieren"]
+      },
+      {
+        title: "Zug & Zirkus",
+        thema: "Soziales Spiel & Gleichgewicht",
+        timeline: [
+          { title: "Ankommen: Der Zug fährt ein", type: "Einführung", dauer: 4, content: "Alle stehen in einer Reihe und halten sich an den Schultern. Der Zug fährt durch den Raum.", material: "Keine" },
+          { title: "Warm-up: Zirkusartisten", type: "Warm-up", dauer: 6, content: "Jongleur (Tücher werfen), Seiltänzer (auf Linie balancieren), Akrobat (Rolle vorwärts auf Matte).", material: "Tücher, Klebebandlinie, Matte" },
+          { title: "Hauptteil: Zirkusnummern", type: "Hauptteil", dauer: 14, content: "Kinder führen kleine Nummern vor: Balancieren mit Kissen auf dem Kopf, Hula-Hoop ausprobieren, Tücher jonglieren. Jedes Kind ist Künstler.", material: "Kissen, Hula-Hoop (2), Tücher" },
+          { title: "Abschluss: Verbeugung & Ruhe", type: "Abschluss", dauer: 6, content: "Alle verbeugen sich (Applaus!). Dann ruhig auf Matten legen. Lehrperson liest kurze Geschichte.", material: "Matten" }
+        ],
+        materials: ["Bunte Tücher", "Klebeband", "Matten", "Kissen (1 pro Kind)", "Hula-Hoop (2)"],
+        tips: ["Verbeugung stärkt Selbstwert", "Auf Sicherheit bei Rollen achten", "Jedes Kind in Rampenlicht lassen"]
+      },
+      {
+        title: "Herbstwald-Entdeckung",
+        thema: "Naturmotorik & Fantasie",
+        timeline: [
+          { title: "Ankommen: Blätter sammeln", type: "Einführung", dauer: 5, content: "Bunte Papierblätter liegen im Raum. Kinder sammeln so viele wie möglich und bringen sie in den Kreis.", material: "Papierblätter (bunt, ausgeschnitten)" },
+          { title: "Warm-up: Eichhörnchen sammeln", type: "Warm-up", dauer: 6, content: "Jedes Kind ist ein Eichhörnchen und sammelt Nüsse (Bälle) und bringt sie in sein Nest (Kiste).", material: "Kleine Bälle, Kisten (1 pro Kind)" },
+          { title: "Hauptteil: Waldleben", type: "Hauptteil", dauer: 13, content: "Stationen: Ast balancieren (Balken), Igel suchen (unter Tüchern), Bären-Höhle (Tunnel), Laubberg (Kissen-Berg).", material: "Balancierbalken, Tücher, Tunnel, Kissen" },
+          { title: "Abschluss: Herbstlied & Schlafen", type: "Abschluss", dauer: 6, content: "Herbstlied singen. Dann alle wie Tiere im Winter 'schlafen' (auf Matten legen). Leise Musik.", material: "Matten, Musik-Player" }
+        ],
+        materials: ["Papierblätter (bunt, 30+)", "Kleine Bälle (10)", "Kisten (3)", "Balancierbalken", "Tücher", "Kriechtunnel", "Kissen", "Matten", "Musik-Player"],
+        tips: ["Herbstthema kann auch draußen stattfinden", "Viel Fantasie aktivieren", "Ruhiger Abschluss wichtig für Krippe"]
+      }
+    ]
+  },
+  kindergarten: {
+    15: [
+      {
+        title: "Schneller Kreis & Reaktionsspiel",
+        thema: "Reaktionsfähigkeit & Teamwork",
+        timeline: [
+          { title: "Ankommen & Einführung", type: "Einführung", dauer: 3, content: "Alle im Kreis stehen. Kurze Vorstellung des Spiels. Wer kennt das Stille-Post-Spiel mit Händen?", material: "Keine" },
+          { title: "Warm-up: Handdruck-Kreis", type: "Warm-up", dauer: 3, content: "Impulse werden durch Händedruck im Kreis weitergegeben. Wer drückt zu früh, scheidet aus.", material: "Keine" },
+          { title: "Hauptteil: Reaktionsspiele", type: "Hauptteil", dauer: 6, content: "1) Farben-Lauf: Farbkarten hochhalten – Kinder rennen zur richtigen Matte (3 min). 2) Freeze-Dance: Musik stoppt – alle erstarren (3 min).", material: "Farbkarten, Farbige Matten, Musik-Player" },
+          { title: "Abschluss & Auswertung", type: "Abschluss", dauer: 3, content: "Im Kreis: Jeder sagt eine Sache, die ihm Spaß gemacht hat. Gemeinsames Abklatschen.", material: "Keine" }
+        ],
+        materials: ["Farbkarten (4 Farben)", "Farbige Matten (4)", "Musik-Player"],
+        tips: ["Freeze-Dance sehr motivierend", "Auf Fairness achten", "Lob für Schnelligkeit UND für Bremsen"]
+      },
+      {
+        title: "Balancier-Olympiade",
+        thema: "Gleichgewicht & Konzentration",
+        timeline: [
+          { title: "Einführung: Was ist Balance?", type: "Einführung", dauer: 2, content: "Kurze Demo: Lehrperson balanciert Kissen auf dem Kopf. Kinder probieren sofort aus.", material: "Kissen (1 pro Kind)" },
+          { title: "Warm-up: Einbeinstand", type: "Warm-up", dauer: 3, content: "Auf einem Bein stehen, Augen zu, 10 Sekunden. Dann andere Seite.", material: "Keine" },
+          { title: "Hauptteil: Balancier-Stationen", type: "Hauptteil", dauer: 7, content: "Station 1: Auf Linie gehen mit Kissen auf Kopf (3 min). Station 2: Auf Balancierbalken stehen und Ball fangen (4 min).", material: "Klebebandlinie, Kissen, Balancierbalken, Ball" },
+          { title: "Abschluss: Medaillen", type: "Abschluss", dauer: 3, content: "Jedes Kind bekommt eine selbstgemalte Medaille (vorbereitet). Gemeinsame Runde.", material: "Papier-Medaillen (vorbereitet)" }
+        ],
+        materials: ["Kissen (1 pro Kind)", "Klebeband", "Balancierbalken", "Ball", "Papier-Medaillen"],
+        tips: ["Medaillen stärken Selbstwert", "Alle gewinnen – keine Verlierer", "Kinder gegenseitig anfeuern lassen"]
+      },
+      {
+        title: "Zahlen & Bewegung",
+        thema: "Kognition & Motorik verbinden",
+        timeline: [
+          { title: "Einführung: Zahlen-Bewegungen", type: "Einführung", dauer: 3, content: "Jeder Zahl wird eine Bewegung zugeordnet: 1=Klatschen, 2=Stampfen, 3=Drehen, 4=Hüpfen, 5=Arme hoch.", material: "Zahlenkarten" },
+          { title: "Warm-up: Karte zeigen – bewegen", type: "Warm-up", dauer: 3, content: "Lehrperson zeigt Karten – alle führen Bewegung aus. Tempo steigern.", material: "Zahlenkarten" },
+          { title: "Hauptteil: Zahlen-Staffel", type: "Hauptteil", dauer: 6, content: "In 2 Teams: Lehrperson ruft Zahl, erstes Kind macht Bewegung + läuft zur Wand und zurück. Dann nächstes Kind.", material: "Zahlenkarten, Klebebandlinie" },
+          { title: "Abschluss: Mein Liebling", type: "Abschluss", dauer: 3, content: "Jedes Kind zeigt seine Lieblingsbewegung. Alle machen sie gemeinsam nach.", material: "Keine" }
+        ],
+        materials: ["Zahlenkarten (1–5 oder 1–10)", "Klebeband"],
+        tips: ["Lerneffekt: Zahlen durch Bewegung verankern", "Tempo anpassen", "Schwierigere Zahlen für ältere Kinder"]
+      },
+      {
+        title: "Seilspringen & Rhythmus",
+        thema: "Koordination & Rhythmus",
+        timeline: [
+          { title: "Einführung & Demo", type: "Einführung", dauer: 2, content: "Lehrperson springt Seil vor. Kinder schauen zu und wollen es ausprobieren.", material: "Sprungseile" },
+          { title: "Warm-up: Hüpfen ohne Seil", type: "Warm-up", dauer: 3, content: "Beide Beine zusammen hüpfen, dann abwechselnd, dann auf der Stelle drehen.", material: "Keine" },
+          { title: "Hauptteil: Seilspringen", type: "Hauptteil", dauer: 7, content: "Jedes Kind springt mit eigenem Seil. Wer noch übt: Seil auf Boden legen und darüber hüpfen. Dann Langseil für Gruppe.", material: "Sprungseile (1 pro Kind), Langseil (1)" },
+          { title: "Abschluss: Seil-Kreis", type: "Abschluss", dauer: 3, content: "Alle halten gemeinsam ein langes Seil im Kreis. Zusammen hochheben und senken.", material: "Langseil (1)" }
+        ],
+        materials: ["Sprungseile (1 pro Kind)", "Langseil (1)"],
+        tips: ["Nicht alle können sofort springen", "Auf dem Boden-Variante für Anfänger", "Langseil macht großen Spaß"]
+      },
+      {
+        title: "Kooperationsspiele",
+        thema: "Teamwork & Vertrauen",
+        timeline: [
+          { title: "Einführung: Wir schaffen es zusammen", type: "Einführung", dauer: 3, content: "Kurze Erklärung: Heute gewinnen wir nur zusammen. Kein gegen, nur mit.", material: "Keine" },
+          { title: "Warm-up: Spiegel zu zweit", type: "Warm-up", dauer: 3, content: "Paare: einer macht Bewegungen, der andere spiegelt. Dann wechseln.", material: "Keine" },
+          { title: "Hauptteil: Gruppenaufgaben", type: "Hauptteil", dauer: 6, content: "1) Alle gemeinsam einen Ball auf einer Decke transportieren ohne ihn fallen zu lassen (3 min). 2) Menschenkette: alle halten sich an Knöcheln und bewegen sich (3 min).", material: "Ball, Decke/Tuch" },
+          { title: "Abschluss: Jubel-Kreis", type: "Abschluss", dauer: 3, content: "Alle in Kreis, Hände zusammen in Mitte. Gemeinsamer Jubel-Ruf. Dann ruhiges Ausatmen.", material: "Keine" }
+        ],
+        materials: ["Ball (1)", "Große Decke oder Tuch"],
+        tips: ["Kooperation explizit loben", "Konkurrenz vermeiden", "Frustration bei Scheitern auffangen"]
+      },
+      {
+        title: "Yoga für Kinder",
+        thema: "Körperwahrnehmung & Ruhe",
+        timeline: [
+          { title: "Einführung: Tiere im Yoga", type: "Einführung", dauer: 2, content: "Yoga wird als Tierimitation eingeführt. Kinder kennen die Tiere – das motiviert!", material: "Matten" },
+          { title: "Warm-up: Aufwärm-Tier", type: "Warm-up", dauer: 3, content: "Katze-Kuh: auf allen Vieren Rücken runden und strecken. 10x wiederholen.", material: "Matten" },
+          { title: "Hauptteil: Tier-Yoga-Reise", type: "Hauptteil", dauer: 7, content: "Hund (Abwärtshund), Kobra (Bauch, Oberkörper heben), Baum (Einbeinstand), Krieger (breiter Stand, Arme seitlich), Frosch (Hocke).", material: "Matten (1 pro Kind)" },
+          { title: "Abschluss: Tote-Mann-Pose", type: "Abschluss", dauer: 3, content: "Alle liegen flach auf Rücken, Augen zu. 1 Minute ruhig atmen. Leise Musik.", material: "Matten, Musik-Player" }
+        ],
+        materials: ["Matten (1 pro Kind)", "Musik-Player"],
+        tips: ["Yogaposen nicht erzwingen", "Körper hören lernen betonen", "Perfekte Abschlussaktivität"]
+      }
+    ],
+    30: [
+      {
+        title: "Bewegungs-Olympiade",
+        thema: "Vielfalt & Wettkampf",
+        timeline: [
+          { title: "Eröffnungsfeier", type: "Einführung", dauer: 5, content: "Einmarsch der Teams (je 2–4 Kinder). Jedes Team bekommt eine Farbe. Kurze Erklärung der Stationen.", material: "Farbige Armbänder oder Tücher" },
+          { title: "Warm-up: Olympisches Feuer", type: "Warm-up", dauer: 5, content: "Mit Fackel (Tuch am Stab) durch den Raum laufen und an alle 'Feuer anzünden' (antippen). Danach gemeinsames Aufwärmritual.", material: "Stab mit Tuch" },
+          { title: "Stationen-Olympiade", type: "Hauptteil", dauer: 14, content: "Station 1: Weitwurf mit Sandsack (3 min). Station 2: Hindernislauf (3 min). Station 3: Zielwerfen (3 min). Station 4: Balancier-Wettbewerb (3 min). Wechsel nach Signal.", material: "Sandsäcke, Hindernismaterial, Zielkorb, Balancierbalken" },
+          { title: "Siegerehrung & Entspannung", type: "Abschluss", dauer: 6, content: "Alle sind Gewinner! Jedes Kind bekommt Medaille. Danach gemeinsame Entspannung auf Matten.", material: "Papiermedaillen, Matten" }
+        ],
+        materials: ["Farbige Tücher/Armbänder (nach Teamgröße)", "Sandsäcke (5)", "Hindernismaterial", "Zielkorb", "Balancierbalken", "Papiermedaillen", "Matten"],
+        tips: ["Fokus auf Teilnahme, nicht Sieg", "Teams ausgewogen zusammenstellen", "Applaus für jeden Versuch"]
+      },
+      {
+        title: "Tanztheater",
+        thema: "Kreativität & Ausdrucksstärke",
+        timeline: [
+          { title: "Einstieg: Geschichte vorstellen", type: "Einführung", dauer: 5, content: "Kurze Geschichte wird vorgestellt (z.B. Dschungel-Abenteuer). Kinder wählen Rollen: Löwe, Elefant, Affe, Schlange.", material: "Bildkarten mit Tieren" },
+          { title: "Warm-up: Tiere erwachen", type: "Warm-up", dauer: 5, content: "Jedes Tier erwacht anders: Löwe streckt sich, Elefant rüsselt, Affe kratzt sich, Schlange zischt.", material: "Keine" },
+          { title: "Hauptteil: Tanztheater aufführen", type: "Hauptteil", dauer: 14, content: "Geschichte wird mit Musik 'aufgeführt'. Lehrperson erzählt, Kinder agieren. 2 Durchläufe mit Rollenwechsel.", material: "Musik-Player, Kostüm-Accessoires (optional)" },
+          { title: "Abschluss: Verbeugung & Nachgespräch", type: "Abschluss", dauer: 6, content: "Alle verbeugen sich. Kurzes Gespräch: Welche Rolle hat am meisten Spaß gemacht?", material: "Keine" }
+        ],
+        materials: ["Bildkarten Tiere", "Musik-Player", "Kostüm-Accessoires (optional)"],
+        tips: ["Geschichte vorher vorbereiten", "Schüchterne Kinder sanft einladen", "Kreativität über Korrektheit stellen"]
+      },
+      {
+        title: "Naturparcours drinnen",
+        thema: "Grobmotorik & Fantasie",
+        timeline: [
+          { title: "Einführung: Naturforscher", type: "Einführung", dauer: 4, content: "Kinder sind heute Naturforscher! Ausrüstung: jeder bekommt eine Lupe (Papier-Lupe). Kurze Erklärung des Parcours.", material: "Papier-Lupen (gebastelt)" },
+          { title: "Warm-up: Waldtiere imitieren", type: "Warm-up", dauer: 6, content: "Hirsch (elegant laufen), Eule (drehen, Kopf bewegen), Fuchs (schleichen), Reh (springen).", material: "Keine" },
+          { title: "Hauptteil: Forscher-Parcours", type: "Hauptteil", dauer: 14, content: "1) Baumstamm überqueren (Balken, 3 min). 2) Bärenhöhle (Tunnel, 3 min). 3) Bergüberquerung (Kissenturm, 3 min). 4) Flussüberquerung (Sprungpunkte aus Papier, 3 min). Kinder rotieren.", material: "Balancierbalken, Tunnel, Kissen, Papier-Kreise" },
+          { title: "Abschluss: Forscher-Tagebuch", type: "Abschluss", dauer: 6, content: "Jedes Kind zeichnet sein Lieblingserlebnis auf einem kleinen Zettel. Gemeinsames Erzählen.", material: "Stifte, Papier" }
+        ],
+        materials: ["Papier-Lupen", "Balancierbalken", "Kriechtunnel", "Kissen (8)", "Papier-Kreise (10)", "Stifte", "Papier"],
+        tips: ["Naturforscher-Rolle gibt Struktur", "Zeichnen am Ende verankert Erlebnis", "Draußen-Version im Sommer ideal"]
+      },
+      {
+        title: "Ball-Meisterschaft",
+        thema: "Ballgefühl & Koordination",
+        timeline: [
+          { title: "Einführung & Aufwärmen", type: "Einführung", dauer: 5, content: "Jedes Kind bekommt einen Ball. Freies Erkunden: prellen, rollen, hochwerfen, fangen.", material: "Bälle (1 pro Kind)" },
+          { title: "Warm-up: Dribbling", type: "Warm-up", dauer: 5, content: "Ball am Ort prellen, dann im Laufen. Wechsel Hand. Tempo variieren.", material: "Bälle (1 pro Kind)" },
+          { title: "Hauptteil: Ball-Spiele", type: "Hauptteil", dauer: 14, content: "1) Zielwerfen in Kisten (4 min). 2) Völkerball-Mini (3 min). 3) Staffellauf mit Ball zwischen Knien (4 min). 4) Freies Ballspiel (3 min).", material: "Bälle, Kisten (3), Klebebandfeld" },
+          { title: "Abschluss: Ball-Yoga", type: "Abschluss", dauer: 6, content: "Mit Ball auf dem Boden liegen: Ball unter Rücken (Massage), Ball zwischen Händen drücken, langsam abrollen.", material: "Bälle (1 pro Kind), Matten" }
+        ],
+        materials: ["Bälle (1 pro Kind)", "Kisten (3)", "Klebeband", "Matten"],
+        tips: ["Völkerball sanft und fair spielen", "Ball-Yoga entspannt sehr gut", "Alle Fähigkeitsstufen einschließen"]
+      },
+      {
+        title: "Sinneswerkstatt",
+        thema: "Wahrnehmung & Konzentration",
+        timeline: [
+          { title: "Einführung: Die 5 Sinne", type: "Einführung", dauer: 5, content: "Kurze Vorstellung der 5 Sinne mit Körperbewegungen: Sehen (Augen auf-zu), Hören (Hände an Ohren), Riechen (schnuppern), Schmecken (Zunge raus), Fühlen (Hände reiben).", material: "Keine" },
+          { title: "Warm-up: Sinnes-Tour", type: "Warm-up", dauer: 5, content: "Augen geschlossen: Geräusche erraten (Rasseln, Klatschen). Dann Gerüche erraten (Zitrone, Lavendel).", material: "Rasseln, Geruchs-Dosen" },
+          { title: "Hauptteil: Sinnes-Stationen", type: "Hauptteil", dauer: 14, content: "Station 1: Fühlen mit verbundenen Augen (Gegenstände ertasten, 4 min). Station 2: Geräusche-Memory (Dosen schütteln und paaren, 4 min). Station 3: Gleichgewicht mit verbundenen Augen (4 min). Station 4: Geruchs-Parcours (2 min).", material: "Augenbinden, Fühl-Box, Geräusche-Dosen, Geruchs-Dosen" },
+          { title: "Abschluss: Achtsamkeits-Moment", type: "Abschluss", dauer: 6, content: "Alle sitzen still. 1 Minute: Was höre ich? Was fühle ich? Danach erzählen.", material: "Keine" }
+        ],
+        materials: ["Augenbinden (1 pro Kind)", "Fühl-Box mit Gegenständen", "Geräusche-Dosen (5 Paare)", "Geruchs-Dosen (4)"],
+        tips: ["Augenbinde nur auf Freiwilligkeit", "Fühlen mit geschlossenen Augen sehr spannend", "Sehr beruhigendes Ende"]
+      },
+      {
+        title: "Großes Gemeinschaftsspiel",
+        thema: "Soziale Kompetenz & Inklusion",
+        timeline: [
+          { title: "Einführung: Wir-Gefühl stärken", type: "Einführung", dauer: 5, content: "Alle in Kreis. Gemeinsamer Name für die Gruppe wird gewählt (z.B. 'Die Sterne'). Alle sagen ihn zusammen.", material: "Keine" },
+          { title: "Warm-up: Bewegungs-Telefon", type: "Warm-up", dauer: 5, content: "Wie Stille Post: Bewegung wird von Kind zu Kind weitergegeben. Wie verändert sie sich?", material: "Keine" },
+          { title: "Hauptteil: Kooperations-Spiele", type: "Hauptteil", dauer: 14, content: "1) Menschenknoten lösen (4 min). 2) Alle müssen gleichzeitig auf Stühle klettern ohne den Boden zu berühren (5 min). 3) Gemeinsam eine Figur aus Körpern legen (5 min).", material: "Stühle (1 pro Kind)" },
+          { title: "Abschluss: Wir-Foto", type: "Abschluss", dauer: 6, content: "Alle bauen gemeinsam eine lustige Pose auf. Optional: Foto machen. Dann ruhiges Sitzen und Nachbesprechen.", material: "Kamera (optional)" }
+        ],
+        materials: ["Stühle (1 pro Kind)", "Kamera (optional)"],
+        tips: ["Kein Kind ausgrenzen", "Lösungen kommen von Kindern", "Körperbilder sind kreativ und verbindend"]
+      }
+    ]
   }
+};
+
+// Sprüche und Vorlagen-Zähler (global im Tab)
+let quoteIndex = 0;
+let templateCounters = {
+  krippe_15: 0,
+  krippe_30: 0,
+  kindergarten_15: 0,
+  kindergarten_30: 0
+};
+
+function showStatus(msg, type) {
+  const el = document.getElementById("status");
+  el.textContent = msg;
+  el.className = type;
+}
+
+function setLoading(loading) {
+  const btn = document.getElementById("generateBtn");
+  const txt = document.getElementById("btnText");
+  btn.disabled = loading;
+  btn.classList.toggle("loading", loading);
+  txt.textContent = loading ? "Generiere..." : "Stunde generieren";
+}
+
+function getMaterialWithCount(mat, kinder) {
+  // Mengen anpassen wenn Anzahl pro Kind notiert
+  if (mat.includes("pro Kind")) {
+    const base = mat.replace(/\(.*\)/, "").trim();
+    return `${base} (${kinder}×)`;
+  }
+  return mat;
+}
+
+function renderResult(template, kinder, dauer) {
+  const el = document.getElementById("result-content");
+  const startMinute = 0;
+
+  // Meta
+  let currentMin = 0;
+  const metaHtml = `
+    <div class="result-section">
+      <h3>📋 Übersicht</h3>
+      <div class="meta-grid">
+        <div class="meta-item"><div class="val">${document.getElementById("bereich").options[document.getElementById("bereich").selectedIndex].text}</div><div class="key">Bereich</div></div>
+        <div class="meta-item"><div class="val">${dauer} min</div><div class="key">Gesamtdauer</div></div>
+        <div class="meta-item"><div class="val">${kinder}</div><div class="key">Kinder</div></div>
+        <div class="meta-item"><div class="val">${template.thema}</div><div class="key">Thema</div></div>
+      </div>
+    </div>`;
+
+  // Materialien mit Mengen
+  const matsHtml = `
+    <div class="result-section">
+      <h3>🎒 Materialbedarf (für ${kinder} Kinder)</h3>
+      <div class="mat-grid">
+        ${template.materials.map(m => {
+          const adjusted = getMaterialWithCount(m, kinder);
+          return `<div class="mat-item">${adjusted}</div>`;
+        }).join('')}
+      </div>
+    </div>`;
+
+  // Timeline mit exakten Minuten
+  let timeMin = 0;
+  const timelineHtml = `
+    <div class="result-section">
+      <h3>⏱ Ablauf</h3>
+      ${template.timeline.map(slot => {
+        const start = timeMin;
+        const end = timeMin + slot.dauer;
+        timeMin = end;
+        return `
+          <div class="timeline-item">
+            <div class="t-time">
+              ${start}–${end} min
+            </div>
+            <div class="t-body">
+              <div class="t-title">${slot.title}</div>
+              <span class="t-type">${slot.type}</span>
+              <div class="t-content">${slot.content}</div>
+              ${slot.material && slot.material !== "Keine" ? `<div class="t-material">📦 Material: ${slot.material}</div>` : ''}
+            </div>
+          </div>`;
+      }).join('')}
+    </div>`;
+
+  // Tipps
+  const tipsHtml = template.tips.length ? `
+    <div class="result-section">
+      <h3>💡 Tipps für die Durchführung</h3>
+      ${template.tips.map(t => `<div class="tip-item">${t}</div>`).join('')}
+    </div>` : '';
+
+  // Abschlussspruch (rotierend, keine Wiederholung von bewegt & bunt)
+  const quote = CLOSING_QUOTES[quoteIndex % CLOSING_QUOTES.length];
+  quoteIndex++;
+  const quoteHtml = `
+    <div class="closing-quote">
+      <blockquote>„${quote.text}"</blockquote>
+      <div class="quote-author">— ${quote.author}</div>
+    </div>`;
+
+  el.innerHTML = metaHtml + matsHtml + timelineHtml + tipsHtml + quoteHtml;
+  document.getElementById("result").style.display = "block";
+}
+
+async function generate() {
+  document.getElementById("status").className = "";
+  document.getElementById("status").textContent = "";
+
+  const bereich = document.getElementById("bereich").value;
+  const dauer = parseInt(document.getElementById("targetMinutes").value);
+  const kinder = parseInt(document.getElementById("kinderAnzahl").value);
+  const heute = new Date();
+  const monat = heute.getMonth() + 1; // 1-12
+
+  if (![15, 30].includes(dauer)) {
+    showStatus("⚠️ Bitte 15 oder 30 Minuten wählen.", "error");
+    return;
+  }
+
+  setLoading(true);
+
+  // Strikte Reihenfolge, kein Zufall
+  const key = `${bereich}_${dauer}`;
+  const pool = TEMPLATES[bereich][dauer];
+  const idx = templateCounters[key] % pool.length;
+  templateCounters[key]++;
+
+  const template = pool[idx];
+
+  // Kurze Verzögerung für UX
+  await new Promise(r => setTimeout(r, 600));
+
+  renderResult(template, kinder, dauer);
+  showStatus(`✅ Vorlage ${idx + 1} von ${pool.length} generiert`, "success");
+  setLoading(false);
+
+  // Verlauf speichern
+  saveToHistory(template, kinder, dauer, bereich);
+
+  // Scroll zum Ergebnis
+  document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+}
+
+// ── VERLAUF laden ──
+async function loadHistory() {
+  if (!supabaseClient) return;
+  const { data: session } = await supabaseClient.auth.getSession();
+  if (!session.session) return;
+
+  const { data, error } = await supabaseClient
+    .from('generated_sessions')
+    .select('*')
+    .eq('user_id', session.session.user.id)
+    .order('created_at', { ascending: false })
+    .limit(5);
+
+  const list = document.getElementById('historyList');
+  const section = document.getElementById('historySection');
+
+  if (error || !data || data.length === 0) {
+    section.style.display = 'none';
+    return;
+  }
+
+  section.style.display = 'block';
+  list.innerHTML = data.map(s => {
+    const date = new Date(s.created_at).toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+    return `<div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin-bottom:0.7rem;display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <div style="font-weight:700;font-size:0.95rem;">${s.title || s.template_key || 'Bewegungsstunde'}</div>
+        <div style="font-size:0.78rem;color:var(--grey);margin-top:0.2rem;">${date} · ${s.duration_minutes || '–'} min · ${s.children_count || '–'} Kinder</div>
+      </div>
+      <span style="font-size:1.3rem;">📋</span>
+    </div>`;
+  }).join('');
+}
+
+// Verlauf nach Login laden
+(async () => {
+  if (!supabaseClient) return;
+  await new Promise(r => setTimeout(r, 500));
+  await loadHistory();
+})();
+
+// Verlauf nach Generieren speichern
+async function saveToHistory(template, kinder, dauer, bereich) {
+  if (!supabaseClient) return;
+  const { data: session } = await supabaseClient.auth.getSession();
+  if (!session.session) return;
+  try {
+    await supabaseClient.from('generated_sessions').insert({
+      user_id: session.session.user.id,
+      title: template.title,
+      template_key: bereich + '_' + dauer,
+      duration_minutes: dauer,
+      children_count: kinder,
+      created_at: new Date().toISOString()
+    });
+    await loadHistory();
+  } catch(e) { console.log('History save skipped:', e.message); }
+}
+
+// ── SAISONALE ANZEIGE ──
+(function() {
+  const m = new Date().getMonth() + 1;
+  let saison, icon;
+  if ([12,1,2].includes(m))      { saison = 'Winter'; icon = '❄️'; }
+  else if ([3,4,5].includes(m))  { saison = 'Frühling'; icon = '🌸'; }
+  else if ([6,7,8].includes(m))  { saison = 'Sommer'; icon = '☀️'; }
+  else                            { saison = 'Herbst'; icon = '🍂'; }
+  
+  // Ostern April/März check
+  if (m === 4) { saison = 'Ostern / Frühling'; icon = '🐣'; }
+  if (m === 12) { saison = 'Advent / Winter'; icon = '🕯️'; }
+  
+  const badge = document.getElementById('seasonBadge');
+  if (badge) badge.innerHTML = icon + ' Aktuelle Saison: <strong style="margin-left:4px">' + saison + '</strong>&nbsp;· Vorlagen passen sich automatisch an';
+})();
 </script>
 </body>
 </html>

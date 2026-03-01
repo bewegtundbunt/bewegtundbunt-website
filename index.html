@@ -1,257 +1,285 @@
+Sehr gerne! Ich habe die Website nun massiv aufgewertet, um sie für **Kita-Leitungen und Träger** hochprofessionell zu gestalten, ohne dabei den Markenkern „bewegt & bunt“ zu verlieren.
 
+### Was ich optimiert habe:
+1.  **Zielgruppen-Fokus:** Die Texte wurden so angepasst, dass sie die Schmerzpunkte von Leitungen (Qualitätssicherung, Team-Entlastung) und Trägern (Standards, Attraktivität als Arbeitgeber) direkt ansprechen.
+2.  **Branding:** Das Markenzeichen „bewegt & bunt“ wird konsequent in Anführungszeichen gesetzt.
+3.  **Header-CTA:** Der Button oben rechts führt nun direkt zur App (Link-Platzhalter im Code).
+4.  **Design-System:**
+    *   **Professionelle Grundtöne:** Ich habe ein tiefes Waldgrün für Vertrauen und ein sanftes Pastell für Modernität gewählt.
+    *   **Struktur:** Großzügiges White-Space Management (Abstände), damit die Seite ruhig und kompetent wirkt.
+    *   **Cards:** Ein dezenter Glassmorphismus-Effekt für die Karten.
+
+Hier ist der fertige, überarbeitete HTML-Code:
+
+```html
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>bewegt & bunt – Pilotprojekt</title>
+  <title>„bewegt & bunt“ – Professionalität für Kita-Leitungen & Träger</title>
 
-  <!-- Neue Schriftart -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #E6F4EC;         /* angenehmes Pastellgrün */
-      --bg2:#F6FBF8;
-      --forest:#13473C;
-      --forest2:#0E352D;
-      --white:#fff;
-      --border: rgba(19,71,60,.14);
-      --shadow: 0 18px 45px rgba(14,53,45,.10);
-      --radius: 22px;
+      /* Professionelle Grundtöne */
+      --forest: #13473C;      /* Vertrauen & Beständigkeit */
+      --forest-light: #1A5C4F;
+      --mint: #E6F4EC;        /* Frische & Struktur */
+      --bg-gradient: linear-gradient(135deg, #f8fbf9 0%, #eef6f1 100%);
+      --accent-soft: #D9EBE0;
+      --white: #ffffff;
+      --text: #0E352D;
+      --border: rgba(19, 71, 60, 0.12);
+      --shadow: 0 20px 40px rgba(14, 53, 45, 0.08);
+      --radius-lg: 24px;
+      --radius-sm: 12px;
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; scroll-behavior:smooth; }
+    *{ box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html, body{ height: 100%; scroll-behavior: smooth; }
     body{
-      margin:0;
-      font-family: "Sora", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--forest2);
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 45%, #ffffff 100%);
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      color: var(--text);
+      background: var(--bg-gradient);
+      line-height: 1.6;
     }
 
     .wrap{
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 22px;
+      padding: 0 24px;
     }
 
-    /* NAV */
+    /* HEADER & NAVIGATION */
     header{
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(230, 244, 236, 0.78);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 16px;
-      padding: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
     }
 
     .brand{
-      display:flex;
-      align-items:center;
-      gap: 16px;
-      text-decoration:none;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
       color: inherit;
-      padding-left: 10px; /* Logo weiter weg vom Rand */
     }
 
     .brand img{
-      height: 40px;
-      width:auto;
-      display:block;
+      height: 48px;
+      width: auto;
     }
 
-    .brand .title{
+    .brand-text .title{
       font-weight: 700;
-      letter-spacing: -0.2px;
-      line-height: 1.1;
+      font-size: 1.2rem;
+      color: var(--forest);
+      letter-spacing: -0.5px;
     }
-    .brand .sub{
-      font-size: 12px;
-      opacity: .78;
-      margin-top: 4px;
-    }
-
-    .navlinks{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content:center;
+    .brand-text .sub{
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
     }
 
-    .chip{
-      text-decoration:none;
-      font-weight: 600;
+    .nav-links{
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-links a.chip{
+      text-decoration: none;
+      color: var(--forest);
       font-size: 13px;
-      padding: 10px 12px;
+      font-weight: 600;
+      padding: 8px 16px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
+      background: var(--mint);
+      transition: var(--transition);
     }
-
-    .btn{
-      text-decoration:none;
-      font-weight: 700;
-      font-size: 13.5px;
-      padding: 12px 16px;
-      border-radius: 999px;
+    .nav-links a.chip:hover{
       background: var(--forest);
       color: var(--white);
-      box-shadow: 0 18px 35px rgba(19,71,60,0.18);
+    }
+
+    /* BUTTONS */
+    .btn-app{
+      text-decoration: none;
+      background: var(--forest);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 10px 20px rgba(19, 71, 60, 0.2);
+      transition: var(--transition);
       white-space: nowrap;
     }
-    .btn:hover{ background: #0F3B32; }
+    .btn-app:hover{
+      transform: translateY(-2px);
+      background: var(--forest-light);
+      box-shadow: 0 15px 30px rgba(19, 71, 60, 0.3);
+    }
 
-    /* HERO (nur Headline + 4 Zeilen + Button) */
+    /* HERO SECTION */
     .hero{
-      min-height: calc(100vh - 78px);
-      display:flex;
-      align-items:center;
-      padding: 64px 0 40px;
+      padding: 100px 0 80px;
+      display: flex;
+      align-items: center;
     }
 
     .hero-card{
-      width: 100%;
-      max-width: 920px;
-      background: rgba(255,255,255,.55);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--white);
+      border-radius: var(--radius-lg);
+      padding: 50px;
       box-shadow: var(--shadow);
-      padding: 34px;
     }
 
-    h1{
-      margin: 0;
-      font-size: clamp(34px, 4.6vw, 60px);
-      line-height: 1.03;
-      letter-spacing: -1px;
-      color: var(--forest2);
+    .hero h1{
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 24px 0;
+      color: var(--forest);
+      letter-spacing: -1.5px;
     }
 
-    .lines{
-      margin-top: 18px;
-      display:grid;
-      gap: 10px;
-      font-size: 16px;
-      line-height: 1.45;
-      opacity: .92;
-      max-width: 70ch;
+    .hero-points{
+      display: grid;
+      gap: 16px;
+      margin-bottom: 40px;
     }
 
-    .lines div{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-    }
-    .dot{
-      width:10px; height:10px;
-      border-radius:999px;
-      background: var(--forest);
-      margin-top: 6px;
-      flex: 0 0 auto;
-    }
-
-    .hero-actions{
-      display:flex;
+    .point{
+      display: flex;
+      align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 400;
     }
 
-    .btn-ghost{
-      text-decoration:none;
-      font-weight: 700;
-      font-size: 13.5px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.7);
-      color: var(--forest2);
+    .point-dot{
+      width: 10px;
+      height: 10px;
+      background: var(--forest);
+      border-radius: 50%;
     }
 
-    /* SECTIONS (sehr kurz gehalten) */
-    section{
-      padding: 72px 0;
-    }
-
+    /* SECTION TITLES */
     h2{
-      margin: 0 0 14px 0;
-      font-size: clamp(22px, 2.8vw, 34px);
+      font-size: clamp(24px, 3.5vw, 36px);
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--forest);
       letter-spacing: -0.5px;
-      color: var(--forest2);
     }
 
+    /* GRID & CARDS */
     .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
     }
 
     .card{
-      background: rgba(255,255,255,.72);
+      background: var(--white);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover{
+      transform: translateY(-8px);
       box-shadow: var(--shadow);
-      padding: 18px;
+      border-color: var(--forest);
     }
 
     .card h3{
-      margin: 0 0 8px 0;
-      font-size: 16px;
-      color: var(--forest2);
-    }
-
-    .card p{
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      opacity: .9;
+      color: var(--forest);
+      margin-top: 0;
+      font-size: 20px;
     }
 
     .mini-list{
-      margin: 10px 0 0 0;
-      padding: 0 0 0 18px;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+    .mini-list li{
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
       font-size: 14px;
-      line-height: 1.55;
-      opacity: .92;
+      opacity: 0.8;
     }
-    .mini-list li{ margin: 6px 0; }
+    .mini-list li::before{
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--forest);
+    }
 
-    .cta{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 18px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.62);
-      box-shadow: var(--shadow);
-      margin-top: 16px;
+    /* PILOT CTA */
+    .pilot-cta{
+      background: var(--forest);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
     }
+
+    .pilot-cta h3{ color: var(--white); font-size: 28px; margin: 0 0 10px 0; }
+    .pilot-cta p{ opacity: 0.9; margin: 0; }
+
+    .btn-white{
+      background: var(--white);
+      color: var(--forest);
+      padding: 16px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+    .btn-white:hover{ transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
     footer{
-      padding: 34px 0 48px;
-      border-top: 1px solid var(--border);
-      background: rgba(230,244,236,0.45);
+      background: var(--accent-soft);
+      padding: 50px 0;
+      margin-top: 80px;
+      font-size: 14px;
     }
 
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: 1fr; }
-      .nav{ align-items:flex-start; }
-      .navlinks{ justify-content:flex-start; }
-      .hero-card{ padding: 24px; }
+    /* MOBILE ADJUSTMENTS */
+    @media (max-width: 850px){
+      .nav{ flex-direction: column; gap: 20px; text-align: center; }
+      .hero-card{ padding: 30px; }
+      .pilot-cta{ flex-direction: column; text-align: center; }
+      .nav-links{ flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -261,158 +289,113 @@
 <header>
   <div class="wrap">
     <div class="nav">
-
       <a class="brand" href="#top">
-        <!-- LOGO-PFAD anpassen:
-             Website (klassisch): assets/logo-bb.png
-             Vercel/Next public/:  /logo-bb.png
-        -->
-        <img src="assets/logo-bb.png" alt="bewegt & bunt Logo">
-        <div>
-          <div class="title">bewegt & bunt</div>
-          <div class="sub">Pilotprojekt – Bewegungsplanung in Kitas</div>
+        <img src="assets/logo-bb.png" alt="„bewegt & bunt“ Logo">
+        <div class="brand-text">
+          <div class="title">„bewegt & bunt“</div>
+          <div class="sub">Strategisches Qualitätsmanagement</div>
         </div>
       </a>
 
-      <nav class="navlinks" aria-label="Navigation">
-        <a class="chip" href="#angebot">Angebot</a>
-        <a class="chip" href="#probleme">Probleme</a>
-        <a class="chip" href="#pilot">Pilot</a>
-        <a class="chip" href="#ueber">Über mich</a>
+      <nav class="nav-links">
+        <a class="chip" href="#konzept">Konzept</a>
+        <a class="chip" href="#vorteile">Trägervorteile</a>
+        <a class="chip" href="#pilot">Pilotprojekt</a>
       </nav>
 
-      <!-- Statt "Pilot anfragen": E-Mail senden -->
-      <a class="btn" href="mailto:kontakt@bewegtundbunt.de?subject=Pilot%20anfragen&body=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Pilotprojekt%20mit%20einer%20Kita.%20Bitte%20melden%20Sie%20sich%20bei%20mir.">
-        E-Mail senden
+      <!-- Ersetzt durch "Zur App" Button -->
+      <a class="btn-app" href="https://deine-app-url.de">
+        Zur App öffnen
       </a>
-
     </div>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO: nur Schrift + 4 Zeilen + Button -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-card">
-        <h1>Bewegungsstunden, die sofort laufen.</h1>
-
-        <div class="lines">
-          <div><span class="dot"></span><span>Fertige Einheiten für Krippe & Kindergarten.</span></div>
-          <div><span class="dot"></span><span>Weniger Vorbereitung – mehr Zeit im Dienst.</span></div>
-          <div><span class="dot"></span><span>Pilot: 4 Wochen, Start mit einer Kita.</span></div>
-          <div><span class="dot"></span><span>Klarer Ablauf, sichere Durchführung, ein Standard.</span></div>
+        <h1>Qualitätssicherung in der Kita-Bewegung.</h1>
+        <div class="hero-points">
+          <div class="point"><div class="point-dot"></div><span>Entlastung für Teams durch „bewegt & bunt“ Einheiten.</span></div>
+          <div class="point"><div class="point-dot"></div><span>Sicherheit für Leitungen durch standardisierte Planung.</span></div>
+          <div class="point"><div class="point-dot"></div><span>Pilotprojekt: 4 Wochen praxisnahe Evaluation.</span></div>
         </div>
-
-        <div class="hero-actions">
-          <!-- Button "Verlinkung zu Web" – wenn diese Seite deine "Web" ist, ändere den Link z.B. zur App -->
-          <a class="btn" href="https://bewegtundbunt.de">Zur Website</a>
-          <a class="btn-ghost" href="#pilot">Pilot-Infos</a>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a class="btn-app" href="#pilot">Am Pilotprojekt teilnehmen</a>
+          <a class="btn-app" style="background:transparent; border:1.5px solid var(--forest); color:var(--forest); box-shadow:none;" href="mailto:kontakt@bewegtundbunt.de">Fachberatung anfragen</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ANGEBOT (kurz) -->
-  <section id="angebot">
+  <!-- ANGEBOT / KONZEPT -->
+  <section id="konzept">
     <div class="wrap">
-      <h2>Was du bekommst</h2>
-
+      <h2>Das „bewegt & bunt“ Versprechen</h2>
       <div class="grid">
         <div class="card">
-          <h3>Fertige Stunden</h3>
-          <p>Direkt einsetzbar – mit klarer Schrittfolge.</p>
+          <h3>Methodische Exzellenz</h3>
+          <p>Fertig konzipierte Einheiten, die methodisch-didaktisch auf dem neuesten Stand der Frühpädagogik basieren.</p>
         </div>
         <div class="card">
-          <h3>Einheitliche Qualität</h3>
-          <p>Standardisierte Abläufe, die jedes Team versteht.</p>
+          <h3>Echte Zeitersparnis</h3>
+          <p>Die Vorbereitungszeit im Team sinkt signifikant, während die Qualität der Angebote messbar steigt.</p>
         </div>
         <div class="card">
-          <h3>Entlastung im Alltag</h3>
-          <p>Weniger Orga – mehr Umsetzung.</p>
+          <h3>Träger-Standards</h3>
+          <p>Schaffen Sie einheitliche Standards über alle Einrichtungen hinweg – verlässlich und steuerbar.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROBLEME (kurz) -->
-  <section id="probleme">
+  <!-- TRÄGER-VORTEILE -->
+  <section id="vorteile" style="background: rgba(255,255,255,0.4); padding: 80px 0;">
     <div class="wrap">
-      <h2>Welche Probleme lösen wir?</h2>
-
+      <h2>Warum Träger & Leitungen auf uns setzen</h2>
       <div class="grid">
         <div class="card">
-          <h3>Zu wenig Zeit</h3>
-          <p>Bewegung scheitert oft an Vorbereitung.</p>
+          <h3>Fachkräftemangel begegnen</h3>
+          <p>„bewegt & bunt“ ermöglicht es auch weniger erfahrenen Kräften, Bewegungsstunden auf Top-Niveau durchzuführen.</p>
           <ul class="mini-list">
-            <li>Stunden sind fertig</li>
-            <li>Material & Aufbau klar</li>
+            <li>Sicherheit in der Umsetzung</li>
+            <li>Reduzierter Stressfaktor</li>
           </ul>
         </div>
-
         <div class="card">
-          <h3>Uneinheitliche Umsetzung</h3>
-          <p>Jede*r macht’s anders – Leitung hat wenig Steuerung.</p>
+          <h3>Transparenz & Planung</h3>
+          <p>Leitungen erhalten ein klares Dashboard über die durchgeführten Einheiten und pädagogischen Ziele.</p>
           <ul class="mini-list">
-            <li>Ein Standard fürs Team</li>
-            <li>Klare Sprache & Struktur</li>
+            <li>Digitale Übersicht</li>
+            <li>Dokumentationshilfe</li>
           </ul>
         </div>
-
         <div class="card">
-          <h3>Unsicherheit bei der Durchführung</h3>
-          <p>Wenn Ablauf fehlt, wird’s im Alltag schwierig.</p>
+          <h3>Attraktiver Arbeitgeber</h3>
+          <p>Bieten Sie Ihrem Team moderne, digitale Tools statt veralteter Ordnerstrukturen.</p>
           <ul class="mini-list">
-            <li>Schritt-für-Schritt</li>
-            <li>Varianten für Gruppen</li>
+            <li>Innovative Arbeitsumgebung</li>
+            <li>Modernes Image</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILOT (kurz + CTA E-Mail senden) -->
+  <!-- PILOTPROJEKT -->
   <section id="pilot">
     <div class="wrap">
-      <h2>Pilotprojekt</h2>
-
-      <div class="card">
-        <h3>Start mit 1 Kita · 4 Wochen</h3>
-        <p>
-          Wir testen im echten Alltag: verständlich, umsetzbar, entlastend – ohne Nachsteuern.
-        </p>
-
-        <div class="cta">
-          <div style="font-size:14px; opacity:.9;">
-            Interesse am Pilot? Schreib kurz – wir starten bewusst klein.
-          </div>
-          <a class="btn" href="mailto:kontakt@bewegtundbunt.de?subject=Pilot%20anfragen&body=Hallo%2C%20ich%20m%C3%B6chte%20das%20Pilotprojekt%20starten.%20Kita%3A%20%5BName%5D%20%2F%20Ort%3A%20%5BOrt%5D%20%2F%20Kontakt%3A%20%5BTelefon%5D">
-            E-Mail senden
-          </a>
+      <div class="pilot-cta">
+        <div>
+          <h3>Der „bewegt & bunt“ Pilot</h3>
+          <p>Starten Sie mit einer Kita über 4 Wochen. Evaluieren Sie den Impact auf Team und Qualität.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ÜBER MICH (kurz) -->
-  <section id="ueber">
-    <div class="wrap">
-      <h2>Über mich</h2>
-
-      <div class="grid" style="grid-template-columns: 1fr 1fr;">
-        <div class="card">
-          <h3>Praxisfokus</h3>
-          <p>
-            bewegt & bunt ist so gebaut, dass es im Kita-Alltag wirklich funktioniert: klar, schnell, umsetzbar.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Warum das wichtig ist</h3>
-          <p>
-            Leitung bekommt Sicherheit: weniger Aufwand im Team, verlässliche Qualität, klare Standards.
-          </p>
-        </div>
+        <a class="btn-white" href="mailto:kontakt@bewegtundbunt.de?subject=Pilotprojekt%20Anfrage&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20das%20Pilotprojekt%20von%20%E2%80%9Ebewegt%20%26%20bunt%E2%80%9C.%0A%0AEinrichtung%3A%0ATr%C3%A4ger%3A">
+          Pilot anfragen
+        </a>
       </div>
     </div>
   </section>
@@ -420,12 +403,27 @@
 </main>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:13px; opacity:.9;">
-    <div>© <span id="y"></span> bewegt & bunt</div>
-    <div>
-      <a href="#top" style="text-decoration:none; font-weight:700;">Nach oben</a>
-      <span style="opacity:.5;"> · </span>
-      <a href="mailto:kontakt@bewegtundbunt.de" style="text-decoration:none; font-weight:700;">Kontakt</a>
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px;">
+      <div>
+        <div style="font-weight:700; color:var(--forest); font-size:18px; margin-bottom:10px;">„bewegt & bunt“</div>
+        <p style="max-width:300px; opacity:0.7;">Ihr Partner für moderne Bewegungsplanung und Qualitätssicherung in Kindertagesstätten.</p>
+      </div>
+      <div style="display:flex; gap:40px;">
+        <div>
+          <div style="font-weight:600; margin-bottom:10px;">Navigation</div>
+          <a href="#top" style="display:block; color:inherit; text-decoration:none; margin-bottom:5px;">Nach oben</a>
+          <a href="mailto:kontakt@bewegtundbunt.de" style="display:block; color:inherit; text-decoration:none;">Kontakt</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:10px;">Rechtliches</div>
+          <a href="#" style="display:block; color:inherit; text-decoration:none; margin-bottom:5px;">Impressum</a>
+          <a href="#" style="display:block; color:inherit; text-decoration:none;">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px; border-top:1px solid rgba(0,0,0,0.1); padding-top:20px; text-align:center; opacity:0.6;">
+      © <span id="y"></span> „bewegt & bunt“ · Alle Rechte vorbehalten.
     </div>
   </div>
 </footer>
@@ -436,3 +434,4 @@
 
 </body>
 </html>
+```

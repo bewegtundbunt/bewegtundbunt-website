@@ -2,280 +2,414 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bewegt & bunt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bewegt & bunt – Der Standard für Bewegungsplanung in Kitas</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --green: #2d6a4f;
-      --green-light: #52b788;
-      --green-pale: #d8f3dc;
-      --cream: #fdfaf5;
-      --dark: #1a2e23;
-      --grey: #6b7c72;
-      --radius: 16px;
-      --shadow: 0 18px 50px rgba(0,0,0,.25);
+    :root{
+      --green:#1a5c4e;
+      --green-2:#2a7a67;
+      --green-soft:#e8f2ef;
+      --gold:#c9a84c;
+      --text:#12332d;
+      --muted:#4c6b64;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --border:#d7e7e2;
+      --shadow: 0 10px 24px rgba(0,0,0,.08);
+      --radius: 18px;
+      --max: 1100px;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Sora', sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      overflow-x: hidden;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg, var(--green-soft), #ffffff 55%);
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* Header */
-    header {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 50;
-      padding: 16px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(26,46,35,.55);
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    header{
+      position:sticky; top:0; z-index:50;
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.75);
+      border-bottom:1px solid rgba(215,231,226,.7);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+      color:var(--green);
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, var(--green), var(--green-2));
+      display:grid; place-items:center;
+      color:#fff; font-weight:800;
+      box-shadow: 0 8px 18px rgba(26,92,78,.22);
+      flex:0 0 auto;
+    }
+    .navlinks{
+      display:flex; gap:18px; align-items:center;
+      color:var(--muted);
+      font-weight:500;
+    }
+    .navlinks a{padding:8px 10px; border-radius:10px}
+    .navlinks a:hover{background:rgba(232,242,239,.8); color:var(--green)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:600;
+      border:1px solid var(--border);
+      background:#fff;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 10px 18px rgba(0,0,0,.08)}
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
     }
 
-    .brand {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      color: #fff;
-      font-weight: 800;
-      letter-spacing: .2px;
+    .hero{
+      padding:54px 0 26px;
     }
-
-    .logo {
-      width: 36px; height: 36px;
-      border-radius: 999px;
-      background: #fff;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .h-card{
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(215,231,226,.9);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:26px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.08;
+      letter-spacing:-.5px;
+    }
+    .lead{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size: 18px;
+      line-height:1.5;
+      max-width: 62ch;
+    }
+    .badges{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .badge{
+      background: rgba(232,242,239,.9);
+      border: 1px solid rgba(215,231,226,.9);
       color: var(--green);
+      padding:8px 10px;
+      border-radius: 999px;
+      font-weight:600;
+      font-size: 14px;
     }
+    .side{
+      display:grid; gap:14px;
+    }
+    .mini{
+      border-radius:var(--radius);
+      border:1px solid rgba(215,231,226,.9);
+      background:#fff;
+      padding:18px;
+    }
+    .mini h3{margin:0 0 6px; font-size:16px; color:var(--green)}
+    .mini p{margin:0; color:var(--muted); line-height:1.5}
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      color: rgba(255,255,255,.92);
-      font-weight: 600;
+    section{
+      padding: 26px 0;
+    }
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin-bottom:14px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: 24px;
+      letter-spacing:-.2px;
+    }
+    .section-title .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:500;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid rgba(215,231,226,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .card p{margin:0 0 10px; color:var(--muted); line-height:1.6}
+    .card p:last-child{margin-bottom:0}
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height:1.7;
+    }
+    .list li{margin: 6px 0}
+
+    .timeline{
+      display:grid; gap:12px;
+    }
+    .step{
+      display:flex; gap:12px;
+      padding:14px;
+      border-radius: 14px;
+      border:1px solid rgba(215,231,226,.9);
+      background: rgba(232,242,239,.45);
+    }
+    .dot{
+      width:12px; height:12px; border-radius: 999px;
+      margin-top:6px;
+      background: linear-gradient(135deg, var(--green), var(--green-2));
+      box-shadow: 0 8px 16px rgba(26,92,78,.22);
+      flex:0 0 auto;
+    }
+    .step strong{display:block; color:var(--green); margin-bottom:2px}
+    .step span{color:var(--muted); line-height:1.55}
+
+    .cta-block{
+      background: linear-gradient(135deg, rgba(26,92,78,.10), rgba(42,122,103,.08));
+      border:1px solid rgba(215,231,226,.9);
+      border-radius: var(--radius);
+      padding:22px;
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+    }
+    .cta-block h3{margin:0 0 6px; color:var(--green)}
+    .cta-block p{margin:0; color:var(--muted); line-height:1.5}
+    footer{
+      padding: 30px 0 40px;
+      color: var(--muted);
       font-size: 14px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.18);
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .12s ease, opacity .12s ease;
-      white-space: nowrap;
-    }
-    .btn:hover { transform: translateY(-1px); opacity: .95; }
-
-    .btn.primary {
-      background: linear-gradient(180deg, var(--green-light), var(--green));
-      color: #fff;
-      border: none;
-      box-shadow: 0 10px 24px rgba(82,183,136,.25);
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      position: relative;
-      background: var(--dark);
-      overflow: hidden;
-      padding: 120px 18px 70px;
-    }
-
-    .glow {
-      position: absolute;
-      inset: -30%;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(82,183,136,.28), transparent 55%),
-        radial-gradient(circle at 80% 35%, rgba(45,106,79,.35), transparent 58%),
-        radial-gradient(circle at 70% 80%, rgba(216,243,220,.12), transparent 55%);
-      filter: blur(2px);
-      pointer-events: none;
-    }
-
-    .hero-card {
-      position: relative;
-      width: min(980px, 100%);
-      text-align: center;
-      color: #fff;
-      padding: 34px 18px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.12);
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: 1.02;
-      letter-spacing: -1px;
-      margin-bottom: 14px;
-    }
-    h1 span { color: var(--green-light); }
-
-    .sub {
-      font-family: 'Lora', serif;
-      font-size: clamp(16px, 2vw, 18px);
-      line-height: 1.55;
-      color: rgba(255,255,255,.8);
-      max-width: 780px;
-      margin: 0 auto 22px;
-    }
-
-    .cta {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: rgba(255,255,255,.92);
-    }
-
-    /* Sections */
-    section {
-      padding: 72px 18px;
-    }
-
-    .wrap {
-      width: min(1100px, 100%);
-      margin: 0 auto;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid rgba(0,0,0,.06);
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
-
-    .card h3 { margin-bottom: 8px; }
-    .card p { color: var(--grey); line-height: 1.55; font-size: 14.5px; }
-
-    footer {
-      padding: 30px 18px;
-      color: rgba(255,255,255,.8);
-      background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,.1);
-    }
-    footer a { text-decoration: underline; text-underline-offset: 3px; }
-
-    @media (max-width: 920px) {
-      .grid { grid-template-columns: 1fr; }
-      nav a:not(.btn) { display: none; }
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
+      .cta-block{flex-direction:column; align-items:flex-start}
+      .navlinks{display:none}
     }
   </style>
 </head>
 
 <body>
   <header>
-    <a class="brand" href="#top" aria-label="Zur Startseite">
-      <div class="logo">BB</div>
-      bewegt & bunt
-    </a>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Startseite">
+          <div class="logo">BB</div>
+          <div>bewegt &amp; bunt</div>
+        </a>
 
-    <nav>
-      <a href="#ueber">Über mich</a>
-      <a href="#angebot">Angebot</a>
-
-      <!-- WICHTIG: Dieser Link muss zur App zeigen -->
-      <a class="btn primary" href="https://app.bewegtundbunt.de/login.html">Zur App →</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-label="Hero">
-      <div class="glow"></div>
-      <div class="hero-card">
-        <div class="hero-badge">Struktur. Qualität. Sofort umsetzbar.</div>
-        <h1>Bewegungsstunden, die <span>wirklich funktionieren</span></h1>
-        <p class="sub">
-          Eine App, die pädagogischen Fachkräften in Kitas klare Struktur und erprobte Qualität
-          für jede Bewegungsstunde gibt – entwickelt aus über 20 Jahren Praxiserfahrung.
-        </p>
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#warum">Warum bewegt &amp; bunt?</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
 
         <div class="cta">
-          <a class="btn primary" href="https://app.bewegtundbunt.de/login.html">Zur App →</a>
-          <a class="btn secondary" href="#angebot">Mehr erfahren</a>
+          <!-- Passe den Link zur App an, falls du eine andere App-URL nutzt -->
+          <a class="btn primary" href="app.html">Zur App</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="h-card">
+          <h1>Bewegungsplanung in Kitas – endlich klar, schnell und umsetzbar.</h1>
+          <p class="lead">
+            bewegt &amp; bunt unterstützt Fachkräfte dabei, Bewegungsstunden ohne Stress vorzubereiten:
+            strukturiert, praxisnah und sofort durchführbar.
+          </p>
+
+          <div class="cta" style="margin-top:14px;">
+            <a class="btn primary" href="app.html">App öffnen</a>
+            <a class="btn" href="#ueber-mich">Über mich</a>
+          </div>
+
+          <div class="badges" aria-label="Highlights">
+            <span class="badge">Praxisorientiert</span>
+            <span class="badge">Sofort einsetzbar</span>
+            <span class="badge">Für Krippe &amp; Kindergarten</span>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="mini">
+            <h3>Für Einrichtungsleitungen</h3>
+            <p>Mehr Qualität und Verlässlichkeit bei Bewegungsangeboten – ohne Mehrbelastung fürs Team.</p>
+          </div>
+          <div class="mini">
+            <h3>Für Fachkräfte</h3>
+            <p>Weniger Vorbereitungszeit, klare Struktur, bessere Durchführung – auch mit wenig Material.</p>
+          </div>
+          <div class="mini">
+            <h3>Fokus</h3>
+            <p>Bewegungseinheiten, die wirklich stattfinden – und die Gruppe sicher führen.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="ueber">
-      <div class="wrap">
+    <!-- ÜBER MICH -->
+    <section id="ueber-mich">
+      <div class="section-title">
         <h2>Über mich</h2>
-        <p style="margin-top:10px;color:var(--grey);line-height:1.6;max-width:820px;">
-          Kurztext: Wer du bist, warum bewegt & bunt entstanden ist und was pädagogische Teams dadurch gewinnen.
+        <p class="sub">Leipzig · 48 Jahre · Ergotherapeut</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <p>
+            Ich bin <strong>48 Jahre alt</strong>, lebe in <strong>Leipzig</strong> und arbeite seit fast
+            <strong>20 Jahren als Ergotherapeut</strong>.
+          </p>
+          <p>
+            In den letzten <strong>fünf Jahren</strong> war (und bin) ich als <strong>Individualbegleiter</strong>
+            in unterschiedlichen <strong>Kitas</strong> tätig. Davor habe ich <strong>drei Jahre stationär</strong>
+            gearbeitet und war anschließend <strong>sieben Jahre in der Psychiatrie</strong>.
+          </p>
+          <p>
+            Diese Stationen haben mir besonders viel Erfahrung in den Bereichen
+            <strong>Gruppendynamik</strong>, <strong>Gruppenstruktur</strong> und alltagsnahe Umsetzung gegeben.
+          </p>
+        </div>
+
+        <div class="card">
+          <p style="margin-bottom:12px;">
+            In der Praxis habe ich immer wieder erlebt:
+            Bewegungsangebote scheitern nicht am Willen – sondern häufig an <strong>Zeit</strong>, <strong>Vorbereitung</strong>
+            und <strong>klarer Struktur</strong>.
+          </p>
+
+          <ul class="list">
+            <li>Zu wenig Vorbereitungszeit im Alltag</li>
+            <li>Unklare Abläufe → unsichere Durchführung</li>
+            <li>Gruppen werden schwerer „geführt“, wenn der Plan fehlt</li>
+            <li>Bewegungsstunden fallen aus oder werden „irgendwie“ gemacht</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p>
+          Genau daraus entstand meine Entscheidung, eine Lösung zu entwickeln, die Kitas im Alltag wirklich entlastet:
+          <strong>bewegt &amp; bunt</strong> – als praktische Unterstützung für Erzieherinnen und Erzieher,
+          damit Bewegungsstunden <strong>regelmäßig</strong>, <strong>gut strukturiert</strong> und
+          <strong>stressfrei</strong> stattfinden.
         </p>
       </div>
-    </section>
 
-    <section id="angebot">
-      <div class="wrap">
-        <h2>Angebot</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Fertige Bewegungsstunden</h3>
-            <p>Erprobte Einheiten mit klarer Struktur – sofort durchführbar.</p>
+      <div class="card" style="margin-top:18px;">
+        <div class="timeline" aria-label="Werdegang">
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <strong>Psychiatrie (7 Jahre)</strong>
+              <span>Erfahrung mit Gruppenstruktur, Dynamik und sicheren Abläufen im herausfordernden Kontext.</span>
+            </div>
           </div>
-          <div class="card">
-            <h3>Planung in Minuten</h3>
-            <p>Weniger Vorbereitung, mehr Zeit mit den Kindern – während der Arbeitszeit.</p>
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <strong>Stationär (3 Jahre)</strong>
+              <span>Strukturiertes Arbeiten, klare Prozesse, Therapieplanung und Durchführung.</span>
+            </div>
           </div>
-          <div class="card">
-            <h3>Qualität & Standard</h3>
-            <p>Gleichbleibende Qualität und einfache Umsetzung für ganze Teams.</p>
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <strong>Kita-Individualbegleitung (5 Jahre)</strong>
+              <span>Alltag nah an Teams und Kindern – mit Blick auf umsetzbare, einfache Bewegungsangebote.</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- WARUM -->
+    <section id="warum">
+      <div class="section-title">
+        <h2>Warum bewegt &amp; bunt?</h2>
+        <p class="sub">Weil gute Angebote Planung brauchen – aber Zeit knapp ist.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <p><strong>Das Ziel:</strong> Bewegungsstunden, die wirklich stattfinden.</p>
+          <p>
+            Mit klarer Struktur, passenden Materialien und einer Durchführung, die Fachkräfte sicher durch die Stunde führt –
+            auch wenn es im Alltag hektisch ist.
+          </p>
+        </div>
+        <div class="card">
+          <p><strong>Der Nutzen:</strong> Weniger Aufwand – mehr Qualität.</p>
+          <p>
+            bewegt &amp; bunt hilft dabei, Vorbereitungszeit zu sparen und gleichzeitig die Durchführung zu verbessern.
+            Das entlastet Teams und unterstützt Einrichtungsleitungen bei verlässlicher Qualität.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="cta-block">
+        <div>
+          <h3>Kontakt</h3>
+          <p>
+            Wenn du bewegt &amp; bunt in deiner Kita testen oder mehr erfahren möchtest, melde dich gerne.
+          </p>
+        </div>
+        <!-- Optional: Ersetze mail@... durch deine echte Adresse -->
+        <div class="cta">
+          <a class="btn" href="mailto:mail@bewegtundbunt.de">E-Mail schreiben</a>
+          <a class="btn primary" href="app.html">Zur App</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        © <span id="year"></span> bewegt &amp; bunt · Leipzig
+      </div>
+    </footer>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <p>© 2026 bewegt & bunt · <a href="mailto:rene@bewegtundbunt.de">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
-    </div>
-  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

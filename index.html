@@ -412,39 +412,65 @@
       line-height: 1.7;
     }
 
-    /* ─── EVALUATION ─── */
-    .eval-grid {
+    /* ─── ÜBER MICH ─── */
+    .ueber-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: start;
     }
-    .e-card {
+    .u-bio {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .u-intro {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--primary);
+      line-height: 1.5;
+      padding-left: 20px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 8px !important;
+    }
+    .u-bio p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .u-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .u-fact {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 40px 36px;
+      padding: 24px 28px;
       box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .e-card h3 {
-      color: var(--primary);
-      font-size: 20px;
+    .u-fact:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .u-fact-num {
+      font-family: "Dancing Script", cursive;
+      font-size: 44px;
       font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .e-card p {
-      color: var(--text-muted);
-      font-size: 14.5px;
-      line-height: 1.75;
-    }
-    .e-result {
-      margin-top: 20px;
-      padding: 14px 18px;
-      background: rgba(26,77,62,0.06);
-      border-left: 3px solid var(--primary);
-      border-radius: var(--radius-sm);
-      font-size: 14px;
-      font-weight: 600;
       color: var(--primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .u-fact-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .ueber-grid { grid-template-columns: 1fr; }
     }
 
     /* ─── CTA BANNER ─── */
@@ -560,7 +586,7 @@
     @media (max-width: 900px) {
       .stats-inner { grid-template-columns: 1fr; gap: 32px; }
       .stat-item:not(:last-child)::after { display: none; }
-      .eval-grid { grid-template-columns: 1fr; }
+      .ueber-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 700px) {
       .nav { flex-wrap: wrap; }
@@ -584,7 +610,7 @@
       <nav class="navlinks">
         <a class="nav-chip" href="#konzept">Konzept</a>
         <a class="nav-chip" href="#vorteile">Träger-Vorteile</a>
-        <a class="nav-chip" href="#evaluation">Evaluation</a>
+        <a class="nav-chip" href="#ueber-mich">Über mich</a>
       </nav>
       <a class="btn-app" href="https://app.bewegtundbunt.de">Zur App öffnen</a>
     </div>
@@ -685,21 +711,31 @@
   </section>
 
   <!-- ─── EVALUATION ─── -->
-  <section id="evaluation">
+  <section id="ueber-mich">
     <div class="wrap">
-      <span class="section-label">Evaluation & Ergebnisse</span>
-      <h2>Praxis-Check: <span class="script">Was wirklich zählt</span></h2>
-      <p class="section-intro">Das Konzept wurde unter realen Bedingungen erprobt und bewertet.</p>
-      <div class="eval-grid">
-        <div class="e-card">
-          <h3>Praxis-Erprobung</h3>
-          <p>Das Konzept wurde unter realen Bedingungen getestet. Der Fokus lag auf der Umsetzbarkeit im stressigen Kita-Alltag und der Akzeptanz durch das Team.</p>
-          <div class="e-result">✓ Hohe Akzeptanz und signifikante Entlastung der Fachkräfte.</div>
+      <span class="section-label">Der Mensch dahinter</span>
+      <h2>Über <span class="script">René Krakow</span></h2>
+      <p class="section-intro">20 Jahre Erfahrung in der Arbeit mit Menschen – vom Krankenhaus bis in die Kita.</p>
+      <div class="ueber-grid">
+        <div class="u-bio">
+          <p class="u-intro">„Bewegung ist nicht nur Therapie – sie ist die natürlichste Sprache, die Kinder kennen."</p>
+          <p>Ich bin René Krakow, Ergotherapeut aus Leipzig mit über 20 Jahren Berufserfahrung. Mein Weg führte mich durch die Psychiatrie und Gerontopsychiatrie, bevor ich in den letzten fünf Jahren als Individualbegleiter in verschiedenen Kindertagesstätten angekommen bin.</p>
+          <p>In dieser Zeit habe ich hautnah erlebt, wie groß der Bedarf an strukturierter, qualitativ hochwertiger Bewegungsförderung im Kita-Alltag ist – und wie wenig Zeit und Ressourcen Fachkräfte dafür haben. Aus dieser Erfahrung heraus entstand „bewegt & bunt".</p>
+          <p>Das Konzept verbindet mein ergotherapeutisches Fachwissen mit dem Verständnis für den echten Kita-Alltag: praxisnah, sofort einsetzbar und für alle Kinder – unabhängig von ihren individuellen Förderbedarfen.</p>
         </div>
-        <div class="e-card">
-          <h3>Fokus: Inklusion</h3>
-          <p>Speziell entwickelt für die Anforderungen inklusiver Arbeit. Die Angebote sprechen Kinder mit unterschiedlichen Förderbedarfen gleichermaßen an und fördern echte Integration im Alltag.</p>
-          <div class="e-result">✓ Anpassungsfähig für alle Gruppen und Förderbedarfe.</div>
+        <div class="u-facts">
+          <div class="u-fact">
+            <div class="u-fact-num">20+</div>
+            <div class="u-fact-label">Jahre Berufserfahrung als Ergotherapeut</div>
+          </div>
+          <div class="u-fact">
+            <div class="u-fact-num">5</div>
+            <div class="u-fact-label">Jahre als Individualbegleiter in Kitas</div>
+          </div>
+          <div class="u-fact">
+            <div class="u-fact-num">3</div>
+            <div class="u-fact-label">Fachbereiche: Psychiatrie, Gerontopsychiatrie & Inklusion</div>
+          </div>
         </div>
       </div>
     </div>

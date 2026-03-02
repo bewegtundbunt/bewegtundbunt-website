@@ -97,6 +97,47 @@
       display: flex;
       gap: 4px;
     }
+    /* ─── MOBILE MENU ─── */
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .mobile-menu-btn span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 0 16px;
+      border-top: 1px solid var(--border);
+      margin-top: 10px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .mobile-nav a:hover { background: rgba(26,77,62,0.07); color: var(--primary); }
+    @media (max-width: 700px) {
+      .navlinks { display: none !important; }
+      .mobile-menu-btn { display: flex; }
+    }
     .nav-chip {
       text-decoration: none;
       color: var(--text);
@@ -619,7 +660,17 @@
         <a class="nav-chip" href="#kontakt">Kontakt</a>
       </nav>
       <a class="btn-app" href="https://app.bewegtundbunt.de">Zur App öffnen</a>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#konzept" onclick="closeMobileMenu()">Konzept</a>
+      <a href="#vorteile" onclick="closeMobileMenu()">Träger-Vorteile</a>
+      <a href="#ueber-mich" onclick="closeMobileMenu()">Über mich</a>
+      <a href="#kontakt" onclick="closeMobileMenu()">Kontakt</a>
+      <a href="https://app.bewegtundbunt.de" style="font-weight:700; color:var(--primary);">Zur App öffnen →</a>
+    </nav>
   </div>
 </header>
 
@@ -652,8 +703,8 @@
           <div class="stat-label">Altersgruppen (Krippe & Kindergarten)</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">0–6</div>
-          <div class="stat-label">Jahre – Krippe & Kindergarten</div>
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Jahre Ergotherapie-Erfahrung</div>
         </div>
       </div>
     </div>
@@ -669,12 +720,12 @@
         <div class="k-card">
           <div class="k-icon">📐</div>
           <h3>Standardisierung</h3>
-          <p>Wir schaffen einen einheitlichen Standard für Bewegungsangebote. Jede Gruppe profitiert von der gleichen hohen Qualität, unabhängig vom Personalwechsel.</p>
+          <p>Ein einheitlicher Standard für Bewegungsangebote – jede Gruppe profitiert von der gleichen hohen Qualität, unabhängig vom Personalwechsel.</p>
         </div>
         <div class="k-card">
           <div class="k-icon">⏱</div>
           <h3>Zeitersparnis</h3>
-          <p>Der größte Engpass in Kitas ist die Zeit. Unsere Einheiten sind „Ready-to-use". Das pädagogische Personal gewinnt Zeit für die direkte Arbeit mit den Kindern.</p>
+          <p>Der größte Engpass in Kitas ist die Zeit. Die Einheiten sind sofort einsetzbar – „Ready-to-use". Das pädagogische Personal gewinnt Zeit für die direkte Arbeit mit den Kindern.</p>
         </div>
         <div class="k-card">
           <div class="k-icon">🔍</div>
@@ -793,7 +844,7 @@
       <div class="footer-links">
         <a href="mailto:info@bewegtundbunt.de">Kontakt</a>
         <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+              <a href="#">Datenschutz</a>
       </div>
     </div>
   </div>
@@ -801,6 +852,12 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMobileMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
 </script>
 </body>
 </html>

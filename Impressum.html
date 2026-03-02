@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – bewegt & bunt</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#1A4D3E; --accent:#C8955A; --bg:#F8F6F1; --text:#2A2F2A; --muted:#6B7B6B; --border:rgba(26,77,62,0.10); }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+    header{background:rgba(248,246,241,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-family:'Dancing Script',cursive;font-size:26px;font-weight:700;color:var(--primary);text-decoration:none;}
+    .back{font-size:13px;color:var(--muted);text-decoration:none;font-weight:600;}
+    .back:hover{color:var(--primary);}
+    .wrap{max-width:760px;margin:0 auto;padding:60px 28px 100px;}
+    .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);margin-bottom:10px;display:block;}
+    h1{font-size:clamp(28px,4vw,38px);color:var(--primary);font-weight:700;margin-bottom:8px;}
+    .intro{font-size:15px;color:var(--muted);margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border);}
+    .notice{background:#fffbf5;border:1px solid rgba(200,149,90,0.3);border-radius:14px;padding:20px 24px;margin-bottom:40px;font-size:14px;color:#7a5a2a;line-height:1.65;}
+    .notice strong{display:block;margin-bottom:4px;color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;}
+    h2{font-size:18px;color:var(--primary);font-weight:700;margin:36px 0 12px;}
+    p{font-size:15px;color:var(--text);line-height:1.75;margin-bottom:12px;}
+    a{color:var(--primary);}
+    footer{border-top:1px solid var(--border);padding:28px;text-align:center;font-size:13px;color:var(--muted);background:#fff;}
+    footer a{color:var(--primary);text-decoration:none;margin:0 8px;}
+  </style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">„bewegt & bunt"</a>
+  <a class="back" href="/">← Zurück zur Website</a>
+</header>
+<div class="wrap">
+  <span class="label">Rechtliches</span>
+  <h1>Impressum</h1>
+  <p class="intro">Angaben gemäß § 5 TMG</p>
+
+  <div class="notice">
+    <strong>Hinweis – Vorbereitungsphase</strong>
+    Dieses Angebot befindet sich derzeit in einer nicht-kommerziellen Vorbereitungs- und Konzeptphase. Es wird kein Gewerbe betrieben und keine Dienstleistung entgeltlich angeboten. Die Website dient ausschließlich der Vorstellung eines pädagogischen Konzepts.
+  </div>
+
+  <h2>Verantwortliche Person</h2>
+  <p><strong>René Krakow</strong><br>Leipzig, Sachsen<br>Deutschland</p>
+
+  <h2>Kontakt</h2>
+  <p>E-Mail: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
+
+  <h2>Keine Umsatzsteuer-ID</h2>
+  <p>Da kein Gewerbe angemeldet ist und keine umsatzsteuerpflichtigen Leistungen erbracht werden, liegt keine Umsatzsteuer-Identifikationsnummer vor.</p>
+
+  <h2>Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)</h2>
+  <p>René Krakow, Leipzig</p>
+
+  <h2>Haftungsausschluss</h2>
+  <p>Die Inhalte dieser Website wurden sorgfältig erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird keine Gewähr übernommen. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Inhalte umgehend entfernt.</p>
+
+  <h2>Urheberrecht</h2>
+  <p>Die durch den Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht. Vervielfältigung oder Verbreitung bedürfen der schriftlichen Zustimmung von René Krakow.</p>
+
+  <h2>Streitschlichtung</h2>
+  <p>Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Eine Teilnahme an einem Streitbeilegungsverfahren wird nicht angeboten.</p>
+</div>
+<footer>
+  <a href="/">Startseite</a>
+  <a href="/impressum.html">Impressum</a>
+  <a href="/datenschutz.html">Datenschutz</a>
+  <span style="margin-left:12px;">&copy; <span id="y"></span> René Krakow</span>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
+</body>
+</html>

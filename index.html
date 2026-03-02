@@ -9,6 +9,7 @@
   <meta property="og:description" content="Sofort einsetzbare Bewegungseinheiten für Krippe und Kindergarten – entwickelt von Ergotherapeut René Krakow." />
   <meta property="og:url" content="https://bewegtundbunt.de" />
   <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Dancing+Script:wght@600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -618,6 +619,143 @@
     }
     .footer-links a:hover { color: var(--primary); }
 
+    /* ─── TESTIMONIALS ─── */
+    #testimonials {
+      background: var(--bg);
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .testi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .testi-quote-icon {
+      font-family: Georgia, serif;
+      font-size: 64px;
+      line-height: 0.6;
+      color: var(--accent);
+      opacity: 0.4;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .testi-text {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testi-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--accent-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .testi-name { font-size: 14px; font-weight: 700; color: var(--primary); }
+    .testi-role { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+    /* ─── KONTAKTFORMULAR ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+    .contact-info-item {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .contact-info-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--accent-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .contact-info-text h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 3px; }
+    .contact-info-text p, .contact-info-text a {
+      font-size: 14px; color: var(--text-muted); text-decoration: none; line-height: 1.5;
+    }
+    .contact-info-text a:hover { color: var(--primary); }
+    .contact-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-field label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+    .form-field input, .form-field select, .form-field textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      resize: none;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26,77,62,0.07);
+    }
+    .btn-form-submit {
+      width: 100%; padding: 0.9rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+      color: #fff; border: none; border-radius: 12px;
+      font-family: inherit; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(26,77,62,0.25);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+    .form-success {
+      display: none; padding: 14px 18px; border-radius: 10px;
+      background: #f0fdf4; border: 1px solid #86efac; color: #166534;
+      font-size: 14px; font-weight: 600; margin-top: 12px; text-align: center;
+    }
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ─── FOOTER ERWEITERT ─── */
+    .footer-inner-top {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 48px;
+      align-items: start;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .footer-brand-col .footer-brand { display: block; margin-bottom: 8px; }
+    .footer-brand-col p { font-size: 13px; color: var(--text-muted); line-height: 1.6; max-width: 260px; }
+    .footer-nav-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
+    .footer-nav-col a { display: block; font-size: 13px; color: var(--text-muted); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
+    .footer-nav-col a:hover { color: var(--primary); }
+    @media (max-width: 700px) {
+      .footer-inner-top { grid-template-columns: 1fr; gap: 28px; }
+    }
+
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -656,6 +794,7 @@
       <nav class="navlinks">
         <a class="nav-chip" href="#konzept">Konzept</a>
         <a class="nav-chip" href="#vorteile">Träger-Vorteile</a>
+        <a class="nav-chip" href="#testimonials">Stimmen</a>
         <a class="nav-chip" href="#ueber-mich">Über mich</a>
         <a class="nav-chip" href="#kontakt">Kontakt</a>
       </nav>
@@ -798,28 +937,120 @@
     </div>
   </section>
 
+  <!-- ─── TESTIMONIALS ─── -->
+  <section id="testimonials">
+    <div class="wrap">
+      <span class="section-label">Stimmen aus der Praxis</span>
+      <h2>Was Fachkräfte <span class="script">sagen</span></h2>
+      <p class="section-intro">„bewegt & bunt" befindet sich derzeit in der Pilotphase. Erste Rückmeldungen folgen in Kürze.</p>
+      <div class="testi-grid">
+        <div class="testi-card" style="opacity:0.55; border-style: dashed;">
+          <span class="testi-quote-icon">"</span>
+          <p class="testi-text" style="color:var(--text-muted); font-style:normal; font-size:15px;">Hier erscheint bald eine erste Rückmeldung aus der Praxis.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">👩‍🏫</div>
+            <div>
+              <div class="testi-name">Erzieherin, Krippe Leipzig</div>
+              <div class="testi-role">Pilotphase 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card" style="opacity:0.55; border-style: dashed;">
+          <span class="testi-quote-icon">"</span>
+          <p class="testi-text" style="color:var(--text-muted); font-style:normal; font-size:15px;">Weitere Erfahrungsberichte werden nach der Pilotphase ergänzt.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">👩‍💼</div>
+            <div>
+              <div class="testi-name">Kita-Leitung, Sachsen</div>
+              <div class="testi-role">Pilotphase 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card" style="opacity:0.55; border-style: dashed;">
+          <span class="testi-quote-icon">"</span>
+          <p class="testi-text" style="color:var(--text-muted); font-style:normal; font-size:15px;">Du hast „bewegt & bunt" bereits genutzt? Schreib mir gern.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">✉️</div>
+            <div>
+              <div class="testi-name"><a href="mailto:info@bewegtundbunt.de" style="color:var(--primary);">info@bewegtundbunt.de</a></div>
+              <div class="testi-role">Feedback willkommen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── KONTAKT ─── -->
   <section id="kontakt" style="background:#fff;">
     <div class="wrap">
       <span class="section-label">Kontakt</span>
       <h2>Interesse? <span class="script">Meld dich gern.</span></h2>
       <p class="section-intro">Ob Kita-Leitung, Träger oder Fachkraft – ich freue mich auf deine Nachricht.</p>
-      <div style="display:flex; gap:24px; flex-wrap:wrap;">
-        <div class="k-card" style="flex:1; min-width:260px;">
-          <div class="k-icon">✉️</div>
-          <h3>E-Mail</h3>
-          <p>Schreib mir direkt – ich antworte in der Regel innerhalb von 24 Stunden.</p>
-          <a href="/cdn-cgi/l/email-protection#abc2c5cdc4ebc9cedcceccdfdec5cfc9dec5df85cfce" style="display:inline-block; margin-top:16px; font-weight:600; color:var(--primary); text-decoration:none; font-size:15px;"><span class="__cf_email__" data-cfemail="e1888f878ea1838496848695948f8583948f95cf8584">[email&#160;protected]</span> →</a>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <h4>E-Mail</h4>
+              <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a>
+              <p>Antwort in der Regel innerhalb von 24 Stunden.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🌍</div>
+            <div class="contact-info-text">
+              <h4>Standort</h4>
+              <p>Leipzig, Sachsen<br>Bundesweit digital tätig.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text">
+              <h4>Erreichbarkeit</h4>
+              <p>Mo – Fr: 8:00 – 18:00 Uhr</p>
+            </div>
+          </div>
         </div>
-        <div class="k-card" style="flex:1; min-width:260px;">
-          <div class="k-icon">🌍</div>
-          <h3>Standort</h3>
-          <p>Ich bin in Leipzig ansässig und arbeite mit Kitas in der Region sowie bundesweit digital.</p>
-          <p style="margin-top:12px; font-weight:600; color:var(--primary); font-size:15px;">Leipzig, Sachsen</p>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Vorname</label>
+              <input type="text" id="cf-vorname" placeholder="Maria" />
+            </div>
+            <div class="form-field">
+              <label>Nachname</label>
+              <input type="text" id="cf-nachname" placeholder="Müller" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>E-Mail</label>
+            <input type="email" id="cf-email" placeholder="maria@kita-beispiel.de" />
+          </div>
+          <div class="form-field">
+            <label>Ich bin …</label>
+            <select id="cf-rolle">
+              <option value="">Bitte wählen</option>
+              <option>Erzieherin / Erzieher</option>
+              <option>Kita-Leitung</option>
+              <option>Trägervertreter:in</option>
+              <option>Heilpädagogin / Heilpädagoge</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Nachricht</label>
+            <textarea id="cf-nachricht" rows="4" placeholder="Ich interessiere mich für bewegt & bunt …"></textarea>
+          </div>
+          <button class="btn-form-submit" onclick="sendContactForm()">
+            Nachricht senden <span>→</span>
+          </button>
+          <div class="form-success" id="cf-success">✅ Danke! Deine Nachricht wurde gesendet. René meldet sich bald.</div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- ─── CTA ─── -->
   <div class="cta-banner">
@@ -838,17 +1069,63 @@
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="wrap">
+    <div class="footer-inner-top">
+      <div class="footer-brand-col">
+        <span class="footer-brand">„bewegt & bunt"</span>
+        <p>Professionelle Bewegungsförderung für Krippe und Kindergarten – entwickelt von René Krakow aus Leipzig.</p>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Navigation</h4>
+        <a href="#konzept">Konzept</a>
+        <a href="#vorteile">Träger-Vorteile</a>
+        <a href="#testimonials">Stimmen</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Rechtliches</h4>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="https://app.bewegtundbunt.de">App öffnen →</a>
+      </div>
+    </div>
     <div class="footer-inner">
-      <span class="footer-brand">„bewegt & bunt"</span>
-      <span class="footer-copy">&copy; <span id="year"></span> Alle Rechte vorbehalten.</span>
+      <span class="footer-brand" style="font-size:16px;">„bewegt & bunt"</span>
+      <span class="footer-copy">&copy; <span id="year"></span> René Krakow · Alle Rechte vorbehalten.</span>
       <div class="footer-links">
-        <a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0c2c5d7c5c7d4d5cec4c2d5ced48ec4c5">Kontakt</a>
-        <a href="#">Impressum</a>
-              <a href="#">Datenschutz</a>
+        <a href="mailto:info@bewegtundbunt.de">Kontakt</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.get
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMobileMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+  function sendContactForm() {
+    const vorname   = document.getElementById('cf-vorname').value.trim();
+    const email     = document.getElementById('cf-email').value.trim();
+    const nachricht = document.getElementById('cf-nachricht').value.trim();
+    if (!vorname || !email || !nachricht) {
+      alert('Bitte Vorname, E-Mail und Nachricht ausfüllen.');
+      return;
+    }
+    const rolle    = document.getElementById('cf-rolle').value;
+    const nachname = document.getElementById('cf-nachname').value.trim();
+    const subject  = encodeURIComponent('Kontaktanfrage über bewegtundbunt.de');
+    const body     = encodeURIComponent(
+      `Name: ${vorname} ${nachname}\nRolle: ${rolle}\nE-Mail: ${email}\n\n${nachricht}`
+    );
+    window.location.href = `mailto:info@bewegtundbunt.de?subject=${subject}&body=${body}`;
+    document.getElementById('cf-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>

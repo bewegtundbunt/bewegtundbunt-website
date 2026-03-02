@@ -232,12 +232,14 @@
       padding: 0 0 80px;
     }
     .stats-inner {
-      background: var(--primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 40px 48px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
+      box-shadow: var(--shadow-sm);
     }
     .stat-item {
       text-align: center;
@@ -251,19 +253,19 @@
       top: 10%;
       height: 80%;
       width: 1px;
-      background: rgba(255,255,255,0.15);
+      background: var(--border);
     }
     .stat-number {
       font-family: "Dancing Script", cursive;
       font-size: 52px;
       font-weight: 700;
-      color: #fff;
+      color: var(--primary);
       line-height: 1;
       margin-bottom: 6px;
     }
     .stat-label {
       font-size: 13px;
-      color: rgba(255,255,255,0.65);
+      color: var(--text-muted);
       font-weight: 500;
       letter-spacing: 0.02em;
     }

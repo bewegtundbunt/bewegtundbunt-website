@@ -71,7 +71,7 @@
     .back-btn:hover { background: rgba(255,255,255,0.25); }
 
     .header-brand {
-      font-family: 'Dancing Script', cursive;
+      font-family: 'Sora', sans-serif;
       font-size: 1.7rem;
       font-weight: 700;
       color: #fff;
@@ -125,7 +125,7 @@
       margin-bottom: 0.6rem;
     }
     .hero-title span {
-      font-family: 'Dancing Script', cursive;
+      font-family: 'Sora', sans-serif;
       font-size: 2.4rem;
       display: block;
     }
@@ -408,7 +408,7 @@
         ⚠️ WICHTIG: Ersetze "mbdzrddp" mit deiner echten ID von formspree.io
         Beispiel: https://formspree.io/f/xpzvwkqr
       -->
-      <form id="contact-form" action="https://formspree.io/f/mbdzrddp" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/mbdzrddp" method="POST" onsubmit="return false;">
 
         <!-- Verstecktes Feld: Zieladresse -->
 
@@ -447,7 +447,6 @@
 
         <button class="btn-submit" type="submit">
           <span>Nachricht senden</span>
-          <span>🌿</span>
         </button>
 
         <p class="form-hint">
@@ -472,8 +471,7 @@
     <a href="/cdn-cgi/l/email-protection#01686f676e41636476646675746f6563746f752f6564"><span class="__cf_email__" data-cfemail="2a43444c456a484f5d4f4d5e5f444e485f445e044e4f">[email&#160;protected]</span></a>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Formular-Erfolg per JS anzeigen (bei Formspree Redirect)
+  <script>
     const form = document.getElementById('contact-form');
     const success = document.getElementById('form-success');
 
@@ -481,12 +479,35 @@
       e.preventDefault();
       const data = new FormData(form);
       const btn = form.querySelector('.btn-submit');
-      btn.textContent = 'Wird gesendet …';
+      btn.innerHTML = '<span>Wird gesendet …</span>';
       btn.disabled = true;
 
       try {
-        const res = await fetch(form.action, {
+        const res = await fetch('https://formspree.io/f/mbdzrddp', {
           method: 'POST',
           body: data,
           headers: { 'Accept': 'application/json' }
-        })
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+          window.scrollTo({ top: success.offsetTop - 80, behavior: 'smooth' });
+        } else {
+          btn.innerHTML = '<span>⚠️ Fehler – bitte nochmal versuchen</span>';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.innerHTML = '<span>⚠️ Fehler – bitte nochmal versuchen</span>';
+        btn.disabled = false;
+      }
+    });
+
+    // Status nach Seiten-Reload prüfen (Fallback)
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('status') === 'erfolg') {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

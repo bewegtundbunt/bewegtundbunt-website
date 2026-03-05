@@ -367,6 +367,35 @@
       font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--primary); }
+    .footer-contact-bar {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 0;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-contact-bar p {
+      font-size: 15px; color: var(--text-muted); line-height: 1.5;
+    }
+    .footer-contact-bar strong { color: var(--text); }
+    .btn-contact {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: #fff;
+      font-family: "Sora", sans-serif; font-weight: 700; font-size: 15px;
+      padding: 13px 28px; border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(26,77,62,0.18);
+    }
+    .btn-contact:hover {
+      background: #2C6E5A;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26,77,62,0.25);
+    }
 
     /* ─── TESTIMONIALS ─── */
     #testimonials { background: var(--bg); }
@@ -709,6 +738,10 @@
         <a href="https://app.bewegtundbunt.de">App öffnen →</a>
       </div>
     </div>
+    <div class="footer-contact-bar">
+      <p><strong>Noch Fragen?</strong><br>Wir freuen uns über deine Nachricht.</p>
+      <a href="/contact.html" class="btn-contact">✉️ Kontakt aufnehmen</a>
+    </div>
     <div class="footer-inner">
       <span class="footer-brand" style="font-size:16px;">„bewegt & bunt"</span>
       <span class="footer-copy">&copy; <span id="year"></span> René Krakow · Alle Rechte vorbehalten.</span>
@@ -737,3 +770,5 @@
     }
     const rolle    = document.getElementById('cf-rolle').value;
     const nachname = document.getElementById('cf-
+
+                                             

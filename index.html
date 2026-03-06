@@ -471,9 +471,12 @@
 
     /* ─── FOOTER ERWEITERT ─── */
     .footer-inner-top {
-      display: grid; grid-template-columns: 1fr 1fr auto auto;
+      display: grid; grid-template-columns: 1fr auto 1fr;
       gap: 48px; align-items: start;
       padding-bottom: 32px; border-bottom: 1px solid var(--border); margin-bottom: 24px;
+    }
+    .footer-nav-cols {
+      display: flex; gap: 48px; justify-content: flex-end;
     }
     .footer-brand-col .footer-brand { display: block; margin-bottom: 8px; }
     .footer-brand-col p { font-size: 13px; color: var(--text-muted); line-height: 1.6; max-width: 260px; }
@@ -488,6 +491,7 @@
     .footer-nav-col a:hover { color: var(--primary); }
     @media (max-width: 700px) {
       .footer-inner-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-nav-cols { flex-direction: column; gap: 28px; }
     }
 
     /* ─── ANIMATIONS ─── */
@@ -711,21 +715,23 @@
         <span class="footer-brand">„bewegt & bunt"</span>
         <p>Professionelle Bewegungsförderung für Krippe und Kindergarten – entwickelt von René Krakow aus Leipzig.</p>
       </div>
-      <div class="footer-contact-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-right:80px;">
+      <div class="footer-contact-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
         <p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:14px;">Noch Fragen?<br>Wir freuen uns über deine Nachricht.</p>
         <a href="/contact.html" class="btn-contact">✉️ Kontakt aufnehmen</a>
       </div>
-      <div class="footer-nav-col">
-        <h4>Navigation</h4>
-        <a href="#konzept">Konzept</a>
-        <a href="#vorteile">Träger-Vorteile</a>
-        <a href="#ueber-mich">Über mich</a>
-      </div>
-      <div class="footer-nav-col">
-        <h4>Rechtliches</h4>
-        <a href="/impressum.html">Impressum</a>
-        <a href="/datenschutz.html">Datenschutz</a>
-        <a href="https://app.bewegtundbunt.de">App öffnen →</a>
+      <div class="footer-nav-cols">
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <a href="#konzept">Konzept</a>
+          <a href="#vorteile">Träger-Vorteile</a>
+          <a href="#ueber-mich">Über mich</a>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Rechtliches</h4>
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutz</a>
+          <a href="https://app.bewegtundbunt.de">App öffnen →</a>
+        </div>
       </div>
     </div>
     <div class="footer-inner">

@@ -471,7 +471,7 @@
 
     /* ─── FOOTER ERWEITERT ─── */
     .footer-inner-top {
-      display: grid; grid-template-columns: 1fr auto auto;
+      display: grid; grid-template-columns: 1fr auto auto auto;
       gap: 48px; align-items: start;
       padding-bottom: 32px; border-bottom: 1px solid var(--border); margin-bottom: 24px;
     }
@@ -715,8 +715,11 @@
         <h4>Navigation</h4>
         <a href="#konzept">Konzept</a>
         <a href="#vorteile">Träger-Vorteile</a>
-
         <a href="#ueber-mich">Über mich</a>
+      </div>
+      <div class="footer-nav-col footer-contact-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:14px;text-align:center;">Noch Fragen?<br>Wir freuen uns über deine Nachricht.</p>
+        <a href="/contact.html" class="btn-contact">✉️ Kontakt aufnehmen</a>
       </div>
       <div class="footer-nav-col">
         <h4>Rechtliches</h4>
@@ -724,11 +727,10 @@
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="https://app.bewegtundbunt.de">App öffnen →</a>
       </div>
-
     </div>
     <div class="footer-inner">
       <span class="footer-brand" style="font-size:16px;">„bewegt & bunt"</span>
-      <a href="/contact.html" class="btn-contact">✉️ Kontakt aufnehmen</a>
+      <span class="footer-copy">&copy; René Krakow · Alle Rechte vorbehalten.</span>
       <div class="footer-links">
         <a href="/impressum.html">Impressum</a>
         <a href="/datenschutz.html">Datenschutz</a>

@@ -388,14 +388,12 @@
       <div class="form-card-title">Nachricht schreiben</div>
       <div class="form-card-sub">Füll das Formular aus – wir melden uns so schnell wie möglich bei dir.</div>
 
-      <!-- 
-        ⚠️ WICHTIG: Ersetze "mbdzrddp" mit deiner echten ID von formspree.io
-        Beispiel: https://formspree.io/f/xpzvwkqr
-      -->
-      <form id="contact-form" action="https://formspree.io/f/mbdzrddp" method="POST" onsubmit="return false;">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return false;">
 
-        <!-- Verstecktes Feld: E-Mail-Betreff -->
-        <input type="hidden" name="_subject" value="Bewegt&Bunt Kontakt" />
+        <!-- Web3Forms -->
+        <input type="hidden" name="access_key" value="51260f60-083c-46f3-8af6-18c0f32b1f72" />
+        <input type="hidden" name="subject" value="Bewegt&Bunt Kontakt" />
+        <input type="hidden" name="from_name" value="bewegt &amp; bunt" />
 
         <div class="form-row">
           <div class="form-group">
@@ -468,7 +466,7 @@
       btn.disabled = true;
 
       try {
-        const res = await fetch('https://formspree.io/f/mbdzrddp', {
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: data,
           headers: { 'Accept': 'application/json' }

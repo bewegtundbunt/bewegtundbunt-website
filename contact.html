@@ -473,7 +473,7 @@
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          form.style.display = 'none';
+          form.closest('.form-card').style.display = 'none';
           success.style.display = 'block';
           window.scrollTo({ top: success.offsetTop - 80, behavior: 'smooth' });
         } else {
@@ -489,7 +489,7 @@
     // Status nach Seiten-Reload prüfen (Fallback)
     const params = new URLSearchParams(window.location.search);
     if (params.get('status') === 'erfolg') {
-      form.style.display = 'none';
+      form.closest('.form-card').style.display = 'none';
       success.style.display = 'block';
     }
   </script>

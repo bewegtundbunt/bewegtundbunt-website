@@ -36,6 +36,16 @@
   </style>
 </head>
 <body>
+
+<!-- Staging Banner -->
+<script>
+  if (window.location.hostname.includes('staging')) {
+    var banner = document.createElement('div');
+    banner.innerHTML = '🛠️ TESTUMGEBUNG – keine Live-Seite';
+    banner.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#ff6b00;color:white;text-align:center;padding:8px;font-weight:bold;font-size:14px;z-index:99999;';
+    document.body.appendChild(banner);
+  }
+</script>
 <header>
   <a class="brand" href="/">„bewegt & bunt"</a>
   <a class="back" href="/">← Zurück zur Website</a>
@@ -70,7 +80,7 @@
   <p>Verantwortlicher im Sinne der DSGVO ist:<br>
   <strong>René Krakow</strong><br>
   Leipzig, Sachsen, Deutschland<br>
-  E-Mail: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
+  E-Mail: <a href="/cdn-cgi/l/email-protection#11787f777e51737466747665647f7573647f653f7574"><span class="__cf_email__" data-cfemail="20494e464f60424557454754554e4442554e540e4445">[email&#160;protected]</span></a></p>
 
   <h2 id="grundsaetze">2. Grundsätze der Datenverarbeitung</h2>
   <p>Personenbezogene Daten werden nur erhoben, soweit dies für die Bereitstellung dieser Website und ihrer Funktionen erforderlich ist. Eine Weitergabe an Dritte erfolgt nicht, sofern dies nicht ausdrücklich beschrieben ist. Es werden keine Daten zu Werbezwecken verarbeitet oder verkauft.</p>
@@ -87,7 +97,7 @@
   <p>Diese Daten sind technisch notwendig und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung des Dienstes).</p>
 
   <h2 id="kontaktformular">4. Kontaktformular & E-Mail</h2>
-  <p>Wenn du das Kontaktformular auf dieser Website ausfüllst, werden die eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) über deinen lokalen E-Mail-Client direkt an <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a> gesendet. Es findet keine serverseitige Speicherung der Formulardaten statt.</p>
+  <p>Wenn du das Kontaktformular auf dieser Website ausfüllst, werden die eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) über deinen lokalen E-Mail-Client direkt an <a href="/cdn-cgi/l/email-protection#244d4a424b64464153414350514a4046514a500a4041"><span class="__cf_email__" data-cfemail="6900070f06290b0c1e0c0e1d1c070d0b1c071d470d0c">[email&#160;protected]</span></a> gesendet. Es findet keine serverseitige Speicherung der Formulardaten statt.</p>
   <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Daten werden nicht an Dritte weitergegeben und nach Abschluss der Korrespondenz gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
 
   <h2 id="fonts">5. Google Fonts</h2>
@@ -117,22 +127,11 @@
     <li><strong>Widerspruch</strong> (Art. 21 DSGVO) – Widerspruch gegen die Verarbeitung</li>
     <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
   </ul>
-  <p>Zur Ausübung deiner Rechte wende dich an: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
+  <p>Zur Ausübung deiner Rechte wende dich an: <a href="/cdn-cgi/l/email-protection#3c55525a537c5e594b595b484952585e495248125859"><span class="__cf_email__" data-cfemail="31585f575e71535446545645445f5553445f451f5554">[email&#160;protected]</span></a></p>
   <p>Du hast außerdem das Recht, Beschwerde bei einer Datenschutz-Aufsichtsbehörde einzulegen. Zuständig für Sachsen ist: <strong>Sächsischer Datenschutzbeauftragter</strong>, <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">www.saechsdsb.de</a>.</p>
 
   <h2 id="cookies">9. Cookies</h2>
   <p>Diese Website (bewegtundbunt.de) setzt keine eigenen Tracking- oder Marketing-Cookies. Die App (app.bewegtundbunt.de) verwendet ein Session-Cookie zur Aufrechterhaltung der Anmeldung. Dieses Cookie ist technisch notwendig und wird beim Abmelden gelöscht.</p>
 
   <h2 id="aenderungen">10. Änderungen dieser Erklärung</h2>
-  <p>Diese Datenschutzerklärung wird bei Bedarf aktualisiert. Die aktuelle Version ist stets unter <a href="/datenschutz.html">bewegtundbunt.de/datenschutz.html</a> abrufbar. Stand der aktuellen Version: März 2026.</p>
-</div>
-
-<footer>
-  <a href="/">Startseite</a>
-  <a href="/impressum.html">Impressum</a>
-  <a href="/datenschutz.html">Datenschutz</a>
-  <span style="margin-left:12px;">&copy; <span id="y"></span> René Krakow</span>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</footer>
-</body>
-</html>
+  <p>Diese Datenschutzerklärung wird bei Bedarf aktualisiert. Die aktuelle Version ist stets unter <a href="/datenschutz.html">bewe

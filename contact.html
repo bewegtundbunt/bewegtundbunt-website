@@ -356,6 +356,16 @@
 </head>
 <body>
 
+<!-- Staging Banner -->
+<script>
+  if (window.location.hostname.includes('staging')) {
+    var banner = document.createElement('div');
+    banner.innerHTML = '🛠️ TESTUMGEBUNG – keine Live-Seite';
+    banner.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#ff6b00;color:white;text-align:center;padding:8px;font-weight:bold;font-size:14px;z-index:99999;';
+    document.body.appendChild(banner);
+  }
+</script>
+
   <!-- HEADER -->
   <header class="page-header">
     <a href="index.html" class="back-btn" aria-label="Zurück">&#8592;</a>

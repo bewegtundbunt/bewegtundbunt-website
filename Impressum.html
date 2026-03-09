@@ -28,6 +28,16 @@
   </style>
 </head>
 <body>
+
+<!-- Staging Banner -->
+<script>
+  if (window.location.hostname.includes('staging')) {
+    var banner = document.createElement('div');
+    banner.innerHTML = '🛠️ TESTUMGEBUNG – keine Live-Seite';
+    banner.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#ff6b00;color:white;text-align:center;padding:8px;font-weight:bold;font-size:14px;z-index:99999;';
+    document.body.appendChild(banner);
+  }
+</script>
 <header>
   <a class="brand" href="/">„bewegt & bunt"</a>
   <a class="back" href="/">← Zurück zur Website</a>
@@ -46,7 +56,7 @@
   <p><strong>René Krakow</strong><br>Leipzig, Sachsen<br>Deutschland</p>
 
   <h2>Kontakt</h2>
-  <p>E-Mail: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
+  <p>E-Mail: <a href="/cdn-cgi/l/email-protection#462f2820290624233123213233282224332832682223"><span class="__cf_email__" data-cfemail="96fff8f0f9d6f4f3e1f3f1e2e3f8f2f4e3f8e2b8f2f3">[email&#160;protected]</span></a></p>
 
   <h2>Keine Umsatzsteuer-ID</h2>
   <p>Da kein Gewerbe angemeldet ist und keine umsatzsteuerpflichtigen Leistungen erbracht werden, liegt keine Umsatzsteuer-Identifikationsnummer vor.</p>
@@ -67,8 +77,4 @@
   <a href="/">Startseite</a>
   <a href="/impressum.html">Impressum</a>
   <a href="/datenschutz.html">Datenschutz</a>
-  <span style="margin-left:12px;">&copy; <span id="y"></span> René Krakow</span>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</footer>
-</body>
-</html>
+  <span style="margin-left:12px;">&copy; <span id="y"><

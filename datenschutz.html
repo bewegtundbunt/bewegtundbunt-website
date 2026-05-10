@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Datenschutz – bewegt & bunt</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
   <style>
     :root { --primary:#1A4D3E; --accent:#C8955A; --bg:#F8F6F1; --text:#2A2F2A; --muted:#6B7B6B; --border:rgba(26,77,62,0.10); }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -18,8 +18,6 @@
     .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);margin-bottom:10px;display:block;}
     h1{font-size:clamp(28px,4vw,38px);color:var(--primary);font-weight:700;margin-bottom:8px;}
     .intro{font-size:15px;color:var(--muted);margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border);}
-    .notice{background:#fffbf5;border:1px solid rgba(200,149,90,0.3);border-radius:14px;padding:20px 24px;margin-bottom:40px;font-size:14px;color:#7a5a2a;line-height:1.65;}
-    .notice strong{display:block;margin-bottom:4px;color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;}
     h2{font-size:18px;color:var(--primary);font-weight:700;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--border);}
     h2:first-of-type{border-top:none;}
     p,li{font-size:15px;color:var(--text);line-height:1.75;margin-bottom:12px;}
@@ -37,7 +35,6 @@
 </head>
 <body>
 
-<!-- Staging Banner -->
 <script>
   if (window.location.hostname.includes('staging')) {
     var banner = document.createElement('div');
@@ -53,12 +50,7 @@
 <div class="wrap">
   <span class="label">Rechtliches</span>
   <h1>Datenschutzerklärung</h1>
-  <p class="intro">Stand: März 2026 · Verantwortlicher: René Krakow, Leipzig</p>
-
-  <div class="notice">
-    <strong>Hinweis – Vorbereitungsphase</strong>
-    Diese Website befindet sich in einer nicht-kommerziellen Konzept- und Pilotphase. Es werden keine Nutzerkonten auf dieser Website angelegt, keine Zahlungen verarbeitet und keine Werbung ausgespielt. Die App unter app.bewegtundbunt.de nutzt Supabase zur Authentifizierung (siehe Abschnitt 7).
-  </div>
+  <p class="intro">Stand: Mai 2026 · Verantwortlicher: René Krakow, Leipzig</p>
 
   <div class="toc">
     <h3>Inhalt</h3>
@@ -66,10 +58,9 @@
       <li><a href="#verantwortlicher">Verantwortlicher</a></li>
       <li><a href="#grundsaetze">Grundsätze der Datenverarbeitung</a></li>
       <li><a href="#website-aufruf">Daten beim Aufruf der Website</a></li>
-      <li><a href="#kontaktformular">Kontaktformular & E-Mail</a></li>
-      <li><a href="#fonts">Google Fonts</a></li>
+      <li><a href="#kontakt">E-Mail-Kontakt</a></li>
+      <li><a href="#fonts">Schriftarten</a></li>
       <li><a href="#hosting">Hosting & Infrastruktur</a></li>
-      <li><a href="#app">App – Supabase-Authentifizierung</a></li>
       <li><a href="#rechte">Deine Rechte</a></li>
       <li><a href="#cookies">Cookies</a></li>
       <li><a href="#aenderungen">Änderungen dieser Erklärung</a></li>
@@ -80,10 +71,10 @@
   <p>Verantwortlicher im Sinne der DSGVO ist:<br>
   <strong>René Krakow</strong><br>
   Leipzig, Sachsen, Deutschland<br>
-  E-Mail: <a href="/cdn-cgi/l/email-protection#11787f777e51737466747665647f7573647f653f7574"><span class="__cf_email__" data-cfemail="20494e464f60424557454754554e4442554e540e4445">[email&#160;protected]</span></a></p>
+  E-Mail: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
 
   <h2 id="grundsaetze">2. Grundsätze der Datenverarbeitung</h2>
-  <p>Personenbezogene Daten werden nur erhoben, soweit dies für die Bereitstellung dieser Website und ihrer Funktionen erforderlich ist. Eine Weitergabe an Dritte erfolgt nicht, sofern dies nicht ausdrücklich beschrieben ist. Es werden keine Daten zu Werbezwecken verarbeitet oder verkauft.</p>
+  <p>Personenbezogene Daten werden nur erhoben, soweit dies für die Bereitstellung dieser Website erforderlich ist. Eine Weitergabe an Dritte erfolgt nicht, sofern dies nicht ausdrücklich beschrieben ist. Es werden keine Daten zu Werbezwecken verarbeitet oder verkauft. Es wird kein Tracking eingesetzt.</p>
 
   <h2 id="website-aufruf">3. Daten beim Aufruf der Website</h2>
   <p>Beim Besuch von bewegtundbunt.de werden durch den Hosting-Anbieter automatisch folgende Daten in Server-Logfiles gespeichert:</p>
@@ -96,28 +87,18 @@
   </ul>
   <p>Diese Daten sind technisch notwendig und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung des Dienstes).</p>
 
-  <h2 id="kontaktformular">4. Kontaktformular & E-Mail</h2>
-  <p>Wenn du das Kontaktformular auf dieser Website ausfüllst, werden die eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) über deinen lokalen E-Mail-Client direkt an <a href="/cdn-cgi/l/email-protection#244d4a424b64464153414350514a4046514a500a4041"><span class="__cf_email__" data-cfemail="6900070f06290b0c1e0c0e1d1c070d0b1c071d470d0c">[email&#160;protected]</span></a> gesendet. Es findet keine serverseitige Speicherung der Formulardaten statt.</p>
-  <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Daten werden nicht an Dritte weitergegeben und nach Abschluss der Korrespondenz gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+  <h2 id="kontakt">4. E-Mail-Kontakt</h2>
+  <p>Wenn du uns per E-Mail kontaktierst, werden deine Angaben (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage gespeichert. Es findet keine Weitergabe an Dritte statt. Nach Abschluss der Korrespondenz werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+  <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
 
-  <h2 id="fonts">5. Google Fonts</h2>
-  <p>Diese Website lädt Schriftarten über Google Fonts (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Dabei wird deine IP-Adresse an Google-Server übertragen. Google ist unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
-  <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung). Falls du Google Fonts blockieren möchtest, kannst du dies über Browser-Erweiterungen wie uBlock Origin tun.</p>
+  <h2 id="fonts">5. Schriftarten</h2>
+  <p>Diese Website verwendet lokal eingebundene Schriftarten. Es findet keine Verbindung zu externen Font-Servern statt. Deine IP-Adresse wird beim Laden der Schriften nicht an Dritte übertragen.</p>
 
   <h2 id="hosting">6. Hosting & Infrastruktur</h2>
-  <p>Die Website wird über <strong>GitHub Pages</strong> gehostet (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Abruf der Seite verarbeitet GitHub technische Verbindungsdaten. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+  <p>Diese Website wird über <strong>Vercel Inc.</strong> (340 S Lemon Ave #4133, Walnut, CA 91789, USA) gehostet. Beim Abruf der Seite verarbeitet Vercel technische Verbindungsdaten (siehe Abschnitt 3). Vercel setzt Serverstandorte innerhalb der EU ein (Edge Network, Frankfurt).</p>
+  <p>Die Datenübermittlung in die USA erfolgt auf Grundlage von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Vercel ist zudem unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a>.</p>
 
-  <h2 id="app">7. App – Supabase-Authentifizierung</h2>
-  <p>Die App unter <a href="https://app.bewegtundbunt.de">app.bewegtundbunt.de</a> verwendet <strong>Supabase</strong> (Supabase Inc., San Francisco, USA) zur Nutzerverwaltung. Dabei werden folgende Daten verarbeitet:</p>
-  <ul>
-    <li>E-Mail-Adresse (für Login)</li>
-    <li>Verschlüsseltes Passwort</li>
-    <li>Zeitstempel der An- und Abmeldungen</li>
-  </ul>
-  <p>Die Zugänge werden ausschließlich freigeschalteten Kita-Fachkräften zur Verfügung gestellt. Supabase verarbeitet Daten auf Servern in der EU (Frankfurt). Weitere Informationen: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</p>
-  <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / Bereitstellung des Dienstes).</p>
-
-  <h2 id="rechte">8. Deine Rechte</h2>
+  <h2 id="rechte">7. Deine Rechte</h2>
   <p>Du hast nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:</p>
   <ul>
     <li><strong>Auskunft</strong> (Art. 15 DSGVO) – welche Daten über dich gespeichert sind</li>
@@ -127,11 +108,21 @@
     <li><strong>Widerspruch</strong> (Art. 21 DSGVO) – Widerspruch gegen die Verarbeitung</li>
     <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
   </ul>
-  <p>Zur Ausübung deiner Rechte wende dich an: <a href="/cdn-cgi/l/email-protection#3c55525a537c5e594b595b484952585e495248125859"><span class="__cf_email__" data-cfemail="31585f575e71535446545645445f5553445f451f5554">[email&#160;protected]</span></a></p>
+  <p>Zur Ausübung deiner Rechte wende dich an: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
   <p>Du hast außerdem das Recht, Beschwerde bei einer Datenschutz-Aufsichtsbehörde einzulegen. Zuständig für Sachsen ist: <strong>Sächsischer Datenschutzbeauftragter</strong>, <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">www.saechsdsb.de</a>.</p>
 
-  <h2 id="cookies">9. Cookies</h2>
-  <p>Diese Website (bewegtundbunt.de) setzt keine eigenen Tracking- oder Marketing-Cookies. Die App (app.bewegtundbunt.de) verwendet ein Session-Cookie zur Aufrechterhaltung der Anmeldung. Dieses Cookie ist technisch notwendig und wird beim Abmelden gelöscht.</p>
+  <h2 id="cookies">8. Cookies</h2>
+  <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Es werden keine Cookies gesetzt, die eine Einwilligung erfordern. Ein Cookie-Banner ist daher nicht notwendig.</p>
 
-  <h2 id="aenderungen">10. Änderungen dieser Erklärung</h2>
-  <p>Diese Datenschutzerklärung wird bei Bedarf aktualisiert. Die aktuelle Version ist stets unter <a href="/datenschutz.html">bewe
+  <h2 id="aenderungen">9. Änderungen dieser Erklärung</h2>
+  <p>Diese Datenschutzerklärung wird bei Bedarf aktualisiert. Die aktuelle Version ist stets unter <a href="/datenschutz.html">bewegtundbunt.de/datenschutz.html</a> abrufbar.</p>
+</div>
+
+<footer>
+  <a href="/">Startseite</a>
+  <a href="/Impressum.html">Impressum</a>
+  <a href="/datenschutz.html">Datenschutz</a>
+</footer>
+
+</body>
+</html>

@@ -21,14 +21,9 @@
     h2{font-size:18px;color:var(--primary);font-weight:700;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--border);}
     h2:first-of-type{border-top:none;}
     p,li{font-size:15px;color:var(--text);line-height:1.75;margin-bottom:12px;}
-    ul{padding-left:20px;margin-bottom:12px;}
+    ul{padding-left:20px;margin-bottom:12px;list-style:none;}
+    ul li::before{content:"— ";margin-left:-20px;}
     a{color:var(--primary);}
-    .toc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:48px;}
-    .toc h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:12px;}
-    .toc ol{padding-left:20px;}
-    .toc li{font-size:14px;margin-bottom:6px;}
-    .toc a{text-decoration:none;color:var(--primary);}
-    .toc a:hover{text-decoration:underline;}
     footer{border-top:1px solid var(--border);padding:28px;text-align:center;font-size:13px;color:var(--muted);background:#fff;}
     footer a{color:var(--primary);text-decoration:none;margin:0 8px;}
   </style>
@@ -50,72 +45,88 @@
 <div class="wrap">
   <span class="label">Rechtliches</span>
   <h1>Datenschutzerklärung</h1>
-  <p class="intro">Stand: Mai 2026 · Verantwortlicher: René Krakow, Leipzig</p>
+  <p class="intro">Stand: Mai 2026</p>
 
-  <div class="toc">
-    <h3>Inhalt</h3>
-    <ol>
-      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
-      <li><a href="#grundsaetze">Grundsätze der Datenverarbeitung</a></li>
-      <li><a href="#website-aufruf">Daten beim Aufruf der Website</a></li>
-      <li><a href="#kontakt">E-Mail-Kontakt</a></li>
-      <li><a href="#fonts">Schriftarten</a></li>
-      <li><a href="#hosting">Hosting & Infrastruktur</a></li>
-      <li><a href="#rechte">Deine Rechte</a></li>
-      <li><a href="#cookies">Cookies</a></li>
-      <li><a href="#aenderungen">Änderungen dieser Erklärung</a></li>
-    </ol>
-  </div>
-
-  <h2 id="verantwortlicher">1. Verantwortlicher</h2>
-  <p>Verantwortlicher im Sinne der DSGVO ist:<br>
-  <strong>René Krakow</strong><br>
-  Leipzig, Sachsen, Deutschland<br>
+  <h2>1. Verantwortlicher</h2>
+  <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+  <p><strong>René Krakow</strong><br>
+  Prager Straße 61<br>
+  04317 Leipzig<br>
   E-Mail: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
+  <p>Diese Datenschutzerklärung gilt für die Marketing-Website unter bewegtundbunt.de. Die Anwendung unter app.bewegtundbunt.de erhält perspektivisch eine eigene Datenschutzerklärung, sobald sie öffentlich zugänglich ist.</p>
 
-  <h2 id="grundsaetze">2. Grundsätze der Datenverarbeitung</h2>
-  <p>Personenbezogene Daten werden nur erhoben, soweit dies für die Bereitstellung dieser Website erforderlich ist. Eine Weitergabe an Dritte erfolgt nicht, sofern dies nicht ausdrücklich beschrieben ist. Es werden keine Daten zu Werbezwecken verarbeitet oder verkauft. Es wird kein Tracking eingesetzt.</p>
+  <h2>2. Allgemeines zur Datenverarbeitung</h2>
+  <p>Wir verarbeiten personenbezogene Daten unserer Nutzerinnen und Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte erforderlich ist. Die Verarbeitung erfolgt regelmäßig nur nach Einwilligung der Nutzerin oder des Nutzers oder soweit eine Verarbeitung durch gesetzliche Vorschriften gestattet ist.</p>
+  <p>Rechtsgrundlage für die Verarbeitung personenbezogener Daten ist im Regelfall Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung der Website) oder Art. 6 Abs. 1 lit. b DSGVO (Anbahnung oder Erfüllung eines Vertrags), soweit eine Verarbeitung zur Erfüllung vertraglicher Pflichten erforderlich ist.</p>
 
-  <h2 id="website-aufruf">3. Daten beim Aufruf der Website</h2>
-  <p>Beim Besuch von bewegtundbunt.de werden durch den Hosting-Anbieter automatisch folgende Daten in Server-Logfiles gespeichert:</p>
+  <h2>3. Hosting und Bereitstellung der Website</h2>
+  <p>Diese Website wird über <strong>Vercel Inc.</strong> (340 S Lemon Ave #4133, Walnut, CA 91789, USA) bereitgestellt. Vercel betreibt ein globales Edge-Netzwerk; die Auslieferung der Inhalte erfolgt unter anderem über den Standort Frankfurt am Main. Die Origin-Server liegen in den USA.</p>
+  <p>Zur sicheren Bereitstellung der Website werden technische Verbindungsdaten verarbeitet (siehe Abschnitt 4 — Server-Logfiles).</p>
+  <p>Da Vercel personenbezogene Daten möglicherweise auch in den USA verarbeitet, stützen wir den Datentransfer auf folgende Garantien:</p>
   <ul>
-    <li>IP-Adresse (anonymisiert)</li>
+    <li><strong>EU-US Data Privacy Framework:</strong> Vercel ist nach dem EU-US Data Privacy Framework zertifiziert (Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023).</li>
+    <li><strong>Standardvertragsklauseln</strong> gemäß Art. 46 Abs. 2 lit. c DSGVO als zusätzliche Absicherung.</li>
+  </ul>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer stabilen, schnellen und sicheren Bereitstellung der Website).</p>
+  <p>Mehr Informationen zum Datenschutz bei Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">https://vercel.com/legal/privacy-policy</a></p>
+
+  <h2>4. Server-Logfiles</h2>
+  <p>Beim Aufruf dieser Website erhebt unser Hosting-Provider (Vercel) automatisch technische Informationen, die der Browser an den Server übermittelt. Dazu gehören:</p>
+  <ul>
+    <li>IP-Adresse des aufrufenden Geräts</li>
     <li>Datum und Uhrzeit des Zugriffs</li>
-    <li>Aufgerufene URL</li>
-    <li>Browser-Typ und Betriebssystem</li>
+    <li>Aufgerufene Seite und übertragene Datenmenge</li>
     <li>Referrer-URL (zuvor besuchte Seite)</li>
+    <li>Browsertyp und Browserversion</li>
+    <li>Verwendetes Betriebssystem</li>
   </ul>
-  <p>Diese Daten sind technisch notwendig und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung des Dienstes).</p>
+  <p>Diese Daten dienen ausschließlich der technischen Bereitstellung, der Fehleranalyse und der Sicherheit der Website. Eine Zusammenführung mit anderen Datenquellen oder eine Auswertung zu Werbe- oder Profilingzwecken findet nicht statt.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Speicherdauer: in der Regel 30 Tage, danach automatische Löschung.</p>
 
-  <h2 id="kontakt">4. E-Mail-Kontakt</h2>
-  <p>Wenn du uns per E-Mail kontaktierst, werden deine Angaben (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage gespeichert. Es findet keine Weitergabe an Dritte statt. Nach Abschluss der Korrespondenz werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
-  <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+  <h2>5. Schriftarten</h2>
+  <p>Diese Website verwendet die Schriftarten Sora, Dancing Script und Source Serif 4. Alle Schriftarten werden lokal von unserem Server ausgeliefert. Es findet keine Verbindung zu externen Schriftanbietern (z. B. Google Fonts) statt; insbesondere wird Ihre IP-Adresse nicht an Dritte übermittelt.</p>
 
-  <h2 id="fonts">5. Schriftarten</h2>
-  <p>Diese Website verwendet lokal eingebundene Schriftarten. Es findet keine Verbindung zu externen Font-Servern statt. Deine IP-Adresse wird beim Laden der Schriften nicht an Dritte übertragen.</p>
+  <h2>6. Cookies</h2>
+  <p>Diese Website setzt keine Cookies. Es kommen weder technisch notwendige noch funktionale, statistische oder Marketing-Cookies zum Einsatz. Aus diesem Grund verzichten wir auch auf einen Cookie-Banner.</p>
 
-  <h2 id="hosting">6. Hosting & Infrastruktur</h2>
-  <p>Diese Website wird über <strong>Vercel Inc.</strong> (340 S Lemon Ave #4133, Walnut, CA 91789, USA) gehostet. Beim Abruf der Seite verarbeitet Vercel technische Verbindungsdaten (siehe Abschnitt 3). Vercel setzt Serverstandorte innerhalb der EU ein (Edge Network, Frankfurt).</p>
-  <p>Die Datenübermittlung in die USA erfolgt auf Grundlage von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Vercel ist zudem unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a>.</p>
+  <h2>7. Tracking, Analyse, Werbung</h2>
+  <p>Diese Website verwendet keine Analyse- oder Tracking-Werkzeuge (kein Google Analytics, Matomo, Plausible o. Ä.). Es werden keine Werbe-Pixel oder vergleichbaren Technologien eingebunden. Es erfolgt keine Profilbildung.</p>
 
-  <h2 id="rechte">7. Deine Rechte</h2>
-  <p>Du hast nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:</p>
+  <h2>8. Externe Inhalte und Plugins</h2>
+  <p>Diese Website bindet keine Inhalte Dritter ein (keine YouTube- oder Vimeo-Videos, keine Google Maps, keine Social-Media-Plugins, keine externen Schriften, keine externen Skripte). Beim Aufruf der Seite werden keine Verbindungen zu Dritt-Anbietern aufgebaut, abgesehen vom Hosting-Provider Vercel (siehe Abschnitt 3).</p>
+
+  <h2>9. Kontaktaufnahme per E-Mail</h2>
+  <p>Wenn Sie uns per E-Mail kontaktieren (<a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a>), werden Ihre Angaben zur Bearbeitung der Anfrage und für etwaige Anschlussfragen verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen) bzw. Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).</p>
+  <p>Speicherdauer: Die übermittelten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.</p>
+
+  <h2>10. Ihre Rechte als betroffene Person</h2>
+  <p>Soweit Ihre personenbezogenen Daten verarbeitet werden, sind Sie Betroffener im Sinne der DSGVO und es stehen Ihnen folgende Rechte gegenüber dem Verantwortlichen zu:</p>
   <ul>
-    <li><strong>Auskunft</strong> (Art. 15 DSGVO) – welche Daten über dich gespeichert sind</li>
-    <li><strong>Berichtigung</strong> (Art. 16 DSGVO) – Korrektur unrichtiger Daten</li>
-    <li><strong>Löschung</strong> (Art. 17 DSGVO) – Löschung deiner Daten</li>
-    <li><strong>Einschränkung</strong> (Art. 18 DSGVO) – Einschränkung der Verarbeitung</li>
-    <li><strong>Widerspruch</strong> (Art. 21 DSGVO) – Widerspruch gegen die Verarbeitung</li>
-    <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+    <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+    <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+    <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+    <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+    <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+    <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    <li>Recht auf Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
   </ul>
-  <p>Zur Ausübung deiner Rechte wende dich an: <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a></p>
-  <p>Du hast außerdem das Recht, Beschwerde bei einer Datenschutz-Aufsichtsbehörde einzulegen. Zuständig für Sachsen ist: <strong>Sächsischer Datenschutzbeauftragter</strong>, <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">www.saechsdsb.de</a>.</p>
+  <p>Zur Ausübung Ihrer Rechte genügt eine formlose Mitteilung an <a href="mailto:info@bewegtundbunt.de">info@bewegtundbunt.de</a>.</p>
 
-  <h2 id="cookies">8. Cookies</h2>
-  <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Es werden keine Cookies gesetzt, die eine Einwilligung erfordern. Ein Cookie-Banner ist daher nicht notwendig.</p>
+  <h2>11. Beschwerderecht bei der Aufsichtsbehörde</h2>
+  <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Für uns zuständig ist:</p>
+  <p><strong>Sächsische Datenschutzbeauftragte</strong><br>
+  Devrientstraße 1<br>
+  01067 Dresden<br>
+  Telefon: 0351 / 85471-101<br>
+  E-Mail: <a href="mailto:saechsdsb@slt.sachsen.de">saechsdsb@slt.sachsen.de</a><br>
+  Web: <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">https://www.saechsdsb.de</a></p>
 
-  <h2 id="aenderungen">9. Änderungen dieser Erklärung</h2>
-  <p>Diese Datenschutzerklärung wird bei Bedarf aktualisiert. Die aktuelle Version ist stets unter <a href="/datenschutz.html">bewegtundbunt.de/datenschutz.html</a> abrufbar.</p>
+  <h2>12. Datensicherheit</h2>
+  <p>Wir verwenden auf dieser Website das Verschlüsselungsverfahren TLS (Transport Layer Security) in Verbindung mit der jeweils höchsten von Ihrem Browser unterstützten Verschlüsselungsstufe. Sie erkennen eine verschlüsselte Verbindung an dem Schloss-Symbol in Ihrer Browserzeile sowie am Präfix „https://" der Adresszeile.</p>
+
+  <h2>13. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+  <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Mai 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Website abgerufen werden.</p>
 </div>
 
 <footer>

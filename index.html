@@ -88,16 +88,6 @@
         radial-gradient(circle at 88% 12%, rgba(168, 209, 59, 0.20), transparent 28%),
         linear-gradient(145deg, #fbfaf4 0%, #eef3e7 100%);
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      left: -190px;
-      bottom: -225px;
-      border: 54px solid rgba(53, 98, 67, 0.08);
-      border-radius: 50%;
-    }
     .hero-inner {
       width: min(var(--max), calc(100% - 48px));
       min-height: 700px;
@@ -174,6 +164,13 @@
     .sheet-rhythmus { z-index: 2; left: 92px; top: 68px; transform: rotate(-7deg); }
     .sheet-spielzeit { z-index: 3; left: 168px; top: 57px; transform: rotate(0deg); }
     .sheet-parcours { z-index: 4; left: 246px; top: 75px; transform: rotate(7deg); }
+    @media (min-width: 1101px) {
+      .sheet-olympiade { top: 192px; }
+      .sheet-rhythmus { top: 168px; }
+      .sheet-spielzeit { top: 157px; }
+      .sheet-parcours { top: 175px; }
+    }
+    .fan-caption { position: absolute; right: 24px; bottom: 16px; margin: 0; }
     .section { padding: 96px 0; }
     .section-inner { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
     .section-heading { max-width: 850px; margin-bottom: 44px; }
@@ -323,7 +320,7 @@
     .footer { padding: 58px 0 34px; background: var(--forest-deep); color: rgba(255,255,255,0.78); }
     .footer-inner { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
     .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding-bottom: 35px; }
-    .footer-claim { max-width: 520px; margin: 0; font-size: 15px; }
+    .footer-claim { max-width: 520px; margin: 0; font-size: 15px; color: rgba(255,255,255,0.62); }
     .footer-contact { text-align: right; }
     .footer-contact p { margin: 0 0 6px; font-size: 14px; }
     .footer-contact a { color: white; font-size: 17px; font-weight: 500; text-underline-offset: 4px; }
@@ -428,6 +425,7 @@
           </div>
         </div>
       </div>
+      <p class="image-caption fan-caption">Abbildungen: Praxistest-Fassungen · Fotos KI-generiert.</p>
     </section>
 
     <section class="section pale" aria-labelledby="dreiklang-title">
@@ -516,7 +514,7 @@
             <p>Kleine Wege durch den Wald – und der große Lauf über Baumstämme und Moosinseln.</p>
           </article>
           <article class="pair-card">
-            <h3>Die kleine Wald-Spielstunde ↔ Die große Wald-Spielzeit</h3>
+            <h3>Die kleine Wald-Spielzeit ↔ Die große Wald-Spielzeit</h3>
             <p>Schwer wie Kastanien, leicht wie Federn – freies Spiel in zwei Größen.</p>
           </article>
           <article class="pair-card">
@@ -524,53 +522,6 @@
             <p>Der Wald findet seinen leisen Takt – vom Lauschen bis zum gemeinsamen Klang.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section white" aria-labelledby="details-title">
-      <div class="section-inner">
-        <div class="section-heading">
-          <h2 id="details-title">Vier Blicke ins Blatt</h2>
-        </div>
-        <div class="detail-grid">
-          <article class="detail-card">
-            <div class="detail-image">
-              <img src="assets/images/einblick-wald-aufbau.png" alt="Ausschnitt aus dem Wald-Aufbau eines Kindergarten-Handouts: Materialzeilen mit grünen Waldwörtern" width="380" height="83" />
-            </div>
-            <div class="detail-copy">
-              <h3>Material wird Fantasiewelt</h3>
-              <p>Aus Matten werden Waldteiche, aus Hütchen Fliegenpilze – jede Stunde beginnt mit einer einfachen Verwandlung.</p>
-            </div>
-          </article>
-          <article class="detail-card">
-            <div class="detail-image">
-              <img src="assets/images/einblick-parcours-titelband.png" alt="Dunkelgrünes Titelband „Den Wald-Parcours durchlaufen&quot; aus dem Kindergarten-Handout" width="380" height="126" />
-            </div>
-            <div class="detail-copy">
-              <h3>Klare Spieltitel</h3>
-              <p>Dunkelgrüne Bänder gliedern die Stunde – ein Blick genügt, um zu wissen, wo Sie sind.</p>
-            </div>
-          </article>
-          <article class="detail-card">
-            <div class="detail-image">
-              <img src="assets/images/einblick-sicherheit.png" alt="Hinweiskasten mit Warnsymbol: Sicherheitsklammer in Braun auf hellem Grund" width="380" height="58" />
-            </div>
-            <div class="detail-copy">
-              <h3>Sicherheit und Spielraum</h3>
-              <p>Was wichtig ist, steht im Blatt: Sicherheitshinweise dort, wo sie gebraucht werden – und Spielraum für jedes Kind, das erst zuschauen möchte.</p>
-            </div>
-          </article>
-          <article class="detail-card">
-            <div class="detail-image">
-              <img src="assets/images/einblick-waldsignal.png" alt="Ausklang-Zeilen mit dem Waldsignal „1, 2, 3 – die Waldzeit ist vorbei&quot;" width="380" height="47" />
-            </div>
-            <div class="detail-copy">
-              <h3>Waldsignal und Waldatem</h3>
-              <p>„1, 2, 3 – die Waldzeit ist vorbei …" Jede Stunde endet mit demselben ruhigen Ritual.</p>
-            </div>
-          </article>
-        </div>
-        <p class="image-caption">Abbildungen: Ausschnitte aus den Praxistest-Fassungen · Fotos KI-generiert.</p>
       </div>
     </section>
 

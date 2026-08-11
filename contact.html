@@ -11,7 +11,7 @@
     :root { --forest:#173e2e; --deep:#102b20; --moss:#356243; --leaf:#a8d13b; --mist:#e8f0e4; --cream:#fbfaf4; --ink:#223028; --muted:#536057; --line:rgba(23,62,46,.14); --max:1180px; }
     *,*::before,*::after{box-sizing:border-box}
     body{margin:0;background:var(--cream);color:var(--ink);font-family:'Sora',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%} a{color:inherit} :focus-visible{outline:3px solid #d28839;outline-offset:4px}
+    img{display:block;max-width:100%} a{color:inherit} :focus-visible{outline:3px solid var(--deep);outline-offset:3px;box-shadow:0 0 0 3px var(--cream)}
     .nav-shell{border-bottom:1px solid var(--line);background:rgba(251,250,244,.96)}
     .nav{width:min(var(--max),calc(100% - 48px));min-height:74px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px}
     .brand{display:inline-flex;align-items:center;gap:11px;color:var(--forest);text-decoration:none;white-space:nowrap}.brand img{width:42px;height:42px;border-radius:50%}.brand span{font-family:'Dancing Script',cursive;font-size:27px;font-weight:600}

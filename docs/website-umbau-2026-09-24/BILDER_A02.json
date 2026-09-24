@@ -1,0 +1,274 @@
+{
+  "stand": "2026-09-24T19:11:41.452945+02:00",
+  "scope": "Nur Ausschnittdateien. Original-PDFs werden nicht geliefert. Bilder quellengebunden; keine generativen Änderungen.",
+  "assets": [
+    {
+      "productId": "MORGENKREIS-WALD-01",
+      "title": "Wo ist der Wintervorrat?",
+      "sourceVersion": "A11",
+      "sourcePdfSha256": "5098e4365c248131e9994fffd0eb07751250b61e2d1fc40d2a11d60a2e3de690",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+      "sha256": "c940824eb8f9499f1e3160c790c988a4285ff0b418c9621260899636a19d4da6",
+      "bytes": 136004,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "MORGENKREIS-WALD-02",
+      "title": "Wer wiegt sich im Wind?",
+      "sourceVersion": "A09",
+      "sourcePdfSha256": "416fa11a39ff5e9b858f791e0ca7efc2324c6348a08238ad36400ad09949fb13",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+      "sha256": "3577d4d46625fc6a6f06ff53280e49552c7a3a6bdc4aa90da9492499d2ab91a0",
+      "bytes": 114348,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "MORGENKREIS-WALD-03",
+      "title": "Wer macht den Wald so laut?",
+      "sourceVersion": "A14",
+      "sourcePdfSha256": "4027639ac45869f6790671911ee2172b45c352b740dd83760edab3bcd27e42dc",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+      "sha256": "954b24b5cba9609661ae80a936186535e95a16134d4d437edc56fe37940b343b",
+      "bytes": 120499,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "MORGENKREIS-WALD-04",
+      "title": "Welches Dach hält dicht?",
+      "sourceVersion": "A08",
+      "sourcePdfSha256": "b768ee73bd7eab71f1dbe30098bfce111f5a77b127f075e40cc422d3b1c1e19c",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+      "sha256": "61e1d3755ed8e2805f73d97f3156348d6ed8445d62cb81ebc591d3853d342dc3",
+      "bytes": 136155,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "SPORT-WALD-01",
+      "title": "Frösche und Eichhörnchen",
+      "sourceVersion": "B15 · Ausgabe A01_2",
+      "sourcePdfSha256": "d0658d2b3fa5a9b17866d7bd7f929cb66ca5e0eb9c638856495456dc09a53e8b",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+      "sha256": "056d80912a52a749e94cac55d723184bafb59774abdf14cabd67629786dcb6c6",
+      "bytes": 93387,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "SPORT-WALD-02",
+      "title": "Wildkatzen und Adler",
+      "sourceVersion": "A10 · Ausgabe A01_2",
+      "sourcePdfSha256": "171c57b845638f99af3dca7fe69c4cc0580b7327e4d1c41c3a26ac3df7589847",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+      "sha256": "8129e40676c4339f9111b990779a85f1b3497ae96a562b3fe1a4fde93cdcdf10",
+      "bytes": 98671,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "SPORT-WALD-03",
+      "title": "Wildschweine und Eichhörnchen",
+      "sourceVersion": "M05",
+      "sourcePdfSha256": "42fbfd8588ada4140f9e3cb739845d330e9bdc87291d39e551b46058d72b0b16",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+      "sha256": "ecd7939bc2cb86408daf09161acac48cd12abad4c8b2b8567668ef16fa119536",
+      "bytes": 104305,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "SPORT-WALD-04",
+      "title": "Igel, Frösche und Adler",
+      "sourceVersion": "W02",
+      "sourcePdfSha256": "9593ecac90ba7582d8916914342058f624bdfa9407cf3861e16db6deb1ec4342",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        316.171875,
+        581.578125,
+        505.875
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+      "sha256": "7b16f1906fe45b39acd3370cec3493d3358c28a6f59a5bb9b36f2070dd3d2338",
+      "bytes": 93307,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "VORSCHULE-WALD-01",
+      "title": "Wir zählen im Herbstwald",
+      "sourceVersion": "E09",
+      "sourcePdfSha256": "7e0a02dfdf0b947a1320bd7a233b2d6d72b7f31357e97b1f37ef94895fb968ba",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        424.828125,
+        581.578125,
+        614.53125
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+      "sha256": "2ca192a262391814121482d6c0231d1f3f288cb7e64c31bfd40d74813c67c131",
+      "bytes": 159675,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "VORSCHULE-WALD-02",
+      "title": "Ein Rascheln im Blätterwald",
+      "sourceVersion": "E08",
+      "sourcePdfSha256": "f6189dc88288a635d6f942fde62f55e9952c4a58ae286daac40bb82cb6b97e77",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        424.828125,
+        581.578125,
+        614.53125
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+      "sha256": "8a80f80cd593c4c09c49c35af4796ce2242aa3d73f6fd76f3e405211d2fcc7b7",
+      "bytes": 159746,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "VORSCHULE-WALD-03",
+      "title": "Was gehört zusammen?",
+      "sourceVersion": "Bildstandard A01_2",
+      "sourcePdfSha256": "4644a2973fe9f29b7bc1eeb44b53b2a2b1b7b5e4feae8a8ced23417764389f85",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        424.828125,
+        581.578125,
+        614.53125
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+      "sha256": "b81620f3f810132f1fd829b56de8b6d04cc6506cb275d79a2a39e0cb56bd23c2",
+      "bytes": 169302,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "VORSCHULE-WALD-04",
+      "title": "Unser Wald aus Formen",
+      "sourceVersion": "Bildstandard A01",
+      "sourcePdfSha256": "be2e5ff862a8168502cc239d52c1365f1507a152c34628350fe1bd16d7cd6fde",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        296.578125,
+        424.828125,
+        581.578125,
+        614.53125
+      ],
+      "content": "Vollständige zentrale Illustration als begrenzter Ausschnitt, kein Handoutablauf.",
+      "path": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+      "sha256": "d76af81212eca81136fc94adc151db9cd318bf44def144d25c370701a10dc93e",
+      "bytes": 168111,
+      "width": 320,
+      "height": 213
+    },
+    {
+      "productId": "MORGENKREIS-ZOO-01",
+      "title": "Was steckt im Beutel?",
+      "sourceVersion": "A07",
+      "sourcePdfSha256": "0f13a3b4522ba0fdb2c1b05a0afa3ff3548b49f2a5ad3448746d3ce341f0c2fc",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        12,
+        16,
+        582,
+        236
+      ],
+      "content": "Titel, Materialbild und Materialkasten. Kein vollständiger Ablauf.",
+      "excludedContent": "Morgenkreisablauf einschließlich Geschichte, Beutelrunde und Abschluss.",
+      "path": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+      "sha256": "0dac6af9994b83608615dd2ece2461279ad27a433e9ac8a7c62941426dab9d3e",
+      "bytes": 57751,
+      "width": 320,
+      "height": 124
+    },
+    {
+      "productId": "VORSCHULE-WALD-04-KINDERBLATT",
+      "title": "Kinderblatt zu Unser Wald aus Formen",
+      "sourceVersion": "BILDSTANDARD_A01",
+      "sourcePdfSha256": "b526eecc1aa3bc46cd1c9e78167e955900fbcb822c5106ce11b0f129eef26367",
+      "sourcePage": 1,
+      "pdfClipPt": [
+        22,
+        16,
+        573.2756,
+        422
+      ],
+      "content": "Erste Aufgabenzeile und Waldbild.",
+      "excludedContent": "Aufgaben 2 und 3: Formen nachfahren und gehörte Formen einkreisen.",
+      "path": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+      "sha256": "e390b35fd4e5a64475be8a5d4a33fe3bf9be78fda5f1977bc2c7502f3ebb4466",
+      "bytes": 112552,
+      "width": 380,
+      "height": 280
+    }
+  ]
+}

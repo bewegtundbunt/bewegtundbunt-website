@@ -1,0 +1,2179 @@
+{
+ "at": "2026-09-24T17:22:12.914Z",
+ "browser": "141.0.7390.37",
+ "layout": [
+  {
+   "width": 320,
+   "fonts": {
+    "fonts": "loaded",
+    "sora": true
+   },
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "outside": [],
+   "textOverflow": [],
+   "mirrored": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "complete": true,
+     "natural": "1024×1024",
+     "ratioOk": true,
+     "renderedW": 36,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 179,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×124",
+     "ratioOk": true,
+     "renderedW": 173,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 177,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 115,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 118,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 154,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 146,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "complete": true,
+     "natural": "380×280",
+     "ratioOk": true,
+     "renderedW": 205,
+     "upscaled": false
+    }
+   ],
+   "areaFans": [
+    {
+     "card": "Morgenkreis · Kindergarten",
+     "srcs": [
+      "morgenkreis-wald-01-ausschnitt.png",
+      "morgenkreis-wald-02-ausschnitt.png",
+      "morgenkreis-wald-03-ausschnitt.png",
+      "morgenkreis-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 107.8,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    },
+    {
+     "card": "Bewegungseinheiten · Kindergarten",
+     "srcs": [
+      "sport-wald-01-ausschnitt.png",
+      "sport-wald-02-ausschnitt.png",
+      "sport-wald-03-ausschnitt.png",
+      "sport-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 107.8,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    },
+    {
+     "card": "Vorschule · für die Großen im Kindergarten",
+     "srcs": [
+      "vorschule-wald-01-ausschnitt.png",
+      "vorschule-wald-02-ausschnitt.png",
+      "vorschule-wald-03-ausschnitt.png",
+      "vorschule-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 107.8,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    }
+   ],
+   "heroFan": [
+    {
+     "src": "sport-wald-01-ausschnitt.png",
+     "z": 1,
+     "top": 846
+    },
+    {
+     "src": "morgenkreis-zoo-01-ausschnitt.png",
+     "z": 2,
+     "top": 829
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 3,
+     "top": 711
+    }
+   ],
+   "kinderFan": [
+    {
+     "src": "vorschule-wald-01-ausschnitt.png",
+     "z": 1,
+     "w": 154
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 2,
+     "w": 146
+    },
+    {
+     "src": "vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "z": 3,
+     "w": 205
+    }
+   ],
+   "headings": [
+    "H1 Mit Themenwelten durch den Kita-Alltag",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Aus Papier wird ein eigener Wald",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "sections": [
+    "hero",
+    "morgenkreis",
+    "bewegungseinheiten",
+    "vorschule",
+    "section pale",
+    "themenwelten",
+    "section white",
+    "section cta-section"
+   ],
+   "handoutRefs": [],
+   "productClasses": 0,
+   "cssBackgroundImages": [],
+   "navHeights": [
+    44,
+    44,
+    44,
+    44,
+    44,
+    44
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "vorschule",
+    "vorschule-title",
+    "verbindet-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": [],
+    "requested": [
+     "/index.html",
+     "/assets/fonts/fonts.css",
+     "/assets/images/logo.png",
+     "/assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "/assets/fonts/dancing-script-variable.woff2",
+     "/assets/fonts/sora-variable.woff2",
+     "/assets/fonts/source-serif-4-italic.woff",
+     "/assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png"
+    ]
+   }
+  },
+  {
+   "width": 360,
+   "fonts": {
+    "fonts": "loaded",
+    "sora": true
+   },
+   "scrollWidth": 360,
+   "clientWidth": 360,
+   "outside": [],
+   "textOverflow": [],
+   "mirrored": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "complete": true,
+     "natural": "1024×1024",
+     "ratioOk": true,
+     "renderedW": 36,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 204,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×124",
+     "ratioOk": true,
+     "renderedW": 197,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 134,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 137,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 175,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 167,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "complete": true,
+     "natural": "380×280",
+     "ratioOk": true,
+     "renderedW": 234,
+     "upscaled": false
+    }
+   ],
+   "areaFans": [
+    {
+     "card": "Morgenkreis · Kindergarten",
+     "srcs": [
+      "morgenkreis-wald-01-ausschnitt.png",
+      "morgenkreis-wald-02-ausschnitt.png",
+      "morgenkreis-wald-03-ausschnitt.png",
+      "morgenkreis-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 121,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    },
+    {
+     "card": "Bewegungseinheiten · Kindergarten",
+     "srcs": [
+      "sport-wald-01-ausschnitt.png",
+      "sport-wald-02-ausschnitt.png",
+      "sport-wald-03-ausschnitt.png",
+      "sport-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 121,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    },
+    {
+     "card": "Vorschule · für die Großen im Kindergarten",
+     "srcs": [
+      "vorschule-wald-01-ausschnitt.png",
+      "vorschule-wald-02-ausschnitt.png",
+      "vorschule-wald-03-ausschnitt.png",
+      "vorschule-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 121,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.38,
+      0.39,
+      0.39
+     ],
+     "links": 0
+    }
+   ],
+   "heroFan": [
+    {
+     "src": "sport-wald-01-ausschnitt.png",
+     "z": 1,
+     "top": 781
+    },
+    {
+     "src": "morgenkreis-zoo-01-ausschnitt.png",
+     "z": 2,
+     "top": 762
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 3,
+     "top": 627
+    }
+   ],
+   "kinderFan": [
+    {
+     "src": "vorschule-wald-01-ausschnitt.png",
+     "z": 1,
+     "w": 175
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 2,
+     "w": 167
+    },
+    {
+     "src": "vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "z": 3,
+     "w": 234
+    }
+   ],
+   "headings": [
+    "H1 Mit Themenwelten durch den Kita-Alltag",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Aus Papier wird ein eigener Wald",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "sections": [
+    "hero",
+    "morgenkreis",
+    "bewegungseinheiten",
+    "vorschule",
+    "section pale",
+    "themenwelten",
+    "section white",
+    "section cta-section"
+   ],
+   "handoutRefs": [],
+   "productClasses": 0,
+   "cssBackgroundImages": [],
+   "navHeights": [
+    44,
+    44,
+    44,
+    44,
+    44,
+    44
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "vorschule",
+    "vorschule-title",
+    "verbindet-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": [],
+    "requested": [
+     "/index.html",
+     "/assets/fonts/fonts.css",
+     "/assets/images/logo.png",
+     "/assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "/assets/fonts/dancing-script-variable.woff2",
+     "/assets/fonts/sora-variable.woff2",
+     "/assets/fonts/source-serif-4-italic.woff",
+     "/assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png"
+    ]
+   }
+  },
+  {
+   "width": 390,
+   "fonts": {
+    "fonts": "loaded",
+    "sora": true
+   },
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "outside": [],
+   "textOverflow": [],
+   "mirrored": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "complete": true,
+     "natural": "1024×1024",
+     "ratioOk": true,
+     "renderedW": 36,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 223,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×124",
+     "ratioOk": true,
+     "renderedW": 215,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 221,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 140,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 143,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 191,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 182,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "complete": true,
+     "natural": "380×280",
+     "ratioOk": true,
+     "renderedW": 256,
+     "upscaled": false
+    }
+   ],
+   "areaFans": [
+    {
+     "card": "Morgenkreis · Kindergarten",
+     "srcs": [
+      "morgenkreis-wald-01-ausschnitt.png",
+      "morgenkreis-wald-02-ausschnitt.png",
+      "morgenkreis-wald-03-ausschnitt.png",
+      "morgenkreis-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 125,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.4,
+      0.41,
+      0.41
+     ],
+     "links": 0
+    },
+    {
+     "card": "Bewegungseinheiten · Kindergarten",
+     "srcs": [
+      "sport-wald-01-ausschnitt.png",
+      "sport-wald-02-ausschnitt.png",
+      "sport-wald-03-ausschnitt.png",
+      "sport-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 125,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.4,
+      0.41,
+      0.41
+     ],
+     "links": 0
+    },
+    {
+     "card": "Vorschule · für die Großen im Kindergarten",
+     "srcs": [
+      "vorschule-wald-01-ausschnitt.png",
+      "vorschule-wald-02-ausschnitt.png",
+      "vorschule-wald-03-ausschnitt.png",
+      "vorschule-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 125,
+     "boxH": 128,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.4,
+      0.41,
+      0.41
+     ],
+     "links": 0
+    }
+   ],
+   "heroFan": [
+    {
+     "src": "sport-wald-01-ausschnitt.png",
+     "z": 1,
+     "top": 778
+    },
+    {
+     "src": "morgenkreis-zoo-01-ausschnitt.png",
+     "z": 2,
+     "top": 757
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 3,
+     "top": 610
+    }
+   ],
+   "kinderFan": [
+    {
+     "src": "vorschule-wald-01-ausschnitt.png",
+     "z": 1,
+     "w": 191
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 2,
+     "w": 182
+    },
+    {
+     "src": "vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "z": 3,
+     "w": 256
+    }
+   ],
+   "headings": [
+    "H1 Mit Themenwelten durch den Kita-Alltag",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Aus Papier wird ein eigener Wald",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "sections": [
+    "hero",
+    "morgenkreis",
+    "bewegungseinheiten",
+    "vorschule",
+    "section pale",
+    "themenwelten",
+    "section white",
+    "section cta-section"
+   ],
+   "handoutRefs": [],
+   "productClasses": 0,
+   "cssBackgroundImages": [],
+   "navHeights": [
+    44,
+    44,
+    44,
+    44,
+    44,
+    44
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "vorschule",
+    "vorschule-title",
+    "verbindet-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": [],
+    "requested": [
+     "/index.html",
+     "/assets/fonts/fonts.css",
+     "/assets/images/logo.png",
+     "/assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "/assets/fonts/dancing-script-variable.woff2",
+     "/assets/fonts/sora-variable.woff2",
+     "/assets/fonts/source-serif-4-italic.woff",
+     "/assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png"
+    ]
+   }
+  },
+  {
+   "width": 768,
+   "fonts": {
+    "fonts": "loaded",
+    "sora": true
+   },
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "outside": [],
+   "textOverflow": [],
+   "mirrored": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "complete": true,
+     "natural": "1024×1024",
+     "ratioOk": true,
+     "renderedW": 36,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 276,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×124",
+     "ratioOk": true,
+     "renderedW": 266,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 273,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 148,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 153,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 279,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 266,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "complete": true,
+     "natural": "380×280",
+     "ratioOk": true,
+     "renderedW": 373,
+     "upscaled": false
+    }
+   ],
+   "areaFans": [
+    {
+     "card": "Morgenkreis · Kindergarten",
+     "srcs": [
+      "morgenkreis-wald-01-ausschnitt.png",
+      "morgenkreis-wald-02-ausschnitt.png",
+      "morgenkreis-wald-03-ausschnitt.png",
+      "morgenkreis-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 152.8,
+     "boxH": 152,
+     "clearOfText": false,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    },
+    {
+     "card": "Bewegungseinheiten · Kindergarten",
+     "srcs": [
+      "sport-wald-01-ausschnitt.png",
+      "sport-wald-02-ausschnitt.png",
+      "sport-wald-03-ausschnitt.png",
+      "sport-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 152.8,
+     "boxH": 152,
+     "clearOfText": false,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    },
+    {
+     "card": "Vorschule · für die Großen im Kindergarten",
+     "srcs": [
+      "vorschule-wald-01-ausschnitt.png",
+      "vorschule-wald-02-ausschnitt.png",
+      "vorschule-wald-03-ausschnitt.png",
+      "vorschule-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 152.8,
+     "boxH": 152,
+     "clearOfText": false,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    }
+   ],
+   "heroFan": [
+    {
+     "src": "sport-wald-01-ausschnitt.png",
+     "z": 1,
+     "top": 702
+    },
+    {
+     "src": "morgenkreis-zoo-01-ausschnitt.png",
+     "z": 2,
+     "top": 676
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 3,
+     "top": 494
+    }
+   ],
+   "kinderFan": [
+    {
+     "src": "vorschule-wald-01-ausschnitt.png",
+     "z": 1,
+     "w": 279
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 2,
+     "w": 266
+    },
+    {
+     "src": "vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "z": 3,
+     "w": 373
+    }
+   ],
+   "headings": [
+    "H1 Mit Themenwelten durch den Kita-Alltag",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Aus Papier wird ein eigener Wald",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "sections": [
+    "hero",
+    "morgenkreis",
+    "bewegungseinheiten",
+    "vorschule",
+    "section pale",
+    "themenwelten",
+    "section white",
+    "section cta-section"
+   ],
+   "handoutRefs": [],
+   "productClasses": 0,
+   "cssBackgroundImages": [],
+   "navHeights": [
+    44,
+    44,
+    44,
+    44,
+    44,
+    44
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "vorschule",
+    "vorschule-title",
+    "verbindet-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": [],
+    "requested": [
+     "/index.html",
+     "/assets/fonts/fonts.css",
+     "/assets/images/logo.png",
+     "/assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "/assets/fonts/dancing-script-variable.woff2",
+     "/assets/fonts/sora-variable.woff2",
+     "/assets/fonts/source-serif-4-italic.woff",
+     "/assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png"
+    ]
+   }
+  },
+  {
+   "width": 1440,
+   "fonts": {
+    "fonts": "loaded",
+    "sora": true
+   },
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "outside": [],
+   "textOverflow": [],
+   "mirrored": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "complete": true,
+     "natural": "1024×1024",
+     "ratioOk": true,
+     "renderedW": 42,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 295,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×124",
+     "ratioOk": true,
+     "renderedW": 284,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 292,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 195,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 196,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 195,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 196,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 195,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 196,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 202,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 279,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "complete": true,
+     "natural": "320×213",
+     "ratioOk": true,
+     "renderedW": 266,
+     "upscaled": false
+    },
+    {
+     "src": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "complete": true,
+     "natural": "380×280",
+     "ratioOk": true,
+     "renderedW": 373,
+     "upscaled": false
+    }
+   ],
+   "areaFans": [
+    {
+     "card": "Morgenkreis · Kindergarten",
+     "srcs": [
+      "morgenkreis-wald-01-ausschnitt.png",
+      "morgenkreis-wald-02-ausschnitt.png",
+      "morgenkreis-wald-03-ausschnitt.png",
+      "morgenkreis-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 187.6,
+     "boxH": 192,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    },
+    {
+     "card": "Bewegungseinheiten · Kindergarten",
+     "srcs": [
+      "sport-wald-01-ausschnitt.png",
+      "sport-wald-02-ausschnitt.png",
+      "sport-wald-03-ausschnitt.png",
+      "sport-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 187.6,
+     "boxH": 192,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    },
+    {
+     "card": "Vorschule · für die Großen im Kindergarten",
+     "srcs": [
+      "vorschule-wald-01-ausschnitt.png",
+      "vorschule-wald-02-ausschnitt.png",
+      "vorschule-wald-03-ausschnitt.png",
+      "vorschule-wald-04-ausschnitt.png"
+     ],
+     "distinct": 4,
+     "z": [
+      4,
+      3,
+      2,
+      1
+     ],
+     "unionH": 187.6,
+     "boxH": 192,
+     "clearOfText": true,
+     "insideCard": true,
+     "visibleShare": [
+      1,
+      0.22,
+      0.24,
+      0.24
+     ],
+     "links": 0
+    }
+   ],
+   "heroFan": [
+    {
+     "src": "sport-wald-01-ausschnitt.png",
+     "z": 1,
+     "top": 365
+    },
+    {
+     "src": "morgenkreis-zoo-01-ausschnitt.png",
+     "z": 2,
+     "top": 337
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 3,
+     "top": 143
+    }
+   ],
+   "kinderFan": [
+    {
+     "src": "vorschule-wald-01-ausschnitt.png",
+     "z": 1,
+     "w": 279
+    },
+    {
+     "src": "vorschule-wald-04-ausschnitt.png",
+     "z": 2,
+     "w": 266
+    },
+    {
+     "src": "vorschule-wald-04-kinderblatt-ausschnitt.png",
+     "z": 3,
+     "w": 373
+    }
+   ],
+   "headings": [
+    "H1 Mit Themenwelten durch den Kita-Alltag",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Aus Papier wird ein eigener Wald",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "sections": [
+    "hero",
+    "morgenkreis",
+    "bewegungseinheiten",
+    "vorschule",
+    "section pale",
+    "themenwelten",
+    "section white",
+    "section cta-section"
+   ],
+   "handoutRefs": [],
+   "productClasses": 0,
+   "cssBackgroundImages": [],
+   "navHeights": [
+    44,
+    44,
+    44,
+    44,
+    44,
+    44
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "vorschule",
+    "vorschule-title",
+    "verbindet-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": [],
+    "requested": [
+     "/index.html",
+     "/assets/fonts/fonts.css",
+     "/assets/images/logo.png",
+     "/assets/previews/a02/sport-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+     "/assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-02-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-03-ausschnitt.png",
+     "/assets/previews/a02/sport-wald-04-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+     "/assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+     "/assets/fonts/dancing-script-variable.woff2",
+     "/assets/fonts/sora-variable.woff2",
+     "/assets/fonts/source-serif-4-italic.woff",
+     "/assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png"
+    ]
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "width": 390,
+   "hash": "bereiche",
+   "section": "bereiche",
+   "heading": "Morgenkreis · Kindergarten",
+   "headingTop": 199,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "hash": "morgenkreis",
+   "section": "morgenkreis",
+   "heading": "Eine Geschichte, ein Spiel, ein Ritual.",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "hash": "bewegungseinheiten",
+   "section": "bewegungseinheiten",
+   "heading": "Der rote Faden einer Einheit",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "hash": "bewegungsstunden",
+   "section": "bewegungseinheiten",
+   "heading": "Der rote Faden einer Einheit",
+   "headingTop": 50,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "hash": "vorschule",
+   "section": "vorschule",
+   "heading": "Zählen, zuhören, ordnen, gestalten.",
+   "headingTop": 119,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "hash": "themenwelten",
+   "section": "themenwelten",
+   "heading": "Themenwelten. Die Klammer um alle Angebote.",
+   "headingTop": 82,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "bereiche",
+   "section": "bereiche",
+   "heading": "Morgenkreis · Kindergarten",
+   "headingTop": 365,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "morgenkreis",
+   "section": "morgenkreis",
+   "heading": "Eine Geschichte, ein Spiel, ein Ritual.",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "bewegungseinheiten",
+   "section": "bewegungseinheiten",
+   "heading": "Der rote Faden einer Einheit",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "bewegungsstunden",
+   "section": "bewegungseinheiten",
+   "heading": "Der rote Faden einer Einheit",
+   "headingTop": 141,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "vorschule",
+   "section": "vorschule",
+   "heading": "Zählen, zuhören, ordnen, gestalten.",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "hash": "themenwelten",
+   "section": "themenwelten",
+   "heading": "Themenwelten. Die Klammer um alle Angebote.",
+   "headingTop": 198,
+   "headerBottom": 77,
+   "visible": true
+  }
+ ],
+ "nav": [
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "section": "bewegungseinheiten",
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "section": "vorschule",
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "section": "themenwelten",
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "section": "morgenkreis",
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/index.html",
+   "link": "Über mich",
+   "url": "/about.html",
+   "title": "Über mich — bewegt & bunt"
+  },
+  {
+   "width": 390,
+   "from": "/index.html",
+   "link": "Kontakt",
+   "url": "/contact.html",
+   "title": "Kontakt — bewegt & bunt"
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "section": "bewegungseinheiten",
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "section": "vorschule",
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "section": "themenwelten",
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "section": "morgenkreis",
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/index.html",
+   "link": "Über mich",
+   "url": "/about.html",
+   "title": "Über mich — bewegt & bunt"
+  },
+  {
+   "width": 1440,
+   "from": "/index.html",
+   "link": "Kontakt",
+   "url": "/contact.html",
+   "title": "Kontakt — bewegt & bunt"
+  }
+ ],
+ "keyboard": [
+  {
+   "width": 390,
+   "count": 12,
+   "order": true,
+   "seq": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "Mehr über René →",
+    "Kontakt aufnehmen",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz"
+   ],
+   "problems": []
+  },
+  {
+   "width": 1440,
+   "count": 12,
+   "order": true,
+   "seq": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "Mehr über René →",
+    "Kontakt aufnehmen",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz"
+   ],
+   "problems": []
+  }
+ ],
+ "screenshots": [
+  "index_320_einstieg-bereiche.png",
+  "index_360_einstieg-bereiche.png",
+  "index_390_einstieg-bereiche.png",
+  "index_768_einstieg-bereiche.png",
+  "index_1440_einstieg-bereiche.png",
+  "index_390x844_erster-bildschirm.png",
+  "index_1440_erster-bildschirm.png",
+  "index_390_morgenkreis.png",
+  "index_390_bewegungseinheiten.png",
+  "index_390_vorschule-kinderblatt.png",
+  "index_390_gesamt.png",
+  "fokus_390_navigation-vorschule.png",
+  "fokus_390_kontaktknopf.png",
+  "index_1440_morgenkreis.png",
+  "index_1440_bewegungseinheiten.png",
+  "index_1440_vorschule-kinderblatt.png",
+  "index_1440_gesamt.png",
+  "fokus_1440_navigation-vorschule.png",
+  "fokus_1440_kontaktknopf.png"
+ ],
+ "domText": "bewegt & bunt\nMorgenkreis\nBewegungseinheiten\nVorschule\nThemenwelten\nÜber mich\nKontakt\nMit Themenwelten durch den Kita-Alltag\n\nMorgenkreis, Bewegungseinheiten und Vorschule – verbunden durch eine gemeinsame Themenwelt.\n\nbewegt & bunt entwickelt klar aufgebaute Handouts für den Kita-Alltag, für die Vorschule mit passendem Kinderblatt. Sie unterstützen pädagogische Fachkräfte bei der Vorbereitung und geben Kindern Raum zum Spielen, Lernen und Gestalten.\n\nThemenwelt Wald\n\nMorgenkreis · Kindergarten\n\nEine Geschichte, ein Spiel und vertraute Rituale öffnen im Sitzkreis die Themenwelt.\n\nThemenwelt Wald\n\nBewegungseinheiten · Kindergarten\n\nAus vertrautem Material wird eine Themenstunde im Bewegungsraum – mit einem klaren Ablauf und Zeit zum Ausklingen.\n\nThemenwelt Wald\n\nVorschule · für die Großen im Kindergarten\n\nZählen, zuhören, ordnen, gestalten: Jede Vorschuleinheit verbindet ein Handout mit einem passenden Kinderblatt.\n\nEinblicke in Morgenkreis, Bewegungseinheiten und Vorschule. Bilder KI-generiert.\n\nMorgenkreis · Kindergarten\n\nEine Geschichte, ein Spiel, ein Ritual.\n\nEin Blatt, ein Morgen: Eine kurze Geschichte und ein Spiel führen in die Themenwelt. Vertraute Rituale begrüßen die Kinder und schließen den Kreis.\n\nSo läuft ein Morgenkreis\nAnkommen\n\n„1, 2, 3 – der Morgenkreis kommt herbei.\" Alle Kinder werden mit Namen begrüßt, der Tag bekommt seinen Platz – und dann öffnet sich das Tor in die Themenwelt.\n\nDie Geschichte\n\nEine kurze Erzählung aus der Welt: das Eichhörnchen und die verschwundene Eichel, die Feldmaus in der Scheune, die Tierpflegerin in der Futterküche. Vorgelesen, im eigenen Tempo.\n\nDas Spiel\n\nEin Spiel in der Kreismitte: suchen, verwandeln, lauschen oder ausprobieren. Je nach Blatt kommt das Spiel vor oder nach der Geschichte – das Blatt sagt es.\n\nDer Abschied\n\nEin Blick aus dem Fenster aufs Wetter, dreimal ruhig atmen, und alle rufen gemeinsam: „1, 2, 3 – der Morgenkreis ist vorbei.\" Jeder Morgenkreis endet gleich.\n\nVier Morgenkreise – vier Arten, eine Welt zu erleben\n\nZu jeder Themenwelt gehören vier Morgenkreise, einer je Art. Wald und Bauernhof haben alle vier, der Zoo sein erstes. Keine feste Reihenfolge – Sie wählen, was zu Ihrer Woche passt.\n\nSuchen & Merken\n\nEtwas liegt versteckt – unter drei Bechern, unter einem Tuch, in einem Fühlbeutel. Die Kinder suchen, tasten und merken sich, was sie gefunden haben.\n\nBewegen & Verwandeln\n\nDie Geschichte gibt das Stichwort, die Kinder machen die Bewegung: Ein Baum wiegt sich, ein Blatt dreht sich, eine Kastanie rollt sich klein und rund zusammen.\n\nHören & Klingen\n\nJedes Kind bekommt ein Instrument. Erst wird gelauscht, dann weckt die Geschichte den Wald oder den Hof – laut, lauter, und wieder ganz still.\n\nForschen & Staunen\n\nEine Frage und ein kleiner Versuch in der Kreismitte: Welches Dach hält dicht? Wer lässt den Mais tanzen? Vermuten, hinsehen, staunen.\n\nDen Morgenkreis gibt es zunächst für den Kindergarten. Die Blätter sind im begleiteten Praxistest – wie Sie mitmachen können, steht unter Kontakt.\n\nBewegungseinheiten · Kindergarten\n\nDer rote Faden einer Einheit\nAnkommen\n\nDie Kinder finden in die Themenwelt und stimmen sich auf die gemeinsame Bewegung ein.\n\nDas erste Spiel\n\nDas Handout beschreibt die Spielidee und gibt Hinweise für die Begleitung.\n\nDas zweite Spiel\n\nEin weiterer Impuls lädt zum Bewegen und Ausprobieren ein.\n\nRuhig ausklingen\n\nEin gemeinsamer Abschluss führt aus der Bewegung in die Ruhe.\n\nVorschule · für die Großen im Kindergarten\n\nZählen, zuhören, ordnen, gestalten.\n\nIn der Vorschule wird die Themenwelt zum Lernanlass. Jede Einheit verbindet ein Handout für pädagogische Fachkräfte mit einem passenden Kinderblatt – zum Zählen, Zuhören, Ordnen und Gestalten.\n\nEinblick in ein Kinderblatt zur Themenwelt Wald.\nAus Papier wird ein eigener Wald\n\nZum Handout gehört ein Kinderblatt, das die Idee aufgreift. Bei „Unser Wald aus Formen“ gestalten die Kinder ihren Wald mit Papierformen, fahren einfache Formen nach und erkennen Formen beim Zuhören in einer Geschichte.\n\nJe nach Einheit wird gezählt, genau hingehört, zugeordnet, nachgezeichnet oder gestaltet. Auch Schere, Papier und Kleber können dazugehören. Welche Materialien benötigt werden, steht im jeweiligen Handout.\n\nFantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.\nFantasie für die Kinder\n\nAus vertrauten Dingen wird eine Welt: Im Sitzkreis öffnet sich das Waldtor, im Bewegungsraum werden Matten zu Waldteichen, und in der Vorschule entsteht ein Wald aus Formen. Die gemeinsame Themenwelt verbindet Geschichten, Bewegung und Gestaltung.\n\nStruktur für die Stunde\n\nEin wiederkehrender Aufbau macht Material, Ablauf und Begleitung leicht auffindbar – im Morgenkreis, in der Bewegungseinheit und in der Vorschule. So können Sie sich auf Ihre Gruppe konzentrieren.\n\nRuhe für Sie\n\nKein Erfinden unter Zeitdruck: Das Blatt trägt den Ablauf – und lässt Raum für Ihre Gruppe. Sie entscheiden, was Ihre Kinder heute brauchen.\n\nThemenwelten. Die Klammer um alle Angebote.\n\nDer Wald verbindet erstmals alle drei Bereiche: je vier Morgenkreise, Bewegungseinheiten und Vorschuleinheiten. Bauernhof und Zoo erweitern die Themenwelten mit ihrem eigenen Entwicklungsstand.\n\nWald\n\nJe vier Einheiten für Morgenkreis, Bewegung und Vorschule – verbunden durch die Tiere, Geschichten und Materialien des Waldes.\n\nBauernhof\n\nVier Morgenkreise im Praxistest. Dazu liegt eine Vorschuleinheit bereits als Entwurf vor.\n\nZoo\n\nErster Morgenkreis im Praxistest: Was steckt im Beutel?\n\nWeitere Themenwelten können wachsen – für Morgenkreis, Bewegungseinheiten und Vorschule.\n\nAus der Praxis gedacht\n\nRené Krakow ist Ergotherapeut und begleitet Kinder individuell in Krippe und Kindergarten. bewegt & bunt ist aus diesem Alltag entstanden – aus einer einfachen Frage: Wie können Morgenkreis, Bewegungseinheiten und Vorschule klar vorbereitet sein und trotzdem offen für jedes einzelne Kind bleiben? Die Antwort steht auf jedem Blatt: Sie kennen Ihre Kinder. bewegt & bunt liefert Struktur und roten Faden.\n\nMehr über René →\n„Ein Hütchen bleibt ein Hütchen – bis ein Kind darin einen Fliegenpilz sieht.\"\nNeugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?\n\nDie Morgenkreis-Handouts werden im begleiteten Praxistest eingesetzt und persönlich weitergegeben – zum Ausprobieren in Ihrer Gruppe, nicht zum Weitergeben. Wenn Sie eine Rückmeldung geben, einen Einblick erhalten oder mit Ihrer Einrichtung teilnehmen möchten, schreiben Sie mir gern – ich antworte zeitnah.\n\nKontakt aufnehmen\n\nbewegt & bunt — Morgenkreis, Bewegungseinheiten und Vorschule für Kitas.\n\nFragen, Interesse, Anmerkungen?\n\ninfo@bewegtundbunt.de\n© 2026 René Krakow · Leipzig\nImpressum\nDatenschutz"
+}

@@ -1,0 +1,7125 @@
+{
+ "startedAt": "2026-09-24T16:29:13.154Z",
+ "base": "http://127.0.0.1:8765",
+ "browser": "141.0.7390.37",
+ "viewportHeight": 900,
+ "deviceScaleFactor": 1,
+ "layout": [
+  {
+   "page": "/index.html",
+   "width": 320,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 15,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "bodyScrollWidth": 320,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 120,
+     "renderedH": 170.92,
+     "contentRatio": 0.6982,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 120,
+     "renderedH": 170.92,
+     "contentRatio": 0.6982,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 120,
+     "renderedH": 170.92,
+     "contentRatio": 0.6982,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 120,
+     "renderedH": 170.92,
+     "contentRatio": 0.6982,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 120,
+     "renderedH": 169.06,
+     "contentRatio": 0.7066,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 115,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 115,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 17,
+     "y": 147,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 115,
+     "y": 147,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 197.9,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 128,
+     "imagesUnion": 119.7,
+     "unionWidth": 242.4,
+     "cardWidth": 286
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 286
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 286
+    }
+   ],
+   "areaCardsColumns": "untereinander",
+   "areaCardsBottom": 1906,
+   "productRowColumns": [
+    2,
+    2,
+    2
+   ],
+   "remeasure": {
+    "sw": 320,
+    "h": 17301
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/about.html",
+   "width": 320,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 37,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "bodyScrollWidth": 320,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 115,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 115,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page",
+     "x": 17,
+     "y": 147,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 115,
+     "y": 147,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Über mich"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 198,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 320,
+    "h": 2289
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/contact.html",
+   "width": 320,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 5,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "bodyScrollWidth": 320,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 58,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 115,
+     "y": 58,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 17,
+     "y": 102,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 115,
+     "y": 102,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 17,
+     "y": 146,
+     "w": 83,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page",
+     "x": 115,
+     "y": 146,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Kontakt"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 197.2,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 320,
+    "h": 1260
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/index.html",
+   "width": 360,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 28,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 360,
+   "clientWidth": 360,
+   "bodyScrollWidth": 360,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 139,
+     "renderedH": 198.13,
+     "contentRatio": 0.699,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 139,
+     "renderedH": 198.13,
+     "contentRatio": 0.699,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 139,
+     "renderedH": 198.13,
+     "contentRatio": 0.699,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 139,
+     "renderedH": 198.13,
+     "contentRatio": 0.699,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 139,
+     "renderedH": 195.95,
+     "contentRatio": 0.7062,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 59,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 128,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 280,
+     "y": 103,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 153.9,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 128,
+     "imagesUnion": 119.7,
+     "unionWidth": 242.4,
+     "cardWidth": 326
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 326
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 326
+    }
+   ],
+   "areaCardsColumns": "untereinander",
+   "areaCardsBottom": 1758,
+   "productRowColumns": [
+    2,
+    2,
+    2
+   ],
+   "remeasure": {
+    "sw": 360,
+    "h": 16361
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/about.html",
+   "width": 360,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 27,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 360,
+   "clientWidth": 360,
+   "bodyScrollWidth": 360,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 59,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page",
+     "x": 128,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 280,
+     "y": 103,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Über mich"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 154,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 360,
+    "h": 1996
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/contact.html",
+   "width": 360,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 22,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 360,
+   "clientWidth": 360,
+   "bodyScrollWidth": 360,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 58,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 58,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 58,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 102,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 128,
+     "y": 102,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page",
+     "x": 280,
+     "y": 102,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Kontakt"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 153.2,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 360,
+    "h": 1216
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/index.html",
+   "width": 390,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 22,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "bodyScrollWidth": 390,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 59,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 128,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 280,
+     "y": 103,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 153.9,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 128,
+     "imagesUnion": 119.7,
+     "unionWidth": 242.4,
+     "cardWidth": 356
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 356
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 356
+    }
+   ],
+   "areaCardsColumns": "untereinander",
+   "areaCardsBottom": 1718,
+   "productRowColumns": [
+    2,
+    2,
+    2
+   ],
+   "remeasure": {
+    "sw": 390,
+    "h": 15753
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/about.html",
+   "width": 390,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 29,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "bodyScrollWidth": 390,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 59,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page",
+     "x": 128,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 280,
+     "y": 103,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Über mich"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 154,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 390,
+    "h": 1884
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/contact.html",
+   "width": 390,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 34,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "bodyScrollWidth": 390,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 58,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 58,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 58,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 102,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 128,
+     "y": 102,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page",
+     "x": 280,
+     "y": 102,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Kontakt"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 153.2,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 390,
+    "h": 1216
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/index.html",
+   "width": 768,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 29,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "bodyScrollWidth": 768,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 101.24,
+     "renderedH": 131.7,
+     "contentRatio": 0.6983,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.22,
+     "renderedH": 124.96,
+     "contentRatio": 0.6983,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.22,
+     "renderedH": 124.96,
+     "contentRatio": 0.6983,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 101.24,
+     "renderedH": 131.7,
+     "contentRatio": 0.6983,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 102.13,
+     "renderedH": 131.81,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.13,
+     "renderedH": 124.99,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.13,
+     "renderedH": 124.99,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 102.13,
+     "renderedH": 131.81,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 102.13,
+     "renderedH": 131.81,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.13,
+     "renderedH": 124.99,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.13,
+     "renderedH": 124.99,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 102.13,
+     "renderedH": 131.81,
+     "contentRatio": 0.7069,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 140.5,
+     "renderedH": 200.27,
+     "contentRatio": 0.702,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 140.5,
+     "renderedH": 200.27,
+     "contentRatio": 0.702,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 140.5,
+     "renderedH": 200.27,
+     "contentRatio": 0.702,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 140.5,
+     "renderedH": 200.27,
+     "contentRatio": 0.702,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 140.5,
+     "renderedH": 198.08,
+     "contentRatio": 0.7092,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 282,
+     "y": 10,
+     "w": 90,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 389,
+     "y": 10,
+     "w": 152,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 558,
+     "y": 10,
+     "w": 70,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 645,
+     "y": 10,
+     "w": 106,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 607,
+     "y": 54,
+     "w": 72,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 696,
+     "y": 54,
+     "w": 55,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 140,
+     "imagesUnion": 132.3,
+     "unionWidth": 271.3,
+     "cardWidth": 720
+    },
+    {
+     "box": 140,
+     "imagesUnion": 132.4,
+     "unionWidth": 274.9,
+     "cardWidth": 720
+    },
+    {
+     "box": 140,
+     "imagesUnion": 132.4,
+     "unionWidth": 274.9,
+     "cardWidth": 720
+    }
+   ],
+   "areaCardsColumns": "untereinander",
+   "areaCardsBottom": 1191,
+   "productRowColumns": [
+    4,
+    4,
+    4
+   ],
+   "remeasure": {
+    "sw": 768,
+    "h": 11192
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/about.html",
+   "width": 768,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 21,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "bodyScrollWidth": 768,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 282,
+     "y": 10,
+     "w": 90,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 389,
+     "y": 10,
+     "w": 152,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 558,
+     "y": 10,
+     "w": 70,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 645,
+     "y": 10,
+     "w": 106,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page",
+     "x": 607,
+     "y": 54,
+     "w": 72,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 696,
+     "y": 54,
+     "w": 55,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    }
+   ],
+   "headings": [
+    "H1 Über mich"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 768,
+    "h": 1443
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/contact.html",
+   "width": 768,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 19,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "bodyScrollWidth": 768,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 282,
+     "y": 10,
+     "w": 90,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 389,
+     "y": 10,
+     "w": 152,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 558,
+     "y": 10,
+     "w": 70,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 645,
+     "y": 10,
+     "w": 106,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 607,
+     "y": 54,
+     "w": 72,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page",
+     "x": 696,
+     "y": 54,
+     "w": 55,
+     "h": 44,
+     "visible": true,
+     "fontSize": "13px"
+    }
+   ],
+   "headings": [
+    "H1 Kontakt"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 768,
+    "h": 1053
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/index.html",
+   "width": 1440,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 90,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "bodyScrollWidth": 1440,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 42,
+     "renderedH": 42,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 109.39,
+     "renderedH": 142.47,
+     "contentRatio": 0.6984,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 98.55,
+     "renderedH": 135.2,
+     "contentRatio": 0.6984,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 98.55,
+     "renderedH": 135.2,
+     "contentRatio": 0.6984,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 109.39,
+     "renderedH": 142.47,
+     "contentRatio": 0.6984,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 110.36,
+     "renderedH": 142.59,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 99.53,
+     "renderedH": 135.23,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 99.53,
+     "renderedH": 135.23,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 110.36,
+     "renderedH": 142.59,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 110.36,
+     "renderedH": 142.59,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 99.53,
+     "renderedH": 135.23,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 99.53,
+     "renderedH": 135.23,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 110.36,
+     "renderedH": 142.59,
+     "contentRatio": 0.7063,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 255.5,
+     "renderedH": 364.89,
+     "contentRatio": 0.6997,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 255.5,
+     "renderedH": 364.89,
+     "contentRatio": 0.6997,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 255.5,
+     "renderedH": 364.89,
+     "contentRatio": 0.6997,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 255.5,
+     "renderedH": 364.89,
+     "contentRatio": 0.6997,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 255.5,
+     "renderedH": 360.89,
+     "contentRatio": 0.7075,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 635,
+     "y": 16,
+     "w": 93,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 750,
+     "y": 16,
+     "w": 155,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 927,
+     "y": 16,
+     "w": 73,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 1022,
+     "y": 16,
+     "w": 110,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 1154,
+     "y": 16,
+     "w": 75,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 1251,
+     "y": 16,
+     "w": 59,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 77,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 150,
+     "imagesUnion": 142.8,
+     "unionWidth": 300.4,
+     "cardWidth": 380
+    },
+    {
+     "box": 150,
+     "imagesUnion": 142.9,
+     "unionWidth": 304.3,
+     "cardWidth": 380
+    },
+    {
+     "box": 150,
+     "imagesUnion": 142.9,
+     "unionWidth": 304.3,
+     "cardWidth": 380
+    }
+   ],
+   "areaCardsColumns": "nebeneinander",
+   "areaCardsBottom": 839,
+   "productRowColumns": [
+    4,
+    4,
+    4
+   ],
+   "remeasure": {
+    "sw": 1440,
+    "h": 9796
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/about.html",
+   "width": 1440,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 26,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "bodyScrollWidth": 1440,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 42,
+     "renderedH": 42,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 635,
+     "y": 16,
+     "w": 93,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 750,
+     "y": 16,
+     "w": 155,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 927,
+     "y": 16,
+     "w": 73,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 1022,
+     "y": 16,
+     "w": 110,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page",
+     "x": 1154,
+     "y": 16,
+     "w": 75,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 1251,
+     "y": 16,
+     "w": 59,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    }
+   ],
+   "headings": [
+    "H1 Über mich"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 77,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 1440,
+    "h": 1343
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/contact.html",
+   "width": 1440,
+   "height": 900,
+   "fonts": {
+    "fontsReadyMs": 12,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": false
+   },
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "bodyScrollWidth": 1440,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 42,
+     "renderedH": 42,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null,
+     "x": 635,
+     "y": 16,
+     "w": 93,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null,
+     "x": 750,
+     "y": 16,
+     "w": 155,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null,
+     "x": 927,
+     "y": 16,
+     "w": 73,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null,
+     "x": 1022,
+     "y": 16,
+     "w": 110,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 1154,
+     "y": 16,
+     "w": 75,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page",
+     "x": 1251,
+     "y": 16,
+     "w": 59,
+     "h": 44,
+     "visible": true,
+     "fontSize": "14px"
+    }
+   ],
+   "headings": [
+    "H1 Kontakt"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 77,
+    "position": "sticky"
+   },
+   "smallTargets": [],
+   "areaThumbs": [],
+   "areaCardsColumns": null,
+   "areaCardsBottom": null,
+   "productRowColumns": [],
+   "remeasure": {
+    "sw": 1440,
+    "h": 997
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  },
+  {
+   "page": "/index.html",
+   "width": 390,
+   "height": 844,
+   "fonts": {
+    "fontsReadyMs": 30,
+    "fontsStatus": "loaded",
+    "fonts": [
+     {
+      "family": "Sora",
+      "weight": "400 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Dancing Script",
+      "weight": "600 700",
+      "style": "normal",
+      "status": "loaded"
+     },
+     {
+      "family": "Source Serif 4",
+      "weight": "400",
+      "style": "italic",
+      "status": "loaded"
+     }
+    ],
+    "checkSora": true,
+    "checkDancing": true,
+    "checkSerif": true
+   },
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "bodyScrollWidth": 390,
+   "outside": [],
+   "textOverflow": [],
+   "overlapCards": [],
+   "images": [
+    {
+     "src": "assets/images/logo.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 1024,
+     "naturalHeight": 1024,
+     "attrW": 1024,
+     "attrH": 1024,
+     "renderedW": 36,
+     "renderedH": 36,
+     "contentRatio": 1,
+     "naturalRatio": 1,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 82.43,
+     "renderedH": 112.68,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 91.46,
+     "renderedH": 118.76,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 83.24,
+     "renderedH": 112.71,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 92.27,
+     "renderedH": 118.86,
+     "contentRatio": 0.7019,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 544,
+     "attrW": 380,
+     "attrH": 544,
+     "renderedW": 154,
+     "renderedH": 219.59,
+     "contentRatio": 0.6972,
+     "naturalRatio": 0.6985,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-01-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-02-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-03-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/sport-wald-04-kiga.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-01.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-02.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-03.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    },
+    {
+     "src": "assets/handouts/vorschule-wald-04.png",
+     "alt": "",
+     "complete": true,
+     "naturalWidth": 380,
+     "naturalHeight": 538,
+     "attrW": 380,
+     "attrH": 538,
+     "renderedW": 154,
+     "renderedH": 217.19,
+     "contentRatio": 0.707,
+     "naturalRatio": 0.7063,
+     "objectFit": "fill"
+    }
+   ],
+   "nav": [
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null,
+     "x": 17,
+     "y": 59,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null,
+     "x": 128,
+     "y": 59,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null,
+     "x": 280,
+     "y": 59,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null,
+     "x": 17,
+     "y": 103,
+     "w": 96,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null,
+     "x": 128,
+     "y": 103,
+     "w": 137,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null,
+     "x": 280,
+     "y": 103,
+     "w": 66,
+     "h": 44,
+     "visible": true,
+     "fontSize": "12px"
+    }
+   ],
+   "headings": [
+    "H1 Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule.",
+    "H2 Morgenkreis · Kindergarten",
+    "H2 Bewegungseinheiten · Kindergarten",
+    "H2 Vorschule · für die Großen im Kindergarten",
+    "H2 Eine Geschichte, ein Spiel, ein Ritual.",
+    "H3 Wo ist der Wintervorrat?",
+    "H3 Wer wiegt sich im Wind?",
+    "H3 Wer macht den Wald so laut?",
+    "H3 Welches Dach hält dicht?",
+    "H3 Sie testen gerade ein Morgenkreis-Handout von bewegt & bunt?",
+    "H2 So läuft ein Morgenkreis",
+    "H3 Ankommen",
+    "H3 Die Geschichte",
+    "H3 Das Spiel",
+    "H3 Der Abschied",
+    "H2 Vier Morgenkreise – vier Arten, eine Welt zu erleben",
+    "H3 Suchen & Merken",
+    "H3 Bewegen & Verwandeln",
+    "H3 Hören & Klingen",
+    "H3 Forschen & Staunen",
+    "H2 Die Kinder kommen in Bewegung.",
+    "H3 Frösche und Eichhörnchen",
+    "H3 Wildkatzen und Adler",
+    "H3 Wildschweine und Eichhörnchen",
+    "H3 Igel, Frösche und Adler",
+    "H2 Der rote Faden einer Einheit",
+    "H3 Ankommen",
+    "H3 Das erste Spiel",
+    "H3 Das zweite Spiel",
+    "H3 Ruhig ausklingen",
+    "H2 Zählen, zuhören, ordnen, gestalten.",
+    "H3 Wir zählen im Herbstwald",
+    "H3 Ein Rascheln im Blätterwald",
+    "H3 Was gehört zusammen?",
+    "H3 Unser Wald aus Formen",
+    "H2 Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.",
+    "H3 Fantasie für die Kinder",
+    "H3 Struktur für die Stunde",
+    "H3 Ruhe für Sie",
+    "H2 So entsteht bewegt & bunt",
+    "H3 Ideen aus dem Alltag",
+    "H3 Entwickeln",
+    "H3 In der Praxis erproben",
+    "H3 Rückmeldungen auswerten und verbessern",
+    "H2 Themenwelten. Die Klammer um alle Angebote.",
+    "H3 Wald",
+    "H3 Bauernhof",
+    "H3 Zoo",
+    "H2 Aus der Praxis gedacht",
+    "H2 Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   ],
+   "navOverlap": [],
+   "header": {
+    "height": 153.9,
+    "position": "static"
+   },
+   "smallTargets": [],
+   "areaThumbs": [
+    {
+     "box": 128,
+     "imagesUnion": 119.7,
+     "unionWidth": 242.4,
+     "cardWidth": 356
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 356
+    },
+    {
+     "box": 128,
+     "imagesUnion": 119.8,
+     "unionWidth": 245.7,
+     "cardWidth": 356
+    }
+   ],
+   "areaCardsColumns": "untereinander",
+   "areaCardsBottom": 1718,
+   "productRowColumns": [
+    2,
+    2,
+    2
+   ],
+   "remeasure": {
+    "sw": 390,
+    "h": 15753
+   },
+   "net": {
+    "failed": [],
+    "bad": [],
+    "external": []
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "width": 390,
+   "hash": "bereiche",
+   "url": "/index.html#bereiche",
+   "targetTop": 12,
+   "sectionId": "bereiche",
+   "headerBottom": 0,
+   "headingTop": 169,
+   "heading": "Morgenkreis · Kindergarten",
+   "headingVisible": true,
+   "scrollY": 614,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "morgenkreis",
+   "url": "/index.html#morgenkreis",
+   "targetTop": 12,
+   "sectionId": "morgenkreis",
+   "headerBottom": 0,
+   "headingTop": 119,
+   "heading": "Eine Geschichte, ein Spiel, ein Ritual.",
+   "headingVisible": true,
+   "scrollY": 1815,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "bewegungseinheiten",
+   "url": "/index.html#bewegungseinheiten",
+   "targetTop": 12,
+   "sectionId": "bewegungseinheiten",
+   "headerBottom": 0,
+   "headingTop": 120,
+   "heading": "Die Kinder kommen in Bewegung.",
+   "headingVisible": true,
+   "scrollY": 6354,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "bewegungsstunden",
+   "url": "/index.html#bewegungsstunden",
+   "targetTop": 12,
+   "sectionId": "bewegungseinheiten",
+   "headerBottom": 0,
+   "headingTop": 50,
+   "heading": "Die Kinder kommen in Bewegung.",
+   "headingVisible": true,
+   "scrollY": 6424,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "vorschule",
+   "url": "/index.html#vorschule",
+   "targetTop": 12,
+   "sectionId": "vorschule",
+   "headerBottom": 0,
+   "headingTop": 120,
+   "heading": "Zählen, zuhören, ordnen, gestalten.",
+   "headingVisible": true,
+   "scrollY": 8488,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "themenwelten",
+   "url": "/index.html#themenwelten",
+   "targetTop": 12,
+   "sectionId": "themenwelten",
+   "headerBottom": 0,
+   "headingTop": 82,
+   "heading": "Themenwelten. Die Klammer um alle Angebote.",
+   "headingVisible": true,
+   "scrollY": 12679,
+   "pass": true
+  },
+  {
+   "width": 390,
+   "hash": "arbeitsweise",
+   "url": "/index.html#arbeitsweise",
+   "targetTop": 12,
+   "sectionId": "arbeitsweise",
+   "headerBottom": 0,
+   "headingTop": 82,
+   "heading": "So entsteht bewegt & bunt",
+   "headingVisible": true,
+   "scrollY": 11396,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "bereiche",
+   "url": "/index.html#bereiche",
+   "targetTop": 104,
+   "sectionId": "bereiche",
+   "headerBottom": 77,
+   "headingTop": 295,
+   "heading": "Morgenkreis · Kindergarten",
+   "headingVisible": true,
+   "scrollY": 313,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "morgenkreis",
+   "url": "/index.html#morgenkreis",
+   "targetTop": 104,
+   "sectionId": "morgenkreis",
+   "headerBottom": 77,
+   "headingTop": 235,
+   "heading": "Eine Geschichte, ein Spiel, ein Ritual.",
+   "headingVisible": true,
+   "scrollY": 851,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "bewegungseinheiten",
+   "url": "/index.html#bewegungseinheiten",
+   "targetTop": 104,
+   "sectionId": "bewegungseinheiten",
+   "headerBottom": 77,
+   "headingTop": 236,
+   "heading": "Die Kinder kommen in Bewegung.",
+   "headingVisible": true,
+   "scrollY": 3552,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "bewegungsstunden",
+   "url": "/index.html#bewegungsstunden",
+   "targetTop": 104,
+   "sectionId": "bewegungseinheiten",
+   "headerBottom": 77,
+   "headingTop": 142,
+   "heading": "Die Kinder kommen in Bewegung.",
+   "headingVisible": true,
+   "scrollY": 3646,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "vorschule",
+   "url": "/index.html#vorschule",
+   "targetTop": 104,
+   "sectionId": "vorschule",
+   "headerBottom": 77,
+   "headingTop": 235,
+   "heading": "Zählen, zuhören, ordnen, gestalten.",
+   "headingVisible": true,
+   "scrollY": 5042,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "themenwelten",
+   "url": "/index.html#themenwelten",
+   "targetTop": 104,
+   "sectionId": "themenwelten",
+   "headerBottom": 77,
+   "headingTop": 198,
+   "heading": "Themenwelten. Die Klammer um alle Angebote.",
+   "headingVisible": true,
+   "scrollY": 7605,
+   "pass": true
+  },
+  {
+   "width": 1440,
+   "hash": "arbeitsweise",
+   "url": "/index.html#arbeitsweise",
+   "targetTop": 104,
+   "sectionId": "arbeitsweise",
+   "headerBottom": 77,
+   "headingTop": 198,
+   "heading": "So entsteht bewegt & bunt",
+   "headingVisible": true,
+   "scrollY": 6950,
+   "pass": true
+  }
+ ],
+ "navFromSubpages": [
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "ok": true,
+   "section": "morgenkreis",
+   "headingTop": 119,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "ok": true,
+   "section": "bewegungseinheiten",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "ok": true,
+   "section": "vorschule",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/about.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "ok": true,
+   "section": "themenwelten",
+   "headingTop": 82,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "ok": true,
+   "section": "morgenkreis",
+   "headingTop": 119,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "ok": true,
+   "section": "bewegungseinheiten",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "ok": true,
+   "section": "vorschule",
+   "headingTop": 120,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "/contact.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "ok": true,
+   "section": "themenwelten",
+   "headingTop": 82,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 390,
+   "from": "Direktadresse",
+   "link": "/#bewegungsstunden",
+   "url": "/#bewegungsstunden",
+   "section": "bewegungseinheiten",
+   "headingTop": 50,
+   "headerBottom": 0,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "ok": true,
+   "section": "morgenkreis",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "ok": true,
+   "section": "bewegungseinheiten",
+   "headingTop": 236,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "ok": true,
+   "section": "vorschule",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/about.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "ok": true,
+   "section": "themenwelten",
+   "headingTop": 198,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Morgenkreis",
+   "url": "/#morgenkreis",
+   "ok": true,
+   "section": "morgenkreis",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Bewegungseinheiten",
+   "url": "/#bewegungseinheiten",
+   "ok": true,
+   "section": "bewegungseinheiten",
+   "headingTop": 236,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Vorschule",
+   "url": "/#vorschule",
+   "ok": true,
+   "section": "vorschule",
+   "headingTop": 235,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "/contact.html",
+   "link": "Themenwelten",
+   "url": "/#themenwelten",
+   "ok": true,
+   "section": "themenwelten",
+   "headingTop": 198,
+   "headerBottom": 77,
+   "visible": true
+  },
+  {
+   "width": 1440,
+   "from": "Direktadresse",
+   "link": "/#bewegungsstunden",
+   "url": "/#bewegungsstunden",
+   "section": "bewegungseinheiten",
+   "headingTop": 142,
+   "headerBottom": 77,
+   "visible": true
+  }
+ ],
+ "links": [
+  {
+   "href": "/",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "#morgenkreis",
+   "from": [
+    "/index.html"
+   ],
+   "status": "Anker auf index"
+  },
+  {
+   "href": "#bewegungseinheiten",
+   "from": [
+    "/index.html"
+   ],
+   "status": "Anker auf index"
+  },
+  {
+   "href": "#vorschule",
+   "from": [
+    "/index.html"
+   ],
+   "status": "Anker auf index"
+  },
+  {
+   "href": "#themenwelten",
+   "from": [
+    "/index.html"
+   ],
+   "status": "Anker auf index"
+  },
+  {
+   "href": "/about.html",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/contact.html",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "mailto:info@bewegtundbunt.de",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": "mailto korrekt (nicht gesendet)"
+  },
+  {
+   "href": "/Impressum.html",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/datenschutz.html",
+   "from": [
+    "/index.html",
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/#morgenkreis",
+   "from": [
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/#bewegungseinheiten",
+   "from": [
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/#vorschule",
+   "from": [
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  },
+  {
+   "href": "/#themenwelten",
+   "from": [
+    "/about.html",
+    "/contact.html"
+   ],
+   "status": 200
+  }
+ ],
+ "keyboard": [
+  {
+   "width": 390,
+   "page": "/index.html",
+   "focusableCount": 15,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "Zu den Morgenkreisen →",
+    "Zu den Bewegungseinheiten →",
+    "Zur Vorschule →",
+    "Mehr über René →",
+    "Kontakt aufnehmen",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "Kontakt aufnehmen",
+    "Mehr über René →",
+    "Zur Vorschule →",
+    "Zu den Bewegungseinheiten →",
+    "Zu den Morgenkreisen →",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "hash": "#vorschule",
+    "headingTop": 120
+   }
+  },
+  {
+   "width": 390,
+   "page": "/about.html",
+   "focusableCount": 10,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "url": "/#vorschule",
+    "headingTop": 120
+   }
+  },
+  {
+   "width": 390,
+   "page": "/contact.html",
+   "focusableCount": 12,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "info@bewegtundbunt.de",
+    "← Zurück zur Startseite",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "← Zurück zur Startseite",
+    "info@bewegtundbunt.de",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "url": "/#vorschule",
+    "headingTop": 120
+   }
+  },
+  {
+   "width": 1440,
+   "page": "/index.html",
+   "focusableCount": 15,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "Zu den Morgenkreisen →",
+    "Zu den Bewegungseinheiten →",
+    "Zur Vorschule →",
+    "Mehr über René →",
+    "Kontakt aufnehmen",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "Kontakt aufnehmen",
+    "Mehr über René →",
+    "Zur Vorschule →",
+    "Zu den Bewegungseinheiten →",
+    "Zu den Morgenkreisen →",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "hash": "#vorschule",
+    "headingTop": 235
+   }
+  },
+  {
+   "width": 1440,
+   "page": "/about.html",
+   "focusableCount": 10,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "url": "/#vorschule",
+    "headingTop": 235
+   }
+  },
+  {
+   "width": 1440,
+   "page": "/contact.html",
+   "focusableCount": 12,
+   "tabSequence": [
+    "bewegt & bunt",
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt",
+    "info@bewegtundbunt.de",
+    "← Zurück zur Startseite",
+    "info@bewegtundbunt.de",
+    "Impressum",
+    "Datenschutz",
+    "(Dokumentende)"
+   ],
+   "orderMatchesDom": true,
+   "shiftTabSequence": [
+    "Datenschutz",
+    "Impressum",
+    "info@bewegtundbunt.de",
+    "← Zurück zur Startseite",
+    "info@bewegtundbunt.de",
+    "Kontakt",
+    "Über mich",
+    "Themenwelten",
+    "Vorschule",
+    "Bewegungseinheiten",
+    "Morgenkreis",
+    "bewegt & bunt"
+   ],
+   "shiftTabOrderOk": true,
+   "shiftTabObscured": 0,
+   "problems": [],
+   "enter": {
+    "url": "/#vorschule",
+    "headingTop": 235
+   }
+  }
+ ],
+ "reducedMotion": [
+  {
+   "page": "/index.html",
+   "matches": true,
+   "scrollBehavior": "auto",
+   "animations": 0,
+   "transitions": 0,
+   "hiddenHoverText": 0
+  },
+  {
+   "page": "/about.html",
+   "matches": true,
+   "scrollBehavior": "auto",
+   "animations": 0,
+   "transitions": 0,
+   "hiddenHoverText": 0
+  },
+  {
+   "page": "/contact.html",
+   "matches": true,
+   "scrollBehavior": "auto",
+   "animations": 0,
+   "transitions": 0,
+   "hiddenHoverText": 0
+  }
+ ],
+ "zoom200": [
+  {
+   "page": "/index.html",
+   "cssWidth": 720,
+   "dpr": 2,
+   "scrollWidth": 720,
+   "clientWidth": 720,
+   "outside": [],
+   "textOverflow": [],
+   "navVisible": true,
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": []
+  },
+  {
+   "page": "/about.html",
+   "cssWidth": 720,
+   "dpr": 2,
+   "scrollWidth": 720,
+   "clientWidth": 720,
+   "outside": [],
+   "textOverflow": [],
+   "navVisible": true,
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": []
+  },
+  {
+   "page": "/contact.html",
+   "cssWidth": 720,
+   "dpr": 2,
+   "scrollWidth": 720,
+   "clientWidth": 720,
+   "outside": [],
+   "textOverflow": [],
+   "navVisible": true,
+   "navOverlap": [],
+   "header": {
+    "height": 109,
+    "position": "sticky"
+   },
+   "smallTargets": []
+  }
+ ],
+ "contrast": {
+  "/index.html": {
+   "text": [
+    {
+     "selector": ".nav-links a",
+     "context": "nav-shell",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 14,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": "h1 .hero-line",
+     "context": "hero",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 56,
+     "weight": 500,
+     "large": true,
+     "ratio": 13.37,
+     "pass": true
+    },
+    {
+     "selector": "h1 .hero-line",
+     "context": "hero",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 56,
+     "weight": 500,
+     "large": true,
+     "ratio": 6.23,
+     "pass": true
+    },
+    {
+     "selector": "h1 .hero-line-accent",
+     "context": "hero",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 56,
+     "weight": 500,
+     "large": true,
+     "ratio": 6.23,
+     "pass": true
+    },
+    {
+     "selector": ".positioning",
+     "context": "hero",
+     "color": "rgb(23, 62, 46)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 18,
+     "weight": 600,
+     "large": false,
+     "ratio": 10.52,
+     "pass": true
+    },
+    {
+     "selector": ".hero-text",
+     "context": "hero",
+     "color": "rgb(52, 68, 58)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.13,
+     "pass": true
+    },
+    {
+     "selector": ".area-card h2",
+     "context": "areas",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(252, 253, 252)",
+     "fontSize": 21,
+     "weight": 500,
+     "large": false,
+     "ratio": 14.87,
+     "pass": true
+    },
+    {
+     "selector": ".area-card p",
+     "context": "areas",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(252, 253, 252)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.5,
+     "pass": true
+    },
+    {
+     "selector": ".area-link",
+     "context": "areas",
+     "color": "rgb(23, 62, 46)",
+     "background": "rgb(252, 253, 252)",
+     "fontSize": 16,
+     "weight": 700,
+     "large": false,
+     "ratio": 11.7,
+     "pass": true
+    },
+    {
+     "selector": ".area-caption span",
+     "context": "areas",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 5.84,
+     "pass": true
+    },
+    {
+     "selector": ".kicker",
+     "context": "section white",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 7.05,
+     "pass": true
+    },
+    {
+     "selector": ".kicker",
+     "context": "section dark",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".kicker",
+     "context": "section soft",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 6,
+     "pass": true
+    },
+    {
+     "selector": ".section-intro",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".section-intro",
+     "context": "section dark",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 7.91,
+     "pass": true
+    },
+    {
+     "selector": ".section-intro",
+     "context": "section soft",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 5.63,
+     "pass": true
+    },
+    {
+     "selector": ".section-intro",
+     "context": "section pale",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(232, 240, 228)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 5.67,
+     "pass": true
+    },
+    {
+     "selector": ".section-intro",
+     "context": "section cta-section",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 5.63,
+     "pass": true
+    },
+    {
+     "selector": ".row-title",
+     "context": "section white",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 20,
+     "weight": 600,
+     "large": false,
+     "ratio": 15.12,
+     "pass": true
+    },
+    {
+     "selector": ".row-title",
+     "context": "section dark",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 20,
+     "weight": 600,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".row-title",
+     "context": "section soft",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 20,
+     "weight": 600,
+     "large": false,
+     "ratio": 12.88,
+     "pass": true
+    },
+    {
+     "selector": ".product-id",
+     "context": "section white",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 13,
+     "weight": 700,
+     "large": false,
+     "ratio": 6.74,
+     "pass": true
+    },
+    {
+     "selector": ".product-id",
+     "context": "section dark",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 13,
+     "weight": 700,
+     "large": false,
+     "ratio": 6.74,
+     "pass": true
+    },
+    {
+     "selector": ".product-id",
+     "context": "section soft",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 13,
+     "weight": 700,
+     "large": false,
+     "ratio": 6.74,
+     "pass": true
+    },
+    {
+     "selector": ".product-card h3",
+     "context": "section white",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": ".product-card h3",
+     "context": "section dark",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": ".product-card h3",
+     "context": "section soft",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": ".product-status",
+     "context": "section white",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 12,
+     "weight": 700,
+     "large": false,
+     "ratio": 12.88,
+     "pass": true
+    },
+    {
+     "selector": ".product-status",
+     "context": "section dark",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 12,
+     "weight": 700,
+     "large": false,
+     "ratio": 12.88,
+     "pass": true
+    },
+    {
+     "selector": ".product-status",
+     "context": "section soft",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(232, 240, 228)",
+     "fontSize": 12,
+     "weight": 700,
+     "large": false,
+     "ratio": 12.98,
+     "pass": true
+    },
+    {
+     "selector": ".row-benefit",
+     "context": "section white",
+     "color": "rgb(34, 48, 40)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 13.8,
+     "pass": true
+    },
+    {
+     "selector": ".row-benefit",
+     "context": "section dark",
+     "color": "rgba(255, 255, 255, 0.86)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.24,
+     "pass": true
+    },
+    {
+     "selector": ".row-benefit",
+     "context": "section soft",
+     "color": "rgb(34, 48, 40)",
+     "background": "rgb(231, 241, 207)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 11.75,
+     "pass": true
+    },
+    {
+     "selector": ".row-status",
+     "context": "section dark",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(46, 81, 67)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 8.81,
+     "pass": true
+    },
+    {
+     "selector": ".row-status",
+     "context": "section soft",
+     "color": "rgb(34, 48, 40)",
+     "background": "rgb(245, 249, 236)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 12.95,
+     "pass": true
+    },
+    {
+     "selector": ".intro-panel p",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(232, 240, 228)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 5.67,
+     "pass": true
+    },
+    {
+     "selector": ".step-card p",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".ritual-note",
+     "context": "section white",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".type-card p",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".section-close",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 16,
+     "weight": 600,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".section-close",
+     "context": "section pale",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(232, 240, 228)",
+     "fontSize": 16,
+     "weight": 600,
+     "large": false,
+     "ratio": 5.67,
+     "pass": true
+    },
+    {
+     "selector": ".ritual-step h3",
+     "context": "section dark",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 18,
+     "weight": 500,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".ritual-step p",
+     "context": "section dark",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 7.91,
+     "pass": true
+    },
+    {
+     "selector": ".feature-card p",
+     "context": "section pale",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(250, 252, 249)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.39,
+     "pass": true
+    },
+    {
+     "selector": ".world-card p",
+     "context": "section pale",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 16,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".practice-copy p",
+     "context": "section white",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 17,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.61,
+     "pass": true
+    },
+    {
+     "selector": ".text-link",
+     "context": "section white",
+     "color": "rgb(23, 62, 46)",
+     "background": "rgb(255, 255, 255)",
+     "fontSize": 16,
+     "weight": 700,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".quote-card blockquote",
+     "context": "section white",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 25,
+     "weight": 400,
+     "large": true,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".button-primary",
+     "context": "section cta-section",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(23, 62, 46)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 11.9,
+     "pass": true
+    },
+    {
+     "selector": ".footer-claim",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.64)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact p",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 14,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact a",
+     "context": "footer",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 15.12,
+     "pass": true
+    },
+    {
+     "selector": ".footer-bottom span",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.62)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.66,
+     "pass": true
+    },
+    {
+     "selector": ".legal a",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    }
+   ],
+   "focus": [
+    {
+     "key": "rgb(16, 43, 32)|251,250,244",
+     "example": "bewegt & bunt",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "key": "rgb(16, 43, 32)|252,253,252",
+     "example": "Zu den Morgenkreisen →",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(252, 253, 252)",
+     "ratio": 14.87,
+     "pass": true
+    },
+    {
+     "key": "rgb(16, 43, 32)|255,255,255",
+     "example": "Mehr über René →",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(255, 255, 255)",
+     "ratio": 15.12,
+     "pass": true
+    },
+    {
+     "key": "rgb(16, 43, 32)|231,241,207",
+     "example": "Kontakt aufnehmen",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(231, 241, 207)",
+     "ratio": 12.88,
+     "pass": true
+    },
+    {
+     "key": "rgb(168, 209, 59)|16,43,32",
+     "example": "info@bewegtundbunt.de",
+     "outline": "3px solid rgb(168, 209, 59)",
+     "background": "rgb(16, 43, 32)",
+     "ratio": 8.53,
+     "pass": true
+    }
+   ]
+  },
+  "/about.html": {
+   "text": [
+    {
+     "selector": ".nav-links a",
+     "context": "nav-shell",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 14,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": ".footer-claim",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.64)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact p",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 14,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact a",
+     "context": "footer",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 15.12,
+     "pass": true
+    },
+    {
+     "selector": ".footer-bottom span",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.62)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.66,
+     "pass": true
+    },
+    {
+     "selector": ".legal a",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    },
+    {
+     "selector": ".eyebrow",
+     "context": "about",
+     "color": "rgb(53, 98, 67)",
+     "background": "rgb(237, 243, 230)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 6.23,
+     "pass": true
+    },
+    {
+     "selector": ".copy p",
+     "context": "about",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(252, 253, 252)",
+     "fontSize": 18,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.5,
+     "pass": true
+    }
+   ],
+   "focus": [
+    {
+     "key": "rgb(16, 43, 32)|251,250,244",
+     "example": "bewegt & bunt",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "key": "rgb(168, 209, 59)|16,43,32",
+     "example": "info@bewegtundbunt.de",
+     "outline": "3px solid rgb(168, 209, 59)",
+     "background": "rgb(16, 43, 32)",
+     "ratio": 8.53,
+     "pass": true
+    }
+   ]
+  },
+  "/contact.html": {
+   "text": [
+    {
+     "selector": ".nav-links a",
+     "context": "nav-shell",
+     "color": "rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 14,
+     "weight": 600,
+     "large": false,
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "selector": ".footer-claim",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.64)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 15,
+     "weight": 400,
+     "large": false,
+     "ratio": 7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact p",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 14,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    },
+    {
+     "selector": ".footer-contact a",
+     "context": "footer",
+     "color": "rgb(255, 255, 255)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 17,
+     "weight": 600,
+     "large": false,
+     "ratio": 15.12,
+     "pass": true
+    },
+    {
+     "selector": ".footer-bottom span",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.62)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.66,
+     "pass": true
+    },
+    {
+     "selector": ".legal a",
+     "context": "footer",
+     "color": "rgba(255, 255, 255, 0.78)",
+     "background": "rgb(16, 43, 32)",
+     "fontSize": 13,
+     "weight": 400,
+     "large": false,
+     "ratio": 9.7,
+     "pass": true
+    },
+    {
+     "selector": ".contact p",
+     "context": "contact",
+     "color": "rgb(83, 96, 87)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 18,
+     "weight": 400,
+     "large": false,
+     "ratio": 6.32,
+     "pass": true
+    },
+    {
+     "selector": ".email",
+     "context": "contact",
+     "color": "rgb(23, 62, 46)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 28,
+     "weight": 700,
+     "large": true,
+     "ratio": 11.38,
+     "pass": true
+    },
+    {
+     "selector": ".back",
+     "context": "contact",
+     "color": "rgb(23, 62, 46)",
+     "background": "rgb(251, 250, 244)",
+     "fontSize": 14,
+     "weight": 700,
+     "large": false,
+     "ratio": 11.38,
+     "pass": true
+    }
+   ],
+   "focus": [
+    {
+     "key": "rgb(16, 43, 32)|251,250,244",
+     "example": "bewegt & bunt",
+     "outline": "3px solid rgb(16, 43, 32)",
+     "background": "rgb(251, 250, 244)",
+     "ratio": 14.46,
+     "pass": true
+    },
+    {
+     "key": "rgb(168, 209, 59)|16,43,32",
+     "example": "info@bewegtundbunt.de",
+     "outline": "3px solid rgb(168, 209, 59)",
+     "background": "rgb(16, 43, 32)",
+     "ratio": 8.53,
+     "pass": true
+    }
+   ]
+  }
+ },
+ "dom": {
+  "mainSections": [
+   {
+    "id": null,
+    "class": "hero",
+    "label": "Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule."
+   },
+   {
+    "id": "morgenkreis",
+    "class": "section white",
+    "label": "Eine Geschichte, ein Spiel, ein Ritual."
+   },
+   {
+    "id": "bewegungseinheiten",
+    "class": "section dark",
+    "label": "Die Kinder kommen in Bewegung."
+   },
+   {
+    "id": "vorschule",
+    "class": "section soft",
+    "label": "Zählen, zuhören, ordnen, gestalten."
+   },
+   {
+    "id": null,
+    "class": "section pale",
+    "label": "Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie."
+   },
+   {
+    "id": "arbeitsweise",
+    "class": "section white",
+    "label": "So entsteht bewegt & bunt"
+   },
+   {
+    "id": "themenwelten",
+    "class": "section pale",
+    "label": "Themenwelten. Die Klammer um alle Angebote."
+   },
+   {
+    "id": null,
+    "class": "section white",
+    "label": "Aus der Praxis gedacht"
+   },
+   {
+    "id": null,
+    "class": "section cta-section",
+    "label": "Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+   }
+  ],
+  "bereiche": {
+   "tag": "SECTION",
+   "label": "Drei Bereiche entdecken",
+   "cards": [
+    {
+     "h2": "Morgenkreis · Kindergarten",
+     "text": "Eine Geschichte, ein Spiel und vertraute Rituale öffnen im Sitzkreis die Themenwelt.",
+     "link": "Zu den Morgenkreisen →",
+     "href": "#morgenkreis",
+     "imgs": [
+      {
+       "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+       "alt": ""
+      }
+     ],
+     "linksInCard": 1
+    },
+    {
+     "h2": "Bewegungseinheiten · Kindergarten",
+     "text": "Aus vertrautem Material wird eine Themenstunde im Bewegungsraum – mit einem klaren Ablauf und Zeit zum Ausklingen.",
+     "link": "Zu den Bewegungseinheiten →",
+     "href": "#bewegungseinheiten",
+     "imgs": [
+      {
+       "src": "assets/handouts/sport-wald-01-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/sport-wald-02-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/sport-wald-03-kiga.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/sport-wald-04-kiga.png",
+       "alt": ""
+      }
+     ],
+     "linksInCard": 1
+    },
+    {
+     "h2": "Vorschule · für die Großen im Kindergarten",
+     "text": "Zählen, zuhören, ordnen, gestalten: Jede Vorschuleinheit verbindet ein Handout mit einem passenden Kinderblatt.",
+     "link": "Zur Vorschule →",
+     "href": "#vorschule",
+     "imgs": [
+      {
+       "src": "assets/handouts/vorschule-wald-01.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/vorschule-wald-02.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/vorschule-wald-03.png",
+       "alt": ""
+      },
+      {
+       "src": "assets/handouts/vorschule-wald-04.png",
+       "alt": ""
+      }
+     ],
+     "linksInCard": 1
+    }
+   ]
+  },
+  "products": [
+   {
+    "section": "morgenkreis",
+    "productId": "MORGENKREIS-WALD-01",
+    "label": "Morgenkreis 01 · Wald",
+    "title": "Wo ist der Wintervorrat?",
+    "status": "Testfassung",
+    "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×544"
+   },
+   {
+    "section": "morgenkreis",
+    "productId": "MORGENKREIS-WALD-02",
+    "label": "Morgenkreis 02 · Wald",
+    "title": "Wer wiegt sich im Wind?",
+    "status": "Testfassung",
+    "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×544"
+   },
+   {
+    "section": "morgenkreis",
+    "productId": "MORGENKREIS-WALD-03",
+    "label": "Morgenkreis 03 · Wald",
+    "title": "Wer macht den Wald so laut?",
+    "status": "Testfassung",
+    "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×544"
+   },
+   {
+    "section": "morgenkreis",
+    "productId": "MORGENKREIS-WALD-04",
+    "label": "Morgenkreis 04 · Wald",
+    "title": "Welches Dach hält dicht?",
+    "status": "Testfassung",
+    "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×544"
+   },
+   {
+    "section": "bewegungseinheiten",
+    "productId": "SPORT-WALD-01",
+    "label": "Bewegungseinheit 01 · Wald",
+    "title": "Frösche und Eichhörnchen",
+    "status": "Testfassung",
+    "src": "assets/handouts/sport-wald-01-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "bewegungseinheiten",
+    "productId": "SPORT-WALD-02",
+    "label": "Bewegungseinheit 02 · Wald",
+    "title": "Wildkatzen und Adler",
+    "status": "Testfassung",
+    "src": "assets/handouts/sport-wald-02-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "bewegungseinheiten",
+    "productId": "SPORT-WALD-03",
+    "label": "Bewegungseinheit 03 · Wald",
+    "title": "Wildschweine und Eichhörnchen",
+    "status": "Testfassung",
+    "src": "assets/handouts/sport-wald-03-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "bewegungseinheiten",
+    "productId": "SPORT-WALD-04",
+    "label": "Bewegungseinheit 04 · Wald",
+    "title": "Igel, Frösche und Adler",
+    "status": "Testfassung",
+    "src": "assets/handouts/sport-wald-04-kiga.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "vorschule",
+    "productId": "VORSCHULE-WALD-01",
+    "label": "Vorschule 01 · Wald",
+    "title": "Wir zählen im Herbstwald",
+    "status": "Testfassung",
+    "src": "assets/handouts/vorschule-wald-01.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "vorschule",
+    "productId": "VORSCHULE-WALD-02",
+    "label": "Vorschule 02 · Wald",
+    "title": "Ein Rascheln im Blätterwald",
+    "status": "Testfassung",
+    "src": "assets/handouts/vorschule-wald-02.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "vorschule",
+    "productId": "VORSCHULE-WALD-03",
+    "label": "Vorschule 03 · Wald",
+    "title": "Was gehört zusammen?",
+    "status": "Testfassung",
+    "src": "assets/handouts/vorschule-wald-03.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   },
+   {
+    "section": "vorschule",
+    "productId": "VORSCHULE-WALD-04",
+    "label": "Vorschule 04 · Wald",
+    "title": "Unser Wald aus Formen",
+    "status": "Testfassung",
+    "src": "assets/handouts/vorschule-wald-04.png",
+    "alt": "",
+    "linksInCard": 0,
+    "cursor": "auto",
+    "natural": "380×538"
+   }
+  ],
+  "alias": {
+   "tag": "SPAN",
+   "parentId": "bewegungseinheiten",
+   "isFirstChild": true,
+   "tabIndex": -1,
+   "text": ""
+  },
+  "oldFan": 0,
+  "downloadLinks": 0
+ },
+ "text": {
+  "/index.html": {
+   "title": "bewegt & bunt — Morgenkreis, Bewegungseinheiten und Vorschule für Kitas",
+   "description": "Morgenkreis, Bewegungseinheiten und Vorschule mit einer gemeinsamen Themenwelt: klar aufgebaute Handouts und passende Kinderblätter für die Vorschule unterstützen pädagogische Fachkräfte im Kita-Alltag.",
+   "innerText": "bewegt & bunt\nMorgenkreis\nBewegungseinheiten\nVorschule\nThemenwelten\nÜber mich\nKontakt\nDer Wald wird wach.\nIm Sitzkreis, in Bewegung und in der Vorschule.\n\nMorgenkreis, Bewegungseinheiten und Vorschule – verbunden durch eine gemeinsame Themenwelt.\n\nbewegt & bunt entwickelt klar aufgebaute Handouts für den Kita-Alltag, für die Vorschule mit passendem Kinderblatt. Sie unterstützen pädagogische Fachkräfte bei der Vorbereitung und geben Kindern Raum zum Spielen, Lernen und Gestalten.\n\nMorgenkreis · Kindergarten\n\nEine Geschichte, ein Spiel und vertraute Rituale öffnen im Sitzkreis die Themenwelt.\n\nZu den Morgenkreisen →\nBewegungseinheiten · Kindergarten\n\nAus vertrautem Material wird eine Themenstunde im Bewegungsraum – mit einem klaren Ablauf und Zeit zum Ausklingen.\n\nZu den Bewegungseinheiten →\nVorschule · für die Großen im Kindergarten\n\nZählen, zuhören, ordnen, gestalten: Jede Vorschuleinheit verbindet ein Handout mit einem passenden Kinderblatt.\n\nZur Vorschule →\n\nDrei Bereiche, eine Themenwelt: je vier Wald-Einheiten für Morgenkreis, Bewegung und Vorschule.\nAbbildungen: Testfassungen · Bilder KI-generiert.\n\nMorgenkreis · Kindergarten\n\nEine Geschichte, ein Spiel, ein Ritual.\n\nEin Blatt, ein Morgen: Eine kurze Geschichte und ein Spiel führen in die Themenwelt. Vertraute Rituale begrüßen die Kinder und schließen den Kreis.\n\nDie vier Wald-Morgenkreise\n\nMorgenkreis 01 · Wald\n\nWo ist der Wintervorrat?\n\nTestfassung\n\nMorgenkreis 02 · Wald\n\nWer wiegt sich im Wind?\n\nTestfassung\n\nMorgenkreis 03 · Wald\n\nWer macht den Wald so laut?\n\nTestfassung\n\nMorgenkreis 04 · Wald\n\nWelches Dach hält dicht?\n\nTestfassung\n\nDas Handout führt durch den Morgenkreis. Material und Ablauf stehen auf einem Blatt, damit Sie die Einheit passend zu Ihrer Gruppe vorbereiten können.\n\nSie testen gerade ein Morgenkreis-Handout von bewegt & bunt?\n\nDanke, dass Sie Ihre Erfahrung aus dem Kita-Alltag mit mir teilen. Ihre Rückmeldung fließt in die weitere Entwicklung der Praxistest-Fassungen ein. Fragen dazu beantworte ich gern – der Weg dorthin steht unter Kontakt.\n\nSo läuft ein Morgenkreis\nAnkommen\n\n„1, 2, 3 – der Morgenkreis kommt herbei.\" Alle Kinder werden mit Namen begrüßt, der Tag bekommt seinen Platz – und dann öffnet sich das Tor in die Themenwelt.\n\nDie Geschichte\n\nEine kurze Erzählung aus der Welt: das Eichhörnchen und die verschwundene Eichel, die Feldmaus in der Scheune, die Tierpflegerin in der Futterküche. Vorgelesen, im eigenen Tempo.\n\nDas Spiel\n\nEin Spiel in der Kreismitte: suchen, verwandeln, lauschen oder ausprobieren. Je nach Blatt kommt das Spiel vor oder nach der Geschichte – das Blatt sagt es.\n\nDer Abschied\n\nEin Blick aus dem Fenster aufs Wetter, dreimal ruhig atmen, und alle rufen gemeinsam: „1, 2, 3 – der Morgenkreis ist vorbei.\" Jeder Morgenkreis endet gleich.\n\nIn den Morgenkreisen zum Suchen und zum Verwandeln klingt eine Klangschale leise zu jeder Überschrift – gern in Kinderhand, ein kleines Amt, auf das ein Kind stolz sein darf. Beim Suchen kommt ein Rundenstein dazu: Er zeigt, wer dran ist, und stilles Weiterschieben ist auch eine Antwort. So kommt jedes Kind vor, und keines muss.\n\nVier Morgenkreise – vier Arten, eine Welt zu erleben\n\nZu jeder Themenwelt gehören vier Morgenkreise, einer je Art. Wald und Bauernhof haben alle vier, der Zoo sein erstes. Keine feste Reihenfolge – Sie wählen, was zu Ihrer Woche passt.\n\nSuchen & Merken\n\nEtwas liegt versteckt – unter drei Bechern, unter einem Tuch, in einem Fühlbeutel. Die Kinder suchen, tasten und behalten, was sie gefunden haben.\n\nBewegen & Verwandeln\n\nDie Geschichte gibt das Stichwort, die Kinder machen die Bewegung: Ein Baum wiegt sich, ein Blatt dreht sich, eine Kastanie rollt sich klein und rund zusammen.\n\nHören & Klingen\n\nJedes Kind bekommt ein Instrument. Erst wird gelauscht, dann weckt die Geschichte den Wald oder den Hof – laut, lauter, und wieder ganz still.\n\nForschen & Staunen\n\nEine Frage und ein kleiner Versuch in der Kreismitte: Welches Dach hält dicht? Wer lässt den Mais tanzen? Vermuten, hinsehen, staunen.\n\nDen Morgenkreis gibt es zunächst für den Kindergarten. Die Blätter sind im begleiteten Praxistest – wie Sie mitmachen können, steht unter Kontakt.\n\nBewegungseinheiten · Kindergarten\n\nDie Kinder kommen in Bewegung.\n\nAus Hütchen werden Fliegenpilze, aus Matten Waldteiche. Die Wald-Einheiten verbinden Bewegung und Spiel mit einem klaren Aufbau für den Kindergarten.\n\nDie vier Wald-Bewegungseinheiten\n\nBewegungseinheit 01 · Wald\n\nFrösche und Eichhörnchen\n\nTestfassung\n\nBewegungseinheit 02 · Wald\n\nWildkatzen und Adler\n\nTestfassung\n\nBewegungseinheit 03 · Wald\n\nWildschweine und Eichhörnchen\n\nTestfassung\n\nBewegungseinheit 04 · Wald\n\nIgel, Frösche und Adler\n\nTestfassung\n\nDas Handout zeigt Material, Aufbau und Ablauf. Sie wählen die Einheit, die zu Ihrer Gruppe passt, und begleiten die Kinder in ihrem Tempo.\n\nDer rote Faden einer Einheit\nAnkommen\n\nDie Kinder finden in die Themenwelt und stimmen sich auf die gemeinsame Bewegung ein.\n\nDas erste Spiel\n\nDas Handout beschreibt die Spielidee und gibt Hinweise für die Begleitung.\n\nDas zweite Spiel\n\nEin weiterer Impuls lädt zum Bewegen und Ausprobieren ein.\n\nRuhig ausklingen\n\nEin gemeinsamer Abschluss führt aus der Bewegung in die Ruhe.\n\nDie gezeigten Bewegungseinheiten sind Testfassungen. Rückmeldungen aus dem Kita-Alltag sollen in ihre weitere Entwicklung einfließen.\n\nVorschule · für die Großen im Kindergarten\n\nZählen, zuhören, ordnen, gestalten.\n\nIn der Vorschule wird die Themenwelt zum Lernanlass. Jede Einheit verbindet ein Handout für pädagogische Fachkräfte mit einem passenden Kinderblatt – zum Zählen, Zuhören, Ordnen und Gestalten.\n\nDie vier Wald-Vorschuleinheiten\n\nVorschule 01 · Wald\n\nWir zählen im Herbstwald\n\nTestfassung\n\nVorschule 02 · Wald\n\nEin Rascheln im Blätterwald\n\nTestfassung\n\nVorschule 03 · Wald\n\nWas gehört zusammen?\n\nTestfassung\n\nVorschule 04 · Wald\n\nUnser Wald aus Formen\n\nTestfassung\n\nDas Handout führt durch die Einheit, das Kinderblatt gehört als Kopiervorlage dazu. Welche Materialien Sie benötigen, steht im jeweiligen Handout. Je nach Einheit wird auch geschnitten, gefaltet, geklebt und gestaltet.\n\nDie gezeigten Vorschuleinheiten sind Testfassungen. Rückmeldungen aus dem Kita-Alltag sollen helfen, Handouts und Kinderblätter weiterzuentwickeln.\n\nFantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie.\nFantasie für die Kinder\n\nAus vertrauten Dingen wird eine Welt: Im Sitzkreis öffnet sich das Waldtor, im Bewegungsraum werden Matten zu Waldteichen, und in der Vorschule entsteht ein Wald aus Formen. Die gemeinsame Themenwelt verbindet Geschichten, Bewegung und Gestaltung.\n\nStruktur für die Stunde\n\nEin wiederkehrender Aufbau macht Material, Ablauf und Begleitung leicht auffindbar – im Morgenkreis, in der Bewegungseinheit und in der Vorschule. So können Sie sich auf Ihre Gruppe konzentrieren.\n\nRuhe für Sie\n\nKein Erfinden unter Zeitdruck: Das Blatt trägt den Ablauf – und lässt Raum für Ihre Gruppe. Sie entscheiden, was Ihre Kinder heute brauchen.\n\nSo entsteht bewegt & bunt\n\nVon der Idee bis zur nächsten Fassung: So sollen die Angebote im Kita-Alltag wachsen.\n\nIdeen aus dem Alltag\n\nBeobachtungen und Fragen aus dem Kita-Alltag geben den Anstoß für neue Angebote.\n\nEntwickeln\n\nAus einer Idee entsteht eine Einheit mit klarem Aufbau, passend zur Themenwelt.\n\nIn der Praxis erproben\n\nEine Testfassung wird mit einer Gruppe ausprobiert. Dabei zeigt sich, was gut funktioniert und wo Unterstützung fehlt.\n\nRückmeldungen auswerten und verbessern\n\nErfahrungen aus der Praxis helfen, Texte, Abläufe und Materialien weiterzuentwickeln.\n\nNicht jede gezeigte Testfassung hat diesen Weg schon vollständig durchlaufen.\n\nThemenwelten. Die Klammer um alle Angebote.\n\nDer Wald verbindet erstmals alle drei Bereiche: je vier Morgenkreise, Bewegungseinheiten und Vorschuleinheiten. Bauernhof und Zoo erweitern die Themenwelten mit ihrem eigenen Entwicklungsstand.\n\nWald\n\nJe vier Einheiten für Morgenkreis, Bewegung und Vorschule – verbunden durch die Tiere, Geschichten und Materialien des Waldes.\n\nBauernhof\n\nVier Morgenkreise im Praxistest. Dazu liegt eine Vorschuleinheit bereits als Entwurf vor.\n\nZoo\n\nErster Morgenkreis im Praxistest: Was steckt im Beutel?\n\nWeitere Themenwelten können wachsen – für Morgenkreis, Bewegungseinheiten und Vorschule.\n\nAus der Praxis gedacht\n\nRené Krakow ist Ergotherapeut und begleitet Kinder individuell in Krippe und Kindergarten. bewegt & bunt ist aus diesem Alltag entstanden – aus einer einfachen Frage: Wie können Morgenkreis, Bewegungseinheiten und Vorschule klar vorbereitet sein und trotzdem offen für jedes einzelne Kind bleiben? Die Antwort steht auf jedem Blatt: Sie kennen Ihre Kinder. bewegt & bunt liefert Struktur und roten Faden.\n\nMehr über René →\n„Ein Hütchen bleibt ein Hütchen – bis ein Kind darin einen Fliegenpilz sieht.\"\nNeugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?\n\nDie gezeigten Handouts sind Testfassungen. Die Morgenkreis-Handouts werden im begleiteten Praxistest eingesetzt und persönlich weitergegeben – zum Ausprobieren in Ihrer Gruppe, nicht zum Weitergeben. Wenn Sie eine Rückmeldung geben, einen Einblick erhalten oder mit Ihrer Einrichtung teilnehmen möchten, schreiben Sie mir gern – ich antworte zeitnah.\n\nKontakt aufnehmen\n\nbewegt & bunt — Morgenkreis, Bewegungseinheiten und Vorschule für Kitas.\n\nFragen, Interesse, Anmerkungen?\n\ninfo@bewegtundbunt.de\n© 2026 René Krakow · Leipzig\nImpressum\nDatenschutz",
+   "ariaLabels": [
+    {
+     "tag": "nav",
+     "id": "",
+     "label": "Hauptnavigation"
+    },
+    {
+     "tag": "section",
+     "id": "bereiche",
+     "label": "Drei Bereiche entdecken"
+    }
+   ],
+   "labelledby": [
+    {
+     "tag": "section",
+     "id": "",
+     "name": "Der Wald wird wach. Im Sitzkreis, in Bewegung und in der Vorschule."
+    },
+    {
+     "tag": "section",
+     "id": "morgenkreis",
+     "name": "Eine Geschichte, ein Spiel, ein Ritual."
+    },
+    {
+     "tag": "ul",
+     "id": "",
+     "name": "Die vier Wald-Morgenkreise"
+    },
+    {
+     "tag": "section",
+     "id": "bewegungseinheiten",
+     "name": "Die Kinder kommen in Bewegung."
+    },
+    {
+     "tag": "ul",
+     "id": "",
+     "name": "Die vier Wald-Bewegungseinheiten"
+    },
+    {
+     "tag": "section",
+     "id": "vorschule",
+     "name": "Zählen, zuhören, ordnen, gestalten."
+    },
+    {
+     "tag": "ul",
+     "id": "",
+     "name": "Die vier Wald-Vorschuleinheiten"
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "name": "Fantasie für die Kinder. Struktur für die Stunde. Ruhe für Sie."
+    },
+    {
+     "tag": "section",
+     "id": "arbeitsweise",
+     "name": "So entsteht bewegt & bunt"
+    },
+    {
+     "tag": "section",
+     "id": "themenwelten",
+     "name": "Themenwelten. Die Klammer um alle Angebote."
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "name": "Aus der Praxis gedacht"
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "name": "Neugierig auf Morgenkreis, Bewegungseinheiten oder Vorschule?"
+    }
+   ],
+   "links": [
+    {
+     "text": "bewegt & bunt",
+     "href": "/",
+     "current": null
+    },
+    {
+     "text": "Morgenkreis",
+     "href": "#morgenkreis",
+     "current": null
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "#bewegungseinheiten",
+     "current": null
+    },
+    {
+     "text": "Vorschule",
+     "href": "#vorschule",
+     "current": null
+    },
+    {
+     "text": "Themenwelten",
+     "href": "#themenwelten",
+     "current": null
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null
+    },
+    {
+     "text": "Zu den Morgenkreisen →",
+     "href": "#morgenkreis",
+     "current": null
+    },
+    {
+     "text": "Zu den Bewegungseinheiten →",
+     "href": "#bewegungseinheiten",
+     "current": null
+    },
+    {
+     "text": "Zur Vorschule →",
+     "href": "#vorschule",
+     "current": null
+    },
+    {
+     "text": "Mehr über René →",
+     "href": "/about.html",
+     "current": null
+    },
+    {
+     "text": "Kontakt aufnehmen",
+     "href": "/contact.html",
+     "current": null
+    },
+    {
+     "text": "info@bewegtundbunt.de",
+     "href": "mailto:info@bewegtundbunt.de",
+     "current": null
+    },
+    {
+     "text": "Impressum",
+     "href": "/Impressum.html",
+     "current": null
+    },
+    {
+     "text": "Datenschutz",
+     "href": "/datenschutz.html",
+     "current": null
+    }
+   ],
+   "ids": [
+    "hero-title",
+    "bereiche",
+    "morgenkreis",
+    "morgenkreis-title",
+    "morgenkreis-reihe",
+    "bewegungseinheiten",
+    "bewegungsstunden",
+    "bewegungseinheiten-title",
+    "bewegung-reihe",
+    "vorschule",
+    "vorschule-title",
+    "vorschule-reihe",
+    "verbindet-title",
+    "arbeitsweise",
+    "arbeitsweise-title",
+    "themenwelten",
+    "themenwelten-title",
+    "praxis-title",
+    "kontakt-title"
+   ],
+   "tabindex": [],
+   "h1count": 1
+  },
+  "/about.html": {
+   "title": "Über mich — bewegt & bunt",
+   "description": "Seit über zwanzig Jahren arbeite ich als Ergotherapeut mit Menschen in ganz unterschiedlichen Lebensphasen.",
+   "innerText": "bewegt & bunt\nMorgenkreis\nBewegungseinheiten\nVorschule\nThemenwelten\nÜber mich\nKontakt\n\nRené Krakow · Ergotherapeut · Leipzig\n\nÜber mich\n\nSeit über zwanzig Jahren arbeite ich als Ergotherapeut mit Menschen in ganz unterschiedlichen Lebensphasen. Meine beruflichen Wurzeln liegen in der Psychiatrie und Gerontopsychiatrie – dort habe ich erfahren, wie viel klare Struktur, Ruhe und verlässliche Rituale bewirken können. Heute begleite ich als Individualbegleiter Kinder in Krippe und Kindergarten.\n\nAus meiner täglichen Arbeit entstehen klar strukturierte Angebote für Morgenkreis, Bewegungsraum und Vorschule. Wiederkehrende Rituale geben Orientierung, thematische Bilder öffnen Spielräume – und die Fachkraft behält die Freiheit, auf ihre Gruppe zu reagieren. Angefangen hat bewegt & bunt mit Bewegungsstunden, entwickelt nicht am Schreibtisch, sondern im Bewegungsraum. Der Morgenkreis kam aus derselben Beobachtung dazu: Eine Geschichte, ein Spiel und ein verlässliches Ritual geben dem Anfang des Tages Halt. Die Idee dahinter bleibt einfach: Fachkräften Struktur und Orientierung geben – und Kindern Freude an Bewegung, an Geschichten und am gemeinsamen Anfang.\n\nbewegt & bunt — Morgenkreis, Bewegungseinheiten und Vorschule für Kitas.\n\nFragen, Interesse, Anmerkungen?\n\ninfo@bewegtundbunt.de\n© 2026 René Krakow · Leipzig\nImpressum\nDatenschutz",
+   "ariaLabels": [
+    {
+     "tag": "nav",
+     "id": "",
+     "label": "Hauptnavigation"
+    }
+   ],
+   "labelledby": [],
+   "links": [
+    {
+     "text": "bewegt & bunt",
+     "href": "/",
+     "current": null
+    },
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": "page"
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": null
+    },
+    {
+     "text": "info@bewegtundbunt.de",
+     "href": "mailto:info@bewegtundbunt.de",
+     "current": null
+    },
+    {
+     "text": "Impressum",
+     "href": "/Impressum.html",
+     "current": null
+    },
+    {
+     "text": "Datenschutz",
+     "href": "/datenschutz.html",
+     "current": null
+    }
+   ],
+   "ids": [],
+   "tabindex": [],
+   "h1count": 1
+  },
+  "/contact.html": {
+   "title": "Kontakt — bewegt & bunt",
+   "description": "Schreiben Sie mir gerne eine E-Mail – ich antworte zeitnah.",
+   "innerText": "bewegt & bunt\nMorgenkreis\nBewegungseinheiten\nVorschule\nThemenwelten\nÜber mich\nKontakt\nKontakt\n\nSchreiben Sie mir gerne eine E-Mail – ich antworte zeitnah. Ob Rückmeldung aus dem Praxistest, Frage zu Morgenkreis, Bewegungseinheiten oder Vorschule oder Interesse an einer Teilnahme mit Ihrer Einrichtung: Ich freue mich auf Ihre Nachricht.\n\ninfo@bewegtundbunt.de\n← Zurück zur Startseite\n\nbewegt & bunt — Morgenkreis, Bewegungseinheiten und Vorschule für Kitas.\n\nFragen, Interesse, Anmerkungen?\n\ninfo@bewegtundbunt.de\n© 2026 René Krakow · Leipzig\nImpressum\nDatenschutz",
+   "ariaLabels": [
+    {
+     "tag": "nav",
+     "id": "",
+     "label": "Hauptnavigation"
+    }
+   ],
+   "labelledby": [],
+   "links": [
+    {
+     "text": "bewegt & bunt",
+     "href": "/",
+     "current": null
+    },
+    {
+     "text": "Morgenkreis",
+     "href": "/#morgenkreis",
+     "current": null
+    },
+    {
+     "text": "Bewegungseinheiten",
+     "href": "/#bewegungseinheiten",
+     "current": null
+    },
+    {
+     "text": "Vorschule",
+     "href": "/#vorschule",
+     "current": null
+    },
+    {
+     "text": "Themenwelten",
+     "href": "/#themenwelten",
+     "current": null
+    },
+    {
+     "text": "Über mich",
+     "href": "/about.html",
+     "current": null
+    },
+    {
+     "text": "Kontakt",
+     "href": "/contact.html",
+     "current": "page"
+    },
+    {
+     "text": "info@bewegtundbunt.de",
+     "href": "mailto:info@bewegtundbunt.de",
+     "current": null
+    },
+    {
+     "text": "← Zurück zur Startseite",
+     "href": "/",
+     "current": null
+    },
+    {
+     "text": "info@bewegtundbunt.de",
+     "href": "mailto:info@bewegtundbunt.de",
+     "current": null
+    },
+    {
+     "text": "Impressum",
+     "href": "/Impressum.html",
+     "current": null
+    },
+    {
+     "text": "Datenschutz",
+     "href": "/datenschutz.html",
+     "current": null
+    }
+   ],
+   "ids": [],
+   "tabindex": [],
+   "h1count": 1
+  }
+ },
+ "screenshots": [
+  "zoom200_index_1440-entspricht-720_einstieg.png",
+  "index_320_einstieg-bereiche.png",
+  "index_360_einstieg-bereiche.png",
+  "index_390_einstieg-bereiche.png",
+  "index_768_einstieg-bereiche.png",
+  "index_1440_einstieg-bereiche.png",
+  "index_390x844_erster-bildschirm.png",
+  "index_320_viewport-oben.png",
+  "index_360_viewport-oben.png",
+  "index_390_viewport-oben.png",
+  "index_768_viewport-oben.png",
+  "index_1440_viewport-oben.png",
+  "index_390_vorschule-abschnitt.png",
+  "index_768_vorschule-abschnitt.png",
+  "index_390_morgenkreis-kartenreihe.png",
+  "index_390_bewegung-abschnitt.png",
+  "index_390_gesamt.png",
+  "index_1440_morgenkreis-kartenreihe.png",
+  "index_1440_bewegung-abschnitt.png",
+  "index_1440_gesamt.png",
+  "about_320_gesamt.png",
+  "contact_320_gesamt.png",
+  "about_1440_gesamt.png",
+  "contact_1440_gesamt.png",
+  "about_320_gesamt.png",
+  "contact_320_gesamt.png",
+  "about_360_gesamt.png",
+  "contact_360_gesamt.png",
+  "about_768_gesamt.png",
+  "contact_768_gesamt.png",
+  "fokus_index_390_navigation-bewegungseinheiten.png",
+  "fokus_index_390_bereichslink-vorschule.png",
+  "fokus_index_390_kontaktknopf.png",
+  "fokus_index_390_fusszeile-impressum.png",
+  "fokus_about_390_navigation-vorschule.png",
+  "fokus_contact_390_navigation-kontakt.png",
+  "fokus_contact_390_email.png",
+  "fokus_index_1440_navigation-bewegungseinheiten.png",
+  "fokus_index_1440_bereichslink-vorschule.png",
+  "fokus_index_1440_kontaktknopf.png",
+  "fokus_index_1440_fusszeile-impressum.png",
+  "fokus_about_1440_navigation-vorschule.png",
+  "fokus_contact_1440_navigation-kontakt.png",
+  "fokus_contact_1440_email.png"
+ ],
+ "finishedAt": "2026-09-24T16:31:08.191Z"
+}

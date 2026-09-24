@@ -200,7 +200,9 @@
       letter-spacing: -0.03em;
     }
     .section h3 { line-height: 1.3; }
-    .themenwelt-overview .section-heading { margin-bottom: 0; }
+    .themenwelt-overview .section-heading, .angebot-erklaerung .section-heading { margin-bottom: 0; }
+    .section.angebot-erklaerung { padding-bottom: 0; }
+    .angebot-erklaerung .section-intro { margin-bottom: 0; }
     .section-intro { max-width: 780px; color: var(--muted); font-size: 17px; }
     .kicker {
       margin-bottom: 14px;
@@ -559,8 +561,7 @@
       </div>
     </section>
 
-    <section class="section white themenwelt-overview" id="morgenkreis" aria-labelledby="themenwelten-title">
-      <span class="anchor-alias" id="themenwelten"></span>
+    <section class="section white themenwelt-overview" id="themenwelten" aria-labelledby="themenwelten-title">
       <div class="section-inner">
         <div class="section-heading">
           <h2 id="themenwelten-title">Was eine Themenwelt umfasst</h2>
@@ -569,34 +570,23 @@
       </div>
     </section>
 
-    <section class="section dark" id="bewegungseinheiten" aria-labelledby="bewegungseinheiten-title">
+    <section class="section soft angebot-erklaerung" id="morgenkreis" aria-labelledby="morgenkreis-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="kicker">Morgenkreis · Kindergarten</p>
+          <h2 id="morgenkreis-title">Lauschen, mitreden, gemeinsam entdecken.</h2>
+          <p class="section-intro">Was raschelt im Wald, wer lebt auf dem Bauernhof? Die Kinder hören zu, bringen eigene Ideen ein und entdecken die Themenwelt mit allen Sinnen. Kleine Spielimpulse lassen aus einer Geschichte ein gemeinsames Erlebnis werden – mit Zeit für Fragen und für jedes Kind.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft angebot-erklaerung" id="bewegungseinheiten" aria-labelledby="bewegungseinheiten-title">
       <span class="anchor-alias" id="bewegungsstunden"></span>
       <div class="section-inner">
         <div class="section-heading">
           <p class="kicker">Bewegungseinheiten · Kindergarten</p>
-          <h2 id="bewegungseinheiten-title">Der rote Faden einer Einheit</h2>
-        </div>
-        <div class="ritual-grid">
-          <article class="ritual-step">
-            <div class="ritual-dot" aria-hidden="true"></div>
-            <h3>Ankommen</h3>
-            <p>Die Kinder finden in die Themenwelt und stimmen sich auf die gemeinsame Bewegung ein.</p>
-          </article>
-          <article class="ritual-step">
-            <div class="ritual-dot" aria-hidden="true"></div>
-            <h3>Das erste Spiel</h3>
-            <p>Das Handout beschreibt die Spielidee und gibt Hinweise für die Begleitung.</p>
-          </article>
-          <article class="ritual-step">
-            <div class="ritual-dot" aria-hidden="true"></div>
-            <h3>Das zweite Spiel</h3>
-            <p>Ein weiterer Impuls lädt zum Bewegen und Ausprobieren ein.</p>
-          </article>
-          <article class="ritual-step">
-            <div class="ritual-dot" aria-hidden="true"></div>
-            <h3>Ruhig ausklingen</h3>
-            <p>Ein gemeinsamer Abschluss führt aus der Bewegung in die Ruhe.</p>
-          </article>
+          <h2 id="bewegungseinheiten-title">Balancieren, hüpfen, Neues ausprobieren.</h2>
+          <p class="section-intro">Über Waldteiche springen oder Vorräte sammeln: Die Themenwelt gibt der Bewegung eine Geschichte. Die Kinder erproben ihr Gleichgewicht, ihre Geschicklichkeit und das Miteinander. Sie passen die Spielideen an Raum, Material und Gruppe an – damit jedes Kind auf seine Weise mitmachen kann.</p>
         </div>
       </div>
     </section>

@@ -32,7 +32,7 @@ Kleine Beobachtung ohne Folgen: Die Zeilenangaben der Textquelle weichen an einz
 | `index.html` | neu gegliedert gemäß Textquelle §2: Einstieg + `#bereiche`, Morgenkreis, Bewegungseinheiten, Vorschule, Säulen, `#arbeitsweise`, Themenwelten, Praxis, Kontakt; CSS entsprechend ersetzt (alte Fächer-, Angebots-, Alters-, Paar- und Zukunftsstile entfernt) |
 | `about.html` | Titel T01b, Navigation T03, erster Satz des zweiten Absatzes T92, Fußzeile T04, Bedien-CSS (44-px-Ziele, Fokus in dunkler Fußzeile, Kopfzeile auf Telefon nicht klebend) |
 | `contact.html` | Titel T01c, Navigation T03, Absatz T93, Fußzeile T04, dasselbe Bedien-CSS |
-| `90_OUTPUT/WEBSITE_CLOUD_2026-09-24/**` | neu: dieser Bericht, Messdaten, 44 Screenshots, Prüfscripte |
+| `90_OUTPUT/WEBSITE_CLOUD_2026-09-24/**` | neu: dieser Bericht, Messdaten, 42 Screenshotdateien, Prüfscripte |
 
 Diff: `messdaten/diff_html_gegen_47729c4.patch`, Statistik `messdaten/diff_stat.txt` (3 Dateien, +479/−373 Zeilen).
 Endhashes: `index.html` 417f4e82…c3c4 · `about.html` 017ca65f…40a0 · `contact.html` 091e97a9…363 (vollständig in `messdaten/text_wort_bild.json` bzw. per `sha256sum` nachmessbar).
@@ -117,7 +117,7 @@ Automatisch: 12/12 Karten mit richtigem Bezeichner, Titel, Status, Bildpfad, `al
 | L04 | PASS | Tab-Folge = DOM-Folge auf 3 Seiten × 390/1440; Shift+Tab vollständig rückwärts; Enter auf „Vorschule“ springt zum Ziel; Fokus sichtbar (3 px), nicht abgeschnitten, nicht unter der Kopfzeile; kein positiver tabindex, keine Fokusfalle | `browserpruefung.json` → keyboard; `fokus_*.png` (14 Bilder) |
 | L05 | PASS | `prefers-reduced-motion: reduce`: scroll-behavior `auto`, 0 Animationen, 0 Übergänge, kein versteckter Hover-Text | reducedMotion |
 | L06 | PASS | 71 Textfarbpaare, Minimum 5,63:1; Fokus 8,5–15,1:1 (Tabelle §7) | contrast |
-| L07 | PASS | 200 % Zoom bei 1440 px (= 720 CSS-px, Faktor 2): kein Überlauf, Navigation vollständig, keine abgeschnittenen Texte, alle Ziele ≥ 44 px | zoom200, `zoom200_index_1440-entspricht-720_einstieg.png` |
+| L07 | WARN | **Nur Zoom-Nachbildung**, kein tatsächlich bedienter Browser-Zoom auf 200 %: Layout mit 720 CSS-px Breite und Gerätepixelfaktor 2 (entspricht rechnerisch 1440 px bei 200 %). In dieser Nachbildung: kein Überlauf, Navigation vollständig, keine abgeschnittenen Texte, alle Ziele ≥ 44 px. Ein echter 200-%-Zoom im bedienten Browser steht aus. | zoom200, `zoom200_index_1440-entspricht-720_einstieg.png` |
 | L08 | PASS | jede Messung nach `document.fonts.ready` (Status `loaded`, 5–90 ms), Sora und Dancing Script geladen; Source Serif 4 auf index geladen, auf about/contact planmäßig ungenutzt („unloaded“); Nachmessung nach 300 ms identisch; keine Schriftladefehler, kein externer Abruf | layout.fonts, layout.remeasure |
 | N01 | PASS | 19 IDs auf index, alle eindeutig; 7 Anker bei 390/1440 geöffnet, Überschrift jeweils sichtbar unter der Kopfzeile | Tabelle §6 |
 | N02 | PASS | 4 Navigationsziele von about und contact bei 390/1440 per Klick; URL und sichtbares Ziel korrekt; `/#bewegungsstunden` landet auf Bewegungseinheiten | navFromSubpages |
@@ -125,7 +125,7 @@ Automatisch: 12/12 Karten mit richtigem Bezeichner, Titel, Status, Bildpfad, `al
 | N04 | PASS | `/Impressum.html` und `/datenschutz.html` auf allen drei Seiten, HTTP 200 (case-sensitiver Server) | links |
 | N05 | PASS | Produktkarten ohne Link, Rolle Listeneintrag, Mauszeiger normal; keine leeren oder `#`-Links | dom.products |
 
-**Gesamt: 42 Kriterien PASS, 0 STOPP.** WARN-Punkte zur Einordnung siehe §8.
+**Gesamt: 42 Kriterien – 41 PASS, 1 WARN (L07), 0 STOPP.** Weitere WARN-Punkte zur Einordnung siehe §8.
 
 ## 5 · Messwerte aller Seite/Breite-Kombinationen (nach Schriftladen)
 
@@ -151,7 +151,7 @@ Spalten: scrollWidth / clientWidth · Elemente außerhalb · abgeschnittene Text
 | contact.html | 1440×900 | 1440 / 1440 | 0 | 0 | 77 (sticky) | 44 | – | – | loaded, 12 ms |
 | index.html | 390×844 | 390 / 390 | 0 | 0 | 153.9 (static) | 44 | 119.7 / 119.8 / 119.8 | untereinander | loaded, 30 ms |
 
-Produktreihen: 4 Spalten ab 761 px, 2 Spalten darunter (einspaltiger Fluss der Seite, kein Karussell). Bei 1440 × 900 liegen alle drei Bereichskarten samt Bildhinweis im ersten Bildschirm (Kartenunterkante ≈ 760 px).
+Produktreihen: 4 Spalten ab 761 px, 2 Spalten darunter (einspaltiger Fluss der Seite, kein Karussell). Bei 1440 × 900 liegen alle drei Bereichskarten samt Bildhinweis im ersten Bildschirm: Kartenunterkante laut Messdaten `areaCardsBottom` = 839 px vom Seitenanfang bzw. Browserfensteroberkante (bei Scrollposition 0, Fensterhöhe 900). Der früher genannte Wert von etwa 760 px galt relativ zum Einstiegsbereich (Hero-Ausschnitt), nicht zum Browserfenster.
 
 ## 6 · Sprungziele und Navigation
 
@@ -218,11 +218,13 @@ Methode: berechnete Farben nach WCAG 2.x, halbtransparente Hintergründe aufgebl
 1. **WARN – Telefon-Einstieg (Sichtentscheidung René):** Bei 390 × 844 zeigt der erste Bildschirm Navigation (alle drei Bereiche direkt erreichbar), H1 und Einstieg; die erste Bereichskarte beginnt bei ≈ 625 px, die zweite und dritte folgen beim Scrollen. Alternative wäre ein kürzerer Einstieg auf Telefonen – das wäre eine Textentscheidung, nicht Teil dieser Textquelle.
 2. **WARN – Bedienänderung außerhalb der Textquelle:** Unter 620 px ist die Kopfzeile nicht mehr klebend (statt ~154–198 px dauerhaft verdeckter Fläche), weil sechs Links mit 44-px-Zielen zwei bis drei Zeilen brauchen. Zudem alle Navigations-, Bereichs-, Fußzeilen- und E-Mail-Links auf 44 px Mindesthöhe und ein gut sichtbarer hellgrüner Fokusring in der dunklen Fußzeile (bisher dunkel auf dunkel). Bitte in Konrads Gegenprüfung mit ansehen.
 3. **WARN – Bildtexte:** Die Sport-Vorschauen tragen im Bild „BEWEGUNGSSTUNDE“ bzw. bei 01–03 die bisherigen Abschlussüberschriften. Das ist der gelieferte Bildstand und nicht Teil der HTML-Wortprüfung.
-4. **WARN – Prüfgrenzen:** Geprüft in einem Chromium (headless, Linux). Kein Safari/Firefox, kein echtes Mobilgerät, kein Screenreader-Durchgang; 200-%-Zoom als 720-CSS-px-Layout mit Faktor 2 nachgebildet. Tastaturtests über Playwright-Tastaturereignisse.
+4. **WARN – Prüfgrenzen:** Geprüft in einem Chromium (headless, Linux). Kein Safari/Firefox, kein echtes Mobilgerät, kein Screenreader-Durchgang; 200-%-Zoom nur als 720-CSS-px-Layout mit Faktor 2 nachgebildet, kein bedienter Browser-Zoom (daher L07 = WARN). Tastaturtests über Playwright-Tastaturereignisse.
 5. **Vorschau:** Die bestehende Vercel-Integration hat nach dem Push automatisch eine Zweigvorschau erzeugt (Status „Ready“, 24.09.2026 16:35 UTC): https://bewegtundbunt-website-git-hugo-w-b411c9-bewegtundbunts-projects.vercel.app – technische Plattform-Vorschau, keine Abnahme der Live-Seite; die Messungen dieses Berichts stammen aus dem lokalen Lauf, nicht aus dieser Vorschau. Von mir wurde nichts an Vercel/IONOS konfiguriert. Prüfbar ist der Zweig `hugo/website-drei-bereiche-2026-09-24` bzw. der Entwurfs-PR; falls die bestehende Hosting-Integration automatisch eine Zweigvorschau erzeugt, ist diese keine Abnahme der Live-Seite. Lokal: Repo-Root mit `python3 -m http.server 8765` starten und `http://127.0.0.1:8765/` öffnen (absolute Links `/about.html` setzen den Root voraus).
 6. **Nächster Schritt:** unabhängige technische Gegenprüfung (Konrad) an genau dieser Fassung; Greta bündelt Inhalt/Tragfähigkeit; René entscheidet über Sichtfreigabe und Veröffentlichung. Die 12 Titel sind laut Auftrag für diesen Entwurf gebunden; ihre endgültige Veröffentlichung ist ausdrücklich noch offen.
 
 ## 9 · Screenshots (alle nach Schriftladen und vollständigem Bildladen aufgenommen und von mir gesichtet)
+
+Im Ordner liegen **42 eigenständige Screenshotdateien**. Die Liste `screenshots` in `browserpruefung.json` hat 44 Einträge, weil `about_320_gesamt.png` und `contact_320_gesamt.png` im selben Lauf zweimal aufgenommen und dabei überschrieben wurden (zweite Aufnahme gleicher Seite/Breite); es sind keine zusätzlichen Belege.
 
 | Datei (`screenshots/`) | Gesichteter Befund |
 |---|---|

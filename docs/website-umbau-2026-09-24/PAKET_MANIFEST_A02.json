@@ -1,0 +1,493 @@
+{
+  "createdAt": "2026-09-24T19:11:42.203014+02:00",
+  "baseCommitBeforePackage": "297c50d5602080aa79a3ba262fc5f9ba01880a28",
+  "baseTreeBeforePackage": "68d091f8fae63b400bbd2f2cce3b283712c6804d",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2022,
+      "sha256": "6b0c66d7baaf4552ed910d66f52cfc34bc87d317eda898a46e68018827b0eb0f"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 251,
+      "sha256": "28a21c990f7595872a89030fc63ef377e7e1ccc5dd9f01084c453824c317b9e4"
+    },
+    {
+      "path": "assets/previews/a02/morgenkreis-wald-01-ausschnitt.png",
+      "bytes": 136004,
+      "sha256": "c940824eb8f9499f1e3160c790c988a4285ff0b418c9621260899636a19d4da6"
+    },
+    {
+      "path": "assets/previews/a02/morgenkreis-wald-02-ausschnitt.png",
+      "bytes": 114348,
+      "sha256": "3577d4d46625fc6a6f06ff53280e49552c7a3a6bdc4aa90da9492499d2ab91a0"
+    },
+    {
+      "path": "assets/previews/a02/morgenkreis-wald-03-ausschnitt.png",
+      "bytes": 120499,
+      "sha256": "954b24b5cba9609661ae80a936186535e95a16134d4d437edc56fe37940b343b"
+    },
+    {
+      "path": "assets/previews/a02/morgenkreis-wald-04-ausschnitt.png",
+      "bytes": 136155,
+      "sha256": "61e1d3755ed8e2805f73d97f3156348d6ed8445d62cb81ebc591d3853d342dc3"
+    },
+    {
+      "path": "assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png",
+      "bytes": 57751,
+      "sha256": "0dac6af9994b83608615dd2ece2461279ad27a433e9ac8a7c62941426dab9d3e"
+    },
+    {
+      "path": "assets/previews/a02/sport-wald-01-ausschnitt.png",
+      "bytes": 93387,
+      "sha256": "056d80912a52a749e94cac55d723184bafb59774abdf14cabd67629786dcb6c6"
+    },
+    {
+      "path": "assets/previews/a02/sport-wald-02-ausschnitt.png",
+      "bytes": 98671,
+      "sha256": "8129e40676c4339f9111b990779a85f1b3497ae96a562b3fe1a4fde93cdcdf10"
+    },
+    {
+      "path": "assets/previews/a02/sport-wald-03-ausschnitt.png",
+      "bytes": 104305,
+      "sha256": "ecd7939bc2cb86408daf09161acac48cd12abad4c8b2b8567668ef16fa119536"
+    },
+    {
+      "path": "assets/previews/a02/sport-wald-04-ausschnitt.png",
+      "bytes": 93307,
+      "sha256": "7b16f1906fe45b39acd3370cec3493d3358c28a6f59a5bb9b36f2070dd3d2338"
+    },
+    {
+      "path": "assets/previews/a02/vorschule-wald-01-ausschnitt.png",
+      "bytes": 159675,
+      "sha256": "2ca192a262391814121482d6c0231d1f3f288cb7e64c31bfd40d74813c67c131"
+    },
+    {
+      "path": "assets/previews/a02/vorschule-wald-02-ausschnitt.png",
+      "bytes": 159746,
+      "sha256": "8a80f80cd593c4c09c49c35af4796ce2242aa3d73f6fd76f3e405211d2fcc7b7"
+    },
+    {
+      "path": "assets/previews/a02/vorschule-wald-03-ausschnitt.png",
+      "bytes": 169302,
+      "sha256": "b81620f3f810132f1fd829b56de8b6d04cc6506cb275d79a2a39e0cb56bd23c2"
+    },
+    {
+      "path": "assets/previews/a02/vorschule-wald-04-ausschnitt.png",
+      "bytes": 168111,
+      "sha256": "d76af81212eca81136fc94adc151db9cd318bf44def144d25c370701a10dc93e"
+    },
+    {
+      "path": "assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png",
+      "bytes": 112552,
+      "sha256": "e390b35fd4e5a64475be8a5d4a33fe3bf9be78fda5f1977bc2c7502f3ebb4466"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BAUAUFTRAG_A02.md",
+      "bytes": 10304,
+      "sha256": "ba5ec5d4f92eceb66ca41144eff3d7fffad4425a497f0102e745c650433f92db"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BILDER_A02.json",
+      "bytes": 9737,
+      "sha256": "cb43e7bc466402e18a8c4f41278a6addb7c18e4a090e451477c127bf9ce12c23"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/WORTPRUEFUNG_A02.md",
+      "bytes": 333,
+      "sha256": "56cf9370f1651372506f02605b633c282417576ee1ffe120ca33ad8b4528820f"
+    }
+  ],
+  "baselineHtml": [
+    {
+      "path": "index.html",
+      "sha256": "417f4e828e4dc2db2da868d3138bc1aa22c3bdf460c64ddd9acfce877127c3c4",
+      "role": "index.html darf nach Bau geändert sein; übrige unverändert"
+    },
+    {
+      "path": "about.html",
+      "sha256": "017ca65fb0e7a276644faf799759deb91d499655de39b667d7bd2e1dc7de40a0",
+      "role": "index.html darf nach Bau geändert sein; übrige unverändert"
+    },
+    {
+      "path": "contact.html",
+      "sha256": "091e97a9bfac298a7be0f867a43bef39c35b6fbe166b18ad472811b09c7b8363",
+      "role": "index.html darf nach Bau geändert sein; übrige unverändert"
+    }
+  ],
+  "protectedGitBlobs": [
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/BAURUECKLAUF_A01.md",
+      "sha": "435002f2bd865bb8511ac6653801b4874cb87b8b"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/messdaten/browserpruefung.json",
+      "sha": "ebd9bb04645129e0f5c4af6b970e8ace2706b355"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/messdaten/diff_html_gegen_47729c4.patch",
+      "sha": "b5025354016948c3d6330b9ef22f9f6d5bf4153c"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/messdaten/diff_stat.txt",
+      "sha": "7c257ffa2649d6219dbeec789b0a6d137fd969c9"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/messdaten/pruefe_paket_nach_bau.txt",
+      "sha": "6ef847655f6c1ef07c7f9d0d4499cfafe8b4773d"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/messdaten/text_wort_bild.json",
+      "sha": "4dd4966f98e1532a11a8bbed277287f7f174c262"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/about_1440_gesamt.png",
+      "sha": "395c3ffd3f419635e5c138f48eac9f9df37f7d36"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/about_320_gesamt.png",
+      "sha": "1b61a04802d16648760aee9b815cb3fb2c096a19"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/about_360_gesamt.png",
+      "sha": "11ea546e687c55a34fa7a17bba50904aca3cefec"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/about_768_gesamt.png",
+      "sha": "1922ef035540cd058e20d14fd7e536dd618548a3"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/contact_1440_gesamt.png",
+      "sha": "e47fae033e1c50e466a5f8984b08d445eccd8faa"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/contact_320_gesamt.png",
+      "sha": "e141282868dd24e45ae4a0c0019d480a87a63303"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/contact_360_gesamt.png",
+      "sha": "faf5e56e36f5af2c8fcd5e19775b12b09b13236f"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/contact_768_gesamt.png",
+      "sha": "170610de846e8bcbd7b0a8067f3bdeaf409f58dd"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_about_1440_navigation-vorschule.png",
+      "sha": "934536357c7816e5024b655579990aeea0a2dd7c"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_about_390_navigation-vorschule.png",
+      "sha": "1be74a4f5dbe4bbf5166ac10ca62c616fb1aafbb"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_contact_1440_email.png",
+      "sha": "dfd1be9f7912519f4d6bd44dd3849617f323ffe7"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_contact_1440_navigation-kontakt.png",
+      "sha": "0821aef28ae213fc0cb2b882e6b8eba71da4509e"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_contact_390_email.png",
+      "sha": "c652a37a70623f2c5a0c21c5f2e18c51dc0af237"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_contact_390_navigation-kontakt.png",
+      "sha": "7a833175ae057ea0a531d4b1e03f6c2e3b09b183"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_1440_bereichslink-vorschule.png",
+      "sha": "07b689c62d528a109129d7aea1c07a3f56795d5f"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_1440_fusszeile-impressum.png",
+      "sha": "c52e47f25957b6a08c79516b466869ff5b0d4309"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_1440_kontaktknopf.png",
+      "sha": "ef75df1579331dd8064eaaa788e4517e5e5182e4"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_1440_navigation-bewegungseinheiten.png",
+      "sha": "545cb4d65222fc53967798662127af8576fb18d2"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_390_bereichslink-vorschule.png",
+      "sha": "96fc77650c1f0e5262fb7c5dfaf3699f6d2fd99c"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_390_fusszeile-impressum.png",
+      "sha": "51da64dc9651e64f6e4e91e8f22629d8524beef0"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_390_kontaktknopf.png",
+      "sha": "f67e86b814490f140a56310b48a385eb5f999854"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/fokus_index_390_navigation-bewegungseinheiten.png",
+      "sha": "e9a16dedb2fcf3532c6a76a98b1e169db0adc101"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_1440_bewegung-abschnitt.png",
+      "sha": "36d25b30bff0b83057ce57be0bfb73233b7ae527"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_1440_einstieg-bereiche.png",
+      "sha": "bc03834a4a67f037f64ada1cb2f324d0f1051220"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_1440_gesamt.png",
+      "sha": "0cefca3266d85b18dea48445ade5483ccc0d3d6b"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_1440_morgenkreis-kartenreihe.png",
+      "sha": "e9edefcbe3a3bc05c787412df634e6f6a4f9feb4"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_1440_viewport-oben.png",
+      "sha": "37e43268e781a1f4136098427518f8c02855775d"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_320_einstieg-bereiche.png",
+      "sha": "f688df64c1e3c68ab5263766a9971868c1b13b4c"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_320_viewport-oben.png",
+      "sha": "ea5d729c3102940f898aa991dad9f884d5e803b0"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_360_einstieg-bereiche.png",
+      "sha": "3a162436092ff12c1b0bd060b37a7cbf27916bbe"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_360_viewport-oben.png",
+      "sha": "90a85eab33ffbf4ed7021f418ef424cad4ac41e5"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_bewegung-abschnitt.png",
+      "sha": "2e6ba6a995d800d34aac51b21a7bd634999a4cf7"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_einstieg-bereiche.png",
+      "sha": "93f65f8cc1f24df055c326d0bb4dba831e779fbf"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_gesamt.png",
+      "sha": "f17ba5641b9c11fbdc4fe3dce5bb2b9ec41f752e"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_morgenkreis-kartenreihe.png",
+      "sha": "925409a4bee386ee6e0e6548e69106ab6abb2474"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_viewport-oben.png",
+      "sha": "d25b52a71935014a0d438bc0f6b7e2316463712c"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390_vorschule-abschnitt.png",
+      "sha": "4cca14179981744208980e8c6b7e399ece327fda"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_390x844_erster-bildschirm.png",
+      "sha": "698d0655c875e298804ea0aa74aceaef90f9c5e9"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_768_einstieg-bereiche.png",
+      "sha": "e06e1d8154a08151c56fe654c0ca101a5c47d4fc"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_768_viewport-oben.png",
+      "sha": "249c31be953b2353486d310018f5e7740dfc0f77"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/index_768_vorschule-abschnitt.png",
+      "sha": "7cc601af9bd9828f3920857e702b78cad3c3c433"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/screenshots/zoom200_index_1440-entspricht-720_einstieg.png",
+      "sha": "7451d309290620d525b45dd200c1fa18d68172df"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/scripts/probe.js",
+      "sha": "0a246cab8df5c4a0f36d6dc62ba965254d548752"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/scripts/pruefung.js",
+      "sha": "18d9b38e0abc0f50a376f20198bf30efc51f90a2"
+    },
+    {
+      "path": "90_OUTPUT/WEBSITE_CLOUD_2026-09-24/scripts/textpruefung.py",
+      "sha": "5247fc4eb23c4f5e9dc9dca14e5ff72785077c43"
+    },
+    {
+      "path": "Impressum.html",
+      "sha": "f737d2b32e97d9ccd23e42e233677733dd353beb"
+    },
+    {
+      "path": "README.md",
+      "sha": "5038a02f0ebfb2d77e16d5e48cf540d0983c779d"
+    },
+    {
+      "path": "about.html",
+      "sha": "c85f55bbbc1f2c169d5ec9df0f6fb702dcdfcb4b"
+    },
+    {
+      "path": "assets/fonts/dancing-script-variable.woff2",
+      "sha": "93bda68a27707f602bf51786f438e20421f435e6"
+    },
+    {
+      "path": "assets/fonts/fonts.css",
+      "sha": "d6d421dec7cc6095560dc374afe1a63e653c590a"
+    },
+    {
+      "path": "assets/fonts/sora-variable.woff2",
+      "sha": "074a20289c43c4d46b6a5c6a33f1dbfe44b95db7"
+    },
+    {
+      "path": "assets/fonts/source-serif-4-italic.woff",
+      "sha": "6acc66e7603d3344a62442b7a5ac340685df24a1"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+      "sha": "af9e9bd5b0626c7281608b9811ac650684987442"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+      "sha": "bf79f9dd98606d4c1f1dccb0fc956263554a6c00"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+      "sha": "0cd5f4d1645b031702ee69cb79cd4ae848f02494"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+      "sha": "67604034c0e9b1d75bad6c7f0a3199d465e647b9"
+    },
+    {
+      "path": "assets/handouts/sport-wald-01-kiga.png",
+      "sha": "c20a1ae82b6b59f9d787f0413cfef508d5e55500"
+    },
+    {
+      "path": "assets/handouts/sport-wald-02-kiga.png",
+      "sha": "3278257fd3a0a38bbfe9443e39219002ed36f679"
+    },
+    {
+      "path": "assets/handouts/sport-wald-03-kiga.png",
+      "sha": "9fbb6374765d0d04ef3780ce69fbbfcfcd494322"
+    },
+    {
+      "path": "assets/handouts/sport-wald-04-kiga.png",
+      "sha": "9663741887d10cbdbfd3dfadbb5482304055f905"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-01.png",
+      "sha": "0453b71e6c2442dddc8b768cea541ee2f2a3962f"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-02.png",
+      "sha": "53ba05bc61524d3657d767cb1685aca006083534"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-03.png",
+      "sha": "ccaac3ddf6fa20482e7da25e5b81eeb8c0730486"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-04.png",
+      "sha": "4f4137d90e5c44825217ddd6da7d5d57a65e2d45"
+    },
+    {
+      "path": "assets/handouts/wald-olympiade-kiga.png",
+      "sha": "90c06aac838bf3d4b73c7583f338931b05c4c401"
+    },
+    {
+      "path": "assets/handouts/wald-parcours-hauptbild.jpg",
+      "sha": "1c8f9004dd9a37fa404082c2c46ff724e26680f1"
+    },
+    {
+      "path": "assets/handouts/wald-parcours-kiga.png",
+      "sha": "88fdc1e287f4a85aef8ef160b043b5559a20f97d"
+    },
+    {
+      "path": "assets/handouts/wald-rhythmus-kiga.png",
+      "sha": "6ef4885495ab78d0caf3a4d630d9b6859d6a1abe"
+    },
+    {
+      "path": "assets/handouts/wald-spielstunde-hauptbild.jpg",
+      "sha": "35741eade0f859f98bd3ee07b7c0da84227247c5"
+    },
+    {
+      "path": "assets/handouts/wald-spielzeit-kiga.png",
+      "sha": "b1bbf8960c937e2076a01989d1d6ff966e9f4692"
+    },
+    {
+      "path": "assets/handouts/wald-wettkampf-hauptbild.jpg",
+      "sha": "af0ef46cde4ed743b8d8340d129d9c862a10ed90"
+    },
+    {
+      "path": "assets/images/einblick-parcours-titelband.png",
+      "sha": "2cccf9ee451b715a453a5d431f13fdce8e8fa908"
+    },
+    {
+      "path": "assets/images/einblick-sicherheit.png",
+      "sha": "090a4c152fbc7e22becf41250f86d989ea2c17e5"
+    },
+    {
+      "path": "assets/images/einblick-wald-aufbau.png",
+      "sha": "d6f87e93f30bea1215119541e6c159b6a9eeaed9"
+    },
+    {
+      "path": "assets/images/einblick-waldsignal.png",
+      "sha": "4a059a7da0fc4b958cb47c179f40003bc89bdfb2"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "sha": "360443279ee517ae394f61243fd84674e0318fbf"
+    },
+    {
+      "path": "assets/images/rene.png",
+      "sha": "360443279ee517ae394f61243fd84674e0318fbf"
+    },
+    {
+      "path": "contact.html",
+      "sha": "b8d1e94f30ec81564880aca10b190452151f331b"
+    },
+    {
+      "path": "datenschutz.html",
+      "sha": "c1653024c703ce8e6b5be26c06ea570d5db38de9"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/ABNAHMEMATRIX_A01.md",
+      "sha": "14f32b78134c321a8bcafbb516dcb08d5d81fbd3"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BAUAUFTRAG_A01.md",
+      "sha": "5c6becda760263b8f83711e55ab7a3b051fc251c"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BILDER_A01.json",
+      "sha": "1243d7775dd05e14d4175f04a92f5ee2ad1fed5a"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/PAKET_MANIFEST_A01.json",
+      "sha": "9b98e4071e0079ff5f20ac2fca0576348f912491"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/PRUEFE_PAKET.py",
+      "sha": "7ee862f090947efc4879b1307c6cd83ab80d89af"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/TEXTQUELLE_A01.md",
+      "sha": "4cc823e3a475a8137ec498a795252864e234f86e"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/WORTPRUEFUNG_A01.md",
+      "sha": "39448c4da75f2659aff69bce5090ddae8c14f7b9"
+    },
+    {
+      "path": "index-2026-03.html.bak",
+      "sha": "531997e9171cc64f3758647a6fe4b3be4655374d"
+    }
+  ]
+}

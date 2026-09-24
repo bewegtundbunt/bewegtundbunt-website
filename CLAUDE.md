@@ -1,3 +1,3 @@
-# Aktiver Website-Bau
+# Website-Sichtrunde A02
 
-Lies `AGENTS.md` und anschließend `docs/website-umbau-2026-09-24/BAUAUFTRAG_A01.md` vollständig. Die dort gebundene Textquelle, Abnahmematrix und das Paketmanifest bilden den konkreten Auftrag. Baue die Arbeitsfassung auf deinem eigenen Cloud-Arbeitszweig und liefere prüfbare Ergebnisse. Keine weitere lokale Planrunde; kein Zugriff auf das App-Repository, keine Änderung von main/staging, kein Merge und keine aktive Live-Veröffentlichung.
+Lies AGENTS.md und docs/website-umbau-2026-09-24/BAUAUFTRAG_A02.md. Renés neuer Änderungsauftrag ersetzt widersprechende A01-Vorgaben. Bleibe im bestehenden eigenen Hugo-Zweig, ohne Merge und ohne automatische Folgeläufe.

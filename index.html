@@ -121,19 +121,19 @@
     }
     .hero-copy { max-width: 620px; }
     .nowrap { white-space: nowrap; }
-    .hero-fan { position: relative; width: 100%; aspect-ratio: 470 / 440; }
+    .hero-fan { position: relative; width: 100%; aspect-ratio: 470 / 480; }
     .hero-fan img {
       position: absolute;
-      width: 60%;
+      width: 54%;
       height: auto;
       border: 4px solid white;
       border-radius: 8px;
       background: white;
       box-shadow: 0 14px 34px rgba(16, 43, 32, 0.18);
     }
-    .hero-fan-back { z-index: 1; left: 2%; top: 53%; transform: rotate(-4deg); }
-    .hero-fan-middle { z-index: 2; left: 14%; top: 45%; transform: rotate(-1deg); }
-    .hero-fan-front { z-index: 3; left: 37%; top: 2%; transform: rotate(3deg); }
+    .hero-fan-back { z-index: 1; left: 7%; top: 14%; transform: rotate(-10deg); }
+    .hero-fan-middle { z-index: 2; left: 22%; top: 7%; transform: rotate(-1deg); }
+    .hero-fan-front { z-index: 3; left: 38%; top: 5%; transform: rotate(8deg); }
     .positioning {
       max-width: 700px;
       margin-bottom: 14px;
@@ -162,13 +162,13 @@
     }
     .area-thumbs {
       position: relative;
-      height: 192px;
+      aspect-ratio: 330 / 280;
       margin-bottom: 14px;
     }
     .area-thumbs img {
       position: absolute;
       top: 0;
-      width: 58%;
+      width: 43%;
       height: auto;
       border: 3px solid white;
       border-radius: 6px;
@@ -176,10 +176,10 @@
       box-shadow: 0 8px 20px rgba(16, 43, 32, 0.16);
     }
     /* umgekehrte Überdeckung gegenüber A01: das erste Bild liegt vorn */
-    .area-thumbs img:nth-child(1) { z-index: 4; left: 0; top: 4px; transform: rotate(-5deg); }
-    .area-thumbs img:nth-child(2) { z-index: 3; left: 14%; top: 18px; transform: rotate(-1.5deg); }
-    .area-thumbs img:nth-child(3) { z-index: 2; left: 28%; top: 32px; transform: rotate(2deg); }
-    .area-thumbs img:nth-child(4) { z-index: 1; left: 42%; top: 46px; transform: rotate(5deg); }
+    .area-thumbs img:nth-child(1) { z-index: 4; left: 5%; top: 5%; transform: rotate(-7deg); }
+    .area-thumbs img:nth-child(2) { z-index: 3; left: 20%; top: 9%; transform: rotate(-2deg); }
+    .area-thumbs img:nth-child(3) { z-index: 2; left: 35%; top: 13%; transform: rotate(3deg); }
+    .area-thumbs img:nth-child(4) { z-index: 1; left: 50%; top: 17%; transform: rotate(8deg); }
     .area-world { margin: 0 0 4px; color: var(--moss); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
     .area-card h2 { margin-bottom: 10px; font-size: 21px; line-height: 1.3; letter-spacing: -0.01em; }
     .area-card p { margin-bottom: 8px; color: var(--muted); font-size: 15px; line-height: 1.6; }
@@ -223,7 +223,7 @@
       align-items: center;
     }
     .kinderblatt-figure { margin: 0; }
-    .kinderblatt-fan { position: relative; width: 100%; aspect-ratio: 520 / 390; }
+    .kinderblatt-fan { position: relative; width: 100%; aspect-ratio: 520 / 470; }
     .kinderblatt-fan img {
       position: absolute;
       height: auto;
@@ -232,9 +232,10 @@
       background: white;
       box-shadow: 0 12px 30px rgba(16, 43, 32, 0.16);
     }
-    .kb-back { z-index: 1; width: 50%; left: 0; top: 0; transform: rotate(-7deg); }
-    .kb-middle { z-index: 2; width: 50%; left: 14%; top: 10%; transform: rotate(-2deg); }
-    .kb-front { z-index: 3; width: 70%; left: 28%; top: 26%; transform: rotate(2deg); border-color: #fff; }
+    .kinderblatt-fan img:nth-child(1) { z-index: 4; width: 48%; left: 5%; top: 5%; transform: rotate(-7deg); }
+    .kinderblatt-fan img:nth-child(2) { z-index: 3; width: 48%; left: 18%; top: 9%; transform: rotate(-2deg); }
+    .kinderblatt-fan img:nth-child(3) { z-index: 2; width: 48%; left: 31%; top: 13%; transform: rotate(3deg); }
+    .kinderblatt-fan img:nth-child(4) { z-index: 1; width: 48%; left: 44%; top: 17%; transform: rotate(8deg); }
     .kinderblatt-figure figcaption { margin-top: 14px; color: var(--muted); font-size: 13px; }
     .kinderblatt-copy h3 { margin-bottom: 14px; font-size: 26px; line-height: 1.25; }
     .kinderblatt-copy p { color: var(--ink); font-size: 17px; }
@@ -401,7 +402,7 @@
         column-gap: 26px;
         align-items: start;
       }
-      .area-thumbs { grid-row: 1 / span 3; height: 152px; margin: 0; }
+      .area-thumbs { grid-row: 1 / span 3; margin: 0; }
     }
 
     @media (max-width: 900px) {
@@ -446,12 +447,7 @@
       .hero-copy h1 { margin-bottom: 18px; }
       .positioning, .hero-text { font-size: 16px; }
       .area-card { display: flex; align-items: stretch; padding: 16px 18px 12px; border-radius: 20px; }
-      .area-thumbs { height: 128px; margin-bottom: 10px; }
-      .area-thumbs img { width: min(46%, 138px); }
-      .area-thumbs img:nth-child(1) { left: 0; top: 3px; transform: rotate(-3deg); }
-      .area-thumbs img:nth-child(2) { left: 18%; top: 11px; transform: rotate(-1deg); }
-      .area-thumbs img:nth-child(3) { left: 36%; top: 19px; transform: rotate(1deg); }
-      .area-thumbs img:nth-child(4) { left: 54%; top: 27px; transform: rotate(3deg); }
+      .area-thumbs { margin-bottom: 10px; }
       .kinderblatt-copy h3 { font-size: 22px; }
       .kinderblatt-copy p { font-size: 16px; }
       .area-card h2 { font-size: 19px; }
@@ -511,9 +507,9 @@
             <p class="hero-text">bewegt &amp; bunt entwickelt klar aufgebaute Handouts für den Kita-Alltag, für die Vorschule mit passendem Kinderblatt. Sie unterstützen pädagogische Fachkräfte bei der Vorbereitung und geben Kindern Raum zum Spielen, Lernen und Gestalten.</p>
           </div>
           <div class="hero-fan">
-            <img class="hero-fan-back" src="assets/previews/a02/sport-wald-01-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-            <img class="hero-fan-middle" src="assets/previews/a02/morgenkreis-zoo-01-ausschnitt.png" alt="" width="320" height="124" decoding="async" />
-            <img class="hero-fan-front" src="assets/previews/a02/vorschule-wald-04-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
+            <img class="hero-fan-back" src="assets/handouts/sport-wald-01-kiga.png" alt="" width="380" height="538" decoding="async" />
+            <img class="hero-fan-middle" src="assets/previews/a03/morgenkreis-zoo-01.png" alt="" width="380" height="538" decoding="async" />
+            <img class="hero-fan-front" src="assets/handouts/vorschule-wald-04.png" alt="" width="380" height="538" decoding="async" />
           </div>
         </div>
 
@@ -521,10 +517,10 @@
           <div class="area-grid">
             <article class="area-card">
               <div class="area-thumbs">
-                <img src="assets/previews/a02/morgenkreis-wald-01-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/morgenkreis-wald-02-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/morgenkreis-wald-03-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/morgenkreis-wald-04-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
+                <img src="assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png" alt="" width="380" height="544" decoding="async" />
+                <img src="assets/handouts/morgenkreis-wald-2-wind-kiga.png" alt="" width="380" height="544" decoding="async" />
+                <img src="assets/handouts/morgenkreis-wald-3-laut-kiga.png" alt="" width="380" height="544" decoding="async" />
+                <img src="assets/handouts/morgenkreis-wald-4-dach-kiga.png" alt="" width="380" height="544" decoding="async" />
               </div>
               <p class="area-world">Themenwelt Wald</p>
               <h2>Morgenkreis · Kindergarten</h2>
@@ -532,10 +528,10 @@
             </article>
             <article class="area-card">
               <div class="area-thumbs">
-                <img src="assets/previews/a02/sport-wald-01-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/sport-wald-02-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/sport-wald-03-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/sport-wald-04-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
+                <img src="assets/handouts/sport-wald-01-kiga.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/sport-wald-02-kiga.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/sport-wald-03-kiga.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/sport-wald-04-kiga.png" alt="" width="380" height="538" decoding="async" />
               </div>
               <p class="area-world">Themenwelt Wald</p>
               <h2>Bewegungseinheiten · Kindergarten</h2>
@@ -543,10 +539,10 @@
             </article>
             <article class="area-card">
               <div class="area-thumbs">
-                <img src="assets/previews/a02/vorschule-wald-01-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/vorschule-wald-02-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/vorschule-wald-03-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
-                <img src="assets/previews/a02/vorschule-wald-04-ausschnitt.png" alt="" width="320" height="213" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-01.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-02.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-03.png" alt="" width="380" height="538" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-04.png" alt="" width="380" height="538" decoding="async" />
               </div>
               <p class="area-world">Themenwelt Wald</p>
               <h2>Vorschule · für die Großen im Kindergarten</h2>
@@ -656,16 +652,18 @@
         <div class="kinderblatt">
           <figure class="kinderblatt-figure">
             <div class="kinderblatt-fan">
-              <img class="kb-back" src="assets/previews/a02/vorschule-wald-01-ausschnitt.png" alt="" width="320" height="213" loading="lazy" decoding="async" />
-              <img class="kb-middle" src="assets/previews/a02/vorschule-wald-04-ausschnitt.png" alt="" width="320" height="213" loading="lazy" decoding="async" />
-              <img class="kb-front" src="assets/previews/a02/vorschule-wald-04-kinderblatt-ausschnitt.png" alt="" width="380" height="280" loading="lazy" decoding="async" />
+              <img src="assets/previews/a03/kinderblatt-wald-01.png" alt="Kinderblatt Wir zählen im Herbstwald mit Zahlenbild und Höraufgabe" width="380" height="538" loading="lazy" decoding="async" />
+              <img src="assets/previews/a03/kinderblatt-wald-02.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+              <img src="assets/previews/a03/kinderblatt-wald-03.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+              <img src="assets/previews/a03/kinderblatt-wald-04.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
             </div>
-            <figcaption>Einblick in ein Kinderblatt zur Themenwelt Wald.</figcaption>
+            <figcaption>Vier Kinderblätter zur Themenwelt Wald – vorne: „Wir zählen im Herbstwald“.</figcaption>
           </figure>
           <div class="kinderblatt-copy">
-            <h3>Aus Papier wird ein eigener Wald</h3>
-            <p>Zum Handout gehört ein Kinderblatt, das die Idee aufgreift. Bei „Unser Wald aus Formen“ gestalten die Kinder ihren Wald mit Papierformen, fahren einfache Formen nach und erkennen Formen beim Zuhören in einer Geschichte.</p>
-            <p>Je nach Einheit wird gezählt, genau hingehört, zugeordnet, nachgezeichnet oder gestaltet. Auch Schere, Papier und Kleber können dazugehören. Welche Materialien benötigt werden, steht im jeweiligen Handout.</p>
+            <h3>Malen nach Zahlen und genau hinhören</h3>
+            <p>Bei „Wir zählen im Herbstwald“ gestalten die Kinder ein Zahlenbild: Die Zahlen zeigen, welche Farbe in die jeweilige Fläche gehört. Auf dem Kinderblatt zählen sie außerdem Mengen, teilen sie auf und verfolgen Wege.</p>
+            <p>Wenn die Geschichte vorgelesen wird, hören die Kinder genau auf „Eichel“ und „Kastanie“. Für jedes gehörte Wort markieren sie einen passenden Kreis auf ihrem Blatt. So verbinden sich das Zuhören, das Wiedererkennen von Wörtern und das Zählen.</p>
+            <p>Die vier Kinderblätter setzen unterschiedliche Schwerpunkte: Zahlen &amp; Mengen; Sprache, Buchstaben &amp; Zuhören; Untersuchen, Ordnen &amp; Entdecken; Formen, Gestalten &amp; Zuhören. Je nach Einheit gehören auch Schere, Papier und Kleber dazu.</p>
           </div>
         </div>
       </div>

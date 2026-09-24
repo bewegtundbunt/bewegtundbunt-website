@@ -1,0 +1,54 @@
+{
+  "entries": [
+    {
+      "path": "assets/previews/a03/kinderblatt-wald-01.png",
+      "sourcePdfSha256": "c0256b004e33180b395ab67b9976221aa7989b5660c881dfc675b8edb10a18e9",
+      "sourceVersion": "WALD1_KINDERBLATT_PRUEFVORSCHAU_A19",
+      "page": 1,
+      "width": 380,
+      "height": 538,
+      "sha256": "2eb096107669d842e46e3f8d13de17d2dbb95c730a083780fd4c83e049558b75",
+      "bytes": 140002
+    },
+    {
+      "path": "assets/previews/a03/kinderblatt-wald-02.png",
+      "sourcePdfSha256": "77a9940e53f0677f81f2cff9f30f2ebf956d3125ae3e9efcabbdf0d1b24ad0da",
+      "sourceVersion": "WALD2_KINDERBLATT_PRUEFVORSCHAU_A10",
+      "page": 1,
+      "width": 380,
+      "height": 538,
+      "sha256": "3f94a5f30103631686fac9d9b31dda2aee247ac46370b6db080e266527210520",
+      "bytes": 130826
+    },
+    {
+      "path": "assets/previews/a03/kinderblatt-wald-03.png",
+      "sourcePdfSha256": "af1c4424939c960b946bfb48e24836ac3c4badbd064598746016cc37d7b89e5b",
+      "sourceVersion": "WALD3_KINDERBLATT_BILDSTANDARD_A01_2",
+      "page": 1,
+      "width": 380,
+      "height": 538,
+      "sha256": "8a2c426f2743cf9558c7375e2e1dce8dc86ce8b3a05d18e7a5396af03bd77368",
+      "bytes": 106086
+    },
+    {
+      "path": "assets/previews/a03/kinderblatt-wald-04.png",
+      "sourcePdfSha256": "b526eecc1aa3bc46cd1c9e78167e955900fbcb822c5106ce11b0f129eef26367",
+      "sourceVersion": "WALD4_KINDERBLATT_BILDSTANDARD_A01",
+      "page": 1,
+      "width": 380,
+      "height": 538,
+      "sha256": "b348e0916cb339cea5e87153658c4789bf5741693b0b9d2a1da826f7d671e485",
+      "bytes": 101479
+    },
+    {
+      "path": "assets/previews/a03/morgenkreis-zoo-01.png",
+      "sourcePdfSha256": "0f13a3b4522ba0fdb2c1b05a0afa3ff3548b49f2a5ad3448746d3ce341f0c2fc",
+      "sourceVersion": "KIGA_MORGENKREIS_ZOO_W4_Was-steckt-im-Beutel_ZTEST01_MASKE-2_A07_NICHT_FREIGEGEBEN",
+      "page": 1,
+      "width": 380,
+      "height": 538,
+      "sha256": "2145ab48bbc283896ee6faa1e534751f3c5e64d1c57228ad2cd4e96ce02aba23",
+      "bytes": 222858
+    }
+  ]
+}

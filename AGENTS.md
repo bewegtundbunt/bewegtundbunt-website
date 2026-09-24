@@ -1,21 +1,26 @@
-# AGENTS.md · WEBSITE-REPO bewegtundbunt-website (Task-Regeln V1)
-Dieses Repo ist der Arbeitsraum für die bewegt-und-bunt-Website. Ausgabe immer auf Deutsch.
+# Website-Auftrag · drei Bereiche · 24.09.2026
 
-Rollen: René = Direktion, einzige finale Freigabe · Anna/Fable = Führung dieser Runde, Textquelle, Konsolidierung · Oskar = Abnahmematrix, unabhängige Messung · Konrad = technische Umsetzung/Prüfung · Greta = Governance/QA. Cowork ist ausführender Arbeitsraum, nicht Entscheider.
+Ausgabe auf Deutsch. Dieses Repository gehört ausschließlich zur Website bewegt & bunt. Das App-Repository ist außerhalb des Auftrags.
 
-Pflichtquellen vor jeder technischen Arbeit (alle im Governance-Ordner /Users/renekrakow/Desktop/bewegt-und-bunt-cowork):
-1. der jüngste AKTIVIERTE Website-Startbrief in 01_STARTBRIEFE (Aktivierung nur durch Renés wortgleichen GO-Satz als eigene Nachricht)
-2. die dort gebundene Abnahmematrix samt Addenda in 02_OSKAR
-3. die dort gebundene Textquelle in 03_FABLE
+## Aktiver Auftrag und Vorrang
 
-Autonomie-Stufen Website (der Startbrief nennt genau eine; fehlt sie, gilt W0):
-- W0 = nur lesen / melden / STOPP
-- W1 = Arbeitsbaum-Write auf staging gemäß Startbrief-Allowlist · KEIN Commit · KEIN Reflog · HEAD/Tree bleiben unverändert · Bericht/Screenshots in den im Startbrief gebundenen 90_OUTPUT-Pfad
-- W2 = ein Commit auf staging, nur nach ausdrücklichem Startbrief + GO · kein Push
-- W3 = Push/Deploy/main — GESPERRT; ausschließlich René persönlich nach Oskar-PASS und Sicht-Freigabe
+Aktiv ist `docs/website-umbau-2026-09-24/BAUAUFTRAG_A01.md`, mit gebundener Textquelle, Abnahmematrix und Paketmanifest im selben Ordner. Der beauftragte Cloud-Bau ersetzt für diesen Auftrag ältere lokale W0/W1-Briefe und deren nicht erreichbare Mac-Dateipfade. Keine neue Planrunde und kein Warten auf einen weiteren wortgleichen GO-Satz: Der konkrete Bau ist beauftragt.
 
-Erlaubt (in W1): Lesen im gesamten Website-Repo · Löschen einer leeren .git/index.lock, wenn der Startbrief sie als Löschziel bindet · Lesen der im Startbrief gebundenen Bildquellen (z. B. /Users/renekrakow/Desktop/Kika Praxis, read-only) · Schreiben NUR in die Startbrief-Allowlist.
+Genau eine Autonomiestufe: **W1C** – Website-Arbeitsfassung auf dem eigenen Cloud-Arbeitszweig erstellen, prüfen und dort speichern/übertragen. Startbasis ist `vorbereitung/website-drei-bereiche-2026-09-24`, abgeleitet von staging. Einen eigenen Sitzungszweig benutzen. **main, staging und den Vorbereitungszweig nicht verändern; kein Merge; keine aktive Veröffentlichung oder Vercel-/IONOS-Konfiguration.** Die Cloud darf ihren eigenen Arbeitszweig mit dem Bau zur Prüfung hochladen. Technische Plattform-Vorschauen sind keine Abnahme der Live-Seite.
 
-Verboten immer: main-Write · Push · Deploy (Vercel/IONOS) · Löschen oder Überschreiben von Impressum.html, datenschutz.html, Schriftdateien, fonts.css, *.bak · Dateien außerhalb von Website-Repo, gebundenen Bildquellen und Governance-90_OUTPUT anfassen · Notion-Write · Veröffentlichung · Statussetzung · Kanonisierung. Das App-Repo (bewegtundbunt-app) ist nicht Teil dieses Tasks und wird weder gelesen noch beschrieben; seine Pflichtquellen gelten hier nicht.
+## Zuständigkeit
 
-Arbeitsweise: erst Vorzustand gegen die Startbrief-Anker prüfen (Branch/HEAD/Tree/Arbeitsbaum), dann handeln · bei Widerspruch, fehlendem Zugriff oder Risiko: STOPP mit Ist-Meldung · am Ende Kurzbericht, erzeugte Dateien, offene Punkte, nächster Schritt · Urteilsskala PASS/WARN/STOPP wie im Leitstand.
+Hugo baut. Konrad prüft anschließend die konkrete technische Fassung unabhängig. Greta bündelt Inhalt/Tragfähigkeit. René entscheidet final über die Veröffentlichung. Kein technischer Test erteilt eine Produkt- oder Praxisfreigabe.
+
+## Schreibumfang für Hugo
+
+Ändern: `index.html`, `about.html`, `contact.html`.
+Neu erzeugen: `90_OUTPUT/WEBSITE_CLOUD_2026-09-24/**` für Prüfbericht, Messdaten, Screenshots und erforderliche kleine Prüfscripte. Keine personenbezogenen oder geheimen Daten in Prüfbelege aufnehmen.
+
+Die acht neuen PNGs unter `assets/handouts/` sind bereits geprüft bereitgestellt und bytegleich zu verwenden. Die vier vorhandenen Morgenkreis-PNGs bleiben unverändert. Auftrag, Textquelle, Regeln und Paketmanifest nicht eigenmächtig umschreiben. Bei einem belegten Konflikt gezielt melden.
+
+Impressum.html, datenschutz.html, assets/fonts/**, fonts.css, *.bak, alle übrigen vorhandenen Bilder, bestehende Git-/Hosting-Konfiguration und andere Dateien bleiben unverändert. Keine PDFs oder neuen externen Schriften/Tracker hinzufügen. Keine Bilder generieren. Keine Dateien löschen. Vorhandene HTML-Abschnitte dürfen innerhalb der drei beauftragten HTML-Dateien gezielt ersetzt werden.
+
+## Arbeitsweise
+
+Zuerst Paket- und Quellhashes nachmessen. Bei fehlendem Bild, Hashabweichung oder widersprüchlicher Quelle an dieser Stelle anhalten und Ist-Fassung melden; nichts zurücksetzen. Danach Auftrag umsetzen, passende reale Layout-/Link-/Tastaturtests durchführen, bei Breitenmessungen `document.fonts.ready` abwarten und tatsächliche Screenshotbelege liefern. Nicht ausgeführte Tests als offen kennzeichnen. Testfassungen und KI-Bildhinweis quellengetreu sichtbar halten. Kein pauschales Praxisversprechen.

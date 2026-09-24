@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0",
+  "purpose": "Geprüfte niedrig aufgelöste Website-Vorschauen; Testfassungen, keine Produktfreigabe",
+  "createdAt": "2026-09-24T16:03:59.127255+00:00",
+  "entries": [
+    {
+      "productId": "SPORT-WALD-01",
+      "title": "Frösche und Eichhörnchen",
+      "sourceVersion": "B15 · Ausgabe A01_2",
+      "sourcePdfSha256": "d0658d2b3fa5a9b17866d7bd7f929cb66ca5e0eb9c638856495456dc09a53e8b",
+      "page": 1,
+      "path": "assets/handouts/sport-wald-01-kiga.png",
+      "sha256": "d9dad0e531946f19d4a648544464f856fa165e2c7b320ab3e0c57cb1ebeec09a",
+      "bytes": 185475,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "SPORT-WALD-02",
+      "title": "Wildkatzen und Adler",
+      "sourceVersion": "A10 · Ausgabe A01_2",
+      "sourcePdfSha256": "171c57b845638f99af3dca7fe69c4cc0580b7327e4d1c41c3a26ac3df7589847",
+      "page": 1,
+      "path": "assets/handouts/sport-wald-02-kiga.png",
+      "sha256": "2340442e93aeaae2faa6b68d5e1ce1f0fe62a41469d68d194668577fb58b8824",
+      "bytes": 191684,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "SPORT-WALD-03",
+      "title": "Wildschweine und Eichhörnchen",
+      "sourceVersion": "M05",
+      "sourcePdfSha256": "42fbfd8588ada4140f9e3cb739845d330e9bdc87291d39e551b46058d72b0b16",
+      "page": 1,
+      "path": "assets/handouts/sport-wald-03-kiga.png",
+      "sha256": "d723deda79b6e51181997c9d6da5f293c8da25e5dbddd5e0bdc028e05fdbd804",
+      "bytes": 201965,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "SPORT-WALD-04",
+      "title": "Igel, Frösche und Adler",
+      "sourceVersion": "W02",
+      "sourcePdfSha256": "9593ecac90ba7582d8916914342058f624bdfa9407cf3861e16db6deb1ec4342",
+      "page": 1,
+      "path": "assets/handouts/sport-wald-04-kiga.png",
+      "sha256": "2ce15fa10c1063b5037a9b84c081cf098f6c3b303e31d8960145570713275602",
+      "bytes": 185438,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "VORSCHULE-WALD-01",
+      "title": "Wir zählen im Herbstwald",
+      "sourceVersion": "E09",
+      "sourcePdfSha256": "7e0a02dfdf0b947a1320bd7a233b2d6d72b7f31357e97b1f37ef94895fb968ba",
+      "page": 1,
+      "path": "assets/handouts/vorschule-wald-01.png",
+      "sha256": "2cb2f6d3316e513e0f645277c2a5ab3b778102ca741db536ad2251e3d23868da",
+      "bytes": 174648,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "VORSCHULE-WALD-02",
+      "title": "Ein Rascheln im Blätterwald",
+      "sourceVersion": "E08",
+      "sourcePdfSha256": "f6189dc88288a635d6f942fde62f55e9952c4a58ae286daac40bb82cb6b97e77",
+      "page": 1,
+      "path": "assets/handouts/vorschule-wald-02.png",
+      "sha256": "6fb0467cac3a9815d624fb874db524d403a7c0938daa06a1a49c65fd01eb0997",
+      "bytes": 176869,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "VORSCHULE-WALD-03",
+      "title": "Was gehört zusammen?",
+      "sourceVersion": "Bildstandard A01_2",
+      "sourcePdfSha256": "4644a2973fe9f29b7bc1eeb44b53b2a2b1b7b5e4feae8a8ced23417764389f85",
+      "page": 1,
+      "path": "assets/handouts/vorschule-wald-03.png",
+      "sha256": "928770cab892196047dd266d62afe2477fc378bf11d2510b4ca9bc7711237070",
+      "bytes": 173831,
+      "width": 380,
+      "height": 538
+    },
+    {
+      "productId": "VORSCHULE-WALD-04",
+      "title": "Unser Wald aus Formen",
+      "sourceVersion": "Bildstandard A01",
+      "sourcePdfSha256": "be2e5ff862a8168502cc239d52c1365f1507a152c34628350fe1bd16d7cd6fde",
+      "page": 1,
+      "path": "assets/handouts/vorschule-wald-04.png",
+      "sha256": "225a281ed7d846dddb67da638777db4e15569c8fc669aa71c34cb3726653d329",
+      "bytes": 173206,
+      "width": 380,
+      "height": 538
+    }
+  ],
+  "notes": [
+    "Sport04 zeigt W02.",
+    "Sport01–03 enthalten noch die bisherigen Abschlussüberschriften; dies sind unveränderte aktuelle Testfassungen.",
+    "Keine vollständigen PDFs im Paket."
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "1.0",
+  "measuredAt": "2026-09-24T16:08:26.708537+00:00",
+  "repository": "bewegtundbunt/bewegtundbunt-website",
+  "sourceBranch": "staging",
+  "sourceCommit": "49fb5f3454f67289edc7718d62488d567b426176",
+  "sourceTree": "2085312718e9a28c89cbb278c64a3733b08d5c75",
+  "prepareBranch": "vorbereitung/website-drei-bereiche-2026-09-24",
+  "sha256Bindings": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "05765d6c441bb7fb6b3ccc100a3c1c69252546dfbd7d6ce73b698bb60296051e",
+      "bytes": 2921,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "0074b86866a6d58d1b5a49422416a0b8772496bf44d4462c4873dd69a1e6a1d8",
+      "bytes": 470,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/sport-wald-01-kiga.png",
+      "sha256": "d9dad0e531946f19d4a648544464f856fa165e2c7b320ab3e0c57cb1ebeec09a",
+      "bytes": 185475,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/sport-wald-02-kiga.png",
+      "sha256": "2340442e93aeaae2faa6b68d5e1ce1f0fe62a41469d68d194668577fb58b8824",
+      "bytes": 191684,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/sport-wald-03-kiga.png",
+      "sha256": "d723deda79b6e51181997c9d6da5f293c8da25e5dbddd5e0bdc028e05fdbd804",
+      "bytes": 201965,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/sport-wald-04-kiga.png",
+      "sha256": "2ce15fa10c1063b5037a9b84c081cf098f6c3b303e31d8960145570713275602",
+      "bytes": 185438,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-01.png",
+      "sha256": "2cb2f6d3316e513e0f645277c2a5ab3b778102ca741db536ad2251e3d23868da",
+      "bytes": 174648,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-02.png",
+      "sha256": "6fb0467cac3a9815d624fb874db524d403a7c0938daa06a1a49c65fd01eb0997",
+      "bytes": 176869,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-03.png",
+      "sha256": "928770cab892196047dd266d62afe2477fc378bf11d2510b4ca9bc7711237070",
+      "bytes": 173831,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "assets/handouts/vorschule-wald-04.png",
+      "sha256": "225a281ed7d846dddb67da638777db4e15569c8fc669aa71c34cb3726653d329",
+      "bytes": 173206,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/ABNAHMEMATRIX_A01.md",
+      "sha256": "a2f8bf1ccae0afb95b627644192ba34dee8087c1796ad9ed68b3596aacde3386",
+      "bytes": 14898,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BAUAUFTRAG_A01.md",
+      "sha256": "d3ac357172d28f0deaaa76d3d3c0014f44a20a7c862a25723814b58d49eba070",
+      "bytes": 6171,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/BILDER_A01.json",
+      "sha256": "74bb38f8029b87aaa07a29592ae48bbc3bfbdce371d7333655a8b8b90572c976",
+      "bytes": 3968,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/PRUEFE_PAKET.py",
+      "sha256": "ef20a6464ba876f59d46daec9f8fc60eebb5d33626d35d15727a8312a3fe91af",
+      "bytes": 781,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/TEXTQUELLE_A01.md",
+      "sha256": "aefeb1c673e1f9bc89e0319c3eabe5ec7585e414cc8cddd77a14c3e6bde0b6f5",
+      "bytes": 22113,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "docs/website-umbau-2026-09-24/WORTPRUEFUNG_A01.md",
+      "sha256": "b7e8c8e1d0f629f8e5dfe02a57f95df2594b26afef09c8e139e7277d7accca26",
+      "bytes": 873,
+      "role": "Paketdatei"
+    },
+    {
+      "path": "index.html",
+      "sha256": "84cc697986e570f9d12d22346802668b06f52152519590121db48296c2d4fb67",
+      "bytes": 38133,
+      "role": "HTML-Ausgangsdatei; nach Bau erwartungsgemäß geändert"
+    },
+    {
+      "path": "about.html",
+      "sha256": "6de9e6f530c14e409e8b5b3e263607c626e745071379f0761b9a635986383319",
+      "bytes": 6988,
+      "role": "HTML-Ausgangsdatei; nach Bau erwartungsgemäß geändert"
+    },
+    {
+      "path": "contact.html",
+      "sha256": "9ca6b544f1d42c3069228641cba06d68360eaf19b33f10b67b12c606c8cb6afd",
+      "bytes": 6072,
+      "role": "HTML-Ausgangsdatei; nach Bau erwartungsgemäß geändert"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+      "sha256": "8814e2bdd224eb12422b52389c0aa5c4e319ed20ded3a400903cecc6c7dbfe25",
+      "bytes": 340408,
+      "role": "vorhandenes unverändertes Morgenkreisbild"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+      "sha256": "8394f6d834ceecc0481e7e6b3a1ae629c1216533c202359d8fd9f6e835683a7a",
+      "bytes": 334205,
+      "role": "vorhandenes unverändertes Morgenkreisbild"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+      "sha256": "b44a905b2a7d1b10257f52a960cd408d6689e04c218f100b360c3df168954cfc",
+      "bytes": 332514,
+      "role": "vorhandenes unverändertes Morgenkreisbild"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+      "sha256": "2047acf7445df70bf63c937cc7b74fb401f7120bb5b3f953d2075fe1810e05aa",
+      "bytes": 343230,
+      "role": "vorhandenes unverändertes Morgenkreisbild"
+    }
+  ],
+  "protectedGitBlobs": [
+    {
+      "path": "Impressum.html",
+      "gitBlobSha": "f737d2b32e97d9ccd23e42e233677733dd353beb"
+    },
+    {
+      "path": "README.md",
+      "gitBlobSha": "5038a02f0ebfb2d77e16d5e48cf540d0983c779d"
+    },
+    {
+      "path": "assets/fonts/dancing-script-variable.woff2",
+      "gitBlobSha": "93bda68a27707f602bf51786f438e20421f435e6"
+    },
+    {
+      "path": "assets/fonts/fonts.css",
+      "gitBlobSha": "d6d421dec7cc6095560dc374afe1a63e653c590a"
+    },
+    {
+      "path": "assets/fonts/sora-variable.woff2",
+      "gitBlobSha": "074a20289c43c4d46b6a5c6a33f1dbfe44b95db7"
+    },
+    {
+      "path": "assets/fonts/source-serif-4-italic.woff",
+      "gitBlobSha": "6acc66e7603d3344a62442b7a5ac340685df24a1"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+      "gitBlobSha": "af9e9bd5b0626c7281608b9811ac650684987442"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+      "gitBlobSha": "bf79f9dd98606d4c1f1dccb0fc956263554a6c00"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+      "gitBlobSha": "0cd5f4d1645b031702ee69cb79cd4ae848f02494"
+    },
+    {
+      "path": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+      "gitBlobSha": "67604034c0e9b1d75bad6c7f0a3199d465e647b9"
+    },
+    {
+      "path": "assets/handouts/wald-olympiade-kiga.png",
+      "gitBlobSha": "90c06aac838bf3d4b73c7583f338931b05c4c401"
+    },
+    {
+      "path": "assets/handouts/wald-parcours-hauptbild.jpg",
+      "gitBlobSha": "1c8f9004dd9a37fa404082c2c46ff724e26680f1"
+    },
+    {
+      "path": "assets/handouts/wald-parcours-kiga.png",
+      "gitBlobSha": "88fdc1e287f4a85aef8ef160b043b5559a20f97d"
+    },
+    {
+      "path": "assets/handouts/wald-rhythmus-kiga.png",
+      "gitBlobSha": "6ef4885495ab78d0caf3a4d630d9b6859d6a1abe"
+    },
+    {
+      "path": "assets/handouts/wald-spielstunde-hauptbild.jpg",
+      "gitBlobSha": "35741eade0f859f98bd3ee07b7c0da84227247c5"
+    },
+    {
+      "path": "assets/handouts/wald-spielzeit-kiga.png",
+      "gitBlobSha": "b1bbf8960c937e2076a01989d1d6ff966e9f4692"
+    },
+    {
+      "path": "assets/handouts/wald-wettkampf-hauptbild.jpg",
+      "gitBlobSha": "af0ef46cde4ed743b8d8340d129d9c862a10ed90"
+    },
+    {
+      "path": "assets/images/einblick-parcours-titelband.png",
+      "gitBlobSha": "2cccf9ee451b715a453a5d431f13fdce8e8fa908"
+    },
+    {
+      "path": "assets/images/einblick-sicherheit.png",
+      "gitBlobSha": "090a4c152fbc7e22becf41250f86d989ea2c17e5"
+    },
+    {
+      "path": "assets/images/einblick-wald-aufbau.png",
+      "gitBlobSha": "d6f87e93f30bea1215119541e6c159b6a9eeaed9"
+    },
+    {
+      "path": "assets/images/einblick-waldsignal.png",
+      "gitBlobSha": "4a059a7da0fc4b958cb47c179f40003bc89bdfb2"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "gitBlobSha": "360443279ee517ae394f61243fd84674e0318fbf"
+    },
+    {
+      "path": "assets/images/rene.png",
+      "gitBlobSha": "360443279ee517ae394f61243fd84674e0318fbf"
+    },
+    {
+      "path": "datenschutz.html",
+      "gitBlobSha": "c1653024c703ce8e6b5be26c06ea570d5db38de9"
+    },
+    {
+      "path": "index-2026-03.html.bak",
+      "gitBlobSha": "531997e9171cc64f3758647a6fe4b3be4655374d"
+    }
+  ],
+  "notes": [
+    "Vor Baubeginn PRUEFE_PAKET.py ausführen. Die Hashes der3HTML-Ausgangsdateien gelten vor dem beauftragten Bau.",
+    "Dieses Manifest schließt seinen eigenen Inhalt von sha256Bindings aus, um zyklische Bindungen zu vermeiden.",
+    "PDF-Quellhashes in BILDER_A01.json sind Herkunft; keine PDF-Dateien nötig oder mitgeliefert.",
+    "Die Quell-PDFs sind nicht für öffentlichen Download freigegeben.",
+    "Die Webbilder sind Testfassungsvorschauen; kein finaler Produkt-/Praxis-/Publikationsstatus daraus abgeleitet."
+  ]
+}

@@ -1,0 +1,4 @@
+ about.html   |  41 ++--
+ contact.html |  45 ++--
+ index.html   | 766 +++++++++++++++++++++++++++++++++--------------------------
+ 3 files changed, 479 insertions(+), 373 deletions(-)

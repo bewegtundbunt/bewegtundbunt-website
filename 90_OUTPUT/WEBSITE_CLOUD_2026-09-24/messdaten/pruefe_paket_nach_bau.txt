@@ -1,0 +1,4 @@
+STOPP: Paketbindung abweichend
+index.html: SHA/Bytezahl weicht ab
+about.html: SHA/Bytezahl weicht ab
+contact.html: SHA/Bytezahl weicht ab

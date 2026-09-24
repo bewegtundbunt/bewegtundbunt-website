@@ -1,0 +1,788 @@
+{
+ "blockCount": 37,
+ "blocks": [
+  {
+   "id": "T01a",
+   "page": "/index.html",
+   "vergleich": "title",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T01b",
+   "page": "/about.html",
+   "vergleich": "title",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T01c",
+   "page": "/contact.html",
+   "vergleich": "title",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T02",
+   "page": "/index.html",
+   "vergleich": "meta description",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T03",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 6,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T03",
+   "page": "/about.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 6,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T03",
+   "page": "/contact.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 6,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T04",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T04",
+   "page": "/about.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T04",
+   "page": "/contact.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T10a",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 2,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T10b",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T10c",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T11label",
+   "page": "/index.html",
+   "vergleich": "aria-label",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T11a",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T11b",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T11c",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T12",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 2,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T20",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 12,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T21",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 12,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T22",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 12,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T30",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T31",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T32",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T33",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T40",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T41",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T42",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T43",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 9,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T44",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T50",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 3,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T51",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T52",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T53",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T60",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 7,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T70",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 11,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T80",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 9,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T90",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T91",
+   "page": "/index.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 2,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T92",
+   "page": "/about.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  },
+  {
+   "id": "T93",
+   "page": "/contact.html",
+   "vergleich": "gerenderter Text",
+   "zeilen": 1,
+   "fehlend": [],
+   "pass": true
+  }
+ ],
+ "words": {
+  "Bewegungsstunde*": [
+   "index.html:708: …<span class=\"anchor-alias\" id=\"bewegungsstunden\"></span>…",
+   "about.html:109: …n. Angefangen hat bewegt &amp; bunt mit Bewegungsstunden, entwickelt nicht am Schreibtisch, son…"
+  ],
+  "Erzieher*": [],
+  "Krippe": [
+   "index.html:895: …eut und begleitet Kinder individuell in Krippe und Kindergarten. bewegt &amp; bunt ist…",
+   "about.html:108: …e ich als Individualbegleiter Kinder in Krippe und Kindergarten.</p>…"
+  ],
+  "Vorschule · in Entwicklung": [],
+  "Noch ohne Handouts": [],
+  "Handouts dafür gibt es noch nicht": [],
+  "Zwei Stapel": [],
+  "acht Blätter": [],
+  "ca. 30/45 Min": [],
+  "alte Sportpaare": [],
+  "nur Stifte": [],
+  "PDF/Download": [],
+  "interne Begriffe": [],
+  "Tracker/extern": [],
+  "tabindex": []
+ },
+ "images": [
+  {
+   "productId": "SPORT-WALD-01",
+   "path": "assets/handouts/sport-wald-01-kiga.png",
+   "sha256": "d9dad0e531946f19d4a648544464f856fa165e2c7b320ab3e0c57cb1ebeec09a",
+   "pass": true
+  },
+  {
+   "productId": "SPORT-WALD-02",
+   "path": "assets/handouts/sport-wald-02-kiga.png",
+   "sha256": "2340442e93aeaae2faa6b68d5e1ce1f0fe62a41469d68d194668577fb58b8824",
+   "pass": true
+  },
+  {
+   "productId": "SPORT-WALD-03",
+   "path": "assets/handouts/sport-wald-03-kiga.png",
+   "sha256": "d723deda79b6e51181997c9d6da5f293c8da25e5dbddd5e0bdc028e05fdbd804",
+   "pass": true
+  },
+  {
+   "productId": "SPORT-WALD-04",
+   "path": "assets/handouts/sport-wald-04-kiga.png",
+   "sha256": "2ce15fa10c1063b5037a9b84c081cf098f6c3b303e31d8960145570713275602",
+   "pass": true
+  },
+  {
+   "productId": "VORSCHULE-WALD-01",
+   "path": "assets/handouts/vorschule-wald-01.png",
+   "sha256": "2cb2f6d3316e513e0f645277c2a5ab3b778102ca741db536ad2251e3d23868da",
+   "pass": true
+  },
+  {
+   "productId": "VORSCHULE-WALD-02",
+   "path": "assets/handouts/vorschule-wald-02.png",
+   "sha256": "6fb0467cac3a9815d624fb874db524d403a7c0938daa06a1a49c65fd01eb0997",
+   "pass": true
+  },
+  {
+   "productId": "VORSCHULE-WALD-03",
+   "path": "assets/handouts/vorschule-wald-03.png",
+   "sha256": "928770cab892196047dd266d62afe2477fc378bf11d2510b4ca9bc7711237070",
+   "pass": true
+  },
+  {
+   "productId": "VORSCHULE-WALD-04",
+   "path": "assets/handouts/vorschule-wald-04.png",
+   "sha256": "225a281ed7d846dddb67da638777db4e15569c8fc669aa71c34cb3726653d329",
+   "pass": true
+  }
+ ],
+ "titles": [
+  {
+   "section": "morgenkreis",
+   "productId": "MORGENKREIS-WALD-01",
+   "label": "Morgenkreis 01 · Wald",
+   "title": "Wo ist der Wintervorrat?",
+   "status": "Testfassung",
+   "src": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×544",
+   "soll": [
+    "Morgenkreis 01 · Wald",
+    "Wo ist der Wintervorrat?",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "morgenkreis",
+   "productId": "MORGENKREIS-WALD-02",
+   "label": "Morgenkreis 02 · Wald",
+   "title": "Wer wiegt sich im Wind?",
+   "status": "Testfassung",
+   "src": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×544",
+   "soll": [
+    "Morgenkreis 02 · Wald",
+    "Wer wiegt sich im Wind?",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "morgenkreis",
+   "productId": "MORGENKREIS-WALD-03",
+   "label": "Morgenkreis 03 · Wald",
+   "title": "Wer macht den Wald so laut?",
+   "status": "Testfassung",
+   "src": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×544",
+   "soll": [
+    "Morgenkreis 03 · Wald",
+    "Wer macht den Wald so laut?",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "morgenkreis",
+   "productId": "MORGENKREIS-WALD-04",
+   "label": "Morgenkreis 04 · Wald",
+   "title": "Welches Dach hält dicht?",
+   "status": "Testfassung",
+   "src": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×544",
+   "soll": [
+    "Morgenkreis 04 · Wald",
+    "Welches Dach hält dicht?",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "bewegungseinheiten",
+   "productId": "SPORT-WALD-01",
+   "label": "Bewegungseinheit 01 · Wald",
+   "title": "Frösche und Eichhörnchen",
+   "status": "Testfassung",
+   "src": "assets/handouts/sport-wald-01-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Bewegungseinheit 01 · Wald",
+    "Frösche und Eichhörnchen",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/sport-wald-01-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "bewegungseinheiten",
+   "productId": "SPORT-WALD-02",
+   "label": "Bewegungseinheit 02 · Wald",
+   "title": "Wildkatzen und Adler",
+   "status": "Testfassung",
+   "src": "assets/handouts/sport-wald-02-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Bewegungseinheit 02 · Wald",
+    "Wildkatzen und Adler",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/sport-wald-02-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "bewegungseinheiten",
+   "productId": "SPORT-WALD-03",
+   "label": "Bewegungseinheit 03 · Wald",
+   "title": "Wildschweine und Eichhörnchen",
+   "status": "Testfassung",
+   "src": "assets/handouts/sport-wald-03-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Bewegungseinheit 03 · Wald",
+    "Wildschweine und Eichhörnchen",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/sport-wald-03-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "bewegungseinheiten",
+   "productId": "SPORT-WALD-04",
+   "label": "Bewegungseinheit 04 · Wald",
+   "title": "Igel, Frösche und Adler",
+   "status": "Testfassung",
+   "src": "assets/handouts/sport-wald-04-kiga.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Bewegungseinheit 04 · Wald",
+    "Igel, Frösche und Adler",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/sport-wald-04-kiga.png",
+   "pass": true
+  },
+  {
+   "section": "vorschule",
+   "productId": "VORSCHULE-WALD-01",
+   "label": "Vorschule 01 · Wald",
+   "title": "Wir zählen im Herbstwald",
+   "status": "Testfassung",
+   "src": "assets/handouts/vorschule-wald-01.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Vorschule 01 · Wald",
+    "Wir zählen im Herbstwald",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/vorschule-wald-01.png",
+   "pass": true
+  },
+  {
+   "section": "vorschule",
+   "productId": "VORSCHULE-WALD-02",
+   "label": "Vorschule 02 · Wald",
+   "title": "Ein Rascheln im Blätterwald",
+   "status": "Testfassung",
+   "src": "assets/handouts/vorschule-wald-02.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Vorschule 02 · Wald",
+    "Ein Rascheln im Blätterwald",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/vorschule-wald-02.png",
+   "pass": true
+  },
+  {
+   "section": "vorschule",
+   "productId": "VORSCHULE-WALD-03",
+   "label": "Vorschule 03 · Wald",
+   "title": "Was gehört zusammen?",
+   "status": "Testfassung",
+   "src": "assets/handouts/vorschule-wald-03.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Vorschule 03 · Wald",
+    "Was gehört zusammen?",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/vorschule-wald-03.png",
+   "pass": true
+  },
+  {
+   "section": "vorschule",
+   "productId": "VORSCHULE-WALD-04",
+   "label": "Vorschule 04 · Wald",
+   "title": "Unser Wald aus Formen",
+   "status": "Testfassung",
+   "src": "assets/handouts/vorschule-wald-04.png",
+   "alt": "",
+   "linksInCard": 0,
+   "cursor": "auto",
+   "natural": "380×538",
+   "soll": [
+    "Vorschule 04 · Wald",
+    "Unser Wald aus Formen",
+    "Testfassung"
+   ],
+   "bildSoll": "assets/handouts/vorschule-wald-04.png",
+   "pass": true
+  }
+ ],
+ "nav": [
+  {
+   "page": "/index.html",
+   "ist": [
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt"
+   ],
+   "pass": true,
+   "current": []
+  },
+  {
+   "page": "/about.html",
+   "ist": [
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt"
+   ],
+   "pass": true,
+   "current": [
+    "Über mich"
+   ]
+  },
+  {
+   "page": "/contact.html",
+   "ist": [
+    "Morgenkreis",
+    "Bewegungseinheiten",
+    "Vorschule",
+    "Themenwelten",
+    "Über mich",
+    "Kontakt"
+   ],
+   "pass": true,
+   "current": [
+    "Kontakt"
+   ]
+  }
+ ],
+ "renderedErzieher": {
+  "/index.html": 0,
+  "/about.html": 0,
+  "/contact.html": 0
+ },
+ "protected": [
+  {
+   "path": "Impressum.html",
+   "pass": true
+  },
+  {
+   "path": "README.md",
+   "pass": true
+  },
+  {
+   "path": "assets/fonts/dancing-script-variable.woff2",
+   "pass": true
+  },
+  {
+   "path": "assets/fonts/fonts.css",
+   "pass": true
+  },
+  {
+   "path": "assets/fonts/sora-variable.woff2",
+   "pass": true
+  },
+  {
+   "path": "assets/fonts/source-serif-4-italic.woff",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/morgenkreis-wald-1-wintervorrat-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/morgenkreis-wald-2-wind-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/morgenkreis-wald-3-laut-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/morgenkreis-wald-4-dach-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-olympiade-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-parcours-hauptbild.jpg",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-parcours-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-rhythmus-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-spielstunde-hauptbild.jpg",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-spielzeit-kiga.png",
+   "pass": true
+  },
+  {
+   "path": "assets/handouts/wald-wettkampf-hauptbild.jpg",
+   "pass": true
+  },
+  {
+   "path": "assets/images/einblick-parcours-titelband.png",
+   "pass": true
+  },
+  {
+   "path": "assets/images/einblick-sicherheit.png",
+   "pass": true
+  },
+  {
+   "path": "assets/images/einblick-wald-aufbau.png",
+   "pass": true
+  },
+  {
+   "path": "assets/images/einblick-waldsignal.png",
+   "pass": true
+  },
+  {
+   "path": "assets/images/logo.png",
+   "pass": true
+  },
+  {
+   "path": "assets/images/rene.png",
+   "pass": true
+  },
+  {
+   "path": "datenschutz.html",
+   "pass": true
+  },
+  {
+   "path": "index-2026-03.html.bak",
+   "pass": true
+  }
+ ]
+}

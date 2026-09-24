@@ -223,8 +223,11 @@
       align-items: center;
     }
     .kinderblatt-figure { margin: 0; }
-    .kinderblatt-fan { position: relative; width: 100%; aspect-ratio: 520 / 470; }
-    .kinderblatt-fan img {
+    .vorschule-preview { position: relative; width: 100%; aspect-ratio: 520 / 390; }
+    .worksheet-fan { position: absolute; aspect-ratio: 520 / 470; }
+    .kinderblatt-fan { z-index: 2; width: 50%; left: 0; top: 35%; }
+    .vorschule-handout-fan { z-index: 1; width: 65%; right: 1%; top: 0; }
+    .worksheet-fan img {
       position: absolute;
       height: auto;
       border: 4px solid white;
@@ -232,10 +235,11 @@
       background: white;
       box-shadow: 0 12px 30px rgba(16, 43, 32, 0.16);
     }
-    .kinderblatt-fan img:nth-child(1) { z-index: 4; width: 48%; left: 5%; top: 5%; transform: rotate(-7deg); }
-    .kinderblatt-fan img:nth-child(2) { z-index: 3; width: 48%; left: 18%; top: 9%; transform: rotate(-2deg); }
-    .kinderblatt-fan img:nth-child(3) { z-index: 2; width: 48%; left: 31%; top: 13%; transform: rotate(3deg); }
-    .kinderblatt-fan img:nth-child(4) { z-index: 1; width: 48%; left: 44%; top: 17%; transform: rotate(8deg); }
+    .worksheet-fan img:nth-child(1) { z-index: 4; width: 48%; left: 5%; top: 5%; transform: rotate(-7deg); }
+    .worksheet-fan img:nth-child(2) { z-index: 3; width: 48%; left: 18%; top: 9%; transform: rotate(-2deg); }
+    .worksheet-fan img:nth-child(3) { z-index: 2; width: 48%; left: 31%; top: 13%; transform: rotate(3deg); }
+    .worksheet-fan img:nth-child(4) { z-index: 1; width: 48%; left: 44%; top: 17%; transform: rotate(8deg); }
+    .kinderblatt-fan img { border-width: 2px; border-radius: 4px; box-shadow: 0 6px 15px rgba(16, 43, 32, 0.16); }
     .kinderblatt-figure figcaption { margin-top: 14px; color: var(--muted); font-size: 13px; }
     .kinderblatt-copy h3 { margin-bottom: 14px; font-size: 26px; line-height: 1.25; }
     .kinderblatt-copy p { color: var(--ink); font-size: 17px; }
@@ -507,7 +511,7 @@
             <p class="hero-text">bewegt &amp; bunt entwickelt klar aufgebaute Handouts für den Kita-Alltag, für die Vorschule mit passendem Kinderblatt. Sie unterstützen pädagogische Fachkräfte bei der Vorbereitung und geben Kindern Raum zum Spielen, Lernen und Gestalten.</p>
           </div>
           <div class="hero-fan">
-            <img class="hero-fan-back" src="assets/handouts/vorschule-wald-04.png" alt="" width="380" height="538" decoding="async" />
+            <img class="hero-fan-back" src="assets/previews/a03/morgenkreis-zoo-01.png" alt="" width="380" height="538" decoding="async" />
             <img class="hero-fan-middle" src="assets/handouts/sport-wald-01-kiga.png" alt="" width="380" height="538" decoding="async" />
             <img class="hero-fan-front" src="assets/previews/a04/morgenkreis-bauernhof-04.png" alt="" width="380" height="538" decoding="async" />
           </div>
@@ -651,13 +655,21 @@
 
         <div class="kinderblatt">
           <figure class="kinderblatt-figure">
-            <div class="kinderblatt-fan">
+            <div class="vorschule-preview">
+              <div class="worksheet-fan vorschule-handout-fan">
+                <img src="assets/handouts/vorschule-wald-01.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-02.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-03.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+                <img src="assets/handouts/vorschule-wald-04.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+              </div>
+              <div class="worksheet-fan kinderblatt-fan">
               <img src="assets/previews/a03/kinderblatt-wald-01.png" alt="Kinderblatt Wir zählen im Herbstwald mit Zahlenbild und Höraufgabe" width="380" height="538" loading="lazy" decoding="async" />
               <img src="assets/previews/a03/kinderblatt-wald-02.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
               <img src="assets/previews/a03/kinderblatt-wald-03.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
               <img src="assets/previews/a03/kinderblatt-wald-04.png" alt="" width="380" height="538" loading="lazy" decoding="async" />
+              </div>
             </div>
-            <figcaption>Vier Kinderblätter zur Themenwelt Wald – vorne: „Wir zählen im Herbstwald“.</figcaption>
+            <figcaption>Vier Kinderblätter und die passenden Vorschul-Handouts – jeweils vorne: „Wir zählen im Herbstwald“.</figcaption>
           </figure>
           <div class="kinderblatt-copy">
             <h3>Malen nach Zahlen und genau hinhören</h3>

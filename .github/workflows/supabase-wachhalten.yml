@@ -1,0 +1,46 @@
+# Hält das Supabase-Projekt der App-Anmeldung wach (kostenloser Plan pausiert nach 7 Tagen ohne Nutzung).
+# Nur lesend: eine REST-Abfrage mit limit=1, die wirklich die Datenbank berührt. Ein leeres Ergebnis ist in Ordnung.
+#
+# Benötigte Einstellungen (Repository → Settings → Secrets and variables → Actions):
+#   Variable SUPABASE_URL      z. B. https://<projekt>.supabase.co  (wie in index.html der App)
+#   Variable SUPABASE_TABELLE  eine vorhandene Tabelle aus admin_setup.sql der App
+#   SUPABASE_ANON_KEY          öffentlicher anon-Schlüssel aus index.html der App (als Variable oder Secret)
+name: Supabase wachhalten
+
+on:
+  schedule:
+    # Montag und Donnerstag, 05:17 UTC (früh morgens deutscher Zeit)
+    - cron: "17 5 * * 1,4"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  anpingen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Lesende Abfrage an die Datenbank
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_TABELLE: ${{ vars.SUPABASE_TABELLE }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || vars.SUPABASE_ANON_KEY }}
+        run: |
+          set -euo pipefail
+          for name in SUPABASE_URL SUPABASE_TABELLE SUPABASE_ANON_KEY; do
+            if [ -z "${!name:-}" ]; then
+              echo "::error::Einstellung $name fehlt (Settings → Secrets and variables → Actions)."
+              exit 1
+            fi
+          done
+          url="${SUPABASE_URL%/}/rest/v1/${SUPABASE_TABELLE}?select=*&limit=1"
+          antwort=$(curl --silent --show-error --fail-with-body \
+            --retry 3 --retry-delay 20 --retry-all-errors --max-time 30 \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
+            -H "Accept: application/json" \
+            "$url") || { echo "::error::Supabase-Abfrage fehlgeschlagen."; exit 1; }
+          case "$antwort" in
+            \[*) echo "Supabase antwortet (Tabelle ${SUPABASE_TABELLE}); Datenbank wurde berührt." ;;
+            *) echo "::error::Unerwartete Antwort von Supabase."; exit 1 ;;
+          esac

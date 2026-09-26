@@ -26,5 +26,8 @@ Ein Wachhalter, damit das Supabase-Projekt der Anmeldung im kostenlosen Plan nic
 ## Wichtig
 **Der Wachhalter läuft erst ab `main`, also mit dem Liveschalten.** GitHub führt Zeitpläne nur vom Standardzweig aus. Bis dahin hilft nur ein Handlauf oder ein Aufruf der App.
 
+## Überschneidung auf dem Zweig
+Kommit `0830e9a` aus einer anderen Sitzung hat schon `.github/workflows/supabase-wachhalten.yml` im **Website**-Repo angelegt, dazu `90_OUTPUT/WEBSITE_A08/BAURUECKLAUF_A08.md`. Diese Fassung holt URL, Tabelle und Schlüssel aus den Repo-Einstellungen und widerspricht damit der Karte vom 26.09. („keine neuen Geheimnisse, nichts in die Repo-Einstellungen“, „im App-Repo“). Ich habe sie nicht angerührt. Empfehlung: Vor dem Merge nach `main` entfernen, sonst läuft sie dort ohne Werte und wird jeden Mo und Do rot. Diese Fassung hier ersetzt sie.
+
 ## Satz für René
 Der Supabase-Wachhalter ist fertig. Er fragt Mo und Do früh eine Tabelle lesend ab, braucht keine Geheimnisse und wird bei Fehlschlag rot. Weil diese Sitzung das App-Repo nicht anfassen durfte, liegt er erst auf meinem Zweig bereit und muss nach `.github/workflows/` im App-Repo kopiert werden. Laufen wird er erst ab `main`, also mit dem Liveschalten.
